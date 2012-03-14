@@ -1,0 +1,165 @@
+@charset "utf-8";
+/*
+ * - - - - - - - - - - - - - - - - - - - *
+ * INDIOSIS                              *
+ * The resource optimization community.  *
+ * - - - - - - - - - - - - - - - - - - - *
+ * 
+ * Main Look
+ * Describes the look of the general page container for every page.
+ * 
+ * @package     layout
+ * @author      Arjun Shankar, Frédéric Andreae
+ * @copyright   Copyright (C) 2011, ROI
+ */
+
+body {
+	background-color: white;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+        margin: 0;
+}
+
+em.indiosis_blue {
+     color: #257EA9;
+     font-style: normal;
+}
+.info_txt {
+    text-align: center;
+    font-family: Arial;
+    font-size: 14px;
+    margin: 15px 0;
+    line-height: 23px;
+}
+ 
+a {
+    color:#0071BC;
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration:none;
+    color: black;
+}
+
+a.company {
+    font-weight:bold;
+}
+
+a img{
+    text-decoration: none;
+    border: 0 none;
+}
+
+input {
+    font-family: Arial;
+    font-size: 11px;
+    padding: 4px 2px;
+    border: solid 1px #aaa;
+}
+*:focus {  
+    outline: none;  
+}
+input:focus{
+    border: solid 1px #257EA9;
+    color: #206E94;
+}
+
+/* Auto-complete result list */
+div.ac_results {
+    border: solid 1px #777;
+}
+div.ac_results li {
+    font-family: Arial;
+    font-size: 11px;
+}
+div.ac_results li:hover {
+    background-color: #257EA9;
+}
+div.ac_results li.ac_over {
+    background-color: #257EA9;
+}
+
+#holder {
+    width:980px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#topBannerHolder {
+    border-top: solid 12px #257EA9;
+    border-bottom: solid 1px #BBB;
+    height: 66px;
+    background-image: url(/images/topBannerBack.png);
+    background-repeat: repeat-x 1px;
+}
+#topbanner {
+    border-top: solid 1px white;
+    width: 980px;
+    margin: 0 auto;
+}
+
+#topLogo {
+    float: left;
+    position: relative;
+    top: -1px;
+}
+
+#topLinks {
+    float: left;
+    margin-top: 20px;
+    height: 16px;
+    border-right: solid 1px #BBB;
+    padding-left: 303px;
+    padding-top: 14px;
+    font-size: 14px;
+}
+#topLinks a {
+    margin-right: 30px;
+}
+#topLinks a:last-child {
+    margin-right: 70px;
+}
+
+#topUserInfo {
+    float: right;
+    width: 155px;
+    margin-top: 20px;
+    margin-right: 5px;
+    height: 30px;
+    text-align: right;
+    font-size: 12px;
+    line-height: 16px;
+    border-left: solid 1px white;
+}
+
+
+.clear {
+	clear:both;
+}
+
+.info {
+	margin-bottom: 20px;
+	font-size:10px;
+}
+
+#notification {
+	width:100%;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	background-color:#FF0;
+	font-size: 9px;
+	text-align:center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#footernotes {
+	font-size:9px;
+	text-align: center;
+	color: #999;
+	min-height: 50px;
+	margin-top: 30px;
+	border-top: 1px solid #999;
+	padding: 10px;
+}

@@ -1,0 +1,136 @@
+@charset "utf-8";
+/*
+ * - - - - - - - - - - - - - - - - - - - *
+ * INDIOSIS                              *
+ * The resource optimization community.  *
+ * - - - - - - - - - - - - - - - - - - - *
+ * 
+ * Landing page Look
+ * Describes the look for Indiosis Homepage.
+ * 
+ * @package     home
+ * @author      Frédéric Andreae, Arjun Shankar
+ * @copyright   Copyright (C) 2011, ROI
+ */
+ @media screen {
+     @font-face {
+         font-family: 'IndiosisCicle';
+         font-style: normal;
+         src: local('IndiosisCicle'), local('IndiosisCicle-Fina'), url('New_Cicle_Fina-webfont.woff') format('woff');
+    }
+ }
+
+ h2 {
+    font-family: 'IndiosisCicle', Arial, Helvetica, sans-serif;
+    font-size:30px;
+    font-stretch:expanded;
+ }
+#signuplink {
+    padding: 8px 16px;
+    background-color: #0176AB;
+    color: white;
+    font-family: Arial;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+#signuplink:hover {
+    background-color: #44A7D7;
+    text-decoration: none;
+}
+#underTagline {
+    font-family: Arial;
+    font-size: 17px;
+    color: #444;
+}
+
+#illustrationholder {
+	background-repeat:no-repeat;
+	background-position: 0px 30px;
+}
+
+#value {
+	float:left;
+	margin-left:25px;
+	margin-top: 80px;
+	width:160px;
+	height:180px;
+}
+
+#value p{
+	margin-top: -10px;
+	font-size: 10px;
+	line-height: 13px;
+}
+
+#cheaper {
+	float:left;
+	margin-left:210px;
+	margin-top: 115px;
+	height:180px;
+	width:160px;
+}
+
+#cheaper p {
+	margin-top: -10px;
+	font-size: 10px;
+	line-height: 13px;
+}	
+
+#signup {
+	width: 300px;
+	padding: 25px 40px 25px 40px;
+	background-color: #F2F2F2;
+	float:left;
+	border: thin #e6e6e6 solid;
+	margin-left:40px;
+        margin-top: 25px;
+}
+
+.IN-widget {
+    float: right;
+    margin-top: 4px;
+}
+
+h3 {
+        margin-top: 0;
+	font-size: 14px;
+	font-weight:bold;
+	line-height: 28px;
+	color: #06C;
+	font-family:'Open Sans Condensed', Arial, Helvetica, sans-serif;
+}
+
+#signup h3 {
+	font-size: 20px;
+	font-weight:bold;
+	line-height: 28px;
+	color: #333;
+	font-family:'Open Sans Condensed', Arial, Helvetica, sans-serif;
+}
+
+form#signupform {
+	padding: 0px;
+}
+
+form#signupform input.signup {
+	color: #999;
+	height: 20px;
+	margin-bottom: 10px;
+}
+
+input#signupsubmit {
+	width: 100px;
+	height: 30px;
+	background-color: #54A4DB;
+	border: thin black;
+	color: #FFF;
+}
+
+input#signupsubmit:hover {
+	width: 100px;
+	height: 30px;
+	background-color: #06C;
+	border: thin black;
+	color: #FFF;
+	cursor:pointer;
+}

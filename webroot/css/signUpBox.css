@@ -1,0 +1,89 @@
+@charset "utf-8";
+/*
+ * - - - - - - - - - - - - - - - - - - - *
+ * INDIOSIS                              *
+ * The resource optimization community.  *
+ * - - - - - - - - - - - - - - - - - - - *
+ * 
+ * Sign Up Box Look
+ * Describes the look for the sign-up box.
+ * 
+ * @package     signup
+ * @author      Frédéric Andreae
+ * @copyright   Copyright (C) 2011, ROI
+ */
+
+
+#loginBox {
+    width: 410px;
+    height: 406px; 
+    border: solid 1px #CCC;
+    font-size: 14px;
+    font-family: Arial;
+    padding-bottom: 20px;
+    background-color: #EEE;
+}
+#signUpTitle {
+    padding: 10px 15px;
+    color: #484848;
+    background-color: #CCC;
+    text-align: center;
+    font-size: 17px;
+}
+#signUpTitle span {
+    font-size: 19px;
+}
+#linkedInPart {
+    text-align: center;
+    margin: 20px;
+    height: 100px;
+    padding-bottom: 12px;
+    border-bottom: dashed 1px #555;
+}
+#linkedInPart p {
+    font-size: 12px;
+    color: #333;
+    margin-top: 20px;
+}
+div.submit {
+    text-align: center;
+}
+#loginBox label {
+    float: left;
+    width: 110px;
+    margin-top: 4px;
+    margin-left: 50px;
+}
+#loginBox input {
+    width: 200px;
+}
+div.errorSummary {
+    height: 30px;
+    padding: 10px 0;
+    color: #C83A2C;
+    font-size: 12px;
+    text-align: center;
+    font-family: Verdana;
+}
+#signUpButton {
+    padding: 5px 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+#thankYouTxt, #thankYouTxtLinkedIn {
+    vertical-align: middle;
+    padding: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #444;
+}
+#thankYouTxtLinkedIn span.name {
+    color: #257EA9;
+}
+.errorField {
+    color: #C83A2C;
+}
+.errorField input {
+    border: solid 1px #C83A2C;
+}
