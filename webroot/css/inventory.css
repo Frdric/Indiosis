@@ -18,3 +18,18 @@
     width: 300px;
     
 }
+
+/* Auto-complete result list */
+div.ac_results {
+    border: solid 1px #777;
+}
+div.ac_results li {
+    font-family: Arial;
+    font-size: 11px;
+}
+div.ac_results li:hover {
+    background-color: #257EA9;
+}
+div.ac_results li.ac_over {
+    background-color: #257EA9;
+}

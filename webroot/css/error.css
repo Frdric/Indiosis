@@ -1,0 +1,19 @@
+@charset "utf-8";
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
+ *
+ * STYLE : Error Look
+ * Describes all errors look.
+ * 
+ * @package     layout
+ * @author      Frédéric Andreae, Arjun Shankar
+ * @copyright   UNIL/ROI
+*/
+
+#error_wrapper {
+    margin: 110px auto 0 auto;
+    width: 900px;
+}

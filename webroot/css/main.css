@@ -1,165 +1,216 @@
 @charset "utf-8";
 /*
- * - - - - - - - - - - - - - - - - - - - *
- * INDIOSIS                              *
- * The resource optimization community.  *
- * - - - - - - - - - - - - - - - - - - - *
- * 
- * Main Look
- * Describes the look of the general page container for every page.
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
+ *
+ * STYLE : Main Look
+ * Describes general design.
+ * (applies to every page)
  * 
  * @package     layout
- * @author      Arjun Shankar, Frédéric Andreae
- * @copyright   Copyright (C) 2011, ROI
- */
+ * @author      Frédéric Andreae, Arjun Shankar
+ * @copyright   UNIL/ROI
+*/
 
-body {
-	background-color: white;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 11px;
-        margin: 0;
-}
-
-em.indiosis_blue {
-     color: #257EA9;
-     font-style: normal;
-}
-.info_txt {
-    text-align: center;
-    font-family: Arial;
-    font-size: 14px;
-    margin: 15px 0;
-    line-height: 23px;
-}
- 
-a {
-    color:#0071BC;
-    text-decoration:none;
-}
-
-a:hover {
-    text-decoration:none;
-    color: black;
-}
-
-a.company {
-    font-weight:bold;
-}
-
-a img{
-    text-decoration: none;
-    border: 0 none;
-}
-
-input {
-    font-family: Arial;
-    font-size: 11px;
-    padding: 4px 2px;
-    border: solid 1px #aaa;
-}
+/* - STANDARD ELEMENTS - */
 *:focus {  
     outline: none;  
 }
-input:focus{
-    border: solid 1px #257EA9;
-    color: #206E94;
+::selection, ::-moz-selection, ::-webkit-selection {
+    background: #2582A9;
+    color: white;
+}
+a, a:visited {
+    color:#2582A9;
+    text-decoration:none;
+}
+#infobar a {
+    color: inherit;
+    padding: 7px 0 0 0;
+}
+a:hover {
+    text-decoration: underline;
 }
 
-/* Auto-complete result list */
-div.ac_results {
-    border: solid 1px #777;
+a img{
+    border: 0 none;
 }
-div.ac_results li {
-    font-family: Arial;
-    font-size: 11px;
+h1 {
+    font-family: "OpenSansSemibold", Arial, sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    color: #2582A9;
+    margin: 0 0 18px 0;
 }
-div.ac_results li:hover {
-    background-color: #257EA9;
+h2 {
+    font-family: "OpenSansRegular", Arial, sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    color: #2582A9;
+    margin-top: 0;
 }
-div.ac_results li.ac_over {
-    background-color: #257EA9;
+h3 {
+    font-family: "OpenSansRegular", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: #2582A9;
+    margin-top: 0;
 }
-
-#holder {
-    width:980px;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-#topBannerHolder {
-    border-top: solid 12px #257EA9;
-    border-bottom: solid 1px #BBB;
-    height: 66px;
-    background-image: url(/images/topBannerBack.png);
-    background-repeat: repeat-x 1px;
-}
-#topbanner {
-    border-top: solid 1px white;
-    width: 980px;
-    margin: 0 auto;
-}
-
-#topLogo {
-    float: left;
-    position: relative;
-    top: -1px;
-}
-
-#topLinks {
-    float: left;
-    margin-top: 20px;
-    height: 16px;
-    border-right: solid 1px #BBB;
-    padding-left: 303px;
-    padding-top: 14px;
-    font-size: 14px;
-}
-#topLinks a {
-    margin-right: 30px;
-}
-#topLinks a:last-child {
-    margin-right: 70px;
-}
-
-#topUserInfo {
-    float: right;
-    width: 155px;
-    margin-top: 20px;
-    margin-right: 5px;
-    height: 30px;
-    text-align: right;
-    font-size: 12px;
+p {
+    font-family: "Bitstream", Georgia, serif;
+    font-size: 13px;
     line-height: 16px;
-    border-left: solid 1px white;
+}
+em {
+    color: #2582A9;
+    font-style: normal;
+}
+input {
+    font-family: "OpenSansRegular", Arial, sans-serif;
+    font-size: 11px;
+    padding: 0;
+    height: 23px;
+    text-indent: 4px;
+    border: solid 1px #AAA;
+}
+input:focus {
+    border: solid 1px #2582A9;
+    color: red;
 }
 
-
-.clear {
-	clear:both;
+/* - OVERALL LAYOUT - */
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-color: white;
+    font-size: 12px;
+    font-family: "Bitstream", Georgia, serif;
+    background-image: url("../images/grained_back.gif");
+    background-repeat: repeat;
+}
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -110px; /* <-- always same as footer_wrapper height! */
+}
+#header, #infobar, #main_content, #footer {
+    margin: 0 auto;
+    width: 980px; /* <-- Site's General Width */
+}
+#header_wrapper {
+    background-color: #CCC;
+    background-image: url("../images/header_gradient.gif");
+    background-repeat: repeat-x;
+    border-bottom: solid 2px white;
+    font-family: "OpenSansSemibold", Arial, sans-serif;
+    font-size: 13px;
+}
+#header {
+    height: 77px;
+}
+#headerlogo {
+    margin-top: 17px;
+}
+#infobar_wrapper {
+    height: 30px;
+    background-color: #4D4D4D;
+    border-top: solid 1px #DADADA;
+    border-bottom: solid 1px #444;
+}
+#topmenu {
+    float: right;
+    width: 532px;
+    height: 77px;
+    border-left: solid 1px #AAA;
+}
+#topmenu div.topmenubutton, #searchfield {
+    float: left;
+}
+#topmenu div.topmenubutton {
+    height: 78px;
+    border-left: solid 1px #FBFBFB;
+    border-right: solid 1px #AAA;
+    text-align: center; 
+}
+#topmenu div.topmenubutton:hover:not(.selected) {
+    background-color: #EEE;
+}
+#topmenu div.selected {
+    border-left: solid 1px #BBB;
+    font-family: "OpenSansBold";
+    -moz-box-shadow:    inset 0 0 10px #888;
+    -webkit-box-shadow: inset 0 0 10px #888;
+    box-shadow:         inset 0 0 10px #888;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444');
+}
+#topmenu div.topmenubutton a {
+    color: #777;
+    line-height: 15px;
+    display: block;
+    height: 51px;
+    padding: 27px 20px 0 20px;
+}
+#topmenu div.monoline a {
+    height: 46px;
+    padding: 32px 20px 0 20px;
+}
+#topmenu div.topmenubutton a:hover {
+    text-decoration: none;
+}
+#topmenu div.selected a {
+    background-image: url("../images/topmenu_arrow.png");
+    background-repeat: no-repeat;
+    background-position: 50% 73px;
+}
+#searchfield {
+    height: 50px;
+    border-left: solid 1px #FBFBFB;
+    padding: 27px 0 0 19px;
+}
+#searchfield input {
+    width: 180px;
+    color: #AAA;
+    border: solid 1px #BABABA;
+    border-radius: 15px;
+    background-image: url("../images/searchmag.gif");
+    background-repeat: no-repeat;
+    background-position: 8px 5px;
+    text-indent: 27px;
+}
+#infobar {
+    margin-top: 8px;
+    padding-right: 2px;
+    color: white;
+    text-align: right;
+}
+#footer_push {
+    height: 110px;
+}
+#footer_wrapper {
+    height: 108px;
+    background-color: #EEE;
+    border-top: solid 2px white;
+}
+#footer_inwrapper {
+    border-top: solid 1px #DDD;
+    font-family: Verdana;
+    font-size: 11px;
+    color: #888;
+    text-align: center;
+    line-height: 15px;
+}
+#footer {
+    margin-top: 12px;
+    margin-bottom: 28px;
+    color: #666;
 }
 
-.info {
-	margin-bottom: 20px;
-	font-size:10px;
-}
-
-#notification {
-	width:100%;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	background-color:#FF0;
-	font-size: 9px;
-	text-align:center;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-#footernotes {
-	font-size:9px;
-	text-align: center;
-	color: #999;
-	min-height: 50px;
-	margin-top: 30px;
-	border-top: 1px solid #999;
-	padding: 10px;
-}
+/* - SITE-WIDE ELEMENTS - */

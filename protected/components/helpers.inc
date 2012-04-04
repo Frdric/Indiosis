@@ -1,11 +1,11 @@
 <?php
 /* 
- * - - - - - - - - - - - - - - - - - - - *
- * INDIOSIS                              *
- * The resource optimization community.  *
- * - - - - - - - - - - - - - - - - - - - *
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  * 
- * Helper Functions
+ * HELPER Functions
  * Class including all the various small helping functions used throughout the application.
  * 
  * @package     all
@@ -23,7 +23,7 @@ class Helpers {
     public static function buildPageTitle($titlePart=null)
     {
         if($titlePart!=null) {
-            $pageTitle = 'Indiosis - '.$titlePart;
+            $pageTitle = $titlePart.' | Indiosis';
         }
         else {
             $pageTitle = 'Indiosis';

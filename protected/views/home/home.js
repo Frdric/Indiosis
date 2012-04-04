@@ -15,14 +15,5 @@
 
 $(document).ready(function() {
     
-    // the fancy sign up box
-    $("a#signuplink").fancybox({
-        'transitionIn'	: 'none',
-        'transitionOut'	: 'fade',
-        'speedOut'	: 300,
-        'width'         : 412,
-        'height'        : 430,
-        'autoDimensions': false
-    });
     
 });

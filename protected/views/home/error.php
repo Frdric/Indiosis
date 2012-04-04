@@ -1,11 +1,11 @@
 <?php
 /*
- * - - - - - - - - - - - - - - - - - - - *
- * INDIOSIS                              *
- * The resource optimization community.  *
- * - - - - - - - - - - - - - - - - - - - *
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  * 
- * Default Error View
+ * VIEW : Error
  * Indiosis's error page.
  * 
  * @package     all
@@ -14,8 +14,10 @@
  */
 
 $this->pageTitle= Helpers::buildPageTitle('Oops !');
+Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/error.css');
+$this->layout='errors';
 ?>
-<h2>Oops... Indiosis generated an error!</h2>
+<h1>:-( Oops... Indiosis generated an error!</h1>
 <p>
    Sorry for any inconvinience it may have caused.
    If this is a recurent bug, our team will be working on it and fix the problem.

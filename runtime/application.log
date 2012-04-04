@@ -1,0 +1,1130 @@
+2012/03/30 13:11:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'indiosis'' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\CDbConnection.php:382
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModule.php(388): CDbConnection->init()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\ar\CActiveRecord.php(619): CApplication->getDb()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\ar\CActiveRecord.php(2267): CActiveRecord->getDbConnection()
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\ar\CActiveRecord.php(383): CActiveRecordMetaData->__construct(Object(Resource))
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\ar\CActiveRecord.php(398): CActiveRecord::model('Resource')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\InventoryController.php(32): CActiveRecord->__construct()
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): InventoryController->actionIndex()
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#15 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('inventory')
+#16 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#18 {main}
+REQUEST_URI=/indiosis/index.php?r=inventory
+---
+2012/03/30 13:15:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/1f70bf56/jquery.uniform.js".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/1f70bf56...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/assets/1f70bf56/jquery.uniform.js
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:15:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/b432dab0/jquery.js".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/b432dab0...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/assets/b432dab0/jquery.js
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:15:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/80cec344/jquery.tipTip.minified.js".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/80cec344...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/assets/80cec344/jquery.tipTip.minified.js
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:15:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/2c66fcf/main.js".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/2c66fcf/...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/assets/2c66fcf/main.js
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:15:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/aae41dd6/profile.js".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/aae41dd6...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/assets/aae41dd6/profile.js
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:15:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/b432dab0/jui/js/jquery-ui.min.js".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/b432dab0...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/assets/b432dab0/jui/js/jquery-ui.min.js
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:15:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/add.png".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/add.png')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/images/add.png
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:15:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/wrench.png".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/wrench.p...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/images/wrench.png
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:15:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/thumb_up.png".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/thumb_up...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/images/thumb_up.png
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:15:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/delete.png".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/delete.p...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/images/delete.png
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:15:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/small_business.png".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/small_bu...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/images/small_business.png
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:57:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/aae41dd6/profile.js".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/aae41dd6...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/assets/aae41dd6/profile.js
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:57:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/b432dab0/jquery.js".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/b432dab0...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/assets/b432dab0/jquery.js
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:57:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/80cec344/jquery.tipTip.minified.js".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/80cec344...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/assets/80cec344/jquery.tipTip.minified.js
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:57:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/b432dab0/jui/js/jquery-ui.min.js".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/b432dab0...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/assets/b432dab0/jui/js/jquery-ui.min.js
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:57:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/2c66fcf/main.js".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/2c66fcf/...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/assets/2c66fcf/main.js
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:57:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/1f70bf56/jquery.uniform.js".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/1f70bf56...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/assets/1f70bf56/jquery.uniform.js
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:57:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/wrench.png".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/wrench.p...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/images/wrench.png
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:57:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/delete.png".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/delete.p...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/images/delete.png
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:57:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/small_business.png".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/small_bu...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/images/small_business.png
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:57:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/thumb_up.png".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/thumb_up...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/images/thumb_up.png
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 13:57:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/add.png".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/add.png')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/index.php/images/add.png
+HTTP_REFERER=http://localhost/indiosis/index.php/profile
+---
+2012/03/30 14:23:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/tipTip.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/t...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/tipTip.css
+HTTP_REFERER=http://localhost/indiosis/profile
+---
+2012/03/30 14:23:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/fancybox/jquery.fancybox-1.3.4.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/fancybox/jq...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/fancybox/jquery.fancybox-1.3.4.css
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/03/30 14:23:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/New_Cicle_Fina-webfont.woff".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/New_Cicle_F...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/New_Cicle_Fina-webfont.woff
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/03/30 14:23:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'indiosis'' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\CDbConnection.php:382
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModule.php(388): CDbConnection->init()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\ar\CActiveRecord.php(619): CApplication->getDb()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\ar\CActiveRecord.php(2267): CActiveRecord->getDbConnection()
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\ar\CActiveRecord.php(383): CActiveRecordMetaData->__construct(Object(Resource))
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\ar\CActiveRecord.php(398): CActiveRecord::model('Resource')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\InventoryController.php(32): CActiveRecord->__construct()
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): InventoryController->actionIndex()
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#15 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('inventory')
+#16 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#18 {main}
+REQUEST_URI=/indiosis/inventory
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/03/30 14:31:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'indiosis'' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\CDbConnection.php:382
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModule.php(388): CDbConnection->init()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\ar\CActiveRecord.php(619): CApplication->getDb()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\ar\CActiveRecord.php(2267): CActiveRecord->getDbConnection()
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\ar\CActiveRecord.php(383): CActiveRecordMetaData->__construct(Object(Resource))
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\ar\CActiveRecord.php(398): CActiveRecord::model('Resource')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\InventoryController.php(32): CActiveRecord->__construct()
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): InventoryController->actionIndex()
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#15 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('inventory')
+#16 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#18 {main}
+REQUEST_URI=/indiosis/inventory
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/03/30 14:45:30 [error] [exception.CException] exception 'CException' with message 'The asset "D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\extensions\tiptip/jquery.tipTip.minified.js" to be published does not exist.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CAssetManager.php:239
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\profile\overview.php(23): CAssetManager->publish('D:\Fred ANDREAE...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', NULL, true)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', NULL, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('overview', NULL, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\ProfileController.php(32): CController->render('overview')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): ProfileController->actionIndex()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/03/30 15:52:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/03/30 15:54:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/03/30 16:00:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/03/30 16:02:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/03/30 16:03:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/03/30 16:06:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/03/30 16:06:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/03/30 16:07:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/03/30 16:11:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/03/30 16:12:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/03/30 16:14:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/03/30 16:14:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/03/30 16:15:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 08:27:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 08:30:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 08:31:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 08:33:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 08:36:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 08:36:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 08:37:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 08:37:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 08:37:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 08:38:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 08:39:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:15:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:25:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:26:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:27:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:28:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:28:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:28:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:28:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:29:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:29:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:29:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:29:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:37:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:37:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:37:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:37:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:38:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:38:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:39:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:39:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:39:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:40:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:40:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:40:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:40:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:40:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:40:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:40:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:40:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:40:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:41:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:41:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:41:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:41:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:41:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:42:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:42:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:42:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:43:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:43:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:43:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:43:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:43:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/02 14:44:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/indiosis_headerlogo.jpg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('images/indiosis...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/images/indiosis_headerlogo.jpg
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/03 08:52:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/03 08:52:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/03 08:52:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/03 08:52:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/03 09:09:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/03 09:09:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/03 09:10:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/03 09:16:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/03 09:17:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/03 09:18:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/03 09:22:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/03 09:24:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/03 09:24:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/03 09:24:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/03 09:24:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/03 14:46:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/sdf.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/sdf.css')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/sdf.css
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/04 07:04:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fdg".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('fdg')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/fdg
+---
+2012/04/04 07:04:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+---
+2012/04/04 07:06:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+---
+2012/04/04 07:06:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+---
+2012/04/04 07:08:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+---
+2012/04/04 09:06:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "repository".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('repository')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/repository
+HTTP_REFERER=http://localhost/indiosis/
+---

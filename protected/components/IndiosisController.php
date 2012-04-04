@@ -1,11 +1,11 @@
 <?php
 /*
- * - - - - - - - - - - - - - - - - - - - *
- * INDIOSIS                              *
- * The resource optimization community.  *
- * - - - - - - - - - - - - - - - - - - - *
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  * 
- * Indiosis Customized Base Controller
+ * CONTROLLER : Indiosis Base Controller
  * All controller classes of Indiosis should extend from this base class.
  * 
  * @package     base
@@ -15,8 +15,8 @@
 
 class IndiosisController extends CController
 {
-    // The default layout (none for indiosis)
-    //public $layout='//layouts/to_create';
+    // The default layout
+    public $layout='//layouts/primary';
     
     // Context menu items. This property will be assigned to {@link CMenu::items}.
     public $menu=array();

@@ -1,9 +1,9 @@
 <?php
 /* 
- * - - - - - - - - - - - - - - - - - - - *
- * INDIOSIS                              *
- * The resource optimization community.  *
- * - - - - - - - - - - - - - - - - - - - *
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  * 
  * Main Configuration File
  * Describes all the configuration variables of Indiosis.
@@ -61,8 +61,8 @@ return array(
         'indiosisEmail'=>'info@indiosis.com',
         'notificationEmail'=>'fred@roi-online.org',
         'adminEmail'=>'fred@roi-online.org',
-        'indiosisVersion' => 'alpha',
-        'indiosisVersionNumber' => '1',
+        'indiosisVersion' => 'beta',
+        'indiosisVersionNumber' => '0.2',
         'ajaxSuccess' => 'OK',
         'ajaxFailure' => 'ERROR',
     ),
@@ -88,12 +88,12 @@ return array(
         // Simplify URLs
         'urlManager'=>array(
             'urlFormat'=>'path',
+            'showScriptName'=>'false',
             'rules'=>array(
                 '<controller:\w+>/<id:\d+>'=>'<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
                 '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-            ),
-            'showScriptName'=>'false'
+            )
         ),
         
         // Setup the DB connexion

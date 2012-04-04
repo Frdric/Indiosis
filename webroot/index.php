@@ -1,10 +1,6 @@
 <?php
 /**
- * - - - - - - - - - - - - - - - - - - - *
- * INDIOSIS                              *
- * The resource optimization community.  *
- * - - - - - - - - - - - - - - - - - - - *
- *
+ * INDIOSIS
  * Application Bootstrap
  * This file is the only file accessible to the public.
  * 
