@@ -1,16 +1,16 @@
 <?php
 /*
- * - - - - - - - - - - - - - - - - - - - *
- * INDIOSIS                              *
- * The resource optimization community.  *
- * - - - - - - - - - - - - - - - - - - - *
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  * 
- * Home Controller
+ * CONTROLLER : Home Controller
  * Handles all home pages related actions.
  * 
  * @package     home
  * @author      Frederic Andreae
- * @copyright   Copyright (C) 2011, ROI
+ * @copyright   UNIL/ROI
  */
 
 class HomeController extends IndiosisController

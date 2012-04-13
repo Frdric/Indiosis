@@ -125,7 +125,7 @@ return array(
         // Specify the asset folder path
         'assetManager'=>array(
             'basePath'=>_joinpath($homePath,'webroot/assets'),
-            'baseUrl'=>'assets'
+            'baseUrl'=>'/indiosis/assets'
         )
     )
 );

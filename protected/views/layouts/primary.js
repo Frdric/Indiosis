@@ -12,7 +12,7 @@
  * @copyright   UNIL/ROI
  */
 
+
 $(document).ready(function() {
     
-    
-});
+}

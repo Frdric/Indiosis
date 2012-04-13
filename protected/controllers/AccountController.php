@@ -1,16 +1,16 @@
 <?php
 /*
- * - - - - - - - - - - - - - - - - - - - *
- * INDIOSIS                              *
- * The resource optimization community.  *
- * - - - - - - - - - - - - - - - - - - - *
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  * 
- * Account Controller
+ * CONTROLLER : Account
  * Handles all user account related actions (including registration and login).
  * 
- * @package     user
+ * @package     account
  * @author      Frederic Andreae
- * @copyright   Copyright (C) 2011, ROI
+ * @copyright   UNIL/ROI
  */
 
 class AccountController extends IndiosisController
@@ -142,5 +142,13 @@ class AccountController extends IndiosisController
     public function actionEditProfile()
     {
         $this->render('editprofile');
+    }
+    
+    /**
+     * Handles the login process. 
+     */
+    public function actionLogin()
+    {
+        $this->renderPartial('login');
     }
 }

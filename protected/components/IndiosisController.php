@@ -5,12 +5,12 @@
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
  * 
- * CONTROLLER : Indiosis Base Controller
- * All controller classes of Indiosis should extend from this base class.
+ * COMPONENT : Indiosis Base Controller
+ * All controller classes of Indiosis should extend this base class.
  * 
  * @package     base
  * @author      Frederic Andreae
- * @copyright   Copyright (C) 2011, ROI
+ * @copyright   UNIL/ROI
  */
 
 class IndiosisController extends CController

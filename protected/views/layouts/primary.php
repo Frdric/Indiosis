@@ -25,7 +25,6 @@
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/css_reset.css' ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/fonts/bitstream/fontface.css' ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/fonts/open-sans/fontface.css' ?>" />
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/jquery-ui/jquery-ui-1.8.16.indiosis.css' ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/main.css' ?>" />
         
     <title><?php echo CHtml::encode($this->pageTitle); ?></title>
@@ -40,11 +39,19 @@
         // Set global JS constants
         var BASE_URL = "'.Yii::app()->baseUrl.'";',
     CClientScript::POS_HEAD);
-?>
+    ?>
     <!-- LinkedIn API import -->
     <script type="text/javascript" src="http://platform.linkedin.com/in.js">
       api_key: L4gyxZw6qwgyw1Gc2baz0HutNqeIafCLf7WhjHklXyGnBvcL65-ysOa1smgdN3lc
+      authentication: true
     </script>
+    <?php
+    // Add fancybox to login link
+    $this->widget('application.extensions.fancybox.EFancyBox', array(
+        'target'=>'a#login_link',
+        'config'=>array("padding" => 0)
+    ));
+    ?>
 </head>
     
 <body>
@@ -53,17 +60,17 @@
         <!-- HEADER -->
         <div id="header_wrapper">
             <div id="header">
-                <a href="<?php echo Yii::app()->baseUrl; ?>/"><img src="<?php echo Yii::app()->baseUrl.'/images/indiosis_headerlogo.png'; ?>" alt="Indiosis" id="headerlogo"/></a>
+                <a href="<?php echo Yii::app()->baseUrl; ?>/"><img src="<?php echo Yii::app()->baseUrl.'/images/indiosis_headlogo.png'; ?>" alt="Indiosis" id="headerlogo"/></a>
                 <div id="topmenu">
                     <div class="topmenubutton"><a href="<?php echo Yii::app()->baseUrl; ?>/repository">PRACTICES<br/>REPOSITORY</a></div>
-                    <div class="topmenubutton monoline"><a href="<?php echo Yii::app()->baseUrl; ?>/profile">My PROFILE</a></div>
+                    <div class="topmenubutton monoline"><a href="<?php echo Yii::app()->baseUrl; ?>/profile">My INDIOSIS</a></div>
                     <div class="topmenubutton"><a href="<?php echo Yii::app()->baseUrl; ?>/about">EXPERTS<br/>CORNER</a></div>
                     <div id="searchfield"><input type="text" name="spractice" value="search symbiosis practices.." /></div>
                 </div>
             </div>
             <div id="infobar_wrapper">
                 <div id="infobar">
-                    <a href="login">Log In</a>
+                    <a href="account/login" id="login_link"><img src="<?php echo Yii::app()->baseUrl.'/images/login_lock.gif'; ?>" alt="Secure login" />Log In</a>
                 </div>
             </div>
         </div>
