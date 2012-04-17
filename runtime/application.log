@@ -3508,3 +3508,1159 @@ Stack trace:
 REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
 HTTP_REFERER=http://localhost/indiosis/
 ---
+2012/04/13 14:04:10 [error] [exception.CException] exception 'CException' with message 'The asset "D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account/login.js" to be published does not exist.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CAssetManager.php:239
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(18): CAssetManager->publish('D:\Fred ANDREAE...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', NULL, true)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', NULL, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(152): CController->renderPartial('login')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#13 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/13 14:04:18 [error] [exception.CException] exception 'CException' with message 'The asset "D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account/login.js" to be published does not exist.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CAssetManager.php:239
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(18): CAssetManager->publish('D:\Fred ANDREAE...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', NULL, true)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', NULL, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(152): CController->renderPartial('login')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#13 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/13 14:20:46 [error] [php] Use of undefined constant reparseLinkedIn - assumed 'reparseLinkedIn' (D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\layouts\primary.php:52)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(785): HomeController->renderFile()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\HomeController.php(40): HomeController->render()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): HomeController->runAction()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): HomeController->run()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\layouts\primary.php (52)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\HomeController.php (40)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/13 15:08:52 [error] [exception.CException] exception 'CException' with message 'AccountController contains improperly nested widget tags in its view "D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php". A IndiosisForm widget does not have an endWidget() call.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', NULL, true)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(153): CController->renderPartial('login')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/13 15:09:33 [error] [exception.CException] exception 'CException' with message 'AccountController contains improperly nested widget tags in its view "D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php". A IndiosisForm widget does not have an endWidget() call.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(153): CController->renderPartial('login', Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/13 15:09:51 [error] [exception.CException] exception 'CException' with message 'AccountController contains improperly nested widget tags in its view "D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php". A IndiosisForm widget does not have an endWidget() call.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(153): CController->renderPartial('login', Array, false, true)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/13 15:11:03 [error] [php] Undefined variable: model (D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:153)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/login
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (153)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/13 15:11:47 [error] [exception.CException] exception 'CException' with message 'AccountController contains improperly nested widget tags in its view "D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php". A CActiveForm widget does not have an endWidget() call.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(153): CController->renderPartial('login', Array, false, true)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/13 15:12:35 [error] [exception.CException] exception 'CException' with message 'AccountController contains improperly nested widget tags in its view "D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php". A CActiveForm widget does not have an endWidget() call.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(153): CController->renderPartial('login', Array, false, true)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/13 15:13:32 [error] [exception.CException] exception 'CException' with message 'AccountController contains improperly nested widget tags in its view "D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php". A CActiveForm widget does not have an endWidget() call.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(153): CController->renderPartial('login', Array, false, true)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/16 12:53:19 [error] [exception.CException] exception 'CException' with message 'Sorry, Buy you need to have the CURL extension enabled in order to be able to use the twitter class.' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\extensions\twitter\VGTwitter.php:191
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModule.php(388): VGTwitter->init()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModule.php(104): CModule->getComponent('twitter')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\home\home.php(116): CModule->__get('twitter')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', NULL, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', NULL, true)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('home', NULL, true)
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\HomeController.php(40): CController->render('home')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#14 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#16 {main}
+REQUEST_URI=/indiosis/
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/16 12:58:39 [error] [exception.CException] exception 'CException' with message '401' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\extensions\twitter\VGTwitter.php:349
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\extensions\twitter\VGTwitter.php(232): VGTwitter->doCall('statuses/user_t...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\home\home.php(116): VGTwitter->get()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', NULL, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', NULL, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('home', NULL, true)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\HomeController.php(40): CController->render('home')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#15 {main}
+REQUEST_URI=/indiosis/
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/16 12:59:29 [error] [exception.CException] exception 'CException' with message '401' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\extensions\twitter\VGTwitter.php:349
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\extensions\twitter\VGTwitter.php(232): VGTwitter->doCall('statuses/user_t...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\home\home.php(116): VGTwitter->get()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', NULL, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', NULL, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('home', NULL, true)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\HomeController.php(40): CController->render('home')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#15 {main}
+REQUEST_URI=/indiosis/
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/16 12:59:38 [error] [exception.CException] exception 'CException' with message '401' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\extensions\twitter\VGTwitter.php:349
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\extensions\twitter\VGTwitter.php(232): VGTwitter->doCall('statuses/user_t...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\home\home.php(116): VGTwitter->get()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', NULL, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', NULL, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('home', NULL, true)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\HomeController.php(40): CController->render('home')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#15 {main}
+REQUEST_URI=/indiosis/
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/16 15:21:55 [error] [exception.CException] exception 'CException' with message 'The asset "D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\home/repository.js" to be published does not exist.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CAssetManager.php:239
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\repository\repository.php(21): CAssetManager->publish('D:\Fred ANDREAE...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', NULL, true)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', NULL, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('repository', NULL, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\RepositoryController.php(21): CController->render('repository')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): RepositoryController->actionIndex()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('repository')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/repository
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/16 15:21:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/16 15:22:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/profile
+---
+2012/04/16 15:28:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/66381c65/css/uniform.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/66381c65...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/assets/66381c65/css/uniform.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/16 15:28:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/66381c65/css/uniform.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/66381c65...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/assets/66381c65/css/uniform.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/16 15:31:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/66381c65/css/uniform.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/66381c65...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/assets/66381c65/css/uniform.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/16 15:31:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/66381c65/css/uniform.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/66381c65...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/assets/66381c65/css/uniform.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 08:58:26 [error] [exception.CException] exception 'CException' with message 'IndiosisForm and its behaviors do not have a method or closure named "activeLabel".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(33): CComponent->__call('activeLabel', Array)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(33): IndiosisForm->activeLabel(Object(FormLogin), 'email')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(136): CController->renderPartial('login', Array, false, true)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 08:58:26 [error] [exception.CException] exception 'CException' with message 'IndiosisForm and its behaviors do not have a method or closure named "activeLabel".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(33): CComponent->__call('activeLabel', Array)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(33): IndiosisForm->activeLabel(Object(FormLogin), 'email')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(136): CController->renderPartial('login', Array, false, true)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 08:58:26 [error] [exception.CException] exception 'CException' with message 'IndiosisForm and its behaviors do not have a method or closure named "activeLabel".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(33): CComponent->__call('activeLabel', Array)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(33): IndiosisForm->activeLabel(Object(FormLogin), 'email')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(136): CController->renderPartial('login', Array, false, true)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 08:59:02 [error] [exception.CException] exception 'CException' with message 'IndiosisForm and its behaviors do not have a method or closure named "activeLabel".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(33): CComponent->__call('activeLabel', Array)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(33): IndiosisForm->activeLabel(Object(FormLogin), 'email')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(136): CController->renderPartial('login', Array, false, true)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 08:59:24 [error] [exception.CException] exception 'CException' with message 'IndiosisForm and its behaviors do not have a method or closure named "activeLabel".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(33): CComponent->__call('activeLabel', Array)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(33): IndiosisForm->activeLabel(Object(FormLogin), 'email')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(136): CController->renderPartial('login', Array, false, true)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 09:00:10 [error] [exception.CException] exception 'CException' with message 'IndiosisForm and its behaviors do not have a method or closure named "activeLabel".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(33): CComponent->__call('activeLabel', Array)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(33): IndiosisForm->activeLabel(Object(FormLogin), 'email')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(136): CController->renderPartial('login', Array, false, true)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 09:00:15 [error] [exception.CException] exception 'CException' with message 'IndiosisForm and its behaviors do not have a method or closure named "activeLabel".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(33): CComponent->__call('activeLabel', Array)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(33): IndiosisForm->activeLabel(Object(FormLogin), 'email')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(136): CController->renderPartial('login', Array, false, true)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 09:00:53 [error] [exception.CException] exception 'CException' with message 'IndiosisForm and its behaviors do not have a method or closure named "activeLabel".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(32): CComponent->__call('activeLabel', Array)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(32): IndiosisForm->activeLabel(Object(FormLogin), 'email')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(136): CController->renderPartial('login', Array, false, true)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 09:00:58 [error] [exception.CException] exception 'CException' with message 'IndiosisForm and its behaviors do not have a method or closure named "activeLabel".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(32): CComponent->__call('activeLabel', Array)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(32): IndiosisForm->activeLabel(Object(FormLogin), 'email')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(136): CController->renderPartial('login', Array, false, true)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 09:01:11 [error] [exception.CException] exception 'CException' with message 'IndiosisForm and its behaviors do not have a method or closure named "activeLabel".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(28): CComponent->__call('activeLabel', Array)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(28): IndiosisForm->activeLabel(Object(FormLogin), 'email')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(136): CController->renderPartial('login', Array, false, true)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 09:01:15 [error] [exception.CException] exception 'CException' with message 'IndiosisForm and its behaviors do not have a method or closure named "activeLabel".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(28): CComponent->__call('activeLabel', Array)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(28): IndiosisForm->activeLabel(Object(FormLogin), 'email')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(136): CController->renderPartial('login', Array, false, true)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 09:02:17 [error] [exception.CException] exception 'CException' with message 'IndiosisForm and its behaviors do not have a method or closure named "activeLabel".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(33): CComponent->__call('activeLabel', Array)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\login.php(33): IndiosisForm->activeLabel(Object(FormLogin), 'email')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(136): CController->renderPartial('login', Array, false, true)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLogin()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('login')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/login')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/account/login
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 12:06:37 [error] [php] Undefined index: FormLogin (D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:158)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/authenticate?_=1334664397590
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (158)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/17 12:19:06 [error] [exception.CException] exception 'CException' with message 'Property "FormLogin._identity" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:174
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\models\forms\FormLogin.php(53): CComponent->__set('_identity', Object(IndiosisUserID))
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CInlineValidator.php(43): FormLogin->authenticate('password', Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(FormLogin), 'password')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(158): CValidator->validate(Object(FormLogin), NULL)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CActiveForm.php(833): CModel->validate(NULL)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(148): CActiveForm::validate(Object(FormLogin))
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionValidateLogin()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('validatelogin')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/validat...')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/account/validatelogin
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 12:19:07 [error] [exception.CException] exception 'CException' with message 'Property "FormLogin._identity" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:174
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\models\forms\FormLogin.php(53): CComponent->__set('_identity', Object(IndiosisUserID))
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CInlineValidator.php(43): FormLogin->authenticate('password', Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(FormLogin), 'password')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(158): CValidator->validate(Object(FormLogin), NULL)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CActiveForm.php(833): CModel->validate(NULL)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(148): CActiveForm::validate(Object(FormLogin))
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionValidateLogin()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('validatelogin')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/validat...')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/account/validatelogin
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 12:20:29 [error] [exception.CException] exception 'CException' with message 'Property "FormLogin._identity" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:174
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\models\forms\FormLogin.php(53): CComponent->__set('_identity', Object(IndiosisUserID))
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CInlineValidator.php(43): FormLogin->authenticate('password', Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(FormLogin), 'password')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(158): CValidator->validate(Object(FormLogin), NULL)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CActiveForm.php(833): CModel->validate(NULL)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(147): CActiveForm::validate(Object(FormLogin))
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionValidateLogin()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('validatelogin')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/validat...')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/account/validatelogin
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 12:21:47 [error] [exception.CException] exception 'CException' with message 'Property "FormLogin._identity" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:174
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\models\forms\FormLogin.php(53): CComponent->__set('_identity', Object(IndiosisUserID))
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CInlineValidator.php(43): FormLogin->authenticate('password', Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(FormLogin), 'password')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(158): CValidator->validate(Object(FormLogin), NULL)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CActiveForm.php(833): CModel->validate(NULL)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(147): CActiveForm::validate(Object(FormLogin))
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionValidateLogin()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('validatelogin')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/validat...')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/account/validatelogin
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 12:21:50 [error] [exception.CException] exception 'CException' with message 'Property "FormLogin._identity" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:174
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\models\forms\FormLogin.php(53): CComponent->__set('_identity', Object(IndiosisUserID))
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CInlineValidator.php(43): FormLogin->authenticate('password', Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(FormLogin), 'password')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(158): CValidator->validate(Object(FormLogin), NULL)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CActiveForm.php(833): CModel->validate(NULL)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(147): CActiveForm::validate(Object(FormLogin))
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionValidateLogin()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('validatelogin')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/validat...')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/account/validatelogin
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 12:23:59 [error] [exception.CException] exception 'CException' with message 'Property "IndiosisUserID.email" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IndiosisUserId.php(21): CComponent->__get('email')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\models\forms\FormLogin.php(54): IndiosisUserID->authenticate()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CInlineValidator.php(43): FormLogin->authenticate('password', Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(FormLogin), 'password')
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(158): CValidator->validate(Object(FormLogin), NULL)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CActiveForm.php(833): CModel->validate(NULL)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(147): CActiveForm::validate(Object(FormLogin))
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionValidateLogin()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('validatelogin')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/validat...')
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#15 {main}
+REQUEST_URI=/indiosis/account/validatelogin
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 12:24:00 [error] [exception.CException] exception 'CException' with message 'Property "IndiosisUserID.email" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IndiosisUserId.php(21): CComponent->__get('email')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\models\forms\FormLogin.php(54): IndiosisUserID->authenticate()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CInlineValidator.php(43): FormLogin->authenticate('password', Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(FormLogin), 'password')
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(158): CValidator->validate(Object(FormLogin), NULL)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CActiveForm.php(833): CModel->validate(NULL)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(147): CActiveForm::validate(Object(FormLogin))
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionValidateLogin()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('validatelogin')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/validat...')
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#15 {main}
+REQUEST_URI=/indiosis/account/validatelogin
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 12:24:04 [error] [exception.CException] exception 'CException' with message 'Property "IndiosisUserID.email" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IndiosisUserId.php(21): CComponent->__get('email')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\models\forms\FormLogin.php(54): IndiosisUserID->authenticate()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CInlineValidator.php(43): FormLogin->authenticate('password', Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(FormLogin), 'password')
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(158): CValidator->validate(Object(FormLogin), NULL)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CActiveForm.php(833): CModel->validate(NULL)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(147): CActiveForm::validate(Object(FormLogin))
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionValidateLogin()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('validatelogin')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/validat...')
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#15 {main}
+REQUEST_URI=/indiosis/account/validatelogin
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 12:24:05 [error] [exception.CException] exception 'CException' with message 'Property "IndiosisUserID.email" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IndiosisUserId.php(21): CComponent->__get('email')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\models\forms\FormLogin.php(54): IndiosisUserID->authenticate()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CInlineValidator.php(43): FormLogin->authenticate('password', Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(FormLogin), 'password')
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(158): CValidator->validate(Object(FormLogin), NULL)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CActiveForm.php(833): CModel->validate(NULL)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(147): CActiveForm::validate(Object(FormLogin))
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionValidateLogin()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('validatelogin')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/validat...')
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#15 {main}
+REQUEST_URI=/indiosis/account/validatelogin
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 12:25:45 [error] [exception.CException] exception 'CException' with message 'Property "IndiosisUserID.email" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IndiosisUserId.php(21): CComponent->__get('email')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\models\forms\FormLogin.php(54): IndiosisUserID->authenticate()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CInlineValidator.php(43): FormLogin->authenticate('password', Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(FormLogin), 'password')
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(158): CValidator->validate(Object(FormLogin), NULL)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CActiveForm.php(833): CModel->validate(NULL)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(147): CActiveForm::validate(Object(FormLogin))
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionValidateLogin()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('validatelogin')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/validat...')
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#15 {main}
+REQUEST_URI=/indiosis/account/validatelogin
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 12:28:34 [error] [exception.CException] exception 'CException' with message 'Property "IndiosisUserID.email" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IndiosisUserId.php(21): CComponent->__get('email')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(164): IndiosisUserID->authenticate()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionAuthenticate()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('authenticate')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/authent...')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/account/authenticate
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 12:30:20 [error] [exception.CException] exception 'CException' with message 'Property "IndiosisUserID.email" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IndiosisUserId.php(21): CComponent->__get('email')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(164): IndiosisUserID->authenticate()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionAuthenticate()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('authenticate')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/authent...')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/account/authenticate
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 12:30:51 [error] [exception.CException] exception 'CException' with message 'Property "IndiosisUserID.email" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IndiosisUserId.php(21): CComponent->__get('email')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(165): IndiosisUserID->authenticate()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionAuthenticate()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('authenticate')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/authent...')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/account/authenticate
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 12:32:32 [error] [exception.CException] exception 'CException' with message 'Property "IndiosisUserID.email" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IndiosisUserId.php(21): CComponent->__get('email')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(165): IndiosisUserID->authenticate()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionAuthenticate()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('authenticate')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/authent...')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/account/authenticate
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 12:32:45 [error] [exception.CException] exception 'CException' with message 'Property "IndiosisUserID.email" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IndiosisUserId.php(21): CComponent->__get('email')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(165): IndiosisUserID->authenticate()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionAuthenticate()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('authenticate')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/authent...')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/account/authenticate
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 12:33:14 [error] [exception.CException] exception 'CException' with message 'Property "IndiosisUserID.email" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IndiosisUserId.php(21): CComponent->__get('email')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(165): IndiosisUserID->authenticate()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionAuthenticate()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('authenticate')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/authent...')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/account/authenticate
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 13:06:22 [error] [exception.CException] exception 'CException' with message 'Property "IndiosisUserID.firstName" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IndiosisUserId.php(30): CComponent->__get('firstName')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\models\forms\FormLogin.php(54): IndiosisUserID->authenticate()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CInlineValidator.php(43): FormLogin->authenticate('password', Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(FormLogin), 'password')
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(158): CValidator->validate(Object(FormLogin), NULL)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CActiveForm.php(833): CModel->validate(NULL)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(161): CActiveForm::validate(Object(FormLogin))
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionAuthenticate()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('authenticate')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/authent...')
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#15 {main}
+REQUEST_URI=/indiosis/account/authenticate
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 13:08:14 [error] [exception.CException] exception 'CException' with message 'Property "IndiosisUserID.name" is read only.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:171
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IndiosisUserId.php(30): CComponent->__set('name', 'Megha Shenoy')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\models\forms\FormLogin.php(54): IndiosisUserID->authenticate()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CInlineValidator.php(43): FormLogin->authenticate('password', Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(FormLogin), 'password')
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(158): CValidator->validate(Object(FormLogin), NULL)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CActiveForm.php(833): CModel->validate(NULL)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(161): CActiveForm::validate(Object(FormLogin))
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionAuthenticate()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('authenticate')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/authent...')
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#15 {main}
+REQUEST_URI=/indiosis/account/authenticate
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 13:13:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "home".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php:484
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(271): CController->missingAction('home')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('home')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/home')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#5 {main}
+REQUEST_URI=/indiosis/account/home
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 13:18:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 13:22:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 13:23:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+---
+2012/04/17 13:23:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/profile
+---
+2012/04/17 13:23:55 [error] [exception.CException] exception 'CException' with message 'The asset "D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\home/repository.js" to be published does not exist.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CAssetManager.php:239
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\repository\repository.php(21): CAssetManager->publish('D:\Fred ANDREAE...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', NULL, true)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', NULL, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('repository', NULL, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\RepositoryController.php(21): CController->render('repository')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): RepositoryController->actionIndex()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('repository')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/repository
+---
+2012/04/17 13:24:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/profile
+---
+2012/04/17 13:24:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 13:24:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/profile
+---
+2012/04/17 13:28:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php:484
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('register')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/registe...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#5 {main}
+REQUEST_URI=/indiosis/index.php/account/register
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 13:28:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/index.php/account/register
+---
+2012/04/17 13:30:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 13:30:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/profile
+---
+2012/04/17 14:20:43 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.firsName" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\auth\CWebUser.php(141): CComponent->__get('firsName')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\layouts\primary.php(78): CWebUser->__get('firsName')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(785): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\HomeController.php(40): CController->render('home')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 14:21:16 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.firsName" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\auth\CWebUser.php(141): CComponent->__get('firsName')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\layouts\primary.php(78): CWebUser->__get('firsName')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(785): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\HomeController.php(40): CController->render('home')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/
+---
+2012/04/17 14:23:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 14:23:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/profile
+---
+2012/04/17 14:23:40 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.firsName" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\auth\CWebUser.php(141): CComponent->__get('firsName')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\layouts\primary.php(79): CWebUser->__get('firsName')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(785): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\HomeController.php(40): CController->render('home')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/indiosis/
+---
+2012/04/17 14:24:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 14:24:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/profile
+---
+2012/04/17 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/17 14:25:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/profile
+---

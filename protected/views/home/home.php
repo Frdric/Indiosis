@@ -17,16 +17,19 @@ $this->pageTitle= Helpers::buildPageTitle("Home");
 
 Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/home.css');
 
+Yii::app()->clientScript->registerScriptFile("http://widgets.twimg.com/j/2/widget.js");
+Yii::app()->clientScript->registerScriptFile("https://apis.google.com/js/plusone.js");
 Yii::app()->clientScript->registerScriptFile(
     Yii::app()->assetManager->publish(Yii::getPathOfAlias('application.views.home')."/home.js"),
     CClientScript::POS_END
 );
 ?>
+
 <!-- HOME PAGE CONTENT -->
 <div id="home_txt">
     <div id="features_description" class="visible">
         <h1>Industrial symbiosis made easy.</h1>
-        <p>Indiosis is a collaborative platform for industrial symbiosis *.<br/>It helps you find business partners and symbiotic practices that best fit your company.</p>
+        <p>Indiosis is a collaborative platform for industrial symbiosis*.<br/>It helps you find business partners and symbiotic practices that best fit your company.</p>
     </div>
     <div id="txt_feature1">
         <h1>Free access to our repository of symbiotic practices.</h1>
@@ -75,8 +78,58 @@ Yii::app()->clientScript->registerScriptFile(
     </div>
     <p id="signup_note">We recommand using your LinkedIn account<br/>as it will allow Indiosis to better suggest you with synergy partners.</p>
 </div>
-
-<h3>// News and Activities</h3>
+<div id="news_area_wrapper">
+    <div id="news_area">
+        <hr/>
+        <h3>// News and Activities</h3>
+        <script>
+            new TWTR.Widget({
+            version: 2,
+            type: 'profile',
+            rpp: 4,
+            interval: 30000,
+            width: 'auto',
+            height: 100,
+            theme: {
+                shell: {
+                background: 'transparent',
+                color: '#808080'
+                },
+                tweets: {
+                background: 'transparent',
+                color: '#333333',
+                links: '#2581a9'
+                }
+            },
+            features: {
+                scrollbar: false,
+                loop: false,
+                hashtags: false,
+                live: false,
+                behavior: 'default',
+                avatars: false,
+                favorite: false
+            }
+            }).render().setUser('indiosis').start();
+            </script>
+    </div>
+    <div id="subscribe_area">
+        <!-- Twitter Follow button -->
+        <a href="https://twitter.com/indiosis" class="twitter-follow-button" data-show-count="false">Follow @indiosis</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <!-- LinkedIn Share button -->
+        &nbsp;<script type="IN/Share" data-url="http://www.indiosis.com" data-counter="right"></script>
+        <!-- Google +1 button -->
+        &nbsp;<div class="g-plusone" data-size="medium" data-annotation="none" data-href="http://www.indiosis.com"></div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <h4>Supported by</h4>
+        <a href="http://www.unil.ch/prime" target="_blank" class="logo_link"><img src="<?php echo Yii::app()->baseUrl.'/images/unil_logo.png'; ?>" alt="UNIL / PRIME"/></a>
+        <a href="http://www.roionline.org" target="_blank" class="logo_link"><img src="<?php echo Yii::app()->baseUrl.'/images/roi_logo.png'; ?>" alt="ROI - Resource Optimization Initiative"/></a>
+    </div>
+</div>
 <div id="what_is">
     <h2>What is<br/><span>INDUSTRIAL SYMBIOSIS</span> ?</h2>
     <p>Industrial symbiosis can be defined as sharing of services, utility and by-product resources among diverse industrial actors in order to add value, reduce costs and improve the environement.</p>

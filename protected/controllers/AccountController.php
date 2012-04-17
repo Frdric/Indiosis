@@ -16,25 +16,19 @@
 class AccountController extends IndiosisController
 {
     
-    /**
-     * Declares class-based actions.
-     */
-    public function actions()
-    {
-    }
+    public function actions() {}
 
     /**
-     * This is the default 'index' action that is invoked
-     * when an action is not explicitly requested by users.
+     * Default action.
      */
     public function actionIndex()
-    {
+    { 
         $this->render('overview');
     }
     
     
     /**
-     * AJAX - Handles the registration process.
+     * AJAX > Handles the registration process.
      */
     public function actionSignUp()
     {
@@ -86,7 +80,7 @@ class AccountController extends IndiosisController
     
     
     /*
-     * AJAX/JSON - Handles of the sign up form ajax validation.
+     * AJAX > Handles of the sign up form ajax validation.
      */
     public function actionValidateSignUp()
     {
@@ -98,6 +92,22 @@ class AccountController extends IndiosisController
         }
     }
     
+    /**
+     * AJAX > Register a new LinkedIn member User.
+     */
+    public function actionLinkedInRegister()
+    {
+        $newLinkedInUser = new User;
+        $newLinkedInUser->linkedIn_id = $_POST['id'];
+        $newLinkedInUser->firstName = $_POST['firstName'];
+        $newLinkedInUser->lastName = $_POST['lastName'];
+        $newLinkedInUser->isExpert = 0;
+        $newLinkedInUser->date_joined = date("Y-m-d");
+        $newLinkedInUser->verified = 1;
+        if($newLinkedInUser->save()) {
+            echo CJSON::encode($newLinkedInUser->getAttributes());
+        }
+    }
     
     /**
      * Verifiy account using confirmation code sent by email.
@@ -117,38 +127,34 @@ class AccountController extends IndiosisController
         $this->render('verifyaccount',array('verified'=>$verified,'user'=>$user));
     }
     
-    
     /**
-     * AJAX/JSON - Register a new LinkedIn member User.
-     */
-    public function actionLinkedInRegister()
-    {
-        $newLinkedInUser = new User;
-        $newLinkedInUser->linkedIn_id = $_POST['id'];
-        $newLinkedInUser->firstName = $_POST['firstName'];
-        $newLinkedInUser->lastName = $_POST['lastName'];
-        $newLinkedInUser->isExpert = 0;
-        $newLinkedInUser->date_joined = date("Y-m-d");
-        $newLinkedInUser->verified = 1;
-        if($newLinkedInUser->save()) {
-            echo CJSON::encode($newLinkedInUser->getAttributes());
-        }
-        
-    }
-    
-    /**
-     * Handles the profile edition page.
-     */
-    public function actionEditProfile()
-    {
-        $this->render('editprofile');
-    }
-    
-    /**
-     * Handles the login process. 
+     * Log In box action.
      */
     public function actionLogin()
     {
-        $this->renderPartial('login');
+        $model = new FormLogin;
+        $this->renderPartial('login',array('model'=>$model),false,true);
+    }
+    
+    /**
+     * AJAX > Authenticate an Indiosis User. 
+     */
+    public function actionAuthenticate()
+    {
+        $model = new FormLogin;
+        if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+        {
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+    }
+    
+    /**
+     * AJAX > Authenticate an Indiosis User. 
+     */
+    public function actionLogout()
+    {
+        Yii::app()->user->logout();
+        Yii::app()->request->redirect(Yii::app()->baseUrl.'/');
     }
 }

@@ -53,6 +53,7 @@ return array(
     // Autoloading model and component classes
     'import'=>array(
         'application.models.*',
+        'application.models.forms.*',
         'application.components.*',
     ),
     

@@ -14,7 +14,7 @@
 class EUniform extends CWidget
 {
 	public $selector = 'select, input, textarea';
-	public $theme = 'default';
+	public $theme = 'indiosis';
 	public $options;
 
 	public function init()

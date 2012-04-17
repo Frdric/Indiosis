@@ -49,7 +49,7 @@
     // Add fancybox to login link
     $this->widget('application.extensions.fancybox.EFancyBox', array(
         'target'=>'a#login_link',
-        'config'=>array("padding" => 0)
+        'config'=>array("padding" => 0, 'onComplete'=>'js:reparseLinkedIn')
     ));
     ?>
 </head>
@@ -70,7 +70,14 @@
             </div>
             <div id="infobar_wrapper">
                 <div id="infobar">
-                    <a href="account/login" id="login_link"><img src="<?php echo Yii::app()->baseUrl.'/images/login_lock.gif'; ?>" alt="Secure login" />Log In</a>
+                    <?php
+                    if(Yii::app()->user->isGuest) {
+                        echo '<a href="'.Yii::app()->baseUrl.'/account/login" id="login_link"><img src="'.Yii::app()->baseUrl.'/images/login_lock.gif'.'" alt="Secure login" />Log In</a>';
+                    }
+                    else {
+                        echo "Connected as ".Yii::app()->user->firstName." ".Yii::app()->user->lastName.' | '.'<a href="'.Yii::app()->baseUrl.'/account/logout">Logout</a>';
+                    }
+                    ?>
                 </div>
             </div>
         </div>

@@ -12,7 +12,6 @@
  * @copyright   UNIL/ROI
  */
 
-
-$(document).ready(function() {
-    
+function reparseLinkedIn() {
+    IN.parse();
 }

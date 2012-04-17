@@ -70,9 +70,10 @@ div.feature_subtitle {
     margin-bottom: 14px;
 }
 
+/* -- REGISTER AREA -- */
 #register_area {
     margin-top: 20px;
-    height: 210px;
+    height: 230px;
     text-align: center;
 }
 #register_area h2 {
@@ -169,6 +170,39 @@ p#signup_subtitle {
 p#signup_note {
     clear: both;
     color: #999;
+}
+
+/* -- NEWS AREA -- */
+#news_area_wrapper {
+    height: 350px;
+}
+#news_area {
+    float: left;
+    width: 650px;
+}
+#news_area .twtr-hd, #news_area .twtr-ft, #news_area .twtr-reply {
+    display: none;
+}
+#news_area div.twtr-tweet {
+    border-bottom: dashed 1px #DDD;
+}
+#news_area div.twtr-tweet-wrap {
+    padding: 11px 0 13px;
+}
+#news_area div.twtr-tweet-text em a {
+    font-family: "OpenSansLight";
+    font-size: 11px;
+}
+#subscribe_area {
+    float: right;
+    width: 290px;
+    text-align: right;
+    padding-top: 10px;
+}
+#subscribe_area a.logo_link {
+    float: right;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 #what_is {

@@ -23,8 +23,8 @@
     color: white;
 }
 a {
-    color:#2582A9;
-    text-decoration:none;
+    color: #2582A9;
+    text-decoration: none;
 }
 #infobar a {
     color: inherit;
@@ -59,6 +59,14 @@ h3 {
     color: #666;
     margin: 0 0 10px;
 }
+h4 {
+    font-family: "OpenSansLight", Arial, sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    color: #B6B6B6;
+    margin: 0 0 10px;
+    text-shadow: 0px 2px 2px white;
+}
 p {
     font-family: "Bitstream", Georgia, serif;
     font-size: 13px;
@@ -76,6 +84,10 @@ hr {
     border-right: none;
     margin: 10px 0;
 }
+hr.ongray {
+    border-top: solid 1px #CCC;
+    border-bottom: solid 1px white;
+}
 input {
     font-family: "OpenSansRegular", Arial, sans-serif;
     font-size: 11px;
@@ -85,8 +97,7 @@ input {
     border: solid 1px #AAA;
 }
 input:focus {
-    border: solid 1px #2582A9;
-    color: red;
+    color: #2582A9;
 }
 
 /* - OVERALL LAYOUT - */
@@ -231,7 +242,7 @@ body {
     filter: none; /* for IE9 support */
 }
 /* Indiosis buttons */
-.ibutton {
+.ibutton, .button {
     display: inline-block;
     outline: none;
     text-align: center;
@@ -301,10 +312,82 @@ body {
 }
 
 /* Login Box */
-div.login_box {
-    width: 300px;
-    height: 200px;
-}
 div#fancybox-content {
     background-color: #EEE;
+}
+div.login_box {
+    width: 550px;
+    height: 250px;
+    font-family: "OpenSansRegular";
+}
+div.login_box h3 {
+    font-size: 16px;
+    color: #444;
+}
+div.login_box div.register_side h3 {
+    color: #555;
+    font-family: "OpenSansRegular";
+}
+div.login_box div.login_side, div.login_box div.register_side {
+    float: left;
+    margin: 15px 0 15px 15px;
+    padding: 0 25px 0 0;
+    width: 280px;
+    height: 167px;
+    border-right: solid 1px #D1D1D1;
+}
+div.login_box div.register_side {
+    width: 180px;
+    border-right: none;
+    padding: 0 0 0 25px;
+    margin: 15px 15px 15px 0;
+}
+div.login_box div.login_line {
+    height: 45px;
+}
+div.login_box input.text, div.login_box input.password {
+    width: 194px;
+}
+div.login_box label {
+    width: 75px;
+    font-family: "OpenSansSemibold";
+    font-size: 13px;
+    padding-top: 9px;
+    display: block;
+    float: left;
+    text-transform: capitalize;
+}
+div.login_box div.login_side label.rememberme {
+    float:left;
+    padding-top: 3px;
+    width: 100px;
+}
+div.login_box div.errorSummary {
+    color: #C83A2C;
+    font-family: "OpenSansRegular";
+    height: 14px;
+    margin-top: 10px;
+    overflow: hidden;
+    float: left;
+}
+div.login_box .checker {
+    float: left;
+}
+div.login_box div.button {
+    float: right;
+}
+div.login_box div.pw_forgot {
+    clear: both;
+    padding: 20px 15px 0;
+    height: 32px;
+    background-color: #E1E1E1;
+    font-family: "OpenSansSemibold";
+    text-shadow: 0px 1px 1px #F2F2F2;
+    border-top: solid 1px #CCC;
+}
+div.login_box div.pw_forgot span {
+    font-family: "OpenSansLight";
+    font-size: 17px;
+    color: #888;
+    text-shadow: none;
 }
