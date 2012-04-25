@@ -27,8 +27,9 @@ a {
     text-decoration: none;
 }
 #infobar a {
-    color: inherit;
+    color: white;
     padding: 2px;
+    font-family: "OpenSansSemibold";
 }
 a:hover {
     text-decoration: underline;
@@ -46,15 +47,17 @@ h1 {
     margin: 0 0 18px 0;
 }
 h2 {
-    font-family: "OpenSansRegular", Arial, sans-serif;
-    font-size: 30px;
-    font-weight: normal;
-    color: #2582A9;
-    margin-top: 0;
-}
-h3 {
     font-family: "OpenSansSemibold", Arial, sans-serif;
     font-size: 18px;
+    font-weight: normal;
+    color: #2582A9;
+    margin: 0 0 13px;
+    padding-bottom: 7px;
+    border-bottom: solid 1px #BBB;
+}
+h3 {
+    font-family: "Bitstream", Georgia, serif;
+    font-size: 19px;
     font-weight: normal;
     color: #666;
     margin: 0 0 10px;
@@ -88,7 +91,19 @@ hr.ongray {
     border-top: solid 1px #CCC;
     border-bottom: solid 1px white;
 }
-input {
+div.lined_heading {
+  border-bottom: solid 1px #DFDFDF;
+  margin-bottom: 15px;
+}
+div.lined_heading h1, div.lined_heading h2, div.lined_heading h3 {
+    display:inline-block;
+    position:relative;
+    top:18px;
+    padding-right: 12px;
+    background-image: url("../images/grained_back.gif");
+    background-repeat: repeat;
+}
+input:not(.ibutton):not(.ibutton_big) {
     font-family: "OpenSansRegular", Arial, sans-serif;
     font-size: 11px;
     padding: 0;
@@ -96,7 +111,7 @@ input {
     text-indent: 4px;
     border: solid 1px #AAA;
 }
-input:focus {
+input:not(.ibutton):focus {
     color: #2582A9;
 }
 
@@ -116,9 +131,12 @@ body {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -70px; /* <-- always same as footer_wrapper height! */
+    margin: 0 auto -160px; /* <-- always same as footer_wrapper height! */
+    box-shadow: inset 0px 130px 100px 0px white;
+    -moz-box-shadow: inset 0px 130px 100px 0px white;
+    -webkit-box-shadow: inset 0px 130px 100px 0px white;
 }
-#header, #infobar, #main_content, #footer {
+#header, #infobar, #main_content, #footer, #copyright {
     margin: 0 auto;
     width: 980px; /* <-- Site's General Width */
 }
@@ -142,13 +160,16 @@ body {
     border-top: solid 1px #DADADA;
     border-bottom: solid 1px #444;
 }
+#toplogo {
+    float: left;
+    margin-right: 140px;
+}
 #topmenu {
     float: right;
-    width: 536px;
     height: 77px;
     border-left: solid 1px #AAA;
 }
-#topmenu div.topmenubutton, #searchfield {
+#topmenu div.topmenubutton {
     float: left;
 }
 #topmenu div.topmenubutton {
@@ -192,19 +213,23 @@ body {
     background-position: 50% 73px;
 }
 #searchfield {
+    float: left;
     height: 50px;
     border-left: solid 1px #FBFBFB;
-    padding: 27px 0 0 19px;
+    padding: 27px 0 0;
 }
 #searchfield input {
     width: 180px;
-    color: #AAA;
     border: solid 1px #BABABA;
     border-radius: 15px;
     background-image: url("../images/searchmag.gif");
     background-repeat: no-repeat;
     background-position: 8px 5px;
     text-indent: 27px;
+    margin-left: 20px;
+}
+#searchfield input.empty {
+    color: #AAA;
 }
 #infobar {
     margin-top: 8px;
@@ -212,103 +237,121 @@ body {
     color: white;
     text-align: right;
 }
+#infobar.logged {
+    margin-top: 9px;
+    font-family: "OpenSansRegular";
+    font-size: 11px;
+    color: #FAFAFA;
+}
 #infobar img {
     margin-right: 6px;
 }
+
 #footer_push {
-    height: 110px;
+    height: 190px; /* <-- always bigger than footer  */
 }
 #footer_wrapper {
-    height: 108px; /* <-- always same as wrapper bottom margin ! */
-    background-color: #EEE;
+    height: 158px; /* <-- always same as wrapper bottom margin ! */
+    background-color: #EFEFEF;
     border-top: solid 2px white;
 }
 #footer_inwrapper {
-    border-top: solid 1px #DDD;
-    font-family: Verdana;
+    border-top: solid 1px #D7D7D7;
     font-size: 11px;
-    color: #888;
-    text-align: center;
+    color: #AAA;
     line-height: 15px;
+    box-shadow: inset 0px 2px 8px 0px #E1E1E1;
+    -moz-box-shadow: inset 0px 2px 8px 0px #E1E1E1;
+    -webkit-box-shadow: inset 0px 2px 8px 0px #E1E1E1;
 }
 #footer {
-    margin-top: 12px;
-    margin-bottom: 28px;
-    color: #666;
+    height: 70px;
+    margin-top: 16px;
+    border-bottom: solid 1px #CFCFCF;
+    color: #999;
 }
-
-/* - SITE-WIDE ELEMENTS - */
-.gradient {
-    filter: none; /* for IE9 support */
+#footer_links, #copyright div:first-child, #footer_supportedby a {
+    float: left;
 }
-/* Indiosis buttons */
-.ibutton, .button {
-    display: inline-block;
-    outline: none;
-    text-align: center;
-    text-decoration: none;
-    font-family: "OpenSansSemibold";
+#footer_supportedby, #support_note, #copyright div:last-child {
+    float: right;
+}
+#footer_supportedby a, #support_note {
+    margin-left: 15px;
+}
+#footer_supportedby a {
+    opacity: 0.8;
+    margin-top: 1px;
+}
+#footer_supportedby a:first-child {
+    opacity: 0.6;
+}
+#footer_supportedby a:hover {
+    opacity: 1;
+}
+#footer_supportedby a:first-child:hover {
+    opacity: 0.8;
+}
+#footer_links {
+    font-family: "Verdana";
+    font-size: 13px;
+    line-height: 8px;
+}
+#footer_links h4 {
+    margin-bottom: 13px;
+    text-shadow: 0px 1px 1px white;
+    font-size: 15px;
+    color: #AAA;
+}
+#footer_links span {
+    font-size: 8px;
+    font-family: "Arial";
+    position: relative;
+    top: -1px;
+}
+#footer_links a {
+    font-family: "OpenSansBold";
     font-size: 11px;
-    cursor: pointer;
-    padding: 4px 10px;
-    border-radius: 6px;
-    -webkit-border-radius: 6px; 
-    -moz-border-radius: 6px;
+    color: #888;
 }
-.ibutton:hover {
+#footer_links a:hover {
     text-decoration: none;
+    color: #2582A9;
 }
-.ibutton:active {
-    position:relative;
-    top:1px;
+#support_note {
+    width: 150px;
+    height: 44px;
+    border-left: solid 1px #CCC;
+    padding: 3px 0 0 18px;
+    font-family: "Bitstream", Georgia, serif;
+    text-align: left;
+    color: #999;
+    text-shadow: 0px 1px 1px white;
+    line-height: 14px;
 }
-/* indiosis Blue button skin */
-.iblue {
-    color: #EDF7FB;
-    border: solid 1px #0076a3;
-    box-shadow:inset 0px 1px 1px 0px #EDF7FB;
-    -moz-box-shadow:inset 0px 1px 1px 0px #EDF7FB;
-    -webkit-box-shadow:inset 0px 1px 1px 0px #EDF7FB;
-    background: #2A92BE;
-    background: -webkit-gradient(linear, left top, left bottom, from(#30A1D1), to(#207294));
-    background: -moz-linear-gradient(top,  #30A1D1,  #207294);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#30A1D1', endColorstr='#207294');
+#copyright {
+    border-top: solid 1px white;
+    font-family: "OpenSansRegular";
+    font-size: 11px;
+    line-height: 13px;
+    padding-top: 6px;
 }
-.iblue:hover {
-    background: #2582A9;
-    background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
-    background: -moz-linear-gradient(top,  #0095cc,  #00678e);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
+#copyright div span {
+    font-family: "Verdana";
 }
-.iblue:active {
-    color: #D8EDF7;
-    background: -webkit-gradient(linear, left top, left bottom, from(#207294), to(#30A1D1));
-    background: -moz-linear-gradient(top,  #207294,  #30A1D1);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#207294', endColorstr='#30A1D1');
+#copyright div:first-child {
+    width: 450px;
 }
-/* indiosis Gray button skin */
-.igray {
-    color: #EEE;
-    border: solid 1px #666;
-    box-shadow:inset 0px 1px 1px 0px #EEE;
-    -moz-box-shadow:inset 0px 1px 1px 0px #EEE;
-    -webkit-box-shadow:inset 0px 1px 1px 0px #EEE;
-    background: #6e6e6e;
-    background: -webkit-gradient(linear, left top, left bottom, from(#AAA), to(#666));
-    background: -moz-linear-gradient(top,  #AAA,  #666);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#AAAAAA', endColorstr='#666666');
+#copyright div:last-child {
+    width: 120px;
 }
-.igray:hover {
-    background: #666;
-    background: -webkit-gradient(linear, left top, left bottom, from(#999), to(#555));
-    background: -moz-linear-gradient(top,  #999,  #555);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#999999', endColorstr='#555555');
+#copyright div:first-child img {
+    float: left;
+    margin: 10px 12px 0 2px;
 }
-.igray:active {
-    color: #DDD;
-    background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#AAA));
-    background: -moz-linear-gradient(top,  #666,  #AAA);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666', endColorstr='#AAAAAA');
+#copyright div:last-child img {
+    float: right;
+    margin: 3px 3px 0 0;
 }
 
 /* Login Box */
@@ -347,6 +390,8 @@ div.login_box div.login_line {
 }
 div.login_box input.text, div.login_box input.password {
     width: 194px;
+    padding: 5px 3px;
+    font-size: 14px;
 }
 div.login_box label {
     width: 75px;
@@ -359,28 +404,37 @@ div.login_box label {
 }
 div.login_box div.login_side label.rememberme {
     float:left;
-    padding-top: 3px;
+    padding-top: 12px;
     width: 100px;
+}
+div.login_box div.login_side div.checker {
+    margin-top: 9px;
 }
 div.login_box div.errorSummary {
     color: #C83A2C;
     font-family: "OpenSansRegular";
     height: 14px;
-    margin-top: 10px;
+    width: 190px;
+    margin-top: 45px;
+    padding-left: 2px;
     overflow: hidden;
     float: left;
 }
 div.login_box .checker {
     float: left;
 }
-div.login_box div.button {
+div.login_box input[type=submit] {
     float: right;
 }
+div.login_box div.errorSummary img.loader {
+    float: left;
+}
 div.login_box div.pw_forgot {
+    text-align: right;
     clear: both;
-    padding: 20px 15px 0;
-    height: 32px;
-    background-color: #E1E1E1;
+    padding: 15px 15px 0;
+    height: 37px;
+    background-color: #E3E3E3;
     font-family: "OpenSansSemibold";
     text-shadow: 0px 1px 1px #F2F2F2;
     border-top: solid 1px #CCC;
@@ -390,4 +444,169 @@ div.login_box div.pw_forgot span {
     font-size: 17px;
     color: #888;
     text-shadow: none;
+}
+
+
+/* - SITE-WIDE ELEMENTS - */
+
+/* Indiosis box */
+div.ibox {
+    border: solid 1px #D3D3D3;
+    border-radius: 10px;
+    background-color: white;
+    background-image: url("../images/header_gradient.gif");
+    background-repeat: repeat-x;
+    background-position-y: -18px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    box-shadow: 0px 2px 3px #E2E2E2;
+    -moz-box-shadow: 0px 2px 3px #E2E2E2;
+    -webkit-box-shadow: 0px 2px 3px #E2E2E2;
+}
+div.ibox div.iboxheader {
+    padding: 12px 15px 12px;
+    border-bottom: solid 1px #CFCFCF;
+    font-family: "OpenSansSemibold";
+    font-size: 18px;
+    color: #777;
+    text-shadow: 0px 1px 1px white;
+}
+div.ibox div.iboxcontent {
+    background-color: white;
+    padding: 20px 15px 0;
+    box-shadow: inset 0px 3px 6px 0px #E6E6E6;
+    -moz-box-shadow: inset 0px 3px 6px 0px #E6E6E6;
+    -webkit-box-shadow: inset 0px 3px 6px 0px #E6E6E6;
+}
+
+/* Indiosis buttons */
+.ibutton, .ibutton_big {
+    display: inline-block;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    font-family: "OpenSansSemibold";
+    font-size: 11px;
+    line-height: 15px;
+    cursor: pointer;
+    padding: 4px 10px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px; 
+    -moz-border-radius: 6px;
+    text-shadow: 0px 1px 1px #17526A;
+}
+.ibutton_big {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 15px;
+    font-family: "OpenSansSemibold";
+}
+.ibutton:hover, .ibutton_big:hover {
+    text-decoration: none;
+}
+.ibutton:active, .ibutton_big:active {
+    position:relative;
+    top:1px;
+}
+
+/* Blue button skin */
+.iblue {
+    color: #EDF7FB;
+    border: solid 1px #0076a3;
+    box-shadow:inset 0px 1px 1px 0px #D8EDF7;
+    -moz-box-shadow:inset 0px 1px 1px 0px #D8EDF7;
+    -webkit-box-shadow:inset 0px 1px 1px 0px #D8EDF7;
+    background: #2A92BE;
+    background: -webkit-gradient(linear, left top, left bottom, from(#30A1D1), to(#207294));
+    background: -moz-linear-gradient(top,  #30A1D1,  #207294);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#30A1D1', endColorstr='#207294');
+}
+.iblue:hover {
+    background: #2582A9;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+    background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
+}
+.iblue:active {
+    color: #D8EDF7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#207294), to(#30A1D1));
+    background: -moz-linear-gradient(top,  #207294,  #30A1D1);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#207294', endColorstr='#30A1D1');
+}
+
+/* Gray button skin */
+.igray {
+    color: #EEE;
+    border: solid 1px #666;
+    box-shadow:inset 0px 1px 1px 0px #EEE;
+    -moz-box-shadow:inset 0px 1px 1px 0px #EEE;
+    -webkit-box-shadow:inset 0px 1px 1px 0px #EEE;
+    background: #6e6e6e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#AAA), to(#666));
+    background: -moz-linear-gradient(top,  #AAA,  #666);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#AAAAAA', endColorstr='#666666');
+}
+.igray:hover {
+    background: #666;
+    background: -webkit-gradient(linear, left top, left bottom, from(#999), to(#555));
+    background: -moz-linear-gradient(top,  #999,  #555);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#999999', endColorstr='#555555');
+}
+.igray:active {
+    color: #DDD;
+    background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#AAA));
+    background: -moz-linear-gradient(top,  #666,  #AAA);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666', endColorstr='#AAAAAA');
+}
+
+/* Notification messages */
+.inotification {
+    border: solid 1px #30A1D1;
+    border-radius: 4px;
+    -webkit-border-radius: 4px; 
+    -moz-border-radius: 4px;
+    background-color: rgba(0,0,0,0.03);
+    padding: 20px;
+    font-family: "OpenSansRegular";
+    font-size: 16px;
+    line-height: 19px;
+    color: black;
+    text-align: center;
+    margin: 10px 10px;
+    overflow: hidden;
+}
+.inotification:not(.show) {
+    display: none;
+}
+.inotification .inot_title {
+    font-family: "OpenSansSemibold";
+    font-size: 22px;
+    color: #2A92BE;
+}
+.inotification span.inot_icon {
+    font-size: 15px;
+    font-family: "Arial";
+}
+.inotification_blue {
+    background-color: rgba(37,130,169,0.6);
+    color: white;
+    border-color: #30A1D1;
+    font-family: "OpenSansSemibold";
+}
+.inotification_green {
+    
+}
+.inotification_red {
+    
+}
+
+
+/* Loading icon */
+img.loader {
+    display: none;
+}
+
+/* for IE9 gradient support */
+.gradient {
+    filter: none;
 }

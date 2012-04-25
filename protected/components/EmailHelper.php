@@ -1,24 +1,34 @@
 <?php
 /* 
- * - - - - - - - - - - - - - - - - - - - *
- * INDIOSIS                              *
- * The resource optimization community.  *
- * - - - - - - - - - - - - - - - - - - - *
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  * 
- * Email Helper component
+ * HELPER : Email Manager
  * Component handling all email sent by Indiosis
  * 
  * @package     all
  * @author      Frederic Andreae
- * @copyright   Copyright (C) 2011, ROI
+ * @copyright   UNIL/ROI
  */
 
 
-class EmailHelper extends CComponent {
+class EmailHelper extends CComponent
+{
+    const HOST = 'smtp.unil.ch';
+    const USERNAME = 'fandreae';
+    const PASSWORD = 'PUT_THE_PASSWORD_HERE';
     
-    public static final $HOST = 'smtp.unil.ch';
-    public static final $USERNAME = 'fandreae';
-    public static final $PASSWORD = 'PUT_THE_PASSWORD_HERE';
+    
+    public static function sendAccountVerification($recipients,$confirm_code)
+    {
+        $title = "New Indiosis account";
+        $body = "Click on this link to verify your account : ".
+                Yii::app()->baseUrl.'/account/verifyaccount/confirmationcode/'.$confirm_code;
+        // send the email
+        EmailHelper::sendEmail($recipients, $title, $body);
+    }
     
     
     /**
@@ -33,21 +43,21 @@ class EmailHelper extends CComponent {
             $recipients = array($recipients);
         }
         $mailer = Yii::createComponent('application.extensions.mailer.EMailer');
-        $mailer->Host = $HOST;
-        $mailer->Username = $USERNAME;
-        //$mailer->Password = $PASSWORD;
+        $mailer->Host = self::HOST;
+        $mailer->Username = self::USERNAME;
+        $mailer->Password = $PASSWORD;
         $mailer->IsSMTP();
         $mailer->IsHTML();
         $mailer->FromName = 'Indiosis';
-        $mailer->From = 'fred@roi-online.org';
+        $mailer->From = 'indiosis@roi-online.org';
         foreach($recipients as $recipient) {
-            $mailer->AddAddress($recipient->email);
+            $mailer->AddAddress('fred@roi-online.org');
+            // $mailer->AddAddress($recipient->email); TODO : Uncomment this line for production.
         }
         $mailer->CharSet = 'UTF-8';
         $mailer->Subject = $title;
         $mailer->Body = $body;
         $mailer->Send();
     }
-    
 }
 ?>

@@ -22,29 +22,28 @@ class AccountController extends IndiosisController
      * Default action.
      */
     public function actionIndex()
-    { 
+    {
         $this->render('overview');
     }
     
-    
     /**
-     * AJAX > Handles the registration process.
+     * Handles the registration process. (including LinkedIn users). 
      */
-    public function actionSignUp()
+    public function actionRegister()
     {
-        $model = new FormSignup;
-
-        if(isset($_POST['FormSignup']))
+        $model = new SignupForm;
+        
+        if(isset($_POST['SignupForm']))
         {
             // collects user input data
-            $model->attributes=$_POST['FormSignup'];
+            $model->attributes=$_POST['SignupForm'];
             
             if($model->validate()) {
-                
                 // create a random confirmation code 
                 $confirm_code = md5(uniqid(rand()));
                 $newUser = new User;
                 $newUser->setAttributes($model->attributes);
+                $newUser->password = md5($newUser->password);
                 $newUser->isExpert = 0;
                 $newUser->date_joined = date("Y-m-d");
                 $newUser->confirmationCode = $confirm_code;
@@ -63,7 +62,7 @@ class AccountController extends IndiosisController
                 }
                 $newUser->save();
                 // send an email with the confirmation code.
-                EmailHelper::sendEmail($newUser,'Verify your Indiosis account','Click on this link to verify your account : '.Yii::app()->baseUrl.'/account/verifyaccount/confirmationcode/'.$confirm_code);
+                EmailHelper::sendAccountVerification($newUser,$confirm_code);
                 // send back success response
                 echo Yii::app()->params['ajaxSuccess'];
             }
@@ -71,20 +70,19 @@ class AccountController extends IndiosisController
                 // send back failure response
                 echo Yii::app()->params['ajaxFailure'];
             }
-            
             Yii::app()->end();
         }
         // display the login form
-        $this->renderPartial('signUpBox',array('model'=>$model),false,true);
+        $this->render('register',array('model'=>$model),false,true);
     }
     
     
     /*
-     * AJAX > Handles of the sign up form ajax validation.
+     * AJAX > Handles the sign up ajax validation.
      */
     public function actionValidateSignUp()
     {
-        $model=new FormSignup;
+        $model = new SignupForm;
         if(isset($_POST['ajax']) && $_POST['ajax']==='signup-form')
         {
             echo CActiveForm::validate($model);
@@ -93,20 +91,49 @@ class AccountController extends IndiosisController
     }
     
     /**
-     * AJAX > Register a new LinkedIn member User.
+     * Authorize Indiosis to access a user's LinkedIn account.
      */
-    public function actionLinkedInRegister()
+    public function actionLinkedInAuthorize()
     {
-        $newLinkedInUser = new User;
-        $newLinkedInUser->linkedIn_id = $_POST['id'];
-        $newLinkedInUser->firstName = $_POST['firstName'];
-        $newLinkedInUser->lastName = $_POST['lastName'];
-        $newLinkedInUser->isExpert = 0;
-        $newLinkedInUser->date_joined = date("Y-m-d");
-        $newLinkedInUser->verified = 1;
-        if($newLinkedInUser->save()) {
-            echo CJSON::encode($newLinkedInUser->getAttributes());
+        // Start an OAuth request to LinkedIn with Indiosis'key and secret  
+        $oauth = new OAuth(Yii::app()->params['linkedinKey'], Yii::app()->params['linkedinSecret']);
+        $oauth->disableSSLChecks(); // TODO : Remove to enable SSL
+        $request_token_response = $oauth->getRequestToken('https://api.linkedin.com/uas/oauth/requestToken');
+ 
+        // If API is up redirects to the "LinkedIn Grant Access page"
+        if($request_token_response === FALSE) {
+                throw new CHttpException(502, 'The LinkedIn API seems to be down at this time. Please try again in a moment...');
+        } else {
+            Yii::app()->session['linkedin_oauth_token'] = $request_token_response['oauth_token'];
+            Yii::app()->session['linkedin_oauth_token_secret'] = $request_token_response['oauth_token_secret'];
+            Yii::app()->request->redirect("https://api.linkedin.com/uas/oauth/authorize?oauth_token=".urlencode($request_token_response['oauth_token']));
         }
+    }
+    
+    /**
+     * Handles responses from LinkedIn authorization API.
+     */
+    public function actionLinkedInHandle()
+    {
+        $message = "A-OK";
+        if (!empty($_GET['oauth_token']) && !empty($_GET['oauth_verifier']) && $_GET['oauth_token']==Yii::app()->session['linkedin_oauth_token'])
+        {
+            // Re-start an OAuth request to LinkedIn with Indiosis'key and secret  
+            $oauth = new OAuth(Yii::app()->params['linkedinKey'], Yii::app()->params['linkedinSecret']);
+            $oauth->disableSSLChecks(); // TODO : Remove to enable SSL
+            $oauth->setToken(Yii::app()->session['linkedin_oauth_token'], Yii::app()->session['linkedin_oauth_token_secret']);
+            $access_token_response = $oauth->getAccessToken("https://api.linkedin.com/uas/oauth/accessToken","", $_GET['oauth_verifier']);
+
+            if($access_token_response === FALSE) {
+                    throw new Exception("Failed fetching request token, response was: " . $oauth->getLastResponse());
+            } else {
+                    $message = $access_token_response;
+            }
+        }
+        else {
+            $message = "You need to tell your LinkedIn account to grant access to Indiosis if you want to connect with your LinkedIn account.<br/>Click here to try again.";
+        }
+        $this->render('linkedinotification',array('message'=>$message));
     }
     
     /**
@@ -132,7 +159,7 @@ class AccountController extends IndiosisController
      */
     public function actionLogin()
     {
-        $model = new FormLogin;
+        $model = new LoginForm;
         $this->renderPartial('login',array('model'=>$model),false,true);
     }
     
@@ -141,7 +168,7 @@ class AccountController extends IndiosisController
      */
     public function actionAuthenticate()
     {
-        $model = new FormLogin;
+        $model = new LoginForm;
         if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
         {
             echo CActiveForm::validate($model);

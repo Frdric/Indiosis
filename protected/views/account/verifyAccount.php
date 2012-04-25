@@ -1,16 +1,16 @@
 <?php
 /*
- * - - - - - - - - - - - - - - - - - - - *
- * INDIOSIS                              *
- * The resource optimization community.  *
- * - - - - - - - - - - - - - - - - - - - *
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  * 
- * VIEW : Verify Account page
- * Display the account verification response.
+ * VIEW : Account verification page
+ * Show wether or not a new account has been validated.
  * 
- * @package     account
+ * @package     all
  * @author      Frederic Andreae
- * @copyright   Copyright (C) 2011, ROI
+ * @copyright   UNIL/ROI
  */
 
 

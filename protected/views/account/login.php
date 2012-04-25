@@ -24,8 +24,12 @@
             'action'=>Yii::app()->baseUrl.'/profile',
             'enableAjaxValidation'=>true,
             'enableClientValidation'=>true,
-            'clientOptions'=>array('validateOnSubmit'=>true,'validateOnChange'=>false,'validationUrl'=>Yii::app()->baseUrl.'/account/authenticate'),
-            'focus'=>array($model,'email')
+            'clientOptions'=>array(
+                'validationUrl'=>Yii::app()->baseUrl.'/account/authenticate',
+                'validateOnSubmit'=>true,
+                'validateOnChange'=>false,
+                'beforeValidate'=>'js:function(form) { showLoader(".loader"); return true; }',
+                'afterValidate'=>'js:function(form) { hideLoader(".loader"); return true; }')
             )
          );
         echo CHtml::beginForm();
@@ -37,8 +41,9 @@
             <?php echo CHtml::activeLabel($model,'password'); ?> <?php echo CHtml::activePasswordField($model,'password'); ?>
         </div>
         <?php echo CHtml::activeCheckBox($model,'rememberMe'); ?> <?php echo CHtml::activeLabel($model,'rememberMe',array("class"=>"rememberme")); ?>
-        <?php echo CHtml::submitButton('Log In'); ?>
+        <?php echo CHtml::submitButton('Log In',array("class"=>'ibutton_big iblue')); ?>
         <div class="errorSummary">
+            <img src="<?php echo Yii::app()->baseUrl.'/images/loader.gif'; ?>" class="loader" alt="loading..." />
             <?php echo $form->error($model,'email'); ?>
             <?php echo $form->error($model,'password'); ?>
         </div>
@@ -51,10 +56,10 @@
         <h3>Not a member yet ?</h3>
         <hr class="ongray"/>
         <br/>
-        <script type="in/Login" data-onAuth="registerLinkedInUser"></script>
+        <script type="in/Login"></script>
         <br/>
         <br/>
         OR <a href="<?php echo $this->createUrl('/account/register');?>">Sign up with Email</a>
     </div>
-    <div class="pw_forgot"><span>></span> <a href="#">Forgot your password ?</a></div>
+    <div class="pw_forgot"><span>&raquo;</span> <a href="#">Forgot your password ?</a></div>
 </div>

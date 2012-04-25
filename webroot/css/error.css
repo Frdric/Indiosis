@@ -17,3 +17,22 @@
     margin: 110px auto 0 auto;
     width: 900px;
 }
+h1 {
+    margin-bottom: 30px;
+}
+p:not(.error) {
+    font-family: "OpenSansRegular";
+    font-size: 15px;
+    color: #777;
+}
+p.main_message {
+    font-family: "OpenSansSemibold";
+    font-size: 16px;
+    color: #777;
+}
+p.error {
+    margin-top: 10px;
+    font-family: "Verdana";
+    color: #C83A2C;
+    font-size: 13px;
+}

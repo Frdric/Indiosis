@@ -18,11 +18,15 @@ Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/error.css'
 $this->layout='errors';
 ?>
 <h1>:-( Oops... Indiosis generated an error!</h1>
+
+<p class="main_message"><?php echo CHtml::encode($message); ?></p>
+
 <p>
-   Sorry for any inconvinience it may have caused.
-   If this is a recurent bug, our team will be working on it and fix the problem.
+   (if this is a recurent bug, our team will be working on it and fix the problem.)
 </p>
-<p>
-    <b><?php echo CHtml::encode($message); ?></b><br/>
-    <?php echo 'Error '.$code.' : '.$type.' in '.$file.' (line '.$line.')'; ?>
-</p>
+
+<?php
+if(YII_DEBUG == TRUE) {
+    echo '<br/><hr/><p class="error">Error '.$code.' : '.$type.' in '.$file.' (line '.$line.')</p>';
+}
+?>

@@ -18,6 +18,9 @@
     background-image: url("../images/home_bk_gradient.gif");
     background-repeat: repeat-x;
     background-position-y: 110px;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
 }
 #infobar_wrapper {
     border-bottom: solid 1px #3A3A3A;
@@ -73,11 +76,15 @@ div.feature_subtitle {
 /* -- REGISTER AREA -- */
 #register_area {
     margin-top: 20px;
-    height: 230px;
+    height: 225px;
     text-align: center;
 }
 #register_area h2 {
     font-family: "OpenSansBold";
+    font-size: 30px;
+    color: #2582A9;
+    margin: 0;
+    border-bottom: none;
 }
 #register_area h2 span {
     color: #666;
@@ -197,7 +204,7 @@ p#signup_note {
     float: right;
     width: 290px;
     text-align: right;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 #subscribe_area a.logo_link {
     float: right;
@@ -216,7 +223,7 @@ p#signup_note {
     font-family: "OpenSansLightItalic";
     color: #4D4D4D;
     font-size: 27px;
-    margin-bottom: 20px;
+    border-bottom: none;
 }
 #what_is h2 span {
     font-family: "OpenSansExtrabold";

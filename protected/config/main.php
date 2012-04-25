@@ -54,7 +54,7 @@ return array(
     'import'=>array(
         'application.models.*',
         'application.models.forms.*',
-        'application.components.*',
+        'application.components.*'
     ),
     
     // Other parameters (accessible through Yii::app()->params['paramName'])
@@ -66,6 +66,8 @@ return array(
         'indiosisVersionNumber' => '0.2',
         'ajaxSuccess' => 'OK',
         'ajaxFailure' => 'ERROR',
+        'linkedinKey' => 'L4gyxZw6qwgyw1Gc2baz0HutNqeIafCLf7WhjHklXyGnBvcL65-ysOa1smgdN3lc',
+        'linkedinSecret' => '3mTvuDViCJia6Htx7Yhbq52Ia0eErN_MY1lzdwdEyR-Afpo9P8i3gCDJgMy9NdpQ'
     ),
     
     //To be uncommented when auto-creation panel is needed.

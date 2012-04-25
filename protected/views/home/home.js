@@ -13,7 +13,9 @@
  */
 
 // Connect with LinkedIn button bind
-$("#linkedin_signup").bind('click',function () {IN.User.authorize(); return false;});
+$("#linkedin_signup").bind('click', function () {
+    window.location.href = BASE_URL+'/account/linkedinauthorize';
+});
 
 // Show the description of a given feature
 function showFeatureDescr(featureId) {
@@ -55,4 +57,9 @@ $("div.feature_illu").mouseleave(function() {
     tm = setTimeout(function() {
         hideFeatureDescr(div.attr("id"));
     }, 200);
+});
+
+// Behaviour for the sign up button
+$("#account_signup").click(function() {
+    window.location.href = BASE_URL+'/account/register';
 });

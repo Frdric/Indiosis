@@ -80,8 +80,10 @@ Yii::app()->clientScript->registerScriptFile(
 </div>
 <div id="news_area_wrapper">
     <div id="news_area">
-        <hr/>
-        <h3>// News and Activities</h3>
+        <div class="lined_heading">
+            <h3>// News and Activities</h3>
+        </div>
+        
         <script>
             new TWTR.Widget({
             version: 2,
@@ -127,7 +129,7 @@ Yii::app()->clientScript->registerScriptFile(
         <br/>
         <h4>Supported by</h4>
         <a href="http://www.unil.ch/prime" target="_blank" class="logo_link"><img src="<?php echo Yii::app()->baseUrl.'/images/unil_logo.png'; ?>" alt="UNIL / PRIME"/></a>
-        <a href="http://www.roionline.org" target="_blank" class="logo_link"><img src="<?php echo Yii::app()->baseUrl.'/images/roi_logo.png'; ?>" alt="ROI - Resource Optimization Initiative"/></a>
+        <a href="http://www.roionline.org" target="_blank" class="logo_link"><img src="<?php echo Yii::app()->baseUrl.'/images/roitxt_logo.png'; ?>" alt="ROI - Resource Optimization Initiative"/></a>
     </div>
 </div>
 <div id="what_is">

@@ -10,7 +10,7 @@
  * 
  * @package     all
  * @author      Frederic Andreae
- * @copyright   Copyright (C) 2011, ROI
+ * @copyright   UNIL/ROI
  */
 
 class Helpers {

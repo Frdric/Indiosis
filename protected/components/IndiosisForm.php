@@ -16,11 +16,17 @@
 
 class IndiosisForm extends CActiveForm
 {
-    public $uniform = array();
+    
+    public $uniformConfig = array(
+        'selector' => 'select:not(.no-uniform), input:not(:button,:submit,.no-uniform), textarea:not(.no-uniform)',
+        'theme' => 'indiosis',
+        // Uniform options, see the documentation
+        'options' => array()
+    );
  
     public function init()
     {
-        $this->widget('ext.uniforms.EUniform', $this->uniform);
+        $this->widget('ext.uniforms.EUniform', $this->uniformConfig);
         parent::init();
     }
 }

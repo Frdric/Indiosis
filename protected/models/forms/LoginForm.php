@@ -8,12 +8,12 @@
  * FORM : Login
  * Describes the login form.
  * 
- * @package     all
+ * @package     account
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI
  */
 
-class FormLogin extends CFormModel
+class LoginForm extends CFormModel
 {
     public $email;
     public $password;
@@ -32,7 +32,7 @@ class FormLogin extends CFormModel
     }
 
     /**
-     * Customized attribute labels.
+     * Customize attribute labels.
      */
     public function attributeLabels()
     {
@@ -43,7 +43,7 @@ class FormLogin extends CFormModel
     }
     
     /**
-     * Check if the user is valid.
+     * Check if the user's credentials are valid.
      * @param type $attribute
      * @param type $params 
      */

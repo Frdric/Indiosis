@@ -4664,3 +4664,1361 @@ Stack trace:
 REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
 HTTP_REFERER=http://localhost/indiosis/profile
 ---
+2012/04/18 07:28:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/b432dab0/jquery.yiiactiveform.js".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/b432dab0...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/assets/b432dab0/jquery.yiiactiveform.js?_=1334734083821
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/18 07:28:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/45d173bd/fancybox.png".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/45d173bd...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/assets/45d173bd/fancybox.png
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/18 07:28:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/45d173bd/fancybox.png".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/45d173bd...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/assets/45d173bd/fancybox.png
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/18 07:28:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/45d173bd/blank.gif".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/45d173bd...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/assets/45d173bd/blank.gif
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/18 10:56:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/18 10:56:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/profile
+---
+2012/04/18 10:59:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/18 10:59:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/profile
+---
+2012/04/18 11:03:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/18 11:03:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/profile
+---
+2012/04/18 12:07:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/18 12:07:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/profile
+---
+2012/04/18 12:10:23 [error] [exception.CException] exception 'CException' with message 'ProfileController cannot find the requested view "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php:879
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('profile', NULL, true)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\ProfileController.php(26): CController->render('profile')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): ProfileController->actionIndex()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/18 12:16:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "register".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('register')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/register
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/18 12:16:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/register
+---
+2012/04/18 12:26:50 [error] [exception.CException] exception 'CException' with message 'ProfileController cannot find the requested view "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php:879
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('profile', NULL, true)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\ProfileController.php(26): CController->render('profile')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): ProfileController->actionIndex()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/account/register
+---
+2012/04/19 13:54:30 [error] [exception.CException] exception 'CException' with message 'ProfileController cannot find the requested view "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php:879
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('profile', NULL, true)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\ProfileController.php(26): CController->render('profile')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): ProfileController->actionIndex()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/account/register
+---
+2012/04/19 15:42:06 [error] [exception.CException] exception 'CException' with message 'ProfileController cannot find the requested view "profile".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php:879
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('profile', NULL, true)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\ProfileController.php(26): CController->render('profile')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): ProfileController->actionIndex()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('profile')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/account/register
+---
+2012/04/20 07:03:47 [error] [php] Undefined variable: boxTitle (D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\views\iboxwidget.php:16)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CWidget.php(244): IBoxWidget->renderFile()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IBoxWidget.php(23): IBoxWidget->render()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(174): IBoxWidget->run()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php(33): AccountController->widget()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): AccountController->renderInternal()
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): AccountController->renderFile()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): AccountController->renderPartial()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(35): AccountController->render()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionRegister()
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#14 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/register
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\views\iboxwidget.php (16)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IBoxWidget.php (23)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php (33)
+2012/04/20 07:30:59 [error] [php] Undefined variable: content (D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\views\iboxwidget.php:18)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CWidget.php(244): IBoxWidget->renderFile()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IBoxWidget.php(33): IBoxWidget->render()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(207): IBoxWidget->run()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php(39): AccountController->endWidget()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): AccountController->renderInternal()
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): AccountController->renderFile()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): AccountController->renderPartial()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(35): AccountController->render()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionRegister()
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#14 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/register
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\views\iboxwidget.php (18)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IBoxWidget.php (33)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php (39)
+2012/04/20 07:31:46 [error] [php] Undefined variable: content (D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\views\iboxwidget.php:18)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CWidget.php(244): IBoxWidget->renderFile()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IBoxWidget.php(38): IBoxWidget->render()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(207): IBoxWidget->run()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php(39): AccountController->endWidget()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): AccountController->renderInternal()
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): AccountController->renderFile()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): AccountController->renderPartial()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(35): AccountController->render()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionRegister()
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#14 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/register
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\views\iboxwidget.php (18)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\IBoxWidget.php (38)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php (39)
+2012/04/20 14:20:09 [error] [php] include(1.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\YiiBase.php:418)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(171): import()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(285): createValidator()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(259): SignupForm->createValidators()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\helpers\CHtml.php(1859): SignupForm->getValidators()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\helpers\CHtml.php(1205): activeInputField()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CActiveForm.php(655): activeTextField()
+#6 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php(45): IndiosisForm->textField()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): AccountController->renderInternal()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): AccountController->renderFile()
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): AccountController->renderPartial()
+#11 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(78): AccountController->render()
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionRegister()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#15 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#16 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#17 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#18 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/register
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php (45)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (78)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/20 14:47:26 [error] [php] include(1.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\YiiBase.php:418)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(171): import()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(285): createValidator()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(259): SignupForm->createValidators()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\helpers\CHtml.php(1859): SignupForm->getValidators()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\helpers\CHtml.php(1205): activeInputField()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CActiveForm.php(655): activeTextField()
+#6 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php(45): IndiosisForm->textField()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): AccountController->renderInternal()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): AccountController->renderFile()
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): AccountController->renderPartial()
+#11 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(78): AccountController->render()
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionRegister()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#15 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#16 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#17 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#18 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/register
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php (45)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (78)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/20 14:48:22 [error] [php] include(true.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\YiiBase.php:418)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(171): import()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(285): createValidator()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(259): SignupForm->createValidators()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\helpers\CHtml.php(1859): SignupForm->getValidators()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\helpers\CHtml.php(1205): activeInputField()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CActiveForm.php(655): activeTextField()
+#6 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php(45): IndiosisForm->textField()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): AccountController->renderInternal()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): AccountController->renderFile()
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): AccountController->renderPartial()
+#11 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(78): AccountController->render()
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionRegister()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#15 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#16 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#17 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#18 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/register
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php (45)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (78)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/20 14:51:13 [error] [exception.CException] exception 'CException' with message 'Property "CBooleanValidator.0" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:174
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(174): CComponent->__set('0', 'true')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(285): CValidator::createValidator('boolean', Object(SignupForm), 'uaagreed', Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(259): CModel->createValidators()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\helpers\CHtml.php(1859): CModel->getValidators('firstName')
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(SignupForm), 'firstName', Array)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CActiveForm.php(655): CHtml::activeTextField(Object(SignupForm), 'firstName', Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php(45): CActiveForm->textField(Object(SignupForm), 'firstName')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#11 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(78): CController->render('register', Array, false, true)
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionRegister()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#15 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('register')
+#17 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/registe...')
+#18 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#20 {main}
+REQUEST_URI=/indiosis/account/register
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/20 14:51:22 [error] [exception.CException] exception 'CException' with message 'Property "CBooleanValidator.0" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:174
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(174): CComponent->__set('0', true)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(285): CValidator::createValidator('boolean', Object(SignupForm), 'uaagreed', Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(259): CModel->createValidators()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\helpers\CHtml.php(1859): CModel->getValidators('firstName')
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(SignupForm), 'firstName', Array)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CActiveForm.php(655): CHtml::activeTextField(Object(SignupForm), 'firstName', Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php(45): CActiveForm->textField(Object(SignupForm), 'firstName')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#11 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(78): CController->render('register', Array, false, true)
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionRegister()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#15 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('register')
+#17 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/registe...')
+#18 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#20 {main}
+REQUEST_URI=/indiosis/account/register
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/23 11:36:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php:484
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(271): CController->missingAction('captcha')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('captcha')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/captcha')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#5 {main}
+REQUEST_URI=/indiosis/index.php/account/captcha?v=4f953ed8d1b70
+HTTP_REFERER=http://localhost/indiosis/account/register
+---
+2012/04/23 11:37:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php:484
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(271): CController->missingAction('captcha')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('captcha')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/captcha')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#5 {main}
+REQUEST_URI=/indiosis/index.php/account/captcha?refresh=1&_=1335181022955
+HTTP_REFERER=http://localhost/indiosis/account/register
+---
+2012/04/23 11:37:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php:484
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(271): CController->missingAction('captcha')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('captcha')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/captcha')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#5 {main}
+REQUEST_URI=/indiosis/index.php/account/captcha?refresh=1&_=1335181024031
+HTTP_REFERER=http://localhost/indiosis/account/register
+---
+2012/04/23 11:41:34 [error] [exception.CException] exception 'CException' with message 'IndiosisForm and its behaviors do not have a method or closure named "activeLabel".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php(47): CComponent->__call('activeLabel', Array)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php(47): IndiosisForm->activeLabel(Object(SignupForm), 'firstName')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(78): CController->render('register', Array, false, true)
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionRegister()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('register')
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/registe...')
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#15 {main}
+REQUEST_URI=/indiosis/account/register
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/23 11:50:14 [warning] [application] Failed to set unsafe attribute "company" of "User".
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (47)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/23 11:50:14 [warning] [application] Failed to set unsafe attribute "uaagreed" of "User".
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (47)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/23 11:50:15 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.mailer.EMailer" is invalid. Make sure it points to an existing PHP file and the file is readable.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\YiiBase.php:318
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\YiiBase.php(198): YiiBase::import('application.ext...', true)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\EmailHelper.php(45): YiiBase::createComponent('application.ext...')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\EmailHelper.php(30): EmailHelper::sendEmail(Object(User), 'New Indiosis ac...', 'Click on this l...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(66): EmailHelper::sendAccountVerification(Object(User), 'd9b8b03f848e9dc...')
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionRegister()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('register')
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/registe...')
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#12 {main}
+REQUEST_URI=/indiosis/account/register
+HTTP_REFERER=http://localhost/indiosis/account/register
+---
+2012/04/23 12:22:11 [warning] [application] Failed to set unsafe attribute "company" of "User".
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (46)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/23 12:22:11 [warning] [application] Failed to set unsafe attribute "uaagreed" of "User".
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (46)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/23 12:22:11 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.mailer.EMailer" is invalid. Make sure it points to an existing PHP file and the file is readable.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\YiiBase.php:318
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\YiiBase.php(198): YiiBase::import('application.ext...', true)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\EmailHelper.php(45): YiiBase::createComponent('application.ext...')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\EmailHelper.php(30): EmailHelper::sendEmail(Object(User), 'New Indiosis ac...', 'Click on this l...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(65): EmailHelper::sendAccountVerification(Object(User), 'ef78fc74ee96dad...')
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionRegister()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('register')
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/registe...')
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#12 {main}
+REQUEST_URI=/indiosis/account/register
+HTTP_REFERER=http://localhost/indiosis/account/register
+---
+2012/04/23 12:49:09 [error] [exception.CException] exception 'CException' with message 'Property "CBooleanValidator.0" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:174
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(174): CComponent->__set('0', true)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(285): CValidator::createValidator('boolean', Object(SignupForm), 'uaagreed', Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(259): CModel->createValidators()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\helpers\CHtml.php(1859): CModel->getValidators('firstName')
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(SignupForm), 'firstName', Array)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php(52): CHtml::activeTextField(Object(SignupForm), 'firstName')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(77): CController->render('register', Array, false, true)
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionRegister()
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('register')
+#16 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/registe...')
+#17 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#19 {main}
+REQUEST_URI=/indiosis/account/register
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/23 12:49:26 [error] [exception.CException] exception 'CException' with message 'Property "CBooleanValidator.0" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:174
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(174): CComponent->__set('0', 'true')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(285): CValidator::createValidator('boolean', Object(SignupForm), 'uaagreed', Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(259): CModel->createValidators()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\helpers\CHtml.php(1859): CModel->getValidators('firstName')
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(SignupForm), 'firstName', Array)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php(52): CHtml::activeTextField(Object(SignupForm), 'firstName')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(77): CController->render('register', Array, false, true)
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionRegister()
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('register')
+#16 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/registe...')
+#17 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#19 {main}
+REQUEST_URI=/indiosis/account/register
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/23 12:49:37 [error] [exception.CException] exception 'CException' with message 'Property "CBooleanValidator.0" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:174
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\validators\CValidator.php(174): CComponent->__set('0', 1)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(285): CValidator::createValidator('boolean', Object(SignupForm), 'uaagreed', Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CModel.php(259): CModel->createValidators()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\helpers\CHtml.php(1859): CModel->getValidators('firstName')
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(SignupForm), 'firstName', Array)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php(52): CHtml::activeTextField(Object(SignupForm), 'firstName')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#10 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(77): CController->render('register', Array, false, true)
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionRegister()
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('register')
+#16 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/registe...')
+#17 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#19 {main}
+REQUEST_URI=/indiosis/account/register
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/23 12:56:24 [warning] [application] Failed to set unsafe attribute "company" of "User".
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (46)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/23 12:56:24 [warning] [application] Failed to set unsafe attribute "uaagreed" of "User".
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (46)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/23 12:56:24 [error] [php] Undefined variable: HOST (D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\EmailHelper.php:46)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionRegister()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/register
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\EmailHelper.php (46)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\EmailHelper.php (30)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (65)
+2012/04/23 12:58:57 [warning] [application] Failed to set unsafe attribute "company" of "User".
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (46)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/23 12:58:57 [warning] [application] Failed to set unsafe attribute "uaagreed" of "User".
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (46)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/23 12:58:57 [error] [php] Use of undefined constant HOST - assumed 'HOST' (D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\EmailHelper.php:46)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionRegister()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/register
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\EmailHelper.php (46)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\EmailHelper.php (30)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (65)
+2012/04/23 13:02:28 [warning] [application] Failed to set unsafe attribute "company" of "User".
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (46)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/23 13:02:28 [warning] [application] Failed to set unsafe attribute "uaagreed" of "User".
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (46)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/23 13:37:54 [error] [exception.CException] exception 'CException' with message 'Property "IBoxWidget.notId" is not defined.' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CComponent.php:174
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWidgetFactory.php(162): CComponent->__set('notId', 'registeredMsg')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(AccountController), 'IBoxWidget', Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(190): CBaseController->createWidget('IBoxWidget', Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php(110): CBaseController->beginWidget('IBoxWidget', Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require('D:\Fred ANDREAE...')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\Fred ANDREAE...', Array, true)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): CBaseController->renderFile('D:\Fred ANDREAE...', Array, true)
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#8 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(77): CController->render('register', Array, false, true)
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionRegister()
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('register')
+#14 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/registe...')
+#15 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#17 {main}
+REQUEST_URI=/indiosis/account/register
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/04/23 13:41:20 [error] [php] Undefined variable: boxTitle (D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\views\inotificationwidget.php:20)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\widgets\CWidget.php(244): INotificationWidget->renderFile()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\INotificationWidget.php(46): INotificationWidget->render()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(207): INotificationWidget->run()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php(113): AccountController->endWidget()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): AccountController->renderInternal()
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): AccountController->renderFile()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): AccountController->renderPartial()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(77): AccountController->render()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionRegister()
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#12 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#13 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#14 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/register
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\views\inotificationwidget.php (20)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\INotificationWidget.php (46)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\register.php (113)
+2012/04/25 09:16:20 [error] [php] Undefined index: linkedin_oauth_L4gyxZw6qwgyw1Gc2baz0HutNqeIafCLf7WhjHklXyGnBvcL65-ysOa1smgdN3lc (D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:40)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/register
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (40)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/25 09:17:28 [error] [php] Undefined index: linkedin_oauth_L4gyxZw6qwgyw1Gc2baz0HutNqeIafCLf7WhjHklXyGnBvcL65-ysOa1smgdN3lc (D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:40)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/register
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (40)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/25 09:18:16 [error] [php] Undefined index: linkedin_oauth_L4gyxZw6qwgyw1Gc2baz0HutNqeIafCLf7WhjHklXyGnBvcL65-ysOa1smgdN3lc (D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:40)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/register
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (40)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/25 09:18:22 [error] [php] Undefined index: linkedin_oauth_L4gyxZw6qwgyw1Gc2baz0HutNqeIafCLf7WhjHklXyGnBvcL65-ysOa1smgdN3lc (D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:40)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/register
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (40)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/25 09:18:45 [error] [php] Undefined index: linkedin_oauth_L4gyxZw6qwgyw1Gc2baz0HutNqeIafCLf7WhjHklXyGnBvcL65-ysOa1smgdN3lc (D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:40)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/register
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (40)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/25 09:19:27 [error] [php] Undefined index: linkedin_oauth_L4gyxZw6qwgyw1Gc2baz0HutNqeIafCLf7WhjHklXyGnBvcL65-ysOa1smgdN3lc (D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:40)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/register
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (40)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/25 09:59:43 [error] [php] include(OAuth.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\YiiBase.php:418)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(29): spl_autoload_call()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionIndex()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (29)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/25 11:56:52 [error] [exception.OAuthException] exception 'OAuthException' with message 'making the request failed (Peer certificate cannot be authenticated with known CA certificates)' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:31
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(31): OAuth->getRequestToken('https://api.lin...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionIndex()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#9 {main}
+REQUEST_URI=/indiosis/account/
+---
+2012/04/25 11:59:27 [error] [exception.OAuthException] exception 'OAuthException' with message 'making the request failed (Peer certificate cannot be authenticated with known CA certificates)' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:31
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(31): OAuth->getRequestToken('https://api.lin...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionIndex()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#9 {main}
+REQUEST_URI=/indiosis/account/
+---
+2012/04/25 12:10:21 [error] [exception.OAuthException] exception 'OAuthException' with message 'making the request failed (Peer certificate cannot be authenticated with known CA certificates)' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:32
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(32): OAuth->getRequestToken('https://api.lin...', '/indiosis/')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionIndex()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#9 {main}
+REQUEST_URI=/indiosis/account/
+---
+2012/04/25 12:11:02 [error] [exception.OAuthException] exception 'OAuthException' with message 'making the request failed (Peer certificate cannot be authenticated with known CA certificates)' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:32
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(32): OAuth->getRequestToken('https://api.lin...', '')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionIndex()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#9 {main}
+REQUEST_URI=/indiosis/account/
+---
+2012/04/25 12:11:03 [error] [exception.OAuthException] exception 'OAuthException' with message 'making the request failed (Peer certificate cannot be authenticated with known CA certificates)' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:32
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(32): OAuth->getRequestToken('https://api.lin...', '')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionIndex()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#9 {main}
+REQUEST_URI=/indiosis/account/
+---
+2012/04/25 12:13:12 [error] [exception.OAuthException] exception 'OAuthException' with message 'making the request failed (Peer certificate cannot be authenticated with known CA certificates)' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:32
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(32): OAuth->getRequestToken('https://api.lin...', '')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionIndex()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#9 {main}
+REQUEST_URI=/indiosis/account/
+---
+2012/04/25 12:16:42 [error] [exception.OAuthException] exception 'OAuthException' with message 'making the request failed (Peer certificate cannot be authenticated with known CA certificates)' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:32
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(32): OAuth->getRequestToken('https://www.goo...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionIndex()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#9 {main}
+REQUEST_URI=/indiosis/account/
+---
+2012/04/25 12:17:13 [error] [exception.OAuthException] exception 'OAuthException' with message 'making the request failed (Couldn't connect to server)' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:32
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(32): OAuth->getRequestToken('https://api.jkl...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionIndex()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#9 {main}
+REQUEST_URI=/indiosis/account/
+---
+2012/04/25 12:17:17 [error] [exception.OAuthException] exception 'OAuthException' with message 'Invalid protected resource url, unable to generate signature base string' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:32
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(32): OAuth->getRequestToken('https://www.goo...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionIndex()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#9 {main}
+REQUEST_URI=/indiosis/account/
+---
+2012/04/25 12:17:31 [error] [exception.OAuthException] exception 'OAuthException' with message 'making the request failed (Peer certificate cannot be authenticated with known CA certificates)' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:32
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(32): OAuth->getRequestToken('https://api.lin...', '')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionIndex()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#9 {main}
+REQUEST_URI=/indiosis/account/
+---
+2012/04/25 13:34:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "auth_callback".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php:484
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(271): CController->missingAction('auth_callback')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('auth_callback')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/auth_ca...')
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#5 {main}
+REQUEST_URI=/indiosis/account/auth_callback?oauth_token=c746633f-84e3-4f05-b233-c8412097d352&oauth_verifier=73469
+---
+2012/04/25 13:34:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/account/auth_callback?oauth_token=c746633f-84e3-4f05-b233-c8412097d352&oauth_verifier=73469
+---
+2012/04/25 13:52:29 [error] [exception.CException] exception 'CException' with message 'AccountController cannot find the requested view "overview".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php:879
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('overview', NULL, true)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(26): CController->render('overview')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionIndex()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/account/
+---
+2012/04/25 13:52:33 [error] [exception.CHttpException.502] exception 'CHttpException' with message 'The LinkedIn API seems to be down at this time. Please try again in a moment...' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:104
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLinkedInAuthorize()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('LinkedInAuthori...')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/LinkedI...')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#8 {main}
+REQUEST_URI=/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 13:52:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 13:55:36 [error] [exception.CHttpException.502] exception 'CHttpException' with message 'The LinkedIn API seems to be down at this time. Please try again in a moment...' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:104
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLinkedInAuthorize()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('LinkedInAuthori...')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/LinkedI...')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#8 {main}
+REQUEST_URI=/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 13:55:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 13:55:52 [error] [exception.CHttpException.502] exception 'CHttpException' with message 'The LinkedIn API seems to be down at this time. Please try again in a moment...' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:104
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLinkedInAuthorize()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('LinkedInAuthori...')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/LinkedI...')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#8 {main}
+REQUEST_URI=/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 13:55:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 13:57:06 [error] [exception.CHttpException.502] exception 'CHttpException' with message 'The LinkedIn API seems to be down at this time. Please try again in a moment...' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:104
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLinkedInAuthorize()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('LinkedInAuthori...')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/LinkedI...')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#8 {main}
+REQUEST_URI=/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 13:57:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 13:57:34 [error] [exception.CHttpException.502] exception 'CHttpException' with message 'The LinkedIn API seems to be down at this time. Please try again in a moment...' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:104
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLinkedInAuthorize()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('LinkedInAuthori...')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/LinkedI...')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#8 {main}
+REQUEST_URI=/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 13:57:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 13:57:48 [error] [exception.CHttpException.502] exception 'CHttpException' with message 'The LinkedIn API seems to be down at this time. Please try again in a moment...' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:104
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLinkedInAuthorize()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('LinkedInAuthori...')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/LinkedI...')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#8 {main}
+REQUEST_URI=/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 13:57:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 13:57:54 [error] [exception.CHttpException.502] exception 'CHttpException' with message 'The LinkedIn API seems to be down at this time. Please try again in a moment...' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:104
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLinkedInAuthorize()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('LinkedInAuthori...')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/LinkedI...')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#8 {main}
+REQUEST_URI=/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 13:57:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 13:58:22 [error] [exception.CHttpException.502] exception 'CHttpException' with message 'The LinkedIn API seems to be down at this time. Please try again in a moment...' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:104
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLinkedInAuthorize()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('LinkedInAuthori...')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/LinkedI...')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#8 {main}
+REQUEST_URI=/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 13:58:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 14:01:42 [error] [exception.CHttpException.502] exception 'CHttpException' with message 'The LinkedIn API seems to be down at this time. Please try again in a moment...' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:104
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLinkedInAuthorize()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('LinkedInAuthori...')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/LinkedI...')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#8 {main}
+REQUEST_URI=/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 14:01:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 14:02:13 [error] [exception.CHttpException.502] exception 'CHttpException' with message 'The LinkedIn API seems to be down at this time. Please try again in a moment...' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:104
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLinkedInAuthorize()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('LinkedInAuthori...')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/LinkedI...')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#8 {main}
+REQUEST_URI=/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 14:02:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 14:02:31 [error] [exception.CHttpException.502] exception 'CHttpException' with message 'The LinkedIn API seems to be down at this time. Please try again in a moment...' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:104
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLinkedInAuthorize()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('LinkedInAuthori...')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/LinkedI...')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#8 {main}
+REQUEST_URI=/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 14:02:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 14:02:58 [error] [exception.CHttpException.502] exception 'CHttpException' with message 'The LinkedIn API seems to be down at this time. Please try again in a moment...' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:104
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLinkedInAuthorize()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('LinkedInAuthori...')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/LinkedI...')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#8 {main}
+REQUEST_URI=/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 14:02:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 14:03:04 [error] [exception.CHttpException.502] exception 'CHttpException' with message 'The LinkedIn API seems to be down at this time. Please try again in a moment...' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:104
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLinkedInAuthorize()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('LinkedInAuthori...')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/LinkedI...')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#8 {main}
+REQUEST_URI=/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 14:03:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 14:03:21 [error] [exception.CHttpException.502] exception 'CHttpException' with message 'The LinkedIn API seems to be down at this time. Please try again in a moment...' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:104
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLinkedInAuthorize()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('LinkedInAuthori...')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/LinkedI...')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#8 {main}
+REQUEST_URI=/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 14:03:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 14:03:38 [error] [exception.CHttpException.502] exception 'CHttpException' with message 'The LinkedIn API seems to be down at this time. Please try again in a moment...' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:104
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLinkedInAuthorize()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('LinkedInAuthori...')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/LinkedI...')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#8 {main}
+REQUEST_URI=/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 14:03:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 14:04:05 [error] [exception.CHttpException.502] exception 'CHttpException' with message 'The LinkedIn API seems to be down at this time. Please try again in a moment...' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:104
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLinkedInAuthorize()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('LinkedInAuthori...')
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/LinkedI...')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#8 {main}
+REQUEST_URI=/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 14:04:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/account/LinkedInAuthorize
+---
+2012/04/25 14:18:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery-ui/jquery-ui-1.8.16.indiosis.css".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('css/jquery-ui/j...')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/jquery-ui/jquery-ui-1.8.16.indiosis.css
+HTTP_REFERER=http://localhost/indiosis/account/auth_callback?oauth_token=c746633f-84e3-4f05-b233-c8412097d352&oauth_verifier=73469
+---
+2012/04/25 14:22:38 [error] [php] Undefined variable: init_display (D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\INotificationWidget.php:57)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(127): require()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CBaseController.php(96): AccountController->renderInternal()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(870): AccountController->renderFile()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): AccountController->renderPartial()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(124): AccountController->render()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLinkedInHandle()
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#10 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/linkedinhandle
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\components\INotificationWidget.php (57)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\views\account\linkedinotification.php (30)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (124)
+2012/04/25 14:28:34 [error] [php] Undefined variable: request_token (D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:122)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/linkedinhandle?oauth_token=70a60c25-9a4f-49e6-b21a-2c66cf0a66ac&oauth_verifier=00636
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (122)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/25 14:38:18 [error] [exception.CException] exception 'CException' with message 'AccountController cannot find the requested view "overview".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php:879
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('overview', NULL, true)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(26): CController->render('overview')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionIndex()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/account/
+---
+2012/04/25 14:38:20 [error] [php] Undefined variable: request_token (D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:109)
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): AccountController->runAction()
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): AccountController->run()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CWebApplication->run()
+REQUEST_URI=/indiosis/account/LinkedInAuthorize
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php (109)
+in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php (22)
+2012/04/25 14:38:47 [error] [exception.OAuthException] exception 'OAuthException' with message 'making the request failed (Peer certificate cannot be authenticated with known CA certificates)' in D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php:125
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(125): OAuth->getAccessToken('https://api.lin...', '', '12863')
+#1 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionLinkedInHandle()
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('linkedinhandle')
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account/linkedi...')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#9 {main}
+REQUEST_URI=/indiosis/account/linkedinhandle?oauth_token=3c3fe850-fc54-458c-9bfa-9b6a5ac61b7e&oauth_verifier=12863
+---
+2012/04/25 14:39:17 [error] [exception.CException] exception 'CException' with message 'AccountController cannot find the requested view "overview".' in D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php:879
+Stack trace:
+#0 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(783): CController->renderPartial('overview', NULL, true)
+#1 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\protected\controllers\AccountController.php(26): CController->render('overview')
+#2 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\actions\CInlineAction.php(50): AccountController->actionIndex()
+#3 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(276): CController->run('')
+#7 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('account')
+#8 D:\Fred ANDREAE\Indiosis\WebApp\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\Fred ANDREAE\Indiosis\WebApp\Indiosis\webroot\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/indiosis/account/
+---
