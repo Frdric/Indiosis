@@ -1,12 +1,16 @@
 <?php
-/**
- * INDIOSIS
- * Application Bootstrap
- * This file is the only file accessible to the public.
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  * 
- * @package     webroot
- * @author      Frédéric Andreae
- * @copyright   Copyright (C) 2011, ROI
+ * APPLICATION BOOTSTRAP
+ * The only accessible file to the public, bootstraping the entire application.
+ * 
+ * @package     base
+ * @author      Frederic Andreae
+ * @copyright   UNIL/ROI
  */
 
 // Framework library + configuration file

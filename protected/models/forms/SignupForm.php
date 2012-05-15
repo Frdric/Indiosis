@@ -19,7 +19,7 @@ class SignupForm extends CFormModel
     public $lastName;
     public $email;
     public $password;
-    public $company;
+    public $organization;
     public $uaagreed;
     
     
@@ -29,12 +29,12 @@ class SignupForm extends CFormModel
     public function rules()
     {
         return array(
-            array('firstName, lastName, email, password, company', 'required'),
+            array('firstName, lastName, email, password, organization', 'required'),
             array('uaagreed', 'required','message'=>'You must accept the {attribute}.'),
             array('email','email'),
             array('email', 'unique','className'=>'User','attributeName'=>'email'),
             array('password', 'length', 'min'=>6),
-            array('company','safe'),
+            array('organization','safe'),
             array('uaagreed','boolean')
         );
     }
@@ -49,7 +49,7 @@ class SignupForm extends CFormModel
             'firstName'=>'First name',
             'lastName'=>'Last name',
             'password'=>'Password',
-            'company'=>'Company',
+            'organization'=>'Organization',
             'uaagreed'=>'Terms of service'
         );
     }

@@ -2,7 +2,6 @@
 /*
  * - -- - - - - - - - - - - - *
  * INDIOSIS                   *
- * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
  * 
  * CONTROLLER : Profile
@@ -16,13 +15,28 @@
 class ProfileController extends IndiosisController
 {
     
-    public function actions() {}
+    /**
+     * Specify the access rules for this controller.
+     */
+    public function accessRules()
+    {
+        return array(
+            array('allow',
+                'actions'=>array('index'),
+                'users'=>array('@'),
+            ),
+            array('deny',
+                'actions'=>array('index')
+            ),
+        );
+    }
 
     /**
      * Default action.
      */
     public function actionIndex()
-    { 
-        $this->render('profile');
+    {
+        $this->breadcrumbsLinks = array('Profile'=>array('profile'),Yii::app()->user->organizationName.' (you)');
+        $this->render('overview',array('companyName'=>null));
     }
 }

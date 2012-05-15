@@ -5,10 +5,10 @@
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
  * 
- * VIEW : Registration page
- * Registration form including LinkedIn based registration.
+ * VIEW : Notification message
+ * Show a simple notification message page.
  * 
- * @package     account
+ * @package     all
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI
  */

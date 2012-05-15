@@ -27,6 +27,7 @@ function showFeatureDescr(featureId) {
         });
     }
 }
+
 // Hide the description of a given feature
 function hideFeatureDescr(featureId) {
     $("#txt_"+featureId).removeClass("visible");
@@ -49,6 +50,7 @@ $("div.feature_illu").mouseenter(function() {
         showFeatureDescr(div.attr("id"));
     }, 250);
 });
+
 // Slide down a feature illustration on mouse-out.
 $("div.feature_illu").mouseleave(function() {
     clearTimeout(tm);

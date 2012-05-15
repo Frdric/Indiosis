@@ -80,7 +80,7 @@
                         echo '<a href="'.Yii::app()->baseUrl.'/account/login" id="login_link"><img src="'.Yii::app()->baseUrl.'/images/login_lock.gif'.'" alt="Secure login" />Log In</a>';
                     }
                     else {
-                        echo Yii::app()->user->firstName." ".Yii::app()->user->lastName.' | '.'<a href="'.Yii::app()->baseUrl.'/account/logout">Logout</a>';
+                        echo Yii::app()->user->firstName." ".Yii::app()->user->lastName.' &nbsp;<span>('.((!empty(Yii::app()->user->organizationAcronym)) ? Yii::app()->user->organizationAcronym : Yii::app()->user->organizationName ).')</span> | '.'<a href="'.Yii::app()->baseUrl.'/account/logout">Logout</a>';
                     }
                     ?>
                 </div>
@@ -89,7 +89,13 @@
         
         <!-- MAIN CONTENT -->
         <div id="main_content">
-            <?php echo $content; ?>
+            <?php
+            // Display breadcrumbs (if set)
+            $this->widget('zii.widgets.CBreadcrumbs', array('links'=>$this->breadcrumbsLinks));
+            // Output main content
+            echo $content;
+            // echo '<a href="#header" /><span>&#9650;</span> Back To Top</a>';
+            ?>
         </div>
         <div id="footer_push"></div>
     </div>
@@ -101,8 +107,6 @@
             <div id="footer_links">
                 <h4>More about Indiosis</h4>
                 <a href="<?php echo Yii::app()->createUrl('help'); ?>">Help</a> | <a href="<?php echo Yii::app()->createUrl('privacy'); ?>">User Agreement & Privacy</a> | <a href="<?php echo Yii::app()->createUrl('about'); ?>">About Indiosis</a> | <a href="<?php echo Yii::app()->createUrl('contact'); ?>">Send us your feedback</a>
-                <br/><br/><br/>
-                <a href="#header" /><span>&#9650;</span> Back To Top</a>
             </div>
             <div id="footer_supportedby">
                 <a href="http://www.roionline.org" target="_blank"><img src="<?php echo Yii::app()->baseUrl.'/images/roi_logo.png'; ?>" alt="ROI - Resource Optimization Initiative" /></a>

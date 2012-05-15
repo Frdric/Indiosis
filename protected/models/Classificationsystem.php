@@ -6,31 +6,28 @@
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
  * 
- * MODEL : Message 
- * The model class for table "message".
+ * MODEL : Classificationsystem 
+ * The model class for table "classificationsystem".
  * 
- * The followings are the available columns in table 'message':
- * @property integer $id
- * @property string $title
- * @property string $body
- * @property string $sent_on
- * @property integer $Sender_id
+ * The followings are the available columns in table 'classificationsystem':
+ * @property string $name
+ * @property string $fullName
+ * @property string $revision
  *
  * The followings are the available model relations:
- * @property User $sender
- * @property User[] $users
+ * @property Resourcecode[] $resourcecodes
  *
  * @package     base
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI
  */
  
-class Message extends CActiveRecord
+class Classificationsystem extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Message the static model class
+	 * @return Classificationsystem the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -42,7 +39,7 @@ class Message extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'message';
+		return 'classificationsystem';
 	}
 
 	/**
@@ -53,13 +50,13 @@ class Message extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('sent_on, Sender_id', 'required'),
-			array('Sender_id', 'numerical', 'integerOnly'=>true),
-			array('title', 'length', 'max'=>250),
-			array('body', 'safe'),
+			array('name', 'required'),
+			array('name', 'length', 'max'=>20),
+			array('fullName', 'length', 'max'=>250),
+			array('revision', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, body, sent_on, Sender_id', 'safe', 'on'=>'search'),
+			array('name, fullName, revision', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -71,8 +68,7 @@ class Message extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'sender' => array(self::BELONGS_TO, 'User', 'Sender_id'),
-			'users' => array(self::MANY_MANY, 'User', 'messagerecipient(Message_id, Recipient_id)'),
+			'resourcecodes' => array(self::HAS_MANY, 'Resourcecode', 'ClassificationSystem_name'),
 		);
 	}
 
@@ -82,11 +78,9 @@ class Message extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'title' => 'Title',
-			'body' => 'Body',
-			'sent_on' => 'Sent On',
-			'Sender_id' => 'Sender',
+			'name' => 'Name',
+			'fullName' => 'Full Name',
+			'revision' => 'Revision',
 		);
 	}
 
@@ -101,11 +95,9 @@ class Message extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('title',$this->title,true);
-		$criteria->compare('body',$this->body,true);
-		$criteria->compare('sent_on',$this->sent_on,true);
-		$criteria->compare('Sender_id',$this->Sender_id);
+		$criteria->compare('name',$this->name,true);
+		$criteria->compare('fullName',$this->fullName,true);
+		$criteria->compare('revision',$this->revision,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

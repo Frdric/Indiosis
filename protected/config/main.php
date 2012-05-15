@@ -10,7 +10,7 @@
  * 
  * @package     all
  * @author      Frederic Andreae
- * @copyright   Copyright (C) 2011, ROI
+ * @copyright   UNIL/ROI 2012
  */
 
 // Include helper functions
@@ -73,10 +73,11 @@ return array(
     //To be uncommented when auto-creation panel is needed.
     'modules'=>array(
         'gii'=>array(
-                'class'=>'system.gii.GiiModule',
-                'password'=>'roi',
-                // If removed, Gii defaults to localhost only. Edit carefully to taste.
-                'ipFilters'=>array('127.0.0.1','::1'),
+            'class'=>'system.gii.GiiModule',
+            'password'=>'primeroi',
+            'generatorPaths'=>array(
+                'application.gii',   // a path alias
+            )
         ),
     ),
     
@@ -85,7 +86,7 @@ return array(
         // Setup user authentication rules
         'user'=>array(
             'allowAutoLogin'=>true,
-            'loginUrl'=>null
+            'loginUrl'=> '/indiosis/',
         ),
 
         // Simplify URLs

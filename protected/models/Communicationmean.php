@@ -6,31 +6,32 @@
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
  * 
- * MODEL : Message 
- * The model class for table "message".
+ * MODEL : Communicationmean 
+ * The model class for table "communicationmean".
  * 
- * The followings are the available columns in table 'message':
+ * The followings are the available columns in table 'communicationmean':
  * @property integer $id
- * @property string $title
- * @property string $body
- * @property string $sent_on
- * @property integer $Sender_id
+ * @property string $type
+ * @property string $value
+ * @property string $label
+ * @property integer $User_id
+ * @property integer $Organization_id
  *
  * The followings are the available model relations:
- * @property User $sender
- * @property User[] $users
+ * @property Organization $organization
+ * @property User $user
  *
  * @package     base
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI
  */
  
-class Message extends CActiveRecord
+class Communicationmean extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Message the static model class
+	 * @return Communicationmean the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -42,7 +43,7 @@ class Message extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'message';
+		return 'communicationmean';
 	}
 
 	/**
@@ -53,13 +54,13 @@ class Message extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('sent_on, Sender_id', 'required'),
-			array('Sender_id', 'numerical', 'integerOnly'=>true),
-			array('title', 'length', 'max'=>250),
-			array('body', 'safe'),
+			array('type, value, User_id, Organization_id', 'required'),
+			array('User_id, Organization_id', 'numerical', 'integerOnly'=>true),
+			array('type', 'length', 'max'=>7),
+			array('value, label', 'length', 'max'=>250),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, body, sent_on, Sender_id', 'safe', 'on'=>'search'),
+			array('id, type, value, label, User_id, Organization_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -71,8 +72,8 @@ class Message extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'sender' => array(self::BELONGS_TO, 'User', 'Sender_id'),
-			'users' => array(self::MANY_MANY, 'User', 'messagerecipient(Message_id, Recipient_id)'),
+			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
+			'user' => array(self::BELONGS_TO, 'User', 'User_id'),
 		);
 	}
 
@@ -83,10 +84,11 @@ class Message extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'title' => 'Title',
-			'body' => 'Body',
-			'sent_on' => 'Sent On',
-			'Sender_id' => 'Sender',
+			'type' => 'Type',
+			'value' => 'Value',
+			'label' => 'Label',
+			'User_id' => 'User',
+			'Organization_id' => 'Organization',
 		);
 	}
 
@@ -102,10 +104,11 @@ class Message extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('title',$this->title,true);
-		$criteria->compare('body',$this->body,true);
-		$criteria->compare('sent_on',$this->sent_on,true);
-		$criteria->compare('Sender_id',$this->Sender_id);
+		$criteria->compare('type',$this->type,true);
+		$criteria->compare('value',$this->value,true);
+		$criteria->compare('label',$this->label,true);
+		$criteria->compare('User_id',$this->User_id);
+		$criteria->compare('Organization_id',$this->Organization_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

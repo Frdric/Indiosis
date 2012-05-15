@@ -16,11 +16,31 @@
 class IndiosisController extends CController
 {
     // The default layout
-    public $layout='//layouts/primary';
+    public $layout = '//layouts/primary';
     
-    // Context menu items. This property will be assigned to {@link CMenu::items}.
-    public $menu=array();
+    // Initialize pages breadcrumbs (to overwrite for breadcrumbs to appear)
+    public $breadcrumbsLinks = array();
     
+    
+    /*
+     * Enable access control.
+     */
+    public function filters()
+    {
+        return array('accessControl');
+    }
+    
+    /**
+     * Specify the access rules for all controllers.
+     */
+    public function accessRules()
+    {
+        return array(
+            array('allow', // allow everyone
+                'users'=>array('*'),
+            ),
+        );
+    }
     
     /**
      * The error action called each time a bug occurs.

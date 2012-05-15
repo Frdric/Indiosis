@@ -1,9 +1,15 @@
 <?php
 
 /**
- * This is the model class for table "indiosis.User".
- *
- * The followings are the available columns in table 'indiosis.User':
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
+ * 
+ * MODEL : User 
+ * The model class for table "user".
+ * 
+ * The followings are the available columns in table 'user':
  * @property integer $id
  * @property string $email
  * @property string $password
@@ -12,39 +18,43 @@
  * @property string $prefix
  * @property string $title
  * @property string $bio
- * @property integer $isExpert
- * @property string $linkedIn_id
- * @property string $date_joined
+ * @property integer $linkedin_id
+ * @property string $oauth_token
+ * @property string $oauth_secret
  * @property string $last_connected
- * @property string $confirmationCode
- * @property integer $verified
- * @property integer $Company_id
+ * @property string $joined_on
+ * @property string $verification_code
+ * @property integer $Organization_id
  *
  * The followings are the available model relations:
- * @property CommunicationMean[] $communicationMeans
+ * @property Communicationmean[] $communicationmeans
+ * @property Expertise[] $expertises
  * @property Message[] $messages
- * @property Message[] $messages1
- * @property News[] $news
- * @property Company $company
- * @property Code[] $codes
+ * @property Organization $organization
+ *
+ * @package     base
+ * @author      Frederic Andreae
+ * @copyright   UNIL/ROI
  */
+ 
 class User extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
+	 * @param string $className active record class name.
 	 * @return User the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-
+	
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'indiosis.User';
+		return 'user';
 	}
 
 	/**
@@ -55,14 +65,17 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('date_joined', 'required'),
-			array('isExpert, verified, Company_id', 'numerical', 'integerOnly'=>true),
-			array('email, password, lastName, firstName, prefix, title, bio', 'length', 'max'=>45),
-			array('linkedIn_id, confirmationCode', 'length', 'max'=>255),
-			array('last_connected', 'safe'),
+			array('email, password, joined_on, Organization_id', 'required'),
+			array('linkedin_id, Organization_id', 'numerical', 'integerOnly'=>true),
+			array('email, lastName, firstName', 'length', 'max'=>45),
+			array('password', 'length', 'max'=>32),
+			array('prefix', 'length', 'max'=>20),
+			array('title', 'length', 'max'=>250),
+			array('oauth_token, oauth_secret, verification_code', 'length', 'max'=>100),
+			array('bio, last_connected', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, email, password, lastName, firstName, prefix, title, bio, isExpert, linkedIn_id, date_joined, last_connected, confirmationCode, verified, Company_id', 'safe', 'on'=>'search'),
+			array('id, email, password, lastName, firstName, prefix, title, bio, linkedin_id, oauth_token, oauth_secret, last_connected, joined_on, verification_code, Organization_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -74,12 +87,10 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'communicationMeans' => array(self::HAS_MANY, 'CommunicationMean', 'User_id'),
-			'messages' => array(self::HAS_MANY, 'Message', 'sender'),
-			'messages1' => array(self::HAS_MANY, 'Message', 'recipient'),
-			'news' => array(self::HAS_MANY, 'News', 'User_id'),
-			'company' => array(self::BELONGS_TO, 'Company', 'Company_id'),
-			'codes' => array(self::MANY_MANY, 'Code', 'UserExpertise(User_id, Code_number)'),
+			'communicationmeans' => array(self::HAS_MANY, 'Communicationmean', 'User_id'),
+			'expertises' => array(self::HAS_MANY, 'Expertise', 'User_id'),
+			'messages' => array(self::MANY_MANY, 'Message', 'messagerecipient(Recipient_id, Message_id)'),
+			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
 		);
 	}
 
@@ -97,13 +108,13 @@ class User extends CActiveRecord
 			'prefix' => 'Prefix',
 			'title' => 'Title',
 			'bio' => 'Bio',
-			'isExpert' => 'Is Expert',
-			'linkedIn_id' => 'Linked In',
-			'date_joined' => 'Date Joined',
+			'linkedin_id' => 'Linkedin',
+			'oauth_token' => 'Oauth Token',
+			'oauth_secret' => 'Oauth Secret',
 			'last_connected' => 'Last Connected',
-			'confirmationCode' => 'Confirmation Code',
-			'verified' => 'Verified',
-			'Company_id' => 'Company',
+			'joined_on' => 'Joined On',
+			'verification_code' => 'Verification Code',
+			'Organization_id' => 'Organization',
 		);
 	}
 
@@ -126,13 +137,13 @@ class User extends CActiveRecord
 		$criteria->compare('prefix',$this->prefix,true);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('bio',$this->bio,true);
-		$criteria->compare('isExpert',$this->isExpert);
-		$criteria->compare('linkedIn_id',$this->linkedIn_id,true);
-		$criteria->compare('date_joined',$this->date_joined,true);
+		$criteria->compare('linkedin_id',$this->linkedin_id);
+		$criteria->compare('oauth_token',$this->oauth_token,true);
+		$criteria->compare('oauth_secret',$this->oauth_secret,true);
 		$criteria->compare('last_connected',$this->last_connected,true);
-		$criteria->compare('confirmationCode',$this->confirmationCode,true);
-		$criteria->compare('verified',$this->verified);
-		$criteria->compare('Company_id',$this->Company_id);
+		$criteria->compare('joined_on',$this->joined_on,true);
+		$criteria->compare('verification_code',$this->verification_code,true);
+		$criteria->compare('Organization_id',$this->Organization_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

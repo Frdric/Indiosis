@@ -45,7 +45,7 @@ class EmailHelper extends CComponent
         $mailer = Yii::createComponent('application.extensions.mailer.EMailer');
         $mailer->Host = self::HOST;
         $mailer->Username = self::USERNAME;
-        $mailer->Password = $PASSWORD;
+        //$mailer->Password = self::PASSWORD;
         $mailer->IsSMTP();
         $mailer->IsHTML();
         $mailer->FromName = 'Indiosis';

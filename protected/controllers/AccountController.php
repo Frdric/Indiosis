@@ -15,9 +15,6 @@
 
 class AccountController extends IndiosisController
 {
-    
-    public function actions() {}
-
     /**
      * Default action.
      */
@@ -40,29 +37,22 @@ class AccountController extends IndiosisController
             
             if($model->validate()) {
                 // create a random confirmation code 
-                $confirm_code = md5(uniqid(rand()));
+                $verif_code = md5(uniqid(rand()));
                 $newUser = new User;
                 $newUser->setAttributes($model->attributes);
                 $newUser->password = md5($newUser->password);
-                $newUser->isExpert = 0;
-                $newUser->date_joined = date("Y-m-d");
-                $newUser->confirmationCode = $confirm_code;
-                $newUser->verified = 0;
+                $newUser->verification_code = $verif_code;
                 
-                // create the company if a name has been provided
-                if($model->attributes['company']!='') {
-                    $newCompany = new Company;
-                    $newCompany->name = $model->attributes['company'];
-                    $newCompany->date_created = date("Y-m-d");
-                    $newCompany->anonymous = 1;
-                    $newCompany->verified = 0;
-                    $newCompany->CompanyType_id = 1;
-                    $newCompany->save();
-                    $newUser->Company_id = $newCompany->primaryKey;
+                // create the organization if a name has been provided
+                if($model->attributes['organization']!='') {
+                    $newOrganization = new Organization;
+                    $newOrganization->name = $model->attributes['organization'];
+                    $newOrganization->save();
+                    $newUser->Organization_id = $newOrganization->primaryKey;
                 }
                 $newUser->save();
                 // send an email with the confirmation code.
-                EmailHelper::sendAccountVerification($newUser,$confirm_code);
+                EmailHelper::sendAccountVerification($newUser,$verif_code);
                 // send back success response
                 echo Yii::app()->params['ajaxSuccess'];
             }
@@ -72,6 +62,7 @@ class AccountController extends IndiosisController
             }
             Yii::app()->end();
         }
+        
         // display the login form
         $this->render('register',array('model'=>$model),false,true);
     }
@@ -125,9 +116,9 @@ class AccountController extends IndiosisController
             $access_token_response = $oauth->getAccessToken("https://api.linkedin.com/uas/oauth/accessToken","", $_GET['oauth_verifier']);
 
             if($access_token_response === FALSE) {
-                    throw new Exception("Failed fetching request token, response was: " . $oauth->getLastResponse());
+                throw new Exception("Failed fetching request token, response was: " . $oauth->getLastResponse());
             } else {
-                    $message = $access_token_response;
+                $message = $access_token_response;
             }
         }
         else {
@@ -139,19 +130,17 @@ class AccountController extends IndiosisController
     /**
      * Verifiy account using confirmation code sent by email.
      */
-    public function actionVerifyAccount()
+    public function actionVerify()
     {
         $verified = false;
         // lookup if a user having that confirmation code exists
-        $user=User::model()->findByAttributes(array('confirmationCode'=>$_GET['confirmationcode']));
+        $user=User::model()->findByAttributes(array('verification_code'=>$_GET['confirmationcode']));
         if($user) {
-            $user->verified = 1;
-            $user->confirmationCode = null;
+            $user->verification_code = 'verified';
             $user->save();
             $verified = true;
         }
-        
-        $this->render('verifyaccount',array('verified'=>$verified,'user'=>$user));
+        $this->render('verify',array('verified'=>$verified,'user'=>$user));
     }
     
     /**

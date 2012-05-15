@@ -1,249 +1,63 @@
 @charset "utf-8";
 /*
- * - - - - - - - - - - - - - - - - - - - *
- * INDIOSIS                              *
- * The resource optimization community.  *
- * - - - - - - - - - - - - - - - - - - - *
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  * 
- * Profile look
- * Describes the look for profile related views.
+ * STYLE : Profile page look
  * 
  * @package     profile
- * @author      Arjun Shankar, Frédéric Andreae
- * @copyright   Copyright (C) 2011, ROI
- */
+ * @author      Frédéric Andreae
+ * @copyright   UNIL/ROI
+*/
 
-#left_column {
-	width:180px;
-	padding-top:0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 9px;
-	margin: 0px;
-	float:left;
-	border-right: 0px;
+/* Altering main layout for special home illustration [ */
+h3 {
+    font-family: "OpenSansSemibold";
+    font-size: 17px;
+    color: #555;
+}
+/* ] */
+h3 span {
+    font-family: "OpenSansRegular";
+    font-size: 16px;
+    color: #777;
 }
 
-#baseinfo {
-	border-bottom: 1px #CCC solid;
+div#org_profile {
+    height: 200px;
 }
-
-.selfphotologo {
-	height: 78px;
-	width: 78px;
-	border: 1px #999 solid;
-	margin-bottom: 10px;
-	margin-right: 10px;
-	font-size: 9px;
-	overflow: hidden;
+div#org_info {
+    float: left;
+    width: 590px;
+    margin-top: 10px;
 }
-/* selfphotologo is the class that will bw reflected for both the company logo as well as profile avatar */
-
-#name {
-	font-weight: bold;
+div#org_logo {
+    float: left;
+    background-color: #FAFAFA;
+    border: solid 1px #CCC;
+    width: 150px;
+    height: 86px;
+    margin-right: 25px;
 }
-
-#designation_company {
-	font-size:10px;
-}
-
-#location {
-	font-size: 10px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-#profile_complete {
-	font-size: 10px;
-	margin-top: 10px;
-	padding-bottom: 10px;
-	border-bottom: 1px #CCC solid;
-}
-
-#materialfinder {
-	font-size: 11px;
-	margin-top: 10px;
-	padding-bottom: 10px;
-	border-bottom: 1px #CCC solid;	
-}
-
-#searchsubmit {
-	background-color: #069;
-	border: 0px;
-	color: white;
-	padding-top: 3px;
-	padding-bottom: 3px;
-	padding-left: 6px;
-	padding-right: 6px;
-	font-size:11px;
-	float:left;
-}
-
-#materialsubmit {
-	background-color: #069;
-	border: 0px;
-	color: white;
-	padding-top: 3px;
-	padding-bottom: 3px;
-	padding-left: 6px;
-	padding-right: 6px;
-	font-size:11px;
-}
-
-#advanced_search {
-	background-color: white;
-	border: opx;
-	color: black;
-	padding-top: 5px;
-	padding-bottom: 3px;
-	padding-left: 6px;
-	padding-right: 6px;
-	font-size:11px;
-	float:left;
-}
-
-#right_column {
-	width: 780px;
-	float:left;
-	padding-left: 9px;
-	border-left: #666 1px solid;
-}
-
-#topsort {
-	font-size:10px;
-	width:100%;
-	padding-top:10px;
-	padding-bottom:0px;
-	border-bottom: #CCC 1px solid;
-	margin-bottom:10px;
-}
-
-.heading {
-	font-size:12px;
-	padding-top: 10px;
-	padding-left: 36px;
-	padding-bottom:0px;
-	border-bottom: #CCC 1px solid;
-	margin-bottom:10px;
-	height:32px;
-	font-weight:bold;
-	margin-top:10px;
-}
-
-#mat {
-	background-image:url(/images/materials_large.png);
-	background-repeat:no-repeat;
-}
-#mat_add {
-	background-image:url(/images/materials_large_add.png);
-	background-repeat:no-repeat;
-}
-
-.currently {
-	float:left;
-	margin-right:60px;
-	margin-bottom:0px;
-}
-
-.currentlyviewing {
-	float:left;
-	margin-left: 20px;
-	margin-right: 20px;	
-	padding: 3px;
-	margin-bottom:0px;
-}
-
-.now {
-	background-color: #CCC;
+div#org_logo img {
+    margin: 8px 11px 0;
 }
 
 
-#feed {
-	width: 530px;
-	padding-right: 5px;
-	border-right: #CCC 1px solid;
-	font-size: 11px;
-	float:left;
+div#org_flows {
+    float: right;
+    width: 350px;
 }
-
-.news {
-	width: 480px;
-	border-bottom: #CCC 1px solid;
-	padding-left: 50px;
-	padding-right: 0px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background-image:url(/images/newspaper.png);
-	background-position: 5px 10px;
-	background-repeat:no-repeat;
+div#org_flows .iboxheader {
+    font-family: "OpenSansRegular";
+    text-align: center;
+    font-size: 15px;
 }
-
-.source {
-	color: #999;
-	font-size:10px;
+div#org_flows .iboxheader span:first-child {
+    font-family: "OpenSansSemibold";
 }
-
-.feed_actions {
-	width: 500px;
-	margin-right: 20px;
-	float:right;
-}
-
-.feedaction {
-	float: right;
-	margin: 5px;
-}
-
-.match {
-	width: 480px;
-	border-bottom: #CCC 1px solid;
-	padding-left: 50px;
-	padding-right: 0px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background-image:url(/images/magnet.png);
-	background-position: 5px 10px;
-	background-repeat:no-repeat;
-}
-
-#more {
-	background-color: #CCC;
-	padding: 5px;
-}
-
-#indiosis_widgets{
-	float:left;
-	margin-left: 10px;
-	font-size:11px;
-	margin-top: 10px;
-}
-
-.indiosis_widget {
-	padding-left: 30px;
-	margin-bottom: 10px;
-	padding-bottom: 10px;
-	border-bottom: 1px #CCC solid;
-}
-
-#materialsinventorywidget {
-	background-image: url(/images/materials.png);
-	background-repeat: no-repeat;
-	background-position: 0px 0px;	
-}
-
-#incomingrequestswidget {
-	background-image: url(/images/request_open.png);
-	background-repeat: no-repeat;
-	background-position: 0px 0px;		
-}
-
-#outgoingrequestswidget {
-	background-image: url(/images/request_go.png);
-	background-repeat: no-repeat;
-	background-position: 0px 0px;	
-}
-
-#inventory {
-	border-bottom: 1px #CCC solid;
-	padding-bottom: 20px;
+div#org_flows .iboxheader span:last-child {
+    color: #2582A9;
 }

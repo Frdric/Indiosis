@@ -14,16 +14,8 @@
  */
 
 
-class InventoryController extends IndiosisController {
-    
-    /**
-     * Declares class-based actions.
-     */
-    public function actions()
-    {
-
-    }
-
+class InventoryController extends IndiosisController
+{
     /**
      * Displays inventory management page.
      */

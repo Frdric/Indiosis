@@ -47,32 +47,32 @@ $this->beginWidget('IBoxWidget',array(
     );
     ?>
     <div class="row">
-        <div><?php echo CHtml::activeLabel($model,'firstName'); ?></div>
-        <div><?php echo CHtml::activeTextField($model,'firstName') ?></div>
+        <div><?php echo $form->label($model,'firstName'); ?></div>
+        <div><?php echo $form->textField($model,'firstName') ?></div>
         <?php echo $form->error($model,'firstName'); ?>
     </div>
     <div class="row">
-        <div><?php echo CHtml::activeLabel($model,'lastName'); ?></div>
-        <div><?php echo CHtml::activeTextField($model,'lastName') ?></div>
+        <div><?php echo $form->label($model,'lastName'); ?></div>
+        <div><?php echo $form->textField($model,'lastName') ?></div>
         <?php echo $form->error($model,'lastName'); ?>
     </div>
     <div class="row">
-        <div><?php echo CHtml::activeLabel($model,'email'); ?></div>
-        <div><?php echo CHtml::activeTextField($model,'email') ?></div>
+        <div><?php echo $form->label($model,'email'); ?></div>
+        <div><?php echo $form->textField($model,'email') ?></div>
         <?php echo $form->error($model,'email'); ?>
     </div>
     <div class="row">
-        <div><?php echo CHtml::activeLabel($model,'password'); ?></div>
-        <div><?php echo CHtml::activePasswordField($model,'password') ?></div>
+        <div><?php echo $form->label($model,'password'); ?></div>
+        <div><?php echo $form->passwordField($model,'password') ?></div>
         <?php echo $form->error($model,'password'); ?>
     </div>
     <div class="row">
-        <div>Your company name</div>
-        <div><?php echo CHtml::activeTextField($model,'company') ?></div>
-        <?php echo $form->error($model,'company'); ?>
+        <div>Company name</div>
+        <div><?php echo $form->textField($model,'organization') ?></div>
+        <?php echo $form->error($model,'organization'); ?>
     </div>            
     <div class="row uaagreed">
-        <div><?php echo CHtml::activeCheckBox($model,'uaagreed') ?></div>
+        <div><?php echo $form->checkBox($model,'uaagreed') ?></div>
         <div class="txt">By signing up I agree to<br/>Indiosis <a href="#" target="_blank">terms of service</a>.</div>
         <?php echo $form->error($model,'uaagreed'); ?>
     </div>
@@ -80,7 +80,6 @@ $this->beginWidget('IBoxWidget',array(
         <?php echo CHtml::submitButton('Sign Up',array("class"=>'ibutton_big iblue')); ?>
         <img src="<?php echo Yii::app()->baseUrl.'/images/loader.gif'; ?>" class="loader signuploader" alt="loading..." />
     </div>
-
     <?php $this->endWidget(); ?>
 </div>
 

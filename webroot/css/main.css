@@ -246,6 +246,14 @@ body {
 #infobar img {
     margin-right: 6px;
 }
+#infobar span {
+    color: #BBB;
+}
+
+div.breadcrumbs {
+    font-family: "OpenSansRegular";
+    padding: 13px 0 28px;
+}
 
 #footer_push {
     height: 190px; /* <-- always bigger than footer  */

@@ -6,31 +6,24 @@
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
  * 
- * MODEL : Message 
- * The model class for table "message".
+ * MODEL : Symbioticorganization 
+ * The model class for table "symbioticorganization".
  * 
- * The followings are the available columns in table 'message':
- * @property integer $id
- * @property string $title
- * @property string $body
- * @property string $sent_on
- * @property integer $Sender_id
- *
- * The followings are the available model relations:
- * @property User $sender
- * @property User[] $users
+ * The followings are the available columns in table 'symbioticorganization':
+ * @property integer $Organization_id
+ * @property integer $Symbiosis_id
  *
  * @package     base
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI
  */
  
-class Message extends CActiveRecord
+class Symbioticorganization extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Message the static model class
+	 * @return Symbioticorganization the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -42,7 +35,7 @@ class Message extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'message';
+		return 'symbioticorganization';
 	}
 
 	/**
@@ -53,13 +46,11 @@ class Message extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('sent_on, Sender_id', 'required'),
-			array('Sender_id', 'numerical', 'integerOnly'=>true),
-			array('title', 'length', 'max'=>250),
-			array('body', 'safe'),
+			array('Organization_id, Symbiosis_id', 'required'),
+			array('Organization_id, Symbiosis_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, body, sent_on, Sender_id', 'safe', 'on'=>'search'),
+			array('Organization_id, Symbiosis_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -71,8 +62,6 @@ class Message extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'sender' => array(self::BELONGS_TO, 'User', 'Sender_id'),
-			'users' => array(self::MANY_MANY, 'User', 'messagerecipient(Message_id, Recipient_id)'),
 		);
 	}
 
@@ -82,11 +71,8 @@ class Message extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'title' => 'Title',
-			'body' => 'Body',
-			'sent_on' => 'Sent On',
-			'Sender_id' => 'Sender',
+			'Organization_id' => 'Organization',
+			'Symbiosis_id' => 'Symbiosis',
 		);
 	}
 
@@ -101,11 +87,8 @@ class Message extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('title',$this->title,true);
-		$criteria->compare('body',$this->body,true);
-		$criteria->compare('sent_on',$this->sent_on,true);
-		$criteria->compare('Sender_id',$this->Sender_id);
+		$criteria->compare('Organization_id',$this->Organization_id);
+		$criteria->compare('Symbiosis_id',$this->Symbiosis_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
