@@ -32,4 +32,20 @@ class Helpers {
         return $pageTitle;
     }
     
+    /**
+     * Output an array of variables into the client's JS script.
+     * @param array $phpVar An array of variables.
+     */
+    public static function varToJS($phpVar)
+    {
+        $jsVarScript = "// Set specific variables \r\n";
+        
+        if(is_array($phpVar)) {
+            // transform each value into a JS variable
+            $jsVarScript .= 'var specificVar = '.json_encode($phpVar);
+            
+            Yii::app()->clientScript->registerScript('specificVar',$jsVarScript,CClientScript::POS_HEAD);
+        }
+    }
+    
 }

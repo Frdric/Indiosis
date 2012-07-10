@@ -17,39 +17,71 @@ h3 {
     font-family: "OpenSansSemibold";
     font-size: 17px;
     color: #555;
+    margin-bottom: 6px;
 }
-/* ] */
+/* end of main layout altering ] */
 h3 span {
     font-family: "OpenSansRegular";
     font-size: 16px;
     color: #777;
 }
 
-div#org_profile {
-    height: 200px;
-}
 div#org_info {
     float: left;
     width: 590px;
     margin-top: 10px;
 }
-div#org_logo {
+div#org_maplogo {
     float: left;
-    background-color: #FAFAFA;
+    width: 170px;
+    margin-right: 23px;
+}
+div#org_logo {
+    background-color: #F9F9F9;
     border: solid 1px #CCC;
-    width: 150px;
-    height: 86px;
-    margin-right: 25px;
+    margin-bottom: 15px;
 }
 div#org_logo img {
-    margin: 8px 11px 0;
+    margin: 10px 18px;
+}
+div#org_detail {
+    border: solid 4px #EEE;
+    border-bottom: solid 6px #EEE;
+    background-color: #EEE;
+    font-family: "OpenSansRegular";
+    font-size: 11px;
+    line-height: 13px;
+}
+div#org_detail span {
+    font-family: "OpenSansSemibold";
+    
+}
+div.gmap {
+    margin-top: 10px;
+}
+.jvectormap-zoomin, .jvectormap-zoomout {
+    display: none;
+}
+
+div#org_descr {
+    float: left;
+    width: 397px;
+    min-height: 250px;
 }
 
 
-div#org_flows {
+div#org_flows, div#interactions {
     float: right;
     width: 350px;
 }
+div#interactions {
+    margin-top: 20px;
+}
+
+div#interactions input:first-child {
+    margin-right: 15 px;
+}
+
 div#org_flows .iboxheader {
     font-family: "OpenSansRegular";
     text-align: center;

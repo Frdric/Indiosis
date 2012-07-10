@@ -59,6 +59,9 @@ Yii::app()->clientScript->registerScriptFile(
         <div class="feature_subtitle">Get help from industrial<br/>symbiosis experts</div>
     </div>
 </div>
+<?php
+if(Yii::app()->user->isGuest) {
+?>
 <hr/>
 <div id="register_area">
     <h2>SIGN UP <span>- it's free !</span></h2>
@@ -78,6 +81,7 @@ Yii::app()->clientScript->registerScriptFile(
     </div>
     <p id="signup_note">We recommand using your LinkedIn account<br/>as it will allow Indiosis to better suggest you with synergy partners.</p>
 </div>
+<?php } ?>
 <div id="news_area_wrapper">
     <div id="news_area">
         <div class="lined_heading">

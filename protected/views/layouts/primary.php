@@ -45,7 +45,7 @@
     ?>
     <!-- LinkedIn API import -->
     <script type="text/javascript" src="http://platform.linkedin.com/in.js">
-      api_key: L4gyxZw6qwgyw1Gc2baz0HutNqeIafCLf7WhjHklXyGnBvcL65-ysOa1smgdN3lc
+      api_key: <?php echo Yii::app()->params['linkedinKey']; ?>
       authorize: true
     </script>
     <?php
@@ -67,8 +67,9 @@
                     <a href="<?php echo Yii::app()->baseUrl; ?>/"><img src="<?php echo Yii::app()->baseUrl.'/images/indiosis_headlogo.png'; ?>" alt="Indiosis" id="headerlogo"/></a>
                 </div>
                 <div id="topmenu">
+                    <div class="topmenubutton monoline"><a href="<?php echo Yii::app()->baseUrl; ?>/profile">My COMPANY</a></div>
+                    <div class="topmenubutton monoline"><a href="<?php echo Yii::app()->baseUrl; ?>/members">MEMBERS<br/></a></div>
                     <div class="topmenubutton"><a href="<?php echo Yii::app()->baseUrl; ?>/repository">PRACTICES<br/>REPOSITORY</a></div>
-                    <div class="topmenubutton monoline"><a href="<?php echo Yii::app()->baseUrl; ?>/profile">My INDIOSIS</a></div>
                     <div class="topmenubutton"><a href="<?php echo Yii::app()->baseUrl; ?>/about">EXPERTS<br/>CORNER</a></div>
                     <div id="searchfield"><input type="text" name="spractice" value="search symbiosis practices.." class="no-uniform empty" /></div>
                 </div>

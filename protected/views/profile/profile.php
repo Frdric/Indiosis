@@ -1,0 +1,108 @@
+<?php
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
+ * 
+ * VIEW : Main Profile Overview
+ * The profile page of an organization.
+ * 
+ * @package     profile
+ * @author      Frederic Andreae
+ * @copyright   UNIL/ROI
+ */
+
+// set page title
+$this->pageTitle= Helpers::buildPageTitle("Profile");
+// register CSS + JS scripts
+Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/profile.css');
+Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/jvectormap.css');
+// add JS variables
+$this->pageTitle= Helpers::varToJS($vmapMarkers);
+Yii::app()->clientScript->registerScriptFile(
+    Yii::app()->assetManager->publish(Yii::getPathOfAlias('application.extensions.jvectormap')."/jquery-jvectormap.js"),
+    CClientScript::POS_END
+);
+Yii::app()->clientScript->registerScriptFile(
+    Yii::app()->assetManager->publish(Yii::getPathOfAlias('application.extensions.jvectormap.maps')."/jquery-jvectormap-world-en.js"),
+    CClientScript::POS_END
+);
+Yii::app()->clientScript->registerScriptFile(
+    Yii::app()->assetManager->publish(Yii::getPathOfAlias('application.views.profile')."/profile.js"),
+    CClientScript::POS_END
+);
+?>
+<!-- PROFILE VIEW -->
+<div id="org_profile">
+    
+    <!-- Organization Info -->
+    <div id="org_info">
+        <div id="org_maplogo">
+            <div id="org_logo">
+                <img src="<?php echo Yii::app()->baseUrl.'/images/default_organization.gif'; ?>" alt="<?php echo $organization->acronym; ?> logo" />
+            </div>
+            <div id="org_detail">
+                <?php
+                foreach ($org_commeans as $comean) {
+                    echo '<span>'.$comean->label.'</span><br/>'.$comean->value.'<br/> ';
+                }
+                ?>
+                <br/>
+                <?php if(!empty($org_location->addressLine1)) echo $org_location->addressLine1.'<br/>'; ?>
+                <?php if(!empty($org_location->addressLine2)) echo $org_location->addressLine2.'<br/>'; ?>
+                <?php if(!empty($org_location->city)) echo $org_location->city.'<br/>'; ?>
+                <?php if(!empty($org_location->country)) echo $org_location->country.'<br/>'; ?>
+                <?php // echo $gMap->renderMap(); ?>
+                <div id="org_vmap" style="width: 162px; height: 100px"></div>
+            </div>
+        </div>
+        <div id="org_descr">
+            <h3><?php echo $organization->name; ?> &nbsp;<span>(<?php echo $organization->acronym; ?>)</span></h3>
+            active in <a href=""><?php echo Yii::app()->params['industryList'][$organization->industry]; ?></a>
+            <br/><hr/>
+            <p><?php
+            if(strlen($organization->description)>300) {
+                $organization_short_descr = substr($organization->description,0,300);
+                echo substr($organization_short_descr, 0, strrpos($organization_short_descr, " "));
+                echo '...<br/><a href="" class="more_button">+ more</a>';
+            }
+            else {
+                echo $organization->description;
+            }
+            ?></p>
+        </div>
+        <div style="clear: both;"></div>
+        <br/>
+        <br/>
+        <h2>// <?php echo $organization->acronym; ?> recents activities</h2>
+        
+        <div class="activity_line">
+            <?php echo (empty($organization->acronym)) ? $organization->name : $organization->acronym; ?> joined Indiosis
+        </div>
+    </div>
+    
+    <!-- Organization Resource Flows -->
+    <?php
+    $this->beginWidget('IBoxWidget',array(
+        'boxId'=>'org_flows',
+        'title'=> '<span>'.Yii::app()->user->organizationAcronym.'</span> has <span>4</span> resource flows',
+        'closable'=>  false));
+    ?>
+    2 Input flows<br/>
+    - Steam<br/>
+    - Metal<br/>
+    <br/>
+    3 Output flows<br/>
+    - Waste water<br/>
+    - Metal scraps
+    <?php $this->endWidget(); ?>
+    
+    <!-- Interaction buttons -->
+    <div id="interactions">
+        <input type="button" class="ibutton_big igray" value="&#9733; Retain" />
+        <input type="button" class="ibutton_big idarkgray" value="Message" />
+        <input type="button" class="ibutton_big iblue" value="Ask for synergy" />
+    </div>
+    
+</div>
