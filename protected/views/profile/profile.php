@@ -4,10 +4,10 @@
  * INDIOSIS                   *
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
- * 
+ *
  * VIEW : Main Profile Overview
  * The profile page of an organization.
- * 
+ *
  * @package     profile
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI
@@ -35,7 +35,7 @@ Yii::app()->clientScript->registerScriptFile(
 ?>
 <!-- PROFILE VIEW -->
 <div id="org_profile">
-    
+
     <!-- Organization Info -->
     <div id="org_info">
         <div id="org_maplogo">
@@ -71,17 +71,26 @@ Yii::app()->clientScript->registerScriptFile(
                 echo $organization->description;
             }
             ?></p>
+            <div id="org_members">
+                <h4>Representatives</h4>
+                <div class="member"><img src="" /><span>CEO</span><br/>Persone Name</div>
+                <div class="member"><img src="" /><span>CEO</span><br/>Persone Name</div>
+                <div class="member"><img src="" /><span>CEO</span><br/>Persone Name</div>
+                <div class="member"><img src="" /><span>CEO</span><br/>Persone Name</div>
+            </div>
         </div>
-        <div style="clear: both;"></div>
-        <br/>
-        <br/>
-        <h2>// <?php echo $organization->acronym; ?> recents activities</h2>
-        
-        <div class="activity_line">
-            <?php echo (empty($organization->acronym)) ? $organization->name : $organization->acronym; ?> joined Indiosis
+        <br class="float_clearer"/>
+        <div id="org_activities">
+            <h2>// <?php echo $organization->acronym; ?> recents activities</h2>
+            <div class="activity_line">
+                <img src="<?php echo Yii::app()->baseUrl.'/images/joined.png'; ?>" alt="joined" />
+                <div><em><?php echo (empty($organization->acronym)) ? $organization->name : $organization->acronym; ?></em> joined Indiosis.</div>
+                <div><?php echo Helpers::timeAgoInWords($organization->created_on); ?></div>
+                <br class="float_clearer"/>
+            </div>
         </div>
     </div>
-    
+
     <!-- Organization Resource Flows -->
     <?php
     $this->beginWidget('IBoxWidget',array(
@@ -97,12 +106,13 @@ Yii::app()->clientScript->registerScriptFile(
     - Waste water<br/>
     - Metal scraps
     <?php $this->endWidget(); ?>
-    
+
     <!-- Interaction buttons -->
     <div id="interactions">
         <input type="button" class="ibutton_big igray" value="&#9733; Retain" />
         <input type="button" class="ibutton_big idarkgray" value="Message" />
         <input type="button" class="ibutton_big iblue" value="Ask for synergy" />
     </div>
-    
+
 </div>
+<br class="float_clearer"/>

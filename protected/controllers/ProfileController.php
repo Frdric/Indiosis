@@ -3,10 +3,10 @@
  * - -- - - - - - - - - - - - *
  * INDIOSIS                   *
  * - -- - - - - - - - - - - - *
- * 
+ *
  * CONTROLLER : Profile
  * Handles all profile related actions.
- * 
+ *
  * @package     profile
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI
@@ -14,7 +14,7 @@
 
 class ProfileController extends IndiosisController
 {
-    
+
     /**
      * Specify the access rules for this controller.
      */
@@ -39,15 +39,15 @@ class ProfileController extends IndiosisController
         // retrieve organisation data
         $organization = Organization::model()->findByAttributes(array('id'=>Yii::app()->user->organizationId));
         $geoLocation = GeoHelper::lookupCoordinates($organization->locations[0]);
-        
+
         $vmapMarkers = array(   "latLng" => array($geoLocation->getLat(),$geoLocation->getLng()),
                                 "r" => 3,
                                 "fill" => "#2582A9",
                                 "name" => $organization->acronym);
-        
+
         $this->breadcrumbsLinks = array('Organization Profile');
 
-        $this->render('profile',array( 'organization'=>$organization,
+        $this->render('profile',array(  'organization'=>$organization,
                                         'org_location'=>$organization->locations[0],
                                         'vmapMarkers'=>$vmapMarkers,
                                         'org_commeans'=>$organization->communicationmeans));

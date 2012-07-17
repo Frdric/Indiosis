@@ -4,22 +4,32 @@
  * INDIOSIS                   *
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
- * 
+ *
  * STYLE : Profile page look
- * 
+ *
  * @package     profile
  * @author      Frédéric Andreae
  * @copyright   UNIL/ROI
 */
 
 /* Altering main layout for special home illustration [ */
+h2 {
+    border-bottom: none;
+}
 h3 {
     font-family: "OpenSansSemibold";
-    font-size: 17px;
+    font-size: 18px;
     color: #555;
     margin-bottom: 6px;
 }
+h4 {
+    font-size: 15px;
+}
+em {
+    font-family: "OpenSansSemibold";
+}
 /* end of main layout altering ] */
+
 h3 span {
     font-family: "OpenSansRegular";
     font-size: 16px;
@@ -54,10 +64,6 @@ div#org_detail {
 }
 div#org_detail span {
     font-family: "OpenSansSemibold";
-    
-}
-div.gmap {
-    margin-top: 10px;
 }
 .jvectormap-zoomin, .jvectormap-zoomout {
     display: none;
@@ -69,6 +75,53 @@ div#org_descr {
     min-height: 250px;
 }
 
+div#org_members {
+    padding: 6px 0;
+}
+div#org_members > div {
+    font-size: 12px;
+    color: #777;
+    clear: both;
+    height: 50px;
+}
+div#org_members img {
+    float: left;
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    margin-right: 10px;
+}
+div#org_members span {
+    font-family: "Bitstream-Bold";
+    color: #AAA;
+    font-size: 12px;
+}
+
+div#org_activities {
+    margin-top: 20px;
+    padding-top: 10px;
+
+}
+div.activity_line {
+    border-top: dotted 1px #CCC;
+    padding: 10px 0;
+    font-size: 13px;
+    font-family: Arial;
+}
+div.activity_line:last-child {
+    border-bottom: dotted 1px #CCC;
+}
+div.activity_line img {
+    border: none;
+    margin: 0 10px 0 1px;
+    float: left;
+}
+div.activity_line div {
+    float: left;
+}
+div.activity_line div:last-child {
+    float: right;
+}
 
 div#org_flows, div#interactions {
     float: right;
@@ -78,8 +131,8 @@ div#interactions {
     margin-top: 20px;
 }
 
-div#interactions input:first-child {
-    margin-right: 15 px;
+div#interactions input:not(:last-child) {
+    margin-right: 8px;
 }
 
 div#org_flows .iboxheader {

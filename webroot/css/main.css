@@ -8,15 +8,15 @@
  * STYLE : Main Look
  * Describes general design.
  * (applies to every page)
- * 
+ *
  * @package     layout
  * @author      Frédéric Andreae, Arjun Shankar
  * @copyright   UNIL/ROI
 */
 
 /* - STANDARD ELEMENTS - */
-*:focus {  
-    outline: none;  
+*:focus {
+    outline: none;
 }
 ::selection, ::-moz-selection, ::-webkit-selection {
     background: #2582A9;
@@ -90,6 +90,9 @@ hr {
 hr.ongray {
     border-top: solid 1px #CCC;
     border-bottom: solid 1px white;
+}
+br.float_clearer {
+    clear: both;
 }
 div.lined_heading {
   border-bottom: solid 1px #DFDFDF;
@@ -176,7 +179,7 @@ body {
     height: 78px;
     border-left: solid 1px #FBFBFB;
     border-right: solid 1px #AAA;
-    text-align: center; 
+    text-align: center;
 }
 #topmenu div.topmenubutton:active {
     background: #EEE;
@@ -499,7 +502,7 @@ div.ibox div.iboxcontent {
     cursor: pointer;
     padding: 4px 10px;
     border-radius: 6px;
-    -webkit-border-radius: 6px; 
+    -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
 }
 .ibutton_big {
@@ -598,7 +601,7 @@ div.ibox div.iboxcontent {
 .inotification {
     border: solid 1px #30A1D1;
     border-radius: 4px;
-    -webkit-border-radius: 4px; 
+    -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     background-color: rgba(0,0,0,0.03);
     padding: 20px;
@@ -629,10 +632,10 @@ div.ibox div.iboxcontent {
     font-family: "OpenSansSemibold";
 }
 .inotification_green {
-    
+
 }
 .inotification_red {
-    
+
 }
 
 
