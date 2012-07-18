@@ -1,15 +1,9 @@
 <?php
 
 /**
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- * 
- * MODEL : Message 
- * The model class for table "message".
- * 
- * The followings are the available columns in table 'message':
+ * This is the model class for table "Message".
+ *
+ * The followings are the available columns in table 'Message':
  * @property integer $id
  * @property string $title
  * @property string $body
@@ -19,12 +13,7 @@
  * The followings are the available model relations:
  * @property User $sender
  * @property User[] $users
- *
- * @package     base
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
  */
- 
 class Message extends CActiveRecord
 {
 	/**
@@ -36,13 +25,13 @@ class Message extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-	
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'message';
+		return 'Message';
 	}
 
 	/**
@@ -72,7 +61,7 @@ class Message extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'sender' => array(self::BELONGS_TO, 'User', 'Sender_id'),
-			'users' => array(self::MANY_MANY, 'User', 'messagerecipient(Message_id, Recipient_id)'),
+			'users' => array(self::MANY_MANY, 'User', 'MessageRecipient(Message_id, Recipient_id)'),
 		);
 	}
 

@@ -1,13 +1,13 @@
 <?php
-/* 
+/*
  * - -- - - - - - - - - - - - *
  * INDIOSIS                   *
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
- * 
+ *
  * Main Configuration File
  * Describes all the configuration variables of Indiosis.
- * 
+ *
  * @package     all
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI 2012
@@ -25,38 +25,38 @@ function _joinpath($dir1, $dir2) {
 }
 
 return array(
-    
+
     // Path to the protected folder
     'basePath'=>_joinpath($homePath, 'protected'),
-    
+
     // Name of the application
     'name'=>'Indiosis',
-    
+
     // Default controller to use
     'defaultController'=>'home',
-    
+
     // Path to runtime folder
     'runtimePath' => _joinpath($homePath, 'runtime'),
-    
+
     // User language
     'language'=>'en',
- 
+
     // Message and views language
     'sourceLanguage'=>'en',
- 
+
     // Application charset
     'charset'=>'utf-8',
-    
+
     // Preloading 'log' component
     'preload'=>array('log'),
-    
+
     // Autoloading model and component classes
     'import'=>array(
         'application.models.*',
         'application.models.forms.*',
         'application.components.*'
     ),
-    
+
     //To be uncommented when auto-creation panel is needed.
     'modules'=>array(
         'gii'=>array(
@@ -67,7 +67,7 @@ return array(
             )
         ),
     ),
-    
+
     // Other parameters (accessible through Yii::app()->params['paramName'])
     'params'=>array(
         'indiosisEmail'=>'info@indiosis.com',
@@ -227,9 +227,9 @@ return array(
                                 'WIRELESS' => 'Wireless',
                                 'WRITING_AND_EDITING' => 'Writing &amp; Editing')
     ),
-    
+
     'components'=>array(
-        
+
         // Setup user authentication rules
         'user'=>array(
             'allowAutoLogin'=>true,
@@ -246,22 +246,22 @@ return array(
                 '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
             )
         ),
-        
+
         // Setup the DB connexion
         'db'=>array(
                 'connectionString' => 'mysql:host=localhost;dbname=indiosis',
                 'emulatePrepare' => true,
                 'username' => 'root',
-                'password' => '',
+                'password' => 'root',
                 'charset' => 'utf8',
         ),
-        
+
         // Redirect errors to Indiosis error page
         'errorHandler'=>array(
             // use 'home/error' action to display errors
             'errorAction'=>'home/error',
         ),
-        
+
         // Enables logs
         'log'=>array(
             'class'=>'CLogRouter',
@@ -272,7 +272,7 @@ return array(
                 )
             )
         ),
-        
+
         // Specify the asset folder path
         'assetManager'=>array(
             'basePath'=>_joinpath($homePath,'webroot/assets'),

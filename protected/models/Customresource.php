@@ -1,47 +1,36 @@
 <?php
 
 /**
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- * 
- * MODEL : Customresource 
- * The model class for table "customresource".
- * 
- * The followings are the available columns in table 'customresource':
+ * This is the model class for table "CustomResource".
+ *
+ * The followings are the available columns in table 'CustomResource':
  * @property integer $id
  * @property string $name
  * @property string $description
  * @property string $MatchingCode_number
  *
  * The followings are the available model relations:
- * @property Resourcecode $matchingCodeNumber
- * @property Resourceflow[] $resourceflows
- *
- * @package     base
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
+ * @property ResourceCode $matchingCodeNumber
+ * @property ResourceFlow[] $resourceFlows
  */
- 
-class Customresource extends CActiveRecord
+class CustomResource extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Customresource the static model class
+	 * @return CustomResource the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-	
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'customresource';
+		return 'CustomResource';
 	}
 
 	/**
@@ -68,8 +57,8 @@ class Customresource extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'matchingCodeNumber' => array(self::BELONGS_TO, 'Resourcecode', 'MatchingCode_number'),
-			'resourceflows' => array(self::HAS_MANY, 'Resourceflow', 'CustomResource_id'),
+			'matchingCodeNumber' => array(self::BELONGS_TO, 'ResourceCode', 'MatchingCode_number'),
+			'resourceFlows' => array(self::HAS_MANY, 'ResourceFlow', 'CustomResource_id'),
 		);
 	}
 

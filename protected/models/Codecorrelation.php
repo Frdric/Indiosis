@@ -1,45 +1,34 @@
 <?php
 
 /**
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- * 
- * MODEL : Codecorrelation 
- * The model class for table "codecorrelation".
- * 
- * The followings are the available columns in table 'codecorrelation':
+ * This is the model class for table "CodeCorrelation".
+ *
+ * The followings are the available columns in table 'CodeCorrelation':
  * @property string $ReferringCode_number
  * @property string $CorrelatingCode_number
  *
  * The followings are the available model relations:
- * @property Resourcecode $correlatingCodeNumber
- * @property Resourcecode $referringCodeNumber
- *
- * @package     base
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
+ * @property ResourceCode $referringCodeNumber
+ * @property ResourceCode $correlatingCodeNumber
  */
- 
-class Codecorrelation extends CActiveRecord
+class CodeCorrelation extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Codecorrelation the static model class
+	 * @return CodeCorrelation the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-	
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'codecorrelation';
+		return 'CodeCorrelation';
 	}
 
 	/**
@@ -66,8 +55,8 @@ class Codecorrelation extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'correlatingCodeNumber' => array(self::BELONGS_TO, 'Resourcecode', 'CorrelatingCode_number'),
-			'referringCodeNumber' => array(self::BELONGS_TO, 'Resourcecode', 'ReferringCode_number'),
+			'referringCodeNumber' => array(self::BELONGS_TO, 'ResourceCode', 'ReferringCode_number'),
+			'correlatingCodeNumber' => array(self::BELONGS_TO, 'ResourceCode', 'CorrelatingCode_number'),
 		);
 	}
 

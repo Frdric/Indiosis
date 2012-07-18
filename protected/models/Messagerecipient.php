@@ -1,42 +1,31 @@
 <?php
 
 /**
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- * 
- * MODEL : Messagerecipient 
- * The model class for table "messagerecipient".
- * 
- * The followings are the available columns in table 'messagerecipient':
+ * This is the model class for table "MessageRecipient".
+ *
+ * The followings are the available columns in table 'MessageRecipient':
  * @property integer $Message_id
  * @property integer $Recipient_id
  * @property integer $read
- *
- * @package     base
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
  */
- 
-class Messagerecipient extends CActiveRecord
+class MessageRecipient extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Messagerecipient the static model class
+	 * @return MessageRecipient the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-	
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'messagerecipient';
+		return 'MessageRecipient';
 	}
 
 	/**

@@ -1,15 +1,9 @@
 <?php
 
 /**
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- * 
- * MODEL : Location 
- * The model class for table "location".
- * 
- * The followings are the available columns in table 'location':
+ * This is the model class for table "Location".
+ *
+ * The followings are the available columns in table 'Location':
  * @property integer $id
  * @property string $label
  * @property string $addressLine1
@@ -25,13 +19,8 @@
  *
  * The followings are the available model relations:
  * @property Organization $organization
- * @property Resourceflow $resourceFlow
- *
- * @package     base
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
+ * @property ResourceFlow $resourceFlow
  */
- 
 class Location extends CActiveRecord
 {
 	/**
@@ -43,13 +32,13 @@ class Location extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-	
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'location';
+		return 'Location';
 	}
 
 	/**
@@ -60,7 +49,7 @@ class Location extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('label, country, Organization_id, ResourceFlow_id', 'required'),
+			array('label, country', 'required'),
 			array('Organization_id, ResourceFlow_id', 'numerical', 'integerOnly'=>true),
 			array('label, city, zip, state, country, lat, lng', 'length', 'max'=>250),
 			array('addressLine1, addressLine2', 'safe'),
@@ -79,7 +68,7 @@ class Location extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
-			'resourceFlow' => array(self::BELONGS_TO, 'Resourceflow', 'ResourceFlow_id'),
+			'resourceFlow' => array(self::BELONGS_TO, 'ResourceFlow', 'ResourceFlow_id'),
 		);
 	}
 

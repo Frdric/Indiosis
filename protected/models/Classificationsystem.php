@@ -1,45 +1,34 @@
 <?php
 
 /**
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- * 
- * MODEL : Classificationsystem 
- * The model class for table "classificationsystem".
- * 
- * The followings are the available columns in table 'classificationsystem':
+ * This is the model class for table "ClassificationSystem".
+ *
+ * The followings are the available columns in table 'ClassificationSystem':
  * @property string $name
  * @property string $fullName
  * @property string $revision
  *
  * The followings are the available model relations:
- * @property Resourcecode[] $resourcecodes
- *
- * @package     base
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
+ * @property ResourceCode[] $resourceCodes
  */
- 
-class Classificationsystem extends CActiveRecord
+class ClassificationSystem extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Classificationsystem the static model class
+	 * @return ClassificationSystem the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-	
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'classificationsystem';
+		return 'ClassificationSystem';
 	}
 
 	/**
@@ -68,7 +57,7 @@ class Classificationsystem extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'resourcecodes' => array(self::HAS_MANY, 'Resourcecode', 'ClassificationSystem_name'),
+			'resourceCodes' => array(self::HAS_MANY, 'ResourceCode', 'ClassificationSystem_name'),
 		);
 	}
 

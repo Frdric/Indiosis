@@ -1,15 +1,9 @@
 <?php
 
 /**
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- * 
- * MODEL : Resourceflow 
- * The model class for table "resourceflow".
- * 
- * The followings are the available columns in table 'resourceflow':
+ * This is the model class for table "ResourceFlow".
+ *
+ * The followings are the available columns in table 'ResourceFlow':
  * @property integer $id
  * @property string $label
  * @property integer $qty
@@ -27,35 +21,30 @@
  *
  * The followings are the available model relations:
  * @property Location[] $locations
- * @property Customresource $customResource
+ * @property CustomResource $customResource
+ * @property ResourceCode $resourceCodeNumber
  * @property Organization $provider
  * @property Organization $receiver
- * @property Resourcecode $resourceCodeNumber
  * @property Symbiosis[] $symbiosises
- *
- * @package     base
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
  */
- 
-class Resourceflow extends CActiveRecord
+class ResourceFlow extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Resourceflow the static model class
+	 * @return ResourceFlow the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-	
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'resourceflow';
+		return 'ResourceFlow';
 	}
 
 	/**
@@ -86,11 +75,11 @@ class Resourceflow extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'locations' => array(self::HAS_MANY, 'Location', 'ResourceFlow_id'),
-			'customResource' => array(self::BELONGS_TO, 'Customresource', 'CustomResource_id'),
+			'customResource' => array(self::BELONGS_TO, 'CustomResource', 'CustomResource_id'),
+			'resourceCodeNumber' => array(self::BELONGS_TO, 'ResourceCode', 'ResourceCode_number'),
 			'provider' => array(self::BELONGS_TO, 'Organization', 'Provider_id'),
 			'receiver' => array(self::BELONGS_TO, 'Organization', 'Receiver_id'),
-			'resourceCodeNumber' => array(self::BELONGS_TO, 'Resourcecode', 'ResourceCode_number'),
-			'symbiosises' => array(self::MANY_MANY, 'Symbiosis', 'symbioticflow(ResourceFlow_id, Symbiosis_id)'),
+			'symbiosises' => array(self::MANY_MANY, 'Symbiosis', 'SymbioticFlow(ResourceFlow_id, Symbiosis_id)'),
 		);
 	}
 

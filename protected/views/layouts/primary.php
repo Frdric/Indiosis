@@ -4,10 +4,10 @@
  * INDIOSIS                   *
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
- * 
+ *
  * VIEW : Main Layout
  * Main container layout for all pages.
- * 
+ *
  * @package     layout
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI
@@ -26,10 +26,13 @@
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/css_reset.css' ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/fonts/bitstream/fontface.css' ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/fonts/open-sans/fontface.css' ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/fonts/entypo/fontface.css' ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/fonts/modernpics/fontface.css' ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/fonts/websymbols/fontface.css' ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/main.css' ?>" />
-        
+
     <title><?php echo CHtml::encode($this->pageTitle); ?></title>
-    
+
     <?php
     // Global JS scripts
     Yii::app()->clientScript->registerCoreScript('jquery');
@@ -56,10 +59,10 @@
     ));
     ?>
 </head>
-    
+
 <body>
     <div id="wrapper">
-        
+
         <!-- HEADER -->
         <div id="header_wrapper">
             <div id="header">
@@ -67,10 +70,10 @@
                     <a href="<?php echo Yii::app()->baseUrl; ?>/"><img src="<?php echo Yii::app()->baseUrl.'/images/indiosis_headlogo.png'; ?>" alt="Indiosis" id="headerlogo"/></a>
                 </div>
                 <div id="topmenu">
-                    <div class="topmenubutton monoline"><a href="<?php echo Yii::app()->baseUrl; ?>/profile">My COMPANY</a></div>
-                    <div class="topmenubutton monoline"><a href="<?php echo Yii::app()->baseUrl; ?>/members">MEMBERS<br/></a></div>
                     <div class="topmenubutton"><a href="<?php echo Yii::app()->baseUrl; ?>/repository">PRACTICES<br/>REPOSITORY</a></div>
+                    <div class="topmenubutton"><a href="<?php echo Yii::app()->baseUrl; ?>/members">ALL<br/>COMPANIES<br/></a></div>
                     <div class="topmenubutton"><a href="<?php echo Yii::app()->baseUrl; ?>/about">EXPERTS<br/>CORNER</a></div>
+                    <div class="topmenubutton monoline"><a href="<?php echo Yii::app()->baseUrl; ?>/profile">Profile</a></div>
                     <div id="searchfield"><input type="text" name="spractice" value="search symbiosis practices.." class="no-uniform empty" /></div>
                 </div>
             </div>
@@ -87,7 +90,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- MAIN CONTENT -->
         <div id="main_content">
             <?php
@@ -100,7 +103,7 @@
         </div>
         <div id="footer_push"></div>
     </div>
-    
+
     <!-- FOOTER -->
     <div id="footer_wrapper">
     <div id="footer_inwrapper">

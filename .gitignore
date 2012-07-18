@@ -1,1 +1,3 @@
-/webroot/assets/
+/webroot/assets/*
+.DS_Store
+/runtime/*

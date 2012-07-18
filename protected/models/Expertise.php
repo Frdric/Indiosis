@@ -1,29 +1,18 @@
 <?php
 
 /**
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- * 
- * MODEL : Expertise 
- * The model class for table "expertise".
- * 
- * The followings are the available columns in table 'expertise':
+ * This is the model class for table "Expertise".
+ *
+ * The followings are the available columns in table 'Expertise':
  * @property string $ResourceCode_number
  * @property integer $Organization_id
  * @property integer $User_id
  *
  * The followings are the available model relations:
- * @property Organization $organization
- * @property Resourcecode $resourceCodeNumber
  * @property User $user
- *
- * @package     base
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
+ * @property ResourceCode $resourceCodeNumber
+ * @property Organization $organization
  */
- 
 class Expertise extends CActiveRecord
 {
 	/**
@@ -35,13 +24,13 @@ class Expertise extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-	
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'expertise';
+		return 'Expertise';
 	}
 
 	/**
@@ -69,9 +58,9 @@ class Expertise extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
-			'resourceCodeNumber' => array(self::BELONGS_TO, 'Resourcecode', 'ResourceCode_number'),
 			'user' => array(self::BELONGS_TO, 'User', 'User_id'),
+			'resourceCodeNumber' => array(self::BELONGS_TO, 'ResourceCode', 'ResourceCode_number'),
+			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
 		);
 	}
 

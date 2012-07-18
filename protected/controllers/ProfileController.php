@@ -50,6 +50,6 @@ class ProfileController extends IndiosisController
         $this->render('profile',array(  'organization'=>$organization,
                                         'org_location'=>$organization->locations[0],
                                         'vmapMarkers'=>$vmapMarkers,
-                                        'org_commeans'=>$organization->communicationmeans));
+                                        'org_commeans'=>$organization->communicationMeans));
     }
 }

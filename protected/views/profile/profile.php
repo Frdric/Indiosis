@@ -51,7 +51,7 @@ Yii::app()->clientScript->registerScriptFile(
                 <br/>
                 <?php if(!empty($org_location->addressLine1)) echo $org_location->addressLine1.'<br/>'; ?>
                 <?php if(!empty($org_location->addressLine2)) echo $org_location->addressLine2.'<br/>'; ?>
-                <?php if(!empty($org_location->city)) echo $org_location->city.'<br/>'; ?>
+                <?php if(!empty($org_location->city)) echo $org_location->city.', '; ?>
                 <?php if(!empty($org_location->country)) echo $org_location->country.'<br/>'; ?>
                 <?php // echo $gMap->renderMap(); ?>
                 <div id="org_vmap" style="width: 162px; height: 100px"></div>
@@ -75,8 +75,6 @@ Yii::app()->clientScript->registerScriptFile(
                 <h4>Representatives</h4>
                 <div class="member"><img src="" /><span>CEO</span><br/>Persone Name</div>
                 <div class="member"><img src="" /><span>CEO</span><br/>Persone Name</div>
-                <div class="member"><img src="" /><span>CEO</span><br/>Persone Name</div>
-                <div class="member"><img src="" /><span>CEO</span><br/>Persone Name</div>
             </div>
         </div>
         <br class="float_clearer"/>
@@ -84,9 +82,10 @@ Yii::app()->clientScript->registerScriptFile(
             <h2>// <?php echo $organization->acronym; ?> recents activities</h2>
             <div class="activity_line">
                 <img src="<?php echo Yii::app()->baseUrl.'/images/joined.png'; ?>" alt="joined" />
-                <div><em><?php echo (empty($organization->acronym)) ? $organization->name : $organization->acronym; ?></em> joined Indiosis.</div>
-                <div><?php echo Helpers::timeAgoInWords($organization->created_on); ?></div>
-                <br class="float_clearer"/>
+                <div>
+                    <em><?php echo (empty($organization->acronym)) ? $organization->name : $organization->acronym; ?></em> joined Indiosis.
+                    <div><?php echo Helpers::timeAgoInWords($organization->created_on); ?></div>
+                </div>
             </div>
         </div>
     </div>
@@ -98,13 +97,11 @@ Yii::app()->clientScript->registerScriptFile(
         'title'=> '<span>'.Yii::app()->user->organizationAcronym.'</span> has <span>4</span> resource flows',
         'closable'=>  false));
     ?>
-    2 Input flows<br/>
-    - Steam<br/>
-    - Metal<br/>
-    <br/>
-    3 Output flows<br/>
-    - Waste water<br/>
-    - Metal scraps
+    <em>2</em> input flows
+    <div class="symb_flow"><span class="websymbols">><em class="websymbols">></em></span> Alumnium (13 rolls / month)</div>
+    <div class="symb_flow"><span class="websymbols">><em class="websymbols">></em></span> Iron (1 ton / day)</div>
+    <br/><em>1</em> output flows
+    <div class="symb_flow"><span class="websymbols"><em class="websymbols"><</em><</span> Metal scraps ()</div>
     <?php $this->endWidget(); ?>
 
     <!-- Interaction buttons -->

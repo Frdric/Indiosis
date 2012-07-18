@@ -1,41 +1,30 @@
 <?php
 
 /**
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- * 
- * MODEL : Symbioticorganization 
- * The model class for table "symbioticorganization".
- * 
- * The followings are the available columns in table 'symbioticorganization':
+ * This is the model class for table "SymbioticOrganization".
+ *
+ * The followings are the available columns in table 'SymbioticOrganization':
  * @property integer $Organization_id
  * @property integer $Symbiosis_id
- *
- * @package     base
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
  */
- 
-class Symbioticorganization extends CActiveRecord
+class SymbioticOrganization extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Symbioticorganization the static model class
+	 * @return SymbioticOrganization the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-	
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'symbioticorganization';
+		return 'SymbioticOrganization';
 	}
 
 	/**

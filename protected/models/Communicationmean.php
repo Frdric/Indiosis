@@ -1,15 +1,9 @@
 <?php
 
 /**
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- * 
- * MODEL : Communicationmean 
- * The model class for table "communicationmean".
- * 
- * The followings are the available columns in table 'communicationmean':
+ * This is the model class for table "CommunicationMean".
+ *
+ * The followings are the available columns in table 'CommunicationMean':
  * @property integer $id
  * @property string $type
  * @property string $value
@@ -18,32 +12,27 @@
  * @property integer $Organization_id
  *
  * The followings are the available model relations:
- * @property Organization $organization
  * @property User $user
- *
- * @package     base
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
+ * @property Organization $organization
  */
- 
-class Communicationmean extends CActiveRecord
+class CommunicationMean extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Communicationmean the static model class
+	 * @return CommunicationMean the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-	
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'communicationmean';
+		return 'CommunicationMean';
 	}
 
 	/**
@@ -72,8 +61,8 @@ class Communicationmean extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
 			'user' => array(self::BELONGS_TO, 'User', 'User_id'),
+			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
 		);
 	}
 

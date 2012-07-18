@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'WebSymbols';
+    src: url('WebSymbols-Regular-webfont.eot');
+    src: url('WebSymbols-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('WebSymbols-Regular-webfont.woff') format('woff'),
+         url('WebSymbols-Regular-webfont.ttf') format('truetype'),
+         url('WebSymbols-Regular-webfont.svg#WebSymbolsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.websymbols {
+	font-family: 'WebSymbols';
+}

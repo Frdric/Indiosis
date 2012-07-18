@@ -1,25 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "Symbiosis".
+ * This is the model class for table "Tag".
  *
- * The followings are the available columns in table 'Symbiosis':
+ * The followings are the available columns in table 'Tag':
  * @property integer $id
- * @property string $status
- * @property string $descrition
- * @property string $created_on
- * @property string $expires_on
+ * @property string $name
+ * @property integer $User_id
+ * @property integer $Organization_id
  *
  * The followings are the available model relations:
- * @property ResourceFlow[] $resourceFlows
- * @property Organization[] $organizations
+ * @property User $user
+ * @property Organization $organization
  */
-class Symbiosis extends CActiveRecord
+class Tag extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Symbiosis the static model class
+	 * @return Tag the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -31,7 +30,7 @@ class Symbiosis extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'Symbiosis';
+		return 'Tag';
 	}
 
 	/**
@@ -42,13 +41,12 @@ class Symbiosis extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, created_on', 'required'),
-			array('id', 'numerical', 'integerOnly'=>true),
-			array('status', 'length', 'max'=>8),
-			array('descrition, expires_on', 'safe'),
+			array('name, User_id, Organization_id', 'required'),
+			array('User_id, Organization_id', 'numerical', 'integerOnly'=>true),
+			array('name', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, status, descrition, created_on, expires_on', 'safe', 'on'=>'search'),
+			array('id, name, User_id, Organization_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,8 +58,8 @@ class Symbiosis extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'resourceFlows' => array(self::MANY_MANY, 'ResourceFlow', 'SymbioticFlow(Symbiosis_id, ResourceFlow_id)'),
-			'organizations' => array(self::MANY_MANY, 'Organization', 'SymbioticOrganization(Symbiosis_id, Organization_id)'),
+			'user' => array(self::BELONGS_TO, 'User', 'User_id'),
+			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
 		);
 	}
 
@@ -72,10 +70,9 @@ class Symbiosis extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'status' => 'Status',
-			'descrition' => 'Descrition',
-			'created_on' => 'Created On',
-			'expires_on' => 'Expires On',
+			'name' => 'Name',
+			'User_id' => 'User',
+			'Organization_id' => 'Organization',
 		);
 	}
 
@@ -91,10 +88,9 @@ class Symbiosis extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('status',$this->status,true);
-		$criteria->compare('descrition',$this->descrition,true);
-		$criteria->compare('created_on',$this->created_on,true);
-		$criteria->compare('expires_on',$this->expires_on,true);
+		$criteria->compare('name',$this->name,true);
+		$criteria->compare('User_id',$this->User_id);
+		$criteria->compare('Organization_id',$this->Organization_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

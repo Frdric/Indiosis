@@ -1,15 +1,9 @@
 <?php
 
 /**
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- * 
- * MODEL : Resourcecode 
- * The model class for table "resourcecode".
- * 
- * The followings are the available columns in table 'resourcecode':
+ * This is the model class for table "ResourceCode".
+ *
+ * The followings are the available columns in table 'ResourceCode':
  * @property string $number
  * @property string $description
  * @property string $uom
@@ -17,38 +11,33 @@
  * @property string $ChildOf_number
  *
  * The followings are the available model relations:
- * @property Codecorrelation[] $codecorrelations
- * @property Codecorrelation[] $codecorrelations1
- * @property Customresource[] $customresources
+ * @property CodeCorrelation[] $codeCorrelations
+ * @property CodeCorrelation[] $codeCorrelations1
+ * @property CustomResource[] $customResources
  * @property Expertise[] $expertises
- * @property Resourcecode $childOfNumber
- * @property Resourcecode[] $resourcecodes
- * @property Classificationsystem $classificationSystemName
- * @property Resourceflow[] $resourceflows
- *
- * @package     base
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
+ * @property ClassificationSystem $classificationSystemName
+ * @property ResourceCode $childOfNumber
+ * @property ResourceCode[] $resourceCodes
+ * @property ResourceFlow[] $resourceFlows
  */
- 
-class Resourcecode extends CActiveRecord
+class ResourceCode extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Resourcecode the static model class
+	 * @return ResourceCode the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-	
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'resourcecode';
+		return 'ResourceCode';
 	}
 
 	/**
@@ -77,14 +66,14 @@ class Resourcecode extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'codecorrelations' => array(self::HAS_MANY, 'Codecorrelation', 'CorrelatingCode_number'),
-			'codecorrelations1' => array(self::HAS_MANY, 'Codecorrelation', 'ReferringCode_number'),
-			'customresources' => array(self::HAS_MANY, 'Customresource', 'MatchingCode_number'),
+			'codeCorrelations' => array(self::HAS_MANY, 'CodeCorrelation', 'ReferringCode_number'),
+			'codeCorrelations1' => array(self::HAS_MANY, 'CodeCorrelation', 'CorrelatingCode_number'),
+			'customResources' => array(self::HAS_MANY, 'CustomResource', 'MatchingCode_number'),
 			'expertises' => array(self::HAS_MANY, 'Expertise', 'ResourceCode_number'),
-			'childOfNumber' => array(self::BELONGS_TO, 'Resourcecode', 'ChildOf_number'),
-			'resourcecodes' => array(self::HAS_MANY, 'Resourcecode', 'ChildOf_number'),
-			'classificationSystemName' => array(self::BELONGS_TO, 'Classificationsystem', 'ClassificationSystem_name'),
-			'resourceflows' => array(self::HAS_MANY, 'Resourceflow', 'ResourceCode_number'),
+			'classificationSystemName' => array(self::BELONGS_TO, 'ClassificationSystem', 'ClassificationSystem_name'),
+			'childOfNumber' => array(self::BELONGS_TO, 'ResourceCode', 'ChildOf_number'),
+			'resourceCodes' => array(self::HAS_MANY, 'ResourceCode', 'ChildOf_number'),
+			'resourceFlows' => array(self::HAS_MANY, 'ResourceFlow', 'ResourceCode_number'),
 		);
 	}
 

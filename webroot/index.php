@@ -4,10 +4,10 @@
  * INDIOSIS                   *
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
- * 
+ *
  * APPLICATION BOOTSTRAP
  * The only accessible file to the public, bootstraping the entire application.
- * 
+ *
  * @package     base
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI
@@ -23,4 +23,7 @@ defined('YII_DEBUG') or define('YII_DEBUG',true);
 defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL',3);
 
 require_once($yii);
-Yii::createWebApplication($config)->run();
+
+$app = Yii::createWebApplication($config);
+Yii::app()->setTimeZone("UTC");
+$app->run();

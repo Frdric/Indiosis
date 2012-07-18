@@ -100,7 +100,6 @@ div#org_members span {
 div#org_activities {
     margin-top: 20px;
     padding-top: 10px;
-
 }
 div.activity_line {
     border-top: dotted 1px #CCC;
@@ -116,23 +115,34 @@ div.activity_line img {
     margin: 0 10px 0 1px;
     float: left;
 }
-div.activity_line div {
-    float: left;
-}
-div.activity_line div:last-child {
+div.activity_line div > div {
     float: right;
+    color: #888;
+    font-size: 12px;
+    margin-top: 1px;
 }
 
 div#org_flows, div#interactions {
     float: right;
     width: 350px;
 }
+div#org_flows {
+    font-size: 14px;
+    font-family: "OpenSansRegular";
+}
+div#org_flows .symb_flow {
+    margin: 10px 0 10px 10px;
+    font-size: 12px;
+}
+div#org_flows .symb_flow span {
+    color: #555;
+}
 div#interactions {
     margin-top: 20px;
 }
 
 div#interactions input:not(:last-child) {
-    margin-right: 8px;
+    margin-right: 5px;
 }
 
 div#org_flows .iboxheader {

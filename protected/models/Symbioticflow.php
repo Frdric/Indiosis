@@ -1,41 +1,30 @@
 <?php
 
 /**
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- * 
- * MODEL : Symbioticflow 
- * The model class for table "symbioticflow".
- * 
- * The followings are the available columns in table 'symbioticflow':
+ * This is the model class for table "SymbioticFlow".
+ *
+ * The followings are the available columns in table 'SymbioticFlow':
  * @property integer $Symbiosis_id
  * @property integer $ResourceFlow_id
- *
- * @package     base
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
  */
- 
-class Symbioticflow extends CActiveRecord
+class SymbioticFlow extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Symbioticflow the static model class
+	 * @return SymbioticFlow the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-	
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'symbioticflow';
+		return 'SymbioticFlow';
 	}
 
 	/**

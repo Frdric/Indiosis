@@ -1,15 +1,9 @@
 <?php
 
 /**
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- * 
- * MODEL : User 
- * The model class for table "user".
- * 
- * The followings are the available columns in table 'user':
+ * This is the model class for table "User".
+ *
+ * The followings are the available columns in table 'User':
  * @property integer $id
  * @property string $email
  * @property string $password
@@ -27,16 +21,12 @@
  * @property integer $Organization_id
  *
  * The followings are the available model relations:
- * @property Communicationmean[] $communicationmeans
+ * @property CommunicationMean[] $communicationMeans
  * @property Expertise[] $expertises
  * @property Message[] $messages
+ * @property Tag[] $tags
  * @property Organization $organization
- *
- * @package     base
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
  */
- 
 class User extends CActiveRecord
 {
 	/**
@@ -48,13 +38,13 @@ class User extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-	
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'user';
+		return 'User';
 	}
 
 	/**
@@ -87,9 +77,10 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'communicationmeans' => array(self::HAS_MANY, 'Communicationmean', 'User_id'),
+			'communicationMeans' => array(self::HAS_MANY, 'CommunicationMean', 'User_id'),
 			'expertises' => array(self::HAS_MANY, 'Expertise', 'User_id'),
-			'messages' => array(self::MANY_MANY, 'Message', 'messagerecipient(Recipient_id, Message_id)'),
+			'messages' => array(self::MANY_MANY, 'Message', 'MessageRecipient(Recipient_id, Message_id)'),
+			'tags' => array(self::HAS_MANY, 'Tag', 'User_id'),
 			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
 		);
 	}

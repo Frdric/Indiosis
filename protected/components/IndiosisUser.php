@@ -4,10 +4,10 @@
  * INDIOSIS                   *
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
- * 
+ *
  * COMPONENT : User Identity
  * Defines how a user is identified.
- * 
+ *
  * @package     base
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI
@@ -16,7 +16,7 @@
 class IndiosisUser extends CUserIdentity
 {
     private $_id;
-    
+
     public function authenticate()
     {
         $record = User::model()->findByAttributes(array('email'=>$this->username));
@@ -57,8 +57,8 @@ class IndiosisUser extends CUserIdentity
         }
         return !$this->errorCode;
     }
- 
-    
+
+
     public function getId()
     {
         return $this->_id;

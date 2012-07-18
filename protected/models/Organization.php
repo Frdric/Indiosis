@@ -1,15 +1,9 @@
 <?php
 
 /**
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- * 
- * MODEL : Organization 
- * The model class for table "organization".
- * 
- * The followings are the available columns in table 'organization':
+ * This is the model class for table "Organization".
+ *
+ * The followings are the available columns in table 'Organization':
  * @property integer $id
  * @property string $acronym
  * @property string $name
@@ -24,19 +18,15 @@
  * The followings are the available model relations:
  * @property Affiliation[] $affiliations
  * @property Affiliation[] $affiliations1
- * @property Communicationmean[] $communicationmeans
+ * @property CommunicationMean[] $communicationMeans
  * @property Expertise[] $expertises
  * @property Location[] $locations
- * @property Resourceflow[] $resourceflows
- * @property Resourceflow[] $resourceflows1
+ * @property ResourceFlow[] $resourceFlows
+ * @property ResourceFlow[] $resourceFlows1
  * @property Symbiosis[] $symbiosises
+ * @property Tag[] $tags
  * @property User[] $users
- *
- * @package     base
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
  */
- 
 class Organization extends CActiveRecord
 {
 	/**
@@ -48,13 +38,13 @@ class Organization extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-	
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'organization';
+		return 'Organization';
 	}
 
 	/**
@@ -85,14 +75,15 @@ class Organization extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'affiliations' => array(self::HAS_MANY, 'Affiliation', 'Child_id'),
-			'affiliations1' => array(self::HAS_MANY, 'Affiliation', 'Parent_id'),
-			'communicationmeans' => array(self::HAS_MANY, 'Communicationmean', 'Organization_id'),
+			'affiliations' => array(self::HAS_MANY, 'Affiliation', 'Parent_id'),
+			'affiliations1' => array(self::HAS_MANY, 'Affiliation', 'Child_id'),
+			'communicationMeans' => array(self::HAS_MANY, 'CommunicationMean', 'Organization_id'),
 			'expertises' => array(self::HAS_MANY, 'Expertise', 'Organization_id'),
 			'locations' => array(self::HAS_MANY, 'Location', 'Organization_id'),
-			'resourceflows' => array(self::HAS_MANY, 'Resourceflow', 'Provider_id'),
-			'resourceflows1' => array(self::HAS_MANY, 'Resourceflow', 'Receiver_id'),
-			'symbiosises' => array(self::MANY_MANY, 'Symbiosis', 'symbioticorganization(Organization_id, Symbiosis_id)'),
+			'resourceFlows' => array(self::HAS_MANY, 'ResourceFlow', 'Provider_id'),
+			'resourceFlows1' => array(self::HAS_MANY, 'ResourceFlow', 'Receiver_id'),
+			'symbiosises' => array(self::MANY_MANY, 'Symbiosis', 'SymbioticOrganization(Organization_id, Symbiosis_id)'),
+			'tags' => array(self::HAS_MANY, 'Tag', 'Organization_id'),
 			'users' => array(self::HAS_MANY, 'User', 'Organization_id'),
 		);
 	}

@@ -5,10 +5,10 @@
  * INDIOSIS                   *
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
- * 
- * MODEL : Affiliation 
+ *
+ * MODEL : Affiliation
  * The model class for table "affiliation".
- * 
+ *
  * The followings are the available columns in table 'affiliation':
  * @property integer $Parent_id
  * @property integer $Child_id
@@ -21,7 +21,7 @@
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI
  */
- 
+
 class Affiliation extends CActiveRecord
 {
 	/**
@@ -33,7 +33,7 @@ class Affiliation extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-	
+
 	/**
 	 * @return string the associated database table name
 	 */
