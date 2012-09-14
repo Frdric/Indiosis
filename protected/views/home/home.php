@@ -4,10 +4,10 @@
  * INDIOSIS                   *
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
- * 
+ *
  * VIEW : Home Page
  * The view for Indiosis landing page.
- * 
+ *
  * @package     home
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI
@@ -15,14 +15,14 @@
 
 $this->pageTitle= Helpers::buildPageTitle("Home");
 
-Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/home.css');
-
 Yii::app()->clientScript->registerScriptFile("http://widgets.twimg.com/j/2/widget.js");
 Yii::app()->clientScript->registerScriptFile("https://apis.google.com/js/plusone.js");
+Yii::app()->clientScript->registerScriptFile("http://platform.linkedin.com/in.js");
 Yii::app()->clientScript->registerScriptFile(
-    Yii::app()->assetManager->publish(Yii::getPathOfAlias('application.views.home')."/home.js"),
-    CClientScript::POS_END
+    Yii::app()->assetManager->publish(Yii::getPathOfAlias('application.views.home')."/home.js"), CClientScript::POS_END
 );
+
+Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/home.css');
 ?>
 
 <!-- HOME PAGE CONTENT -->
@@ -40,7 +40,7 @@ Yii::app()->clientScript->registerScriptFile(
         <p>Many companies are looking for synergy partners. Indiosis notifies you when opportunities are detected<br/>or if a company wants to collaborate with yours.</p>
     </div>
     <div id="txt_feature3">
-        <h1>Connections with industrial symbiosis experts.</h1>
+        <h1>Get in touch with industrial symbiosis experts.</h1>
         <p>Receive help from industrial symbiosis practicioners in your area to setup or join an eco-industrial park.</p>
     </div>
 </div>
@@ -82,12 +82,20 @@ if(Yii::app()->user->isGuest) {
     <p id="signup_note">We recommand using your LinkedIn account<br/>as it will allow Indiosis to better suggest you with synergy partners.</p>
 </div>
 <?php } ?>
-<div id="news_area_wrapper">
-    <div id="news_area">
-        <div class="lined_heading">
+<div class="news_area_wrapper">
+    <div class="lined_heading">
             <h3>// News and Activities</h3>
-        </div>
-        
+            <div class="social-buttons" style="float: right;">
+                <!-- Twitter Follow button -->
+                <a href="https://twitter.com/indiosis" class="twitter-follow-button" data-show-count="false">Follow @indiosis</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <!-- LinkedIn Share button -->
+                &nbsp;<script type="IN/Share" data-counter="right"></script>
+                <!-- Google +1 button -->
+                &nbsp;<div class="g-plusone" data-size="medium" data-annotation="none" data-href="http://www.indiosis.com"></div>
+            </div>
+    </div>
+    <div class="news_area">
         <script>
             new TWTR.Widget({
             version: 2,
@@ -104,7 +112,7 @@ if(Yii::app()->user->isGuest) {
                 tweets: {
                 background: 'transparent',
                 color: '#333333',
-                links: '#2581a9'
+                links: '#2581a9',
                 }
             },
             features: {
@@ -117,27 +125,12 @@ if(Yii::app()->user->isGuest) {
                 favorite: false
             }
             }).render().setUser('indiosis').start();
-            </script>
+        </script>
     </div>
-    <div id="subscribe_area">
-        <!-- Twitter Follow button -->
-        <a href="https://twitter.com/indiosis" class="twitter-follow-button" data-show-count="false">Follow @indiosis</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        <!-- LinkedIn Share button -->
-        &nbsp;<script type="IN/Share" data-url="http://www.indiosis.com" data-counter="right"></script>
-        <!-- Google +1 button -->
-        &nbsp;<div class="g-plusone" data-size="medium" data-annotation="none" data-href="http://www.indiosis.com"></div>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <h4>Supported by</h4>
-        <a href="http://www.unil.ch/prime" target="_blank" class="logo_link"><img src="<?php echo Yii::app()->baseUrl.'/images/unil_logo.png'; ?>" alt="UNIL / PRIME"/></a>
-        <a href="http://www.roionline.org" target="_blank" class="logo_link"><img src="<?php echo Yii::app()->baseUrl.'/images/roitxt_logo.png'; ?>" alt="ROI - Resource Optimization Initiative"/></a>
+    <div class="info_area">
+        <div class="what_is">
+            <h2>What is<br/><span>INDUSTRIAL SYMBIOSIS</span> ?</h2>
+            <p>Industrial symbiosis can be defined as sharing of services, utility and by-product resources among diverse industrial actors in order to add value, reduce costs and improve the environement.</p>
+        </div>
     </div>
-</div>
-<div id="what_is">
-    <h2>What is<br/><span>INDUSTRIAL SYMBIOSIS</span> ?</h2>
-    <p>Industrial symbiosis can be defined as sharing of services, utility and by-product resources among diverse industrial actors in order to add value, reduce costs and improve the environement.</p>
-    <p>Direct inter-firm reuse of waste is the cornerstone of the pheonomenon termed industrial symbiosis (IS), where a group of firms in relative geographic proximity cooperate on resource management issues. Three types of symbiotic practices can occur among industries : (1) utilizing waste as raw material inputs from others (aka by-product exchange).</p>
 </div>

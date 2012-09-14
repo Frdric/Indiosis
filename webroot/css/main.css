@@ -26,7 +26,7 @@ a {
     color: #2582A9;
     text-decoration: none;
 }
-#infobar a {
+.infobar a {
     color: white;
     padding: 2px;
     font-family: "OpenSansSemibold";
@@ -43,7 +43,7 @@ h1 {
     font-size: 30px;
     font-weight: normal;
     color: #2582A9;
-    text-shadow: 0px 1px 1px white;
+    text-shadow: 0 1px 1px white;
     margin: 0 0 18px 0;
 }
 h2 {
@@ -57,7 +57,7 @@ h2 {
 }
 h3 {
     font-family: "Bitstream", Georgia, serif;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: normal;
     color: #666;
     margin: 0 0 10px;
@@ -68,7 +68,7 @@ h4 {
     font-weight: normal;
     color: #B6B6B6;
     margin: 0 0 10px;
-    text-shadow: 0px 2px 2px white;
+    text-shadow: 0 2px 2px white;
 }
 p {
     font-family: "Bitstream", Georgia, serif;
@@ -79,6 +79,34 @@ p {
 em {
     color: #2582A9;
     font-style: normal;
+}
+.bold {
+    font-family: "Bitstream-Bold";
+}
+ul,ol {
+    list-style-type: circle;
+    color: #2582A9;
+    padding-left: 30px;
+    font-size: 13px;
+    margin: 0;
+}
+ol {
+    list-style-type: decimal;
+}
+ol li {
+    color: #333;
+    line-height: 15px;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+.websymbol {
+    font-family: "WebSymbols";
+}
+.websymbol-entypo {
+    font-family: "Entypo";
+}
+.websymbol-modernpicto {
+    font-family: "ModernPictograms";
 }
 hr {
     border-top: solid 1px white;
@@ -91,14 +119,14 @@ hr.ongray {
     border-top: solid 1px #CCC;
     border-bottom: solid 1px white;
 }
-br.float_clearer {
+.float_clearer {
     clear: both;
 }
-div.lined_heading {
+.lined_heading {
   border-bottom: solid 1px #DFDFDF;
   margin-bottom: 15px;
 }
-div.lined_heading h1, div.lined_heading h2, div.lined_heading h3 {
+.lined_heading h1, .lined_heading h2, .lined_heading h3 {
     display:inline-block;
     position:relative;
     top:18px;
@@ -109,12 +137,11 @@ div.lined_heading h1, div.lined_heading h2, div.lined_heading h3 {
 input:not(.ibutton):not(.ibutton_big) {
     font-family: "OpenSansRegular", Arial, sans-serif;
     font-size: 11px;
-    padding: 0;
-    height: 23px;
+    padding: 5px 3px;
     text-indent: 4px;
     border: solid 1px #AAA;
 }
-input:not(.ibutton):focus {
+input:not(.ibutton):focus, label.required {
     color: #2582A9;
 }
 
@@ -130,20 +157,20 @@ body {
     background-image: url("../images/grained_back.gif");
     background-repeat: repeat;
 }
-#wrapper {
+.wrapper {
     min-height: 100%;
     height: auto !important;
     height: 100%;
     margin: 0 auto -160px; /* <-- always same as footer_wrapper height! */
-    box-shadow: inset 0px 130px 100px 0px white;
-    -moz-box-shadow: inset 0px 130px 100px 0px white;
-    -webkit-box-shadow: inset 0px 130px 100px 0px white;
+    -moz-box-shadow: inset 0 130px 100px 0 white;
+    -webkit-box-shadow: inset 0 130px 100px 0 white;
+    box-shadow: inset 0 130px 100px 0 white;
 }
-#header, #infobar, #main_content, #footer, #copyright {
+.header, .infobar, .main_content, #footer, .copyright {
     margin: 0 auto;
     width: 980px; /* <-- Site's General Width */
 }
-#header_wrapper {
+.header_wrapper {
     background-color: #CCC;
     background-image: url("../images/header_gradient.gif");
     background-repeat: repeat-x;
@@ -151,17 +178,11 @@ body {
     font-family: "OpenSansSemibold", Arial, sans-serif;
     font-size: 13px;
 }
-#header {
+.header {
     height: 77px;
 }
 #headerlogo {
     margin-top: 17px;
-}
-#infobar_wrapper {
-    height: 30px;
-    background-color: #4D4D4D;
-    border-top: solid 1px #DADADA;
-    border-bottom: solid 1px #444;
 }
 #toplogo {
     float: left;
@@ -172,6 +193,10 @@ body {
     height: 77px;
     border-left: solid 1px #AAA;
 }
+#topmenu span {
+    font-size: 30px;
+    line-height: 26px;
+}
 #topmenu div.topmenubutton {
     float: left;
 }
@@ -181,7 +206,7 @@ body {
     border-right: solid 1px #AAA;
     text-align: center;
 }
-#topmenu div.topmenubutton:active {
+#topmenu div.topmenubutton:active, #topmenu div.current {
     background: #EEE;
 }
 #topmenu div.selected {
@@ -200,13 +225,13 @@ body {
     line-height: 15px;
     display: block;
     height: 52px;
-    padding: 26px 20px 0 20px;
+    padding: 19px 20px 0 20px;
 }
-#topmenu div.monoline a {
+#topmenu div.dbline a {
     height: 46px;
-    padding: 32px 20px 0 20px;
+    padding: 25px 20px 0 20px;
 }
-#topmenu div.topmenubutton a:hover {
+#topmenu div.topmenubutton a:hover, #topmenu div.current a {
     text-decoration: none;
     color: #2A92BE;
 }
@@ -234,28 +259,52 @@ body {
 #searchfield input.empty {
     color: #AAA;
 }
-#infobar {
+.infobar_wrapper {
+    height: 30px;
+    background-color: #4D4D4D;
+    border-top: solid 1px #DADADA;
+    border-bottom: solid 1px #444;
+    overflow: hidden;
+}
+.infobar {
     margin-top: 8px;
     padding-right: 2px;
-    color: white;
     text-align: right;
-}
-#infobar.logged {
+    font-size: 11px;
     margin-top: 9px;
     font-family: "OpenSansRegular";
-    font-size: 11px;
     color: #FAFAFA;
 }
-#infobar img {
+.infobar a:hover {
+    text-decoration: none;
+    color: #2582A9;
+}
+#login_link {
+    font-size: 12px;
+}
+.breadcrumbs {
+    font-family: "OpenSansRegular";
+    float: left;
+    text-align: left;
+}
+.infobar img {
     margin-right: 6px;
 }
-#infobar span {
-    color: #BBB;
+
+.actionMenu {
+    font-family: "OpenSansRegular";
+    margin-top: -20px;
+    margin-bottom: 15px;
+    padding: 5px 0 10px;
+    text-align: right;
+}
+.actionMenu span {
+    font-family: "OpenSansSemibold";
+    color: #555;
 }
 
-div.breadcrumbs {
-    font-family: "OpenSansRegular";
-    padding: 13px 0 25px;
+.main_content {
+    padding-top: 30px;
 }
 
 #footer_push {
@@ -268,12 +317,13 @@ div.breadcrumbs {
 }
 #footer_inwrapper {
     border-top: solid 1px #D7D7D7;
+    height: 157px;
     font-size: 11px;
     color: #AAA;
     line-height: 15px;
-    box-shadow: inset 0px 2px 8px 0px #E1E1E1;
-    -moz-box-shadow: inset 0px 2px 8px 0px #E1E1E1;
-    -webkit-box-shadow: inset 0px 2px 8px 0px #E1E1E1;
+    -moz-box-shadow: inset 0 2px 8px 0 #E1E1E1;
+    -webkit-box-shadow: inset 0 2px 8px 0 #E1E1E1;
+    box-shadow: inset 0 2px 8px 0 #E1E1E1;
 }
 #footer {
     height: 70px;
@@ -281,10 +331,10 @@ div.breadcrumbs {
     border-bottom: solid 1px #CFCFCF;
     color: #999;
 }
-#footer_links, #copyright div:first-child, #footer_supportedby a {
+#footer_links, .copyright div:first-child, #footer_supportedby a {
     float: left;
 }
-#footer_supportedby, #support_note, #copyright div:last-child {
+#footer_supportedby, #support_note, .copyright div:last-child {
     float: right;
 }
 #footer_supportedby a, #support_note {
@@ -310,7 +360,7 @@ div.breadcrumbs {
 }
 #footer_links h4 {
     margin-bottom: 13px;
-    text-shadow: 0px 1px 1px white;
+    text-shadow: 0 1px 1px white;
     font-size: 15px;
     color: #AAA;
 }
@@ -337,35 +387,35 @@ div.breadcrumbs {
     font-family: "Bitstream", Georgia, serif;
     text-align: left;
     color: #999;
-    text-shadow: 0px 1px 1px white;
+    text-shadow: 0 1px 1px white;
     line-height: 14px;
 }
-#copyright {
+.copyright {
     border-top: solid 1px white;
     font-family: "OpenSansRegular";
     font-size: 11px;
     line-height: 13px;
     padding-top: 6px;
 }
-#copyright div span {
+.copyright div span {
     font-family: "Verdana";
 }
-#copyright div:first-child {
+.copyright div:first-child {
     width: 450px;
 }
-#copyright div:last-child {
+.copyright div:last-child {
     width: 120px;
 }
-#copyright div:first-child img {
+.copyright div:first-child img {
     float: left;
     margin: 10px 12px 0 2px;
 }
-#copyright div:last-child img {
+.copyright div:last-child img {
     float: right;
     margin: 3px 3px 0 0;
 }
 
-/* Login Box */
+/* LOGIN BOX */
 div#fancybox-content {
     background-color: #EEE;
 }
@@ -388,7 +438,7 @@ div.login_box div.login_side, div.login_box div.register_side {
     padding: 0 25px 0 0;
     width: 280px;
     height: 167px;
-    border-right: solid 1px #D1D1D1;
+    border-right: 1px solid #D1D1D1;
 }
 div.login_box div.register_side {
     width: 180px;
@@ -447,7 +497,7 @@ div.login_box div.pw_forgot {
     height: 37px;
     background-color: #E3E3E3;
     font-family: "OpenSansSemibold";
-    text-shadow: 0px 1px 1px #F2F2F2;
+    text-shadow: 0 1px 1px #F2F2F2;
     border-top: solid 1px #CCC;
 }
 div.login_box div.pw_forgot span {
@@ -468,11 +518,10 @@ div.ibox {
     background-image: url("../images/header_gradient.gif");
     background-repeat: repeat-x;
     background-position-y: -18px;
-    padding-bottom: 10px;
     overflow: hidden;
-    box-shadow: 0px 2px 3px #E2E2E2;
-    -moz-box-shadow: 0px 2px 3px #E2E2E2;
-    -webkit-box-shadow: 0px 2px 3px #E2E2E2;
+    -moz-box-shadow: 0 2px 3px #E2E2E2;
+    -webkit-box-shadow: 0 2px 3px #E2E2E2;
+    box-shadow: 0 2px 3px #E2E2E2;
 }
 div.ibox div.iboxheader {
     padding: 12px 15px 12px;
@@ -480,20 +529,19 @@ div.ibox div.iboxheader {
     font-family: "OpenSansSemibold";
     font-size: 18px;
     color: #777;
-    text-shadow: 0px 1px 1px white;
+    text-shadow: 0 1px 1px white;
 }
 div.ibox div.iboxcontent {
     background-color: white;
-    padding: 20px 15px 0;
-    box-shadow: inset 0px 3px 6px 0px #E6E6E6;
-    -moz-box-shadow: inset 0px 3px 6px 0px #E6E6E6;
-    -webkit-box-shadow: inset 0px 3px 6px 0px #E6E6E6;
+    padding: 20px 15px 10px;
+    -moz-box-shadow: inset 0 3px 6px 0 #E6E6E6;
+    -webkit-box-shadow: inset 0 3px 6px 0 #E6E6E6;
+    box-shadow: inset 0 3px 6px 0 #E6E6E6;
 }
 
 /* Indiosis buttons */
 .ibutton, .ibutton_big {
     display: inline-block;
-    outline: none;
     text-align: center;
     text-decoration: none;
     font-family: "OpenSansSemibold";
@@ -501,9 +549,12 @@ div.ibox div.iboxcontent {
     line-height: 15px;
     cursor: pointer;
     padding: 4px 10px;
-    border-radius: 6px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.ibutton:focus, .ibutton_big:focus {
+    outline: none;
 }
 .ibutton_big {
     font-size: 14px;
@@ -523,10 +574,10 @@ div.ibox div.iboxcontent {
 .iblue {
     color: #EDF7FB;
     border: solid 1px #0076a3;
-    box-shadow:inset 0px 1px 1px 0px #D8EDF7;
-    text-shadow: 0px 1px 1px #17526A;
-    -moz-box-shadow:inset 0px 1px 1px 0px #D8EDF7;
-    -webkit-box-shadow:inset 0px 1px 1px 0px #D8EDF7;
+    text-shadow: 0 1px 1px #17526A;
+    -moz-box-shadow:inset 0 1px 1px 0 #D8EDF7;
+    -webkit-box-shadow:inset 0 1px 1px 0 #D8EDF7;
+    box-shadow:inset 0 1px 1px 0 #D8EDF7;
     background: #2A92BE;
     background: -webkit-gradient(linear, left top, left bottom, from(#30A1D1), to(#207294));
     background: -moz-linear-gradient(top,  #30A1D1,  #207294);
@@ -549,10 +600,10 @@ div.ibox div.iboxcontent {
 .igray {
     color: #EEE;
     border: solid 1px #666;
-    box-shadow:inset 0px 1px 1px 0px #EEE;
-    text-shadow: 0px 1px 1px #222;
-    -moz-box-shadow:inset 0px 1px 1px 0px #EEE;
-    -webkit-box-shadow:inset 0px 1px 1px 0px #EEE;
+    text-shadow: 0 1px 1px #222;
+    -moz-box-shadow:inset 0 1px 1px 0 #EEE;
+    -webkit-box-shadow:inset 0 1px 1px 0 #EEE;
+    box-shadow:inset 0 1px 1px 0 #EEE;
     background: #6e6e6e;
     background: -webkit-gradient(linear, left top, left bottom, from(#CCC), to(#888));
     background: -moz-linear-gradient(top,  #CCC,  #888);
@@ -575,10 +626,10 @@ div.ibox div.iboxcontent {
 .idarkgray {
     color: #EEE;
     border: solid 1px #666;
-    box-shadow:inset 0px 1px 1px 0px #EEE;
-    text-shadow: 0px 1px 1px #222;
-    -moz-box-shadow:inset 0px 1px 1px 0px #EEE;
-    -webkit-box-shadow:inset 0px 1px 1px 0px #EEE;
+    text-shadow: 0 1px 1px #222;
+    -moz-box-shadow:inset 0 1px 1px 0 #EEE;
+    -webkit-box-shadow:inset 0 1px 1px 0 #EEE;
+    box-shadow: inset 0 1px 1px 0 #EEE;
     background: #6e6e6e;
     background: -webkit-gradient(linear, left top, left bottom, from(#AAA), to(#666));
     background: -moz-linear-gradient(top,  #AAA,  #666);
@@ -600,9 +651,10 @@ div.ibox div.iboxcontent {
 /* Notification messages */
 .inotification {
     border: solid 1px #30A1D1;
-    border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #DDD;
     background-color: rgba(0,0,0,0.03);
     padding: 20px;
     font-family: "OpenSansRegular";
@@ -626,6 +678,7 @@ div.ibox div.iboxcontent {
     font-family: "Arial";
 }
 .inotification_blue {
+    background-color: blue;
     background-color: rgba(37,130,169,0.6);
     color: white;
     border-color: #30A1D1;

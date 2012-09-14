@@ -14,15 +14,15 @@
  * @property integer $hideQty
  * @property integer $hideQtyUom
  * @property integer $hideLocation
- * @property string $ResourceCode_number
- * @property integer $CustomResource_id
+ * @property string $ClassCode_number
+ * @property integer $CustomClass_id
  * @property integer $Provider_id
  * @property integer $Receiver_id
  *
  * The followings are the available model relations:
  * @property Location[] $locations
- * @property CustomResource $customResource
- * @property ResourceCode $resourceCodeNumber
+ * @property CustomClass $customClass
+ * @property ClassCode $classCodeNumber
  * @property Organization $provider
  * @property Organization $receiver
  * @property Symbiosis[] $symbiosises
@@ -56,13 +56,13 @@ class ResourceFlow extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('added_on', 'required'),
-			array('qty, hideQty, hideQtyUom, hideLocation, CustomResource_id, Provider_id, Receiver_id', 'numerical', 'integerOnly'=>true),
+			array('qty, hideQty, hideQtyUom, hideLocation, CustomClass_id, Provider_id, Receiver_id', 'numerical', 'integerOnly'=>true),
 			array('label', 'length', 'max'=>255),
 			array('qtyUom, frequency', 'length', 'max'=>20),
-			array('reach, ResourceCode_number', 'length', 'max'=>250),
+			array('reach, ClassCode_number', 'length', 'max'=>250),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, label, qty, qtyUom, frequency, reach, added_on, hideQty, hideQtyUom, hideLocation, ResourceCode_number, CustomResource_id, Provider_id, Receiver_id', 'safe', 'on'=>'search'),
+			array('id, label, qty, qtyUom, frequency, reach, added_on, hideQty, hideQtyUom, hideLocation, ClassCode_number, CustomClass_id, Provider_id, Receiver_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -75,8 +75,8 @@ class ResourceFlow extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'locations' => array(self::HAS_MANY, 'Location', 'ResourceFlow_id'),
-			'customResource' => array(self::BELONGS_TO, 'CustomResource', 'CustomResource_id'),
-			'resourceCodeNumber' => array(self::BELONGS_TO, 'ResourceCode', 'ResourceCode_number'),
+			'customClass' => array(self::BELONGS_TO, 'CustomClass', 'CustomClass_id'),
+			'classCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'ClassCode_number'),
 			'provider' => array(self::BELONGS_TO, 'Organization', 'Provider_id'),
 			'receiver' => array(self::BELONGS_TO, 'Organization', 'Receiver_id'),
 			'symbiosises' => array(self::MANY_MANY, 'Symbiosis', 'SymbioticFlow(ResourceFlow_id, Symbiosis_id)'),
@@ -99,8 +99,8 @@ class ResourceFlow extends CActiveRecord
 			'hideQty' => 'Hide Qty',
 			'hideQtyUom' => 'Hide Qty Uom',
 			'hideLocation' => 'Hide Location',
-			'ResourceCode_number' => 'Resource Code Number',
-			'CustomResource_id' => 'Custom Resource',
+			'ClassCode_number' => 'Class Code Number',
+			'CustomClass_id' => 'Custom Class',
 			'Provider_id' => 'Provider',
 			'Receiver_id' => 'Receiver',
 		);
@@ -127,8 +127,8 @@ class ResourceFlow extends CActiveRecord
 		$criteria->compare('hideQty',$this->hideQty);
 		$criteria->compare('hideQtyUom',$this->hideQtyUom);
 		$criteria->compare('hideLocation',$this->hideLocation);
-		$criteria->compare('ResourceCode_number',$this->ResourceCode_number,true);
-		$criteria->compare('CustomResource_id',$this->CustomResource_id);
+		$criteria->compare('ClassCode_number',$this->ClassCode_number,true);
+		$criteria->compare('CustomClass_id',$this->CustomClass_id);
 		$criteria->compare('Provider_id',$this->Provider_id);
 		$criteria->compare('Receiver_id',$this->Receiver_id);
 

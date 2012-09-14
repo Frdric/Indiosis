@@ -59,7 +59,7 @@ Yii::app()->clientScript->registerScriptFile(
         </div>
         <div id="org_descr">
             <h3><?php echo $organization->name; ?> &nbsp;<span>(<?php echo $organization->acronym; ?>)</span></h3>
-            active in <a href=""><?php echo Yii::app()->params['industryList'][$organization->industry]; ?></a>
+            active in <a href=""><?php echo Yii::app()->params['industryList'][1]; ?></a>
             <br/><hr/>
             <p><?php
             if(strlen($organization->description)>300) {
@@ -81,6 +81,13 @@ Yii::app()->clientScript->registerScriptFile(
         <div id="org_activities">
             <h2>// <?php echo $organization->acronym; ?> recents activities</h2>
             <div class="activity_line">
+                <span class="websymbols">V</span>
+                <div>
+                    <em><?php echo (empty($organization->acronym)) ? $organization->name : $organization->acronym; ?></em> accepted a synergy request from <em>HES-SO</em>.
+                    <div>today</div>
+                </div>
+            </div>
+            <div class="activity_line">
                 <img src="<?php echo Yii::app()->baseUrl.'/images/joined.png'; ?>" alt="joined" />
                 <div>
                     <em><?php echo (empty($organization->acronym)) ? $organization->name : $organization->acronym; ?></em> joined Indiosis.
@@ -94,13 +101,13 @@ Yii::app()->clientScript->registerScriptFile(
     <?php
     $this->beginWidget('IBoxWidget',array(
         'boxId'=>'org_flows',
-        'title'=> '<span>'.Yii::app()->user->organizationAcronym.'</span> has <span>4</span> resource flows',
+        'title'=> '<span>'.Yii::app()->user->organizationAcronym.'</span> has <span>3</span> resource flows',
         'closable'=>  false));
     ?>
     <em>2</em> input flows
     <div class="symb_flow"><span class="websymbols">><em class="websymbols">></em></span> Alumnium (13 rolls / month)</div>
     <div class="symb_flow"><span class="websymbols">><em class="websymbols">></em></span> Iron (1 ton / day)</div>
-    <br/><em>1</em> output flows
+    <br/><em>1</em> output flow
     <div class="symb_flow"><span class="websymbols"><em class="websymbols"><</em><</span> Metal scraps ()</div>
     <?php $this->endWidget(); ?>
 

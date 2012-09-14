@@ -4,33 +4,36 @@
  * INDIOSIS                   *
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
- * 
+ *
  * STYLE : Landing page Look
  * Describes the look for Indiosis Homepage.
- * 
+ *
  * @package     home
  * @author      Frédéric Andreae
  * @copyright   UNIL/ROI
 */
 
 /* Altering main layout for special home illustration [ */
-#wrapper {
+.wrapper {
     background-image: url("../images/home_bk_gradient.gif");
     background-repeat: repeat-x;
     background-position-y: 110px;
-    box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
+    box-shadow: none;
 }
-#infobar_wrapper {
+.infobar_wrapper {
     border-bottom: solid 1px #3A3A3A;
 }
-#header_wrapper {
+.header_wrapper {
     border-bottom: solid 2px #2582A9;
 }
 h1 {
     color: white;
-    text-shadow: 0px 1px 1px black;
+    text-shadow: 0 1px 1px black;
+}
+.main_content {
+    padding: 0;
 }
 /* ] */
 #home_txt {
@@ -56,7 +59,7 @@ h1 {
     text-align: center;
     cursor: pointer;
 }
-div.feature_subtitle {
+.feature_subtitle {
     font-family: "OpenSansLight";
     font-size: 19px;
     color : #444;
@@ -127,22 +130,22 @@ p#signup_subtitle {
     background-image: url("../images/linkedin_signup.png");
     background-repeat: no-repeat;
     background-position: -24px -8px;
-    -moz-box-shadow:inset 0px 1px 0px 0px #76C6E2;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #76C6E2;
-    box-shadow:inset 0px 1px 0px 0px #76C6E2;
+    -moz-box-shadow:inset 0 1px 0 0 #76C6E2;
+    -webkit-box-shadow:inset 0 1px 0 0 #76C6E2;
+    box-shadow:inset 0 1px 0 0 #76C6E2;
 }
 #linkedin_signup span, #account_signup span {
     font-family: "OpenSansSemibold";
 }
 #linkedin_signup:hover {
     opacity: 0.92;
-    -moz-box-shadow:inset 0px 1px 0px 0px #9ED9E8;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #9ED9E8;
-    box-shadow:inset 0px 1px 0px 0px #9ED9E8;
+    -moz-box-shadow:inset 0 1px 0 0 #9ED9E8;
+    -webkit-box-shadow:inset 0 1px 0 0 #9ED9E8;
+    box-shadow:inset 0 1px 0 0 #9ED9E8;
 }
 #account_signup {
     color: #F3F3F3;
-    text-shadow: 0px 1px 0px #555;
+    text-shadow: 0 1px 0 #555;
     border: solid 1px #888;
     background: #bbbbbb;
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxNyUiIHN0b3AtY29sb3I9IiNiYmJiYmIiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjODg4ODg4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
@@ -155,9 +158,9 @@ p#signup_subtitle {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bbbbbb', endColorstr='#888888',GradientType=0 );
 }
 #account_signup:hover {
-    -moz-box-shadow:inset 0px 1px 0px 0px white;
-    -webkit-box-shadow:inset 0px 1px 0px 0px white;
-    box-shadow:inset 0px 1px 0px 0px white;
+    -moz-box-shadow:inset 0 1px 0 0 white;
+    -webkit-box-shadow:inset 0 1px 0 0 white;
+    box-shadow:inset 0 1px 0 0 white;
     background: #c4c4c4;
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxOCUiIHN0b3AtY29sb3I9IiNjNGM0YzQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjOGU4ZThlIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
     background: -moz-linear-gradient(top,  #c4c4c4 18%, #8e8e8e 100%);
@@ -180,52 +183,55 @@ p#signup_note {
 }
 
 /* -- NEWS AREA -- */
-#news_area_wrapper {
+.news_area_wrapper {
     height: 350px;
 }
-#news_area {
+.news_area {
     float: left;
-    width: 650px;
+    width: 560px;
+    padding-top: 15px;
 }
-#news_area .twtr-hd, #news_area .twtr-ft, #news_area .twtr-reply {
+.news_area .twtr-hd, .news_area .twtr-ft, .news_area .twtr-reply {
     display: none;
 }
-#news_area div.twtr-tweet {
+.news_area .twtr-tweet {
     border-bottom: dashed 1px #DDD;
 }
-#news_area div.twtr-tweet-wrap {
+.twtr-tweet-wrap {
     padding: 11px 0 13px;
 }
-#news_area div.twtr-tweet-text em a {
+.news_area .twtr-tweet-text em a {
     font-family: "OpenSansLight";
     font-size: 11px;
 }
-#subscribe_area {
-    float: right;
-    width: 290px;
-    text-align: right;
-    padding-top: 15px;
-}
-#subscribe_area a.logo_link {
-    float: right;
-    margin-left: 20px;
-    margin-top: 20px;
+.social-buttons {
+    background-image: url("../images/grained_back.gif");
+    background-repeat: repeat;
+    padding: 18px 10px 0 20px;
 }
 
-#what_is {
-    width: 350px;
-    padding: 25px 30px;
-    border: solid 10px #DDD;
+.info_area {
+    float: right;
+    width: 380px;
+    text-align: right;
+    padding-top: 20px;
+}
+.what_is {
+    width: 310px;
+    padding: 18px 23px;
+    border: solid 10px #E6E6E6;
     border-radius: 20px;
     background-color: white;
+    clear: both;
+    text-align: justify;
 }
-#what_is h2 {
+.what_is h2 {
     font-family: "OpenSansLightItalic";
     color: #4D4D4D;
-    font-size: 27px;
+    font-size: 24px;
     border-bottom: none;
 }
-#what_is h2 span {
+.what_is h2 span {
     font-family: "OpenSansExtrabold";
     color: #777;
 }

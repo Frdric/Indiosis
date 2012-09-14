@@ -8,8 +8,8 @@
  * @property string $CorrelatingCode_number
  *
  * The followings are the available model relations:
- * @property ResourceCode $referringCodeNumber
- * @property ResourceCode $correlatingCodeNumber
+ * @property ClassCode $referringCodeNumber
+ * @property ClassCode $correlatingCodeNumber
  */
 class CodeCorrelation extends CActiveRecord
 {
@@ -55,8 +55,8 @@ class CodeCorrelation extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'referringCodeNumber' => array(self::BELONGS_TO, 'ResourceCode', 'ReferringCode_number'),
-			'correlatingCodeNumber' => array(self::BELONGS_TO, 'ResourceCode', 'CorrelatingCode_number'),
+			'referringCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'ReferringCode_number'),
+			'correlatingCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'CorrelatingCode_number'),
 		);
 	}
 

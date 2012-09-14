@@ -43,7 +43,7 @@ class CommunicationMean extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('type, value, User_id, Organization_id', 'required'),
+			array('type, value', 'required'),
 			array('User_id, Organization_id', 'numerical', 'integerOnly'=>true),
 			array('type', 'length', 'max'=>7),
 			array('value, label', 'length', 'max'=>250),

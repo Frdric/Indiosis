@@ -110,7 +110,7 @@ div.activity_line {
 div.activity_line:last-child {
     border-bottom: dotted 1px #CCC;
 }
-div.activity_line img {
+div.activity_line img, div.activity_line span {
     border: none;
     margin: 0 10px 0 1px;
     float: left;

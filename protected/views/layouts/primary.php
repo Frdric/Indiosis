@@ -61,30 +61,38 @@
 </head>
 
 <body>
-    <div id="wrapper">
+    <div class="wrapper">
 
         <!-- HEADER -->
-        <div id="header_wrapper">
-            <div id="header">
+        <div class="header_wrapper">
+            <div class="header">
                 <div id="toplogo">
-                    <a href="<?php echo Yii::app()->baseUrl; ?>/"><img src="<?php echo Yii::app()->baseUrl.'/images/indiosis_headlogo.png'; ?>" alt="Indiosis" id="headerlogo"/></a>
+                    <a href="<?php echo Yii::app()->baseUrl; ?>/">
+                        <img src="<?php echo Yii::app()->baseUrl.'/images/indiosis_headlogo.png'; ?>" alt="Indiosis" id="headerlogo"/>
+                    </a>
                 </div>
                 <div id="topmenu">
-                    <div class="topmenubutton"><a href="<?php echo Yii::app()->baseUrl; ?>/repository">PRACTICES<br/>REPOSITORY</a></div>
-                    <div class="topmenubutton"><a href="<?php echo Yii::app()->baseUrl; ?>/members">ALL<br/>COMPANIES<br/></a></div>
-                    <div class="topmenubutton"><a href="<?php echo Yii::app()->baseUrl; ?>/about">EXPERTS<br/>CORNER</a></div>
-                    <div class="topmenubutton monoline"><a href="<?php echo Yii::app()->baseUrl; ?>/profile">Profile</a></div>
+                    <div class="topmenubutton <?php echo ((Yii::app()->controller->id=='repository') ? 'current' : ''); ?>"><a href="<?php echo Yii::app()->baseUrl; ?>/repository"><span class="websymbol-modernpicto">B</span><br/>REPOSITORY</a></div>
+                    <div class="topmenubutton <?php echo ((Yii::app()->controller->id=='company') ? 'current' : ''); ?>"><a href="<?php echo Yii::app()->baseUrl; ?>/members"><span class="websymbol-entypo" style="font-size: 40px;">,</span><br/>MEMBERS</a></div>
+                    <div class="topmenubutton  <?php echo ((Yii::app()->controller->id=='profile') ? 'current' : ''); ?>">
+                        <a href="<?php echo Yii::app()->baseUrl; ?>/profile">
+                            <span class="websymbol-entypo" style="font-size: 40px;">o</span><br/>MY COMPANY</a>
+                    </div>
+                    <div class="topmenubutton dbline <?php echo ((Yii::app()->controller->id=='expert') ? 'current' : ''); ?>"><a href="<?php echo Yii::app()->baseUrl; ?>/about">EXPERTS<br/>CORNER</a></div>
                     <div id="searchfield"><input type="text" name="spractice" value="search symbiosis practices.." class="no-uniform empty" /></div>
                 </div>
             </div>
-            <div id="infobar_wrapper">
-                <div id="infobar" class="<?php echo (Yii::app()->user->isGuest)? 'guest':'logged' ; ?>">
+            <div class="infobar_wrapper">
+                <div class="infobar <?php echo (Yii::app()->user->isGuest)? 'guest':'logged' ; ?>">
                     <?php
+                    // Display breadcrumbs (if set)
+                    $this->widget('zii.widgets.CBreadcrumbs', array('links'=>$this->breadcrumbsLinks,'homeLink'=>false));
+
                     if(Yii::app()->user->isGuest) {
                         echo '<a href="'.Yii::app()->baseUrl.'/account/login" id="login_link"><img src="'.Yii::app()->baseUrl.'/images/login_lock.gif'.'" alt="Secure login" />Log In</a>';
                     }
                     else {
-                        echo Yii::app()->user->firstName." ".Yii::app()->user->lastName.' &nbsp;<span>('.((!empty(Yii::app()->user->organizationAcronym)) ? Yii::app()->user->organizationAcronym : Yii::app()->user->organizationName ).')</span> | '.'<a href="'.Yii::app()->baseUrl.'/account/logout">Logout</a>';
+                        echo Yii::app()->user->firstName." ".Yii::app()->user->lastName.' &nbsp;<span>('.((!empty(Yii::app()->user->organizationAcronym)) ? Yii::app()->user->organizationAcronym : Yii::app()->user->organizationName ).')</span> | '.'<a href="'.Yii::app()->baseUrl.'/account/logout"><span class="websymbol">X</span></a>';
                     }
                     ?>
                 </div>
@@ -92,10 +100,28 @@
         </div>
 
         <!-- MAIN CONTENT -->
-        <div id="main_content">
+        <div class="main_content">
             <?php
-            // Display breadcrumbs (if set)
-            $this->widget('zii.widgets.CBreadcrumbs', array('links'=>$this->breadcrumbsLinks));
+            // Action menu (if set)
+            if(isset($this->menuActions)) {
+                ?>
+                <div class="actionMenu">
+                    <span>Admin privileges :</span>&nbsp;&nbsp;
+                <?php
+                $first=true;
+                foreach ($this->menuActions as $action => $link) {
+                    if(!$first) {
+                        echo ' <span>|</span> ';
+                    }
+                    else {
+                        $first=false;
+                    }
+                    echo '<a href="'.$link.'">'.$action.'</a>';
+                }
+                ?>
+                </div>
+                <?php
+            }
             // Output main content
             echo $content;
             // echo '<a href="#header" /><span>&#9650;</span> Back To Top</a>';
@@ -118,7 +144,7 @@
                 <div id="support_note">Supported by the<br/>University of Lausanne,<br/>in collaboration with ROI.</div>
             </div>
         </div>
-        <div id="copyright">
+        <div class="copyright">
             <div>
                 <img src="<?php echo Yii::app()->baseUrl.'/images/indiosis_gray.png'; ?>" alt="Indiosis"/>
                 <br/>

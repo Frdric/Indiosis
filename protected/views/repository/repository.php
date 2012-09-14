@@ -16,18 +16,29 @@
 $this->pageTitle= Helpers::buildPageTitle("Repository");
 
 Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/repository.css');
-
-
-//echo CHtml::ajaxLink(
-//	'Test request',          // the link body (it will NOT be HTML-encoded.)
-//	array('home/reqTest01'), // the URL for the AJAX request. If empty, it is assumed to be the current URL.
-//	array(
-//		'update'=>'#req_res'
-//	),
-//        array('id' => 'send-link-'.uniqid())
-//);
+Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/inventory.css'); // TODO : remove this line
 ?>
-<!-- REPOSITORY PAGE CONTENT -->
-<div id="req_res"></div>
 
-IS Knowledge Base : Work in progress..
+<!-- REPOSITORY PAGE CONTENT -->
+<h1>Browse all Industrial Symbiosis cases</h1>
+<br>
+<div>IS Knowledge Base : Work in progress..</div>
+<br/>
+<br>
+<br>
+<h2>Search by Material</h2>
+
+<?php
+$form=$this->beginWidget('CActiveForm', array(
+    'id'=>'resource_form',
+    'enableAjaxValidation'=>true,
+    'htmlOptions'=>array('enctype' => 'multipart/form-data'))
+ );
+echo 'Material name : ';
+$this->widget('CAutoComplete', array(
+    'name' => 'material_name',
+    'url' => Yii::app()->baseUrl.'/inventory/MaterialAutocomplete',
+    'methodChain'=>".result(function(event,item){ $(\"#Class_Code_number\").val(item[1]);})"
+));
+
+$this->endWidget();

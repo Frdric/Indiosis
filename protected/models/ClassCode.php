@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "ResourceCode".
+ * This is the model class for table "ClassCode".
  *
- * The followings are the available columns in table 'ResourceCode':
+ * The followings are the available columns in table 'ClassCode':
  * @property string $number
  * @property string $description
  * @property string $uom
@@ -11,21 +11,22 @@
  * @property string $ChildOf_number
  *
  * The followings are the available model relations:
+ * @property ClassificationSystem $classificationSystemName
+ * @property ClassCode $childOfNumber
+ * @property ClassCode[] $classCodes
  * @property CodeCorrelation[] $codeCorrelations
  * @property CodeCorrelation[] $codeCorrelations1
- * @property CustomResource[] $customResources
+ * @property CustomClass[] $customClasses
  * @property Expertise[] $expertises
- * @property ClassificationSystem $classificationSystemName
- * @property ResourceCode $childOfNumber
- * @property ResourceCode[] $resourceCodes
+ * @property ISCaseClass[] $iSCaseClasses
  * @property ResourceFlow[] $resourceFlows
  */
-class ResourceCode extends CActiveRecord
+class ClassCode extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return ResourceCode the static model class
+	 * @return ClassCode the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -37,7 +38,7 @@ class ResourceCode extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'ResourceCode';
+		return 'ClassCode';
 	}
 
 	/**
@@ -66,14 +67,15 @@ class ResourceCode extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'classificationSystemName' => array(self::BELONGS_TO, 'ClassificationSystem', 'ClassificationSystem_name'),
+			'childOfNumber' => array(self::BELONGS_TO, 'ClassCode', 'ChildOf_number'),
+			'classCodes' => array(self::HAS_MANY, 'ClassCode', 'ChildOf_number'),
 			'codeCorrelations' => array(self::HAS_MANY, 'CodeCorrelation', 'ReferringCode_number'),
 			'codeCorrelations1' => array(self::HAS_MANY, 'CodeCorrelation', 'CorrelatingCode_number'),
-			'customResources' => array(self::HAS_MANY, 'CustomResource', 'MatchingCode_number'),
+			'customClasses' => array(self::HAS_MANY, 'CustomClass', 'MatchingCode_number'),
 			'expertises' => array(self::HAS_MANY, 'Expertise', 'ResourceCode_number'),
-			'classificationSystemName' => array(self::BELONGS_TO, 'ClassificationSystem', 'ClassificationSystem_name'),
-			'childOfNumber' => array(self::BELONGS_TO, 'ResourceCode', 'ChildOf_number'),
-			'resourceCodes' => array(self::HAS_MANY, 'ResourceCode', 'ChildOf_number'),
-			'resourceFlows' => array(self::HAS_MANY, 'ResourceFlow', 'ResourceCode_number'),
+			'iSCaseClasses' => array(self::HAS_MANY, 'ISCaseClass', 'ClassCode_number'),
+			'resourceFlows' => array(self::HAS_MANY, 'ResourceFlow', 'ClassCode_number'),
 		);
 	}
 

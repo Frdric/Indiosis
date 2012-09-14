@@ -1,24 +1,23 @@
 <?php
 
 /**
- * This is the model class for table "Expertise".
+ * This is the model class for table "ISCaseClass".
  *
- * The followings are the available columns in table 'Expertise':
- * @property string $ResourceCode_number
- * @property integer $Organization_id
- * @property integer $User_id
+ * The followings are the available columns in table 'ISCaseClass':
+ * @property integer $ISCase_id
+ * @property string $ClassCode_number
+ * @property string $role
  *
  * The followings are the available model relations:
- * @property User $user
- * @property ClassCode $resourceCodeNumber
- * @property Organization $organization
+ * @property ISCase $iSCase
+ * @property ClassCode $classCodeNumber
  */
-class Expertise extends CActiveRecord
+class ISCaseClass extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Expertise the static model class
+	 * @return ISCaseClass the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -30,7 +29,7 @@ class Expertise extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'Expertise';
+		return 'ISCaseClass';
 	}
 
 	/**
@@ -41,12 +40,13 @@ class Expertise extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ResourceCode_number, Organization_id, User_id', 'required'),
-			array('Organization_id, User_id', 'numerical', 'integerOnly'=>true),
-			array('ResourceCode_number', 'length', 'max'=>250),
+			array('ISCase_id, ClassCode_number, role', 'required'),
+			array('ISCase_id', 'numerical', 'integerOnly'=>true),
+			array('ClassCode_number', 'length', 'max'=>250),
+			array('role', 'length', 'max'=>11),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('ResourceCode_number, Organization_id, User_id', 'safe', 'on'=>'search'),
+			array('ISCase_id, ClassCode_number, role', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,9 +58,8 @@ class Expertise extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'user' => array(self::BELONGS_TO, 'User', 'User_id'),
-			'resourceCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'ResourceCode_number'),
-			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
+			'iSCase' => array(self::BELONGS_TO, 'ISCase', 'ISCase_id'),
+			'classCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'ClassCode_number'),
 		);
 	}
 
@@ -70,9 +69,9 @@ class Expertise extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'ResourceCode_number' => 'Resource Code Number',
-			'Organization_id' => 'Organization',
-			'User_id' => 'User',
+			'ISCase_id' => 'Iscase',
+			'ClassCode_number' => 'Class Code Number',
+			'role' => 'Role',
 		);
 	}
 
@@ -87,9 +86,9 @@ class Expertise extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('ResourceCode_number',$this->ResourceCode_number,true);
-		$criteria->compare('Organization_id',$this->Organization_id);
-		$criteria->compare('User_id',$this->User_id);
+		$criteria->compare('ISCase_id',$this->ISCase_id);
+		$criteria->compare('ClassCode_number',$this->ClassCode_number,true);
+		$criteria->compare('role',$this->role,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

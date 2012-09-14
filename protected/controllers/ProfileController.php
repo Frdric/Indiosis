@@ -36,6 +36,7 @@ class ProfileController extends IndiosisController
      */
     public function actionIndex()
     {
+        $this->breadcrumbsLinks = array('My Company'=>'index','Profile');
         // retrieve organisation data
         $organization = Organization::model()->findByAttributes(array('id'=>Yii::app()->user->organizationId));
         $geoLocation = GeoHelper::lookupCoordinates($organization->locations[0]);
@@ -44,8 +45,6 @@ class ProfileController extends IndiosisController
                                 "r" => 3,
                                 "fill" => "#2582A9",
                                 "name" => $organization->acronym);
-
-        $this->breadcrumbsLinks = array('Organization Profile');
 
         $this->render('profile',array(  'organization'=>$organization,
                                         'org_location'=>$organization->locations[0],

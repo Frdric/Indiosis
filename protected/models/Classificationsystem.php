@@ -9,7 +9,7 @@
  * @property string $revision
  *
  * The followings are the available model relations:
- * @property ResourceCode[] $resourceCodes
+ * @property ClassCode[] $classCodes
  */
 class ClassificationSystem extends CActiveRecord
 {
@@ -57,7 +57,7 @@ class ClassificationSystem extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'resourceCodes' => array(self::HAS_MANY, 'ResourceCode', 'ClassificationSystem_name'),
+			'classCodes' => array(self::HAS_MANY, 'ClassCode', 'ClassificationSystem_name'),
 		);
 	}
 

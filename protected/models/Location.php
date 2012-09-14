@@ -16,10 +16,12 @@
  * @property string $lng
  * @property integer $Organization_id
  * @property integer $ResourceFlow_id
+ * @property integer $ISCase_id
  *
  * The followings are the available model relations:
  * @property Organization $organization
  * @property ResourceFlow $resourceFlow
+ * @property ISCase $iSCase
  */
 class Location extends CActiveRecord
 {
@@ -50,12 +52,12 @@ class Location extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('label, country', 'required'),
-			array('Organization_id, ResourceFlow_id', 'numerical', 'integerOnly'=>true),
+			array('Organization_id, ResourceFlow_id, ISCase_id', 'numerical', 'integerOnly'=>true),
 			array('label, city, zip, state, country, lat, lng', 'length', 'max'=>250),
 			array('addressLine1, addressLine2', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, label, addressLine1, addressLine2, city, zip, state, country, lat, lng, Organization_id, ResourceFlow_id', 'safe', 'on'=>'search'),
+			array('id, label, addressLine1, addressLine2, city, zip, state, country, lat, lng, Organization_id, ResourceFlow_id, ISCase_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,6 +71,7 @@ class Location extends CActiveRecord
 		return array(
 			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
 			'resourceFlow' => array(self::BELONGS_TO, 'ResourceFlow', 'ResourceFlow_id'),
+			'iSCase' => array(self::BELONGS_TO, 'ISCase', 'ISCase_id'),
 		);
 	}
 
@@ -90,6 +93,7 @@ class Location extends CActiveRecord
 			'lng' => 'Lng',
 			'Organization_id' => 'Organization',
 			'ResourceFlow_id' => 'Resource Flow',
+			'ISCase_id' => 'Iscase',
 		);
 	}
 
@@ -116,6 +120,7 @@ class Location extends CActiveRecord
 		$criteria->compare('lng',$this->lng,true);
 		$criteria->compare('Organization_id',$this->Organization_id);
 		$criteria->compare('ResourceFlow_id',$this->ResourceFlow_id);
+		$criteria->compare('ISCase_id',$this->ISCase_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

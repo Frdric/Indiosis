@@ -1,0 +1,71 @@
+@charset "utf-8";
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
+ *
+ * STYLE : Sign up page look
+ *
+ * @package     account
+ * @author      Frédéric Andreae
+ * @copyright   UNIL/ROI
+*/
+
+#newCaseBox .iboxcontent {
+	height: 1350px;
+}
+.case-form {
+	float: left;
+	width: 530px;
+	margin-left: 10px;
+}
+hr {
+	margin-bottom: 20px;
+}
+.instructions {
+	float: right;
+	width: 340px;
+	border-left: 1px dashed #CCC;
+	padding: 0 15px 0 25px;
+	height: 1195px;
+}
+.instructions p {
+	margin: 20px 0;
+}
+
+.case-form .row {
+	clear: both;
+	min-height: 30px;
+	padding-bottom: 17px;
+}
+.case-form label {
+	float: left;
+	font-family: "OpenSansRegular";
+	width: 90px;
+	padding-right: 15px;
+	margin-top: 6px;
+	text-align: right;
+}
+.case-form label:not(.required) {
+	color: #444;
+}
+.impacts label {
+	float: none;
+}
+.required span {
+	display: none;
+}
+.case-form input, .case-form .row textarea {
+	width: 420px;
+}
+.impacts .row textarea {
+	width: 526px;
+	margin-top: 7px;
+}
+.case-form .buttons {
+	padding: 5px 0 0 160px;
+}
+.case-form .ibutton_big {
+	width: 250px;
+}

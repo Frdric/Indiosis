@@ -1,24 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "CustomResource".
+ * This is the model class for table "CustomClass".
  *
- * The followings are the available columns in table 'CustomResource':
+ * The followings are the available columns in table 'CustomClass':
  * @property integer $id
  * @property string $name
  * @property string $description
  * @property string $MatchingCode_number
  *
  * The followings are the available model relations:
- * @property ResourceCode $matchingCodeNumber
+ * @property ClassCode $matchingCodeNumber
  * @property ResourceFlow[] $resourceFlows
  */
-class CustomResource extends CActiveRecord
+class CustomClass extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return CustomResource the static model class
+	 * @return CustomClass the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -30,7 +30,7 @@ class CustomResource extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'CustomResource';
+		return 'CustomClass';
 	}
 
 	/**
@@ -57,8 +57,8 @@ class CustomResource extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'matchingCodeNumber' => array(self::BELONGS_TO, 'ResourceCode', 'MatchingCode_number'),
-			'resourceFlows' => array(self::HAS_MANY, 'ResourceFlow', 'CustomResource_id'),
+			'matchingCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'MatchingCode_number'),
+			'resourceFlows' => array(self::HAS_MANY, 'ResourceFlow', 'CustomClass_id'),
 		);
 	}
 

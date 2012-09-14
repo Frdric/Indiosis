@@ -4,10 +4,10 @@
  * INDIOSIS                   *
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
- * 
+ *
  * VIEW : Registration page
  * Registration form including LinkedIn based registration.
- * 
+ *
  * @package     account
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI
@@ -70,7 +70,7 @@ $this->beginWidget('IBoxWidget',array(
         <div>Company name</div>
         <div><?php echo $form->textField($model,'organization') ?></div>
         <?php echo $form->error($model,'organization'); ?>
-    </div>            
+    </div>
     <div class="row uaagreed">
         <div><?php echo $form->checkBox($model,'uaagreed') ?></div>
         <div class="txt">By signing up I agree to<br/>Indiosis <a href="#" target="_blank">terms of service</a>.</div>
@@ -107,7 +107,7 @@ $this->beginWidget('INotificationWidget',array(
     'notId'=>'registeredMsg',
     'title'=>'Done. Thank you for registering!'));
 ?>
-Like usual, we just sent you a confirmation email with a validation link that will activate your account...
+Thank you for registering, we just sent you a confirmation email with a validation link that will activate your account...
 <br/>
 <br/>
 < <a href="<?php echo Yii::app()->homeUrl; ?>">Back to homepage</a>

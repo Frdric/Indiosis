@@ -8,7 +8,6 @@
  * @property string $acronym
  * @property string $name
  * @property string $type
- * @property string $industry
  * @property string $description
  * @property integer $linkedin_id
  * @property integer $verified
@@ -58,12 +57,12 @@ class Organization extends CActiveRecord
 			array('name, created_on', 'required'),
 			array('linkedin_id, verified, anonymous', 'numerical', 'integerOnly'=>true),
 			array('acronym', 'length', 'max'=>10),
-			array('name, industry', 'length', 'max'=>250),
+			array('name', 'length', 'max'=>250),
 			array('type', 'length', 'max'=>11),
 			array('description', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, acronym, name, type, industry, description, linkedin_id, verified, anonymous, created_on', 'safe', 'on'=>'search'),
+			array('id, acronym, name, type, description, linkedin_id, verified, anonymous, created_on', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -98,7 +97,6 @@ class Organization extends CActiveRecord
 			'acronym' => 'Acronym',
 			'name' => 'Name',
 			'type' => 'Type',
-			'industry' => 'Industry',
 			'description' => 'Description',
 			'linkedin_id' => 'Linkedin',
 			'verified' => 'Verified',
@@ -122,7 +120,6 @@ class Organization extends CActiveRecord
 		$criteria->compare('acronym',$this->acronym,true);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('type',$this->type,true);
-		$criteria->compare('industry',$this->industry,true);
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('linkedin_id',$this->linkedin_id);
 		$criteria->compare('verified',$this->verified);

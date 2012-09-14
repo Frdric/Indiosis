@@ -5,7 +5,7 @@
  *
  * The followings are the available columns in table 'Tag':
  * @property integer $id
- * @property string $name
+ * @property string $label
  * @property integer $User_id
  * @property integer $Organization_id
  *
@@ -41,12 +41,12 @@ class Tag extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, User_id, Organization_id', 'required'),
+			array('label, User_id, Organization_id', 'required'),
 			array('User_id, Organization_id', 'numerical', 'integerOnly'=>true),
-			array('name', 'length', 'max'=>255),
+			array('label', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, User_id, Organization_id', 'safe', 'on'=>'search'),
+			array('id, label, User_id, Organization_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,7 +70,7 @@ class Tag extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
+			'label' => 'Label',
 			'User_id' => 'User',
 			'Organization_id' => 'Organization',
 		);
@@ -88,7 +88,7 @@ class Tag extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
+		$criteria->compare('label',$this->label,true);
 		$criteria->compare('User_id',$this->User_id);
 		$criteria->compare('Organization_id',$this->Organization_id);
 

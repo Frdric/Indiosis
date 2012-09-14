@@ -68,6 +68,58 @@ return array(
         ),
     ),
 
+    'components'=>array(
+
+        // Setup user authentication rules
+        'user'=>array(
+            'allowAutoLogin'=>true,
+            'loginUrl'=> '/indiosis/',
+        ),
+
+        // Simplify URLs
+        'urlManager'=>array(
+            'urlFormat'=>'path',
+            'showScriptName'=>'false',
+            'rules'=>array(
+                '<controller:\w+>/<id:\d+>'=>'<controller>/view',
+                '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+                '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+            )
+        ),
+
+        // Setup the DB connexion
+        'db'=>array(
+                'connectionString' => 'mysql:host=127.0.0.1;dbname=indiosis',
+                'emulatePrepare' => true,
+                'username' => 'indiosis',
+                'password' => 'roi',
+                'charset' => 'utf8',
+        ),
+
+        // Redirect errors to Indiosis error page
+        'errorHandler'=>array(
+            // use 'home/error' action to display errors
+            'errorAction'=>'home/error',
+        ),
+
+        // Enables logs
+        'log'=>array(
+            'class'=>'CLogRouter',
+            'routes'=>array(
+                array(
+                    'class'=>'CFileLogRoute',
+                    'levels'=>'error, warning',
+                )
+            )
+        ),
+
+        // Specify the asset folder path
+        'assetManager'=>array(
+            'basePath'=>_joinpath($homePath,'webroot/assets'),
+            'baseUrl'=>'/indiosis/assets'
+        )
+    ),
+
     // Other parameters (accessible through Yii::app()->params['paramName'])
     'params'=>array(
         'indiosisEmail'=>'info@indiosis.com',
@@ -79,6 +131,7 @@ return array(
         'ajaxFailure' => 'ERROR',
         'linkedinKey' => 'L4gyxZw6qwgyw1Gc2baz0HutNqeIafCLf7WhjHklXyGnBvcL65-ysOa1smgdN3lc',
         'linkedinSecret' => '3mTvuDViCJia6Htx7Yhbq52Ia0eErN_MY1lzdwdEyR-Afpo9P8i3gCDJgMy9NdpQ',
+        'countryList' => include( _joinpath(_joinpath($homePath,'protected'),'data').'/country-list.php' ),
         'industryList' => array('ACCOUNTING' => 'Accounting',
                                 'AIRLINES_AVIATION' => 'Airlines/Aviation',
                                 'ALTERNATIVE_DISPUTE_RESOLUTION' => 'Alternative Dispute Resolution',
@@ -226,57 +279,5 @@ return array(
                                 'WINE_AND_SPIRITS' => 'Wine &amp; Spirits',
                                 'WIRELESS' => 'Wireless',
                                 'WRITING_AND_EDITING' => 'Writing &amp; Editing')
-    ),
-
-    'components'=>array(
-
-        // Setup user authentication rules
-        'user'=>array(
-            'allowAutoLogin'=>true,
-            'loginUrl'=> '/indiosis/',
-        ),
-
-        // Simplify URLs
-        'urlManager'=>array(
-            'urlFormat'=>'path',
-            'showScriptName'=>'false',
-            'rules'=>array(
-                '<controller:\w+>/<id:\d+>'=>'<controller>/view',
-                '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-                '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-            )
-        ),
-
-        // Setup the DB connexion
-        'db'=>array(
-                'connectionString' => 'mysql:host=localhost;dbname=indiosis',
-                'emulatePrepare' => true,
-                'username' => 'root',
-                'password' => 'root',
-                'charset' => 'utf8',
-        ),
-
-        // Redirect errors to Indiosis error page
-        'errorHandler'=>array(
-            // use 'home/error' action to display errors
-            'errorAction'=>'home/error',
-        ),
-
-        // Enables logs
-        'log'=>array(
-            'class'=>'CLogRouter',
-            'routes'=>array(
-                array(
-                    'class'=>'CFileLogRoute',
-                    'levels'=>'error, warning',
-                )
-            )
-        ),
-
-        // Specify the asset folder path
-        'assetManager'=>array(
-            'basePath'=>_joinpath($homePath,'webroot/assets'),
-            'baseUrl'=>'/indiosis/assets'
-        )
     )
 );

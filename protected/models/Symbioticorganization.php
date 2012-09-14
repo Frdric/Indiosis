@@ -4,8 +4,8 @@
  * This is the model class for table "SymbioticOrganization".
  *
  * The followings are the available columns in table 'SymbioticOrganization':
- * @property integer $Organization_id
  * @property integer $Symbiosis_id
+ * @property integer $Organization_id
  */
 class SymbioticOrganization extends CActiveRecord
 {
@@ -35,11 +35,11 @@ class SymbioticOrganization extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Organization_id, Symbiosis_id', 'required'),
-			array('Organization_id, Symbiosis_id', 'numerical', 'integerOnly'=>true),
+			array('Symbiosis_id, Organization_id', 'required'),
+			array('Symbiosis_id, Organization_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('Organization_id, Symbiosis_id', 'safe', 'on'=>'search'),
+			array('Symbiosis_id, Organization_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,8 +60,8 @@ class SymbioticOrganization extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'Organization_id' => 'Organization',
 			'Symbiosis_id' => 'Symbiosis',
+			'Organization_id' => 'Organization',
 		);
 	}
 
@@ -76,8 +76,8 @@ class SymbioticOrganization extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('Organization_id',$this->Organization_id);
 		$criteria->compare('Symbiosis_id',$this->Symbiosis_id);
+		$criteria->compare('Organization_id',$this->Organization_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -1,20 +1,20 @@
 <?php
-/* 
+/*
  * - -- - - - - - - - - - - - *
  * INDIOSIS                   *
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
- * 
+ *
  * WIDGET : Indiosis Notification Message
  * Creates a standard customizable Indiosis top notification message.
- * 
+ *
  * @package     all
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI
  */
 
 class INotificationWidget extends CWidget
-{   
+{
     // Standard colors
     const BLUE_INOT = "inotification_blue";
     const GREEN_INOT = "inotification_green";
@@ -25,7 +25,7 @@ class INotificationWidget extends CWidget
     const ICON_IERROR = "IERROR";
     const ICON_ISAVED = "ISAVED";
     const ICON_NONE = "INOICON";
-    
+
     public $notId;
     // the header title of the box
     public $title = null;
@@ -33,15 +33,15 @@ class INotificationWidget extends CWidget
     public $color = '';
     // the icon to be displayed (default none)
     public $icon = self::ICON_NONE;
-    // hiden by default
+    // hidden by default
     public $init_display = false;
-    
-    
+
+
     public function init()
     {
         ob_start();
     }
-    
+
     public function run()
     {
         // retrieve boc body content
