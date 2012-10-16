@@ -2,13 +2,12 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
-CREATE SCHEMA IF NOT EXISTS `indiosis` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
-USE `indiosis` ;
+USE `indiosis_main` ;
 
 -- -----------------------------------------------------
--- Table `indiosis`.`Organization`
+-- Table `indiosis_main`.`Organization`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`Organization` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`Organization` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `acronym` VARCHAR(10) NULL ,
   `name` VARCHAR(250) NOT NULL ,
@@ -23,9 +22,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis`.`User`
+-- Table `indiosis_main`.`User`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`User` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`User` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `email` VARCHAR(45) NOT NULL ,
   `password` CHAR(32) NOT NULL ,
@@ -45,16 +44,16 @@ CREATE  TABLE IF NOT EXISTS `indiosis`.`User` (
   INDEX `fk_User_Organization_idx` (`Organization_id` ASC) ,
   CONSTRAINT `fk_User_Organization`
     FOREIGN KEY (`Organization_id` )
-    REFERENCES `indiosis`.`Organization` (`id` )
+    REFERENCES `indiosis_main`.`Organization` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis`.`ClassificationSystem`
+-- Table `indiosis_main`.`ClassificationSystem`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`ClassificationSystem` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`ClassificationSystem` (
   `name` VARCHAR(20) NOT NULL ,
   `fullName` VARCHAR(250) NULL ,
   `revision` VARCHAR(50) NULL ,
@@ -63,34 +62,34 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis`.`ClassCode`
+-- Table `indiosis_main`.`ClassCode`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`ClassCode` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`ClassCode` (
   `number` VARCHAR(250) NOT NULL ,
   `description` TEXT NOT NULL ,
   `uom` VARCHAR(50) NULL ,
-  `ClassificationSystem_name` VARCHAR(20) NOT NULL ,
   `ChildOf_number` VARCHAR(250) NULL ,
+  `ClassificationSystem_name` VARCHAR(20) NOT NULL ,
   PRIMARY KEY (`number`) ,
   INDEX `fk_ResourceCode_ClassificationSystem_idx` (`ClassificationSystem_name` ASC) ,
   INDEX `fk_ResourceCode_ChildOf_idx` (`ChildOf_number` ASC) ,
   CONSTRAINT `fk_ResourceCode_ClassificationSystem`
     FOREIGN KEY (`ClassificationSystem_name` )
-    REFERENCES `indiosis`.`ClassificationSystem` (`name` )
+    REFERENCES `indiosis_main`.`ClassificationSystem` (`name` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_ResourceCode_ChildOf`
     FOREIGN KEY (`ChildOf_number` )
-    REFERENCES `indiosis`.`ClassCode` (`number` )
+    REFERENCES `indiosis_main`.`ClassCode` (`number` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis`.`CustomClass`
+-- Table `indiosis_main`.`CustomClass`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`CustomClass` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`CustomClass` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `name` TEXT NOT NULL ,
   `description` TEXT NOT NULL ,
@@ -99,16 +98,16 @@ CREATE  TABLE IF NOT EXISTS `indiosis`.`CustomClass` (
   INDEX `fk_CustomResource_ResourceCode1_idx` (`MatchingCode_number` ASC) ,
   CONSTRAINT `fk_CustomResource_ResourceCode1`
     FOREIGN KEY (`MatchingCode_number` )
-    REFERENCES `indiosis`.`ClassCode` (`number` )
+    REFERENCES `indiosis_main`.`ClassCode` (`number` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis`.`ResourceFlow`
+-- Table `indiosis_main`.`ResourceFlow`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`ResourceFlow` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`ResourceFlow` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `label` VARCHAR(255) NULL ,
   `qty` INT NULL ,
@@ -130,31 +129,31 @@ CREATE  TABLE IF NOT EXISTS `indiosis`.`ResourceFlow` (
   INDEX `fk_ResourceFlow_Receiver_idx` (`Receiver_id` ASC) ,
   CONSTRAINT `fk_ResourceFlow_CustomClass`
     FOREIGN KEY (`CustomClass_id` )
-    REFERENCES `indiosis`.`CustomClass` (`id` )
+    REFERENCES `indiosis_main`.`CustomClass` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_ResourceFlow_ClassCode`
     FOREIGN KEY (`ClassCode_number` )
-    REFERENCES `indiosis`.`ClassCode` (`number` )
+    REFERENCES `indiosis_main`.`ClassCode` (`number` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_ResourceFlow_Provider`
     FOREIGN KEY (`Provider_id` )
-    REFERENCES `indiosis`.`Organization` (`id` )
+    REFERENCES `indiosis_main`.`Organization` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_ResourceFlow_Receiver`
     FOREIGN KEY (`Receiver_id` )
-    REFERENCES `indiosis`.`Organization` (`id` )
+    REFERENCES `indiosis_main`.`Organization` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis`.`Message`
+-- Table `indiosis_main`.`Message`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`Message` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`Message` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `title` VARCHAR(250) NULL ,
   `body` TEXT NULL ,
@@ -164,16 +163,16 @@ CREATE  TABLE IF NOT EXISTS `indiosis`.`Message` (
   INDEX `fk_Message_Sender_idx` (`Sender_id` ASC) ,
   CONSTRAINT `fk_Message_Sender`
     FOREIGN KEY (`Sender_id` )
-    REFERENCES `indiosis`.`User` (`id` )
+    REFERENCES `indiosis_main`.`User` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis`.`Symbiosis`
+-- Table `indiosis_main`.`Symbiosis`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`Symbiosis` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`Symbiosis` (
   `id` INT NOT NULL ,
   `status` ENUM('REQ', 'ACPTED', 'REJ','ACTIVE','INACTIVE','FAILED') NOT NULL DEFAULT 'REQ' ,
   `descrition` TEXT NULL ,
@@ -184,12 +183,12 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis`.`ISCase`
+-- Table `indiosis_main`.`ISCase`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`ISCase` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`ISCase` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `title` TEXT NOT NULL ,
-  `type` ENUM('reprocessing','eco-park','mutualization') NULL ,
+  `type` ENUM('wastex','ecopark','intra','local','regional','mutual') NOT NULL ,
   `description` TEXT NULL ,
   `financial_impact` TEXT NULL ,
   `hr_impact` TEXT NULL ,
@@ -202,9 +201,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis`.`Location`
+-- Table `indiosis_main`.`Location`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`Location` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`Location` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `label` VARCHAR(250) NOT NULL ,
   `addressLine1` TEXT NULL ,
@@ -224,26 +223,26 @@ CREATE  TABLE IF NOT EXISTS `indiosis`.`Location` (
   INDEX `fk_Location_ISCase1_idx` (`ISCase_id` ASC) ,
   CONSTRAINT `fk_Location_Organization`
     FOREIGN KEY (`Organization_id` )
-    REFERENCES `indiosis`.`Organization` (`id` )
+    REFERENCES `indiosis_main`.`Organization` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Location_ResourceFlow`
     FOREIGN KEY (`ResourceFlow_id` )
-    REFERENCES `indiosis`.`ResourceFlow` (`id` )
+    REFERENCES `indiosis_main`.`ResourceFlow` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Location_ISCase1`
     FOREIGN KEY (`ISCase_id` )
-    REFERENCES `indiosis`.`ISCase` (`id` )
+    REFERENCES `indiosis_main`.`ISCase` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis`.`CommunicationMean`
+-- Table `indiosis_main`.`CommunicationMean`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`CommunicationMean` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`CommunicationMean` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `type` ENUM('email','phone','fax','skype','gtalk','msn','yahoo','website','twitter') NOT NULL ,
   `value` VARCHAR(250) NOT NULL ,
@@ -255,21 +254,21 @@ CREATE  TABLE IF NOT EXISTS `indiosis`.`CommunicationMean` (
   INDEX `fk_CommunicationMean_Organization_idx` (`Organization_id` ASC) ,
   CONSTRAINT `fk_CommunicationMean_User`
     FOREIGN KEY (`User_id` )
-    REFERENCES `indiosis`.`User` (`id` )
+    REFERENCES `indiosis_main`.`User` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_CommunicationMean_Organization`
     FOREIGN KEY (`Organization_id` )
-    REFERENCES `indiosis`.`Organization` (`id` )
+    REFERENCES `indiosis_main`.`Organization` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis`.`Affiliation`
+-- Table `indiosis_main`.`Affiliation`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`Affiliation` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`Affiliation` (
   `Parent_id` INT NOT NULL ,
   `Child_id` INT NOT NULL ,
   PRIMARY KEY (`Parent_id`, `Child_id`) ,
@@ -277,21 +276,21 @@ CREATE  TABLE IF NOT EXISTS `indiosis`.`Affiliation` (
   INDEX `fk_Affiliation_Parent_idx` (`Parent_id` ASC) ,
   CONSTRAINT `fk_Affiliation_Parent`
     FOREIGN KEY (`Parent_id` )
-    REFERENCES `indiosis`.`Organization` (`id` )
+    REFERENCES `indiosis_main`.`Organization` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Affiliation_Child`
     FOREIGN KEY (`Child_id` )
-    REFERENCES `indiosis`.`Organization` (`id` )
+    REFERENCES `indiosis_main`.`Organization` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis`.`CodeCorrelation`
+-- Table `indiosis_main`.`CodeCorrelation`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`CodeCorrelation` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`CodeCorrelation` (
   `ReferringCode_number` VARCHAR(250) NOT NULL ,
   `CorrelatingCode_number` VARCHAR(250) NOT NULL ,
   PRIMARY KEY (`ReferringCode_number`, `CorrelatingCode_number`) ,
@@ -299,21 +298,21 @@ CREATE  TABLE IF NOT EXISTS `indiosis`.`CodeCorrelation` (
   INDEX `fk_CodeCorrelation_ReferringCode_idx` (`ReferringCode_number` ASC) ,
   CONSTRAINT `fk_CodeCorrelation_ReferringCode`
     FOREIGN KEY (`ReferringCode_number` )
-    REFERENCES `indiosis`.`ClassCode` (`number` )
+    REFERENCES `indiosis_main`.`ClassCode` (`number` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_CodeCorrelation_CorrelatingCode`
     FOREIGN KEY (`CorrelatingCode_number` )
-    REFERENCES `indiosis`.`ClassCode` (`number` )
+    REFERENCES `indiosis_main`.`ClassCode` (`number` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis`.`Expertise`
+-- Table `indiosis_main`.`Expertise`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`Expertise` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`Expertise` (
   `ResourceCode_number` VARCHAR(250) NOT NULL ,
   `Organization_id` INT NOT NULL ,
   `User_id` INT NOT NULL ,
@@ -323,26 +322,26 @@ CREATE  TABLE IF NOT EXISTS `indiosis`.`Expertise` (
   INDEX `fk_Expertise_Organization_idx` (`Organization_id` ASC) ,
   CONSTRAINT `fk_Expertise_User`
     FOREIGN KEY (`User_id` )
-    REFERENCES `indiosis`.`User` (`id` )
+    REFERENCES `indiosis_main`.`User` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Expertise_ResourceCode`
     FOREIGN KEY (`ResourceCode_number` )
-    REFERENCES `indiosis`.`ClassCode` (`number` )
+    REFERENCES `indiosis_main`.`ClassCode` (`number` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Expertise_Organization`
     FOREIGN KEY (`Organization_id` )
-    REFERENCES `indiosis`.`Organization` (`id` )
+    REFERENCES `indiosis_main`.`Organization` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis`.`SymbioticFlow`
+-- Table `indiosis_main`.`SymbioticFlow`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`SymbioticFlow` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`SymbioticFlow` (
   `Symbiosis_id` INT NOT NULL ,
   `ResourceFlow_id` INT NOT NULL ,
   PRIMARY KEY (`Symbiosis_id`, `ResourceFlow_id`) ,
@@ -350,21 +349,21 @@ CREATE  TABLE IF NOT EXISTS `indiosis`.`SymbioticFlow` (
   INDEX `fk_SymbioticFlow_Symbiosis_idx` (`Symbiosis_id` ASC) ,
   CONSTRAINT `fk_SymbioticFlow_Symbiosis`
     FOREIGN KEY (`Symbiosis_id` )
-    REFERENCES `indiosis`.`Symbiosis` (`id` )
+    REFERENCES `indiosis_main`.`Symbiosis` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_SymbioticFlow_ResourceFlow`
     FOREIGN KEY (`ResourceFlow_id` )
-    REFERENCES `indiosis`.`ResourceFlow` (`id` )
+    REFERENCES `indiosis_main`.`ResourceFlow` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis`.`SymbioticOrganization`
+-- Table `indiosis_main`.`SymbioticOrganization`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`SymbioticOrganization` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`SymbioticOrganization` (
   `Symbiosis_id` INT NOT NULL ,
   `Organization_id` INT NOT NULL ,
   PRIMARY KEY (`Symbiosis_id`, `Organization_id`) ,
@@ -372,21 +371,21 @@ CREATE  TABLE IF NOT EXISTS `indiosis`.`SymbioticOrganization` (
   INDEX `fk_SymbioticOrganization_Symbiosis_idx` (`Symbiosis_id` ASC) ,
   CONSTRAINT `fk_SymbioticOrganization_Symbiosis`
     FOREIGN KEY (`Symbiosis_id` )
-    REFERENCES `indiosis`.`Symbiosis` (`id` )
+    REFERENCES `indiosis_main`.`Symbiosis` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_SymbioticOrganization_Organization`
     FOREIGN KEY (`Organization_id` )
-    REFERENCES `indiosis`.`Organization` (`id` )
+    REFERENCES `indiosis_main`.`Organization` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis`.`MessageRecipient`
+-- Table `indiosis_main`.`MessageRecipient`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`MessageRecipient` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`MessageRecipient` (
   `Message_id` INT NOT NULL ,
   `Recipient_id` INT NOT NULL ,
   `read` TINYINT(1) NOT NULL DEFAULT 0 ,
@@ -395,45 +394,45 @@ CREATE  TABLE IF NOT EXISTS `indiosis`.`MessageRecipient` (
   INDEX `fk_MessageRecipient_Message_idx` (`Message_id` ASC) ,
   CONSTRAINT `fk_MessageRecipient_Message`
     FOREIGN KEY (`Message_id` )
-    REFERENCES `indiosis`.`Message` (`id` )
+    REFERENCES `indiosis_main`.`Message` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_MessageRecipient_Recipient`
     FOREIGN KEY (`Recipient_id` )
-    REFERENCES `indiosis`.`User` (`id` )
+    REFERENCES `indiosis_main`.`User` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis`.`Tag`
+-- Table `indiosis_main`.`Tag`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`Tag` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`Tag` (
   `id` INT NOT NULL AUTO_INCREMENT ,
-  `label` VARCHAR(255) NOT NULL ,
-  `User_id` INT NOT NULL ,
-  `Organization_id` INT NOT NULL ,
+  `label` ENUM('retain','expert','admin') NOT NULL ,
+  `User_id` INT NULL ,
+  `Organization_id` INT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `fk_Tag_User1_idx` (`User_id` ASC) ,
   INDEX `fk_Tag_Organization1_idx` (`Organization_id` ASC) ,
   CONSTRAINT `fk_Tag_User1`
     FOREIGN KEY (`User_id` )
-    REFERENCES `indiosis`.`User` (`id` )
+    REFERENCES `indiosis_main`.`User` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Tag_Organization1`
     FOREIGN KEY (`Organization_id` )
-    REFERENCES `indiosis`.`Organization` (`id` )
+    REFERENCES `indiosis_main`.`Organization` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis`.`ISCaseClass`
+-- Table `indiosis_main`.`ISCaseClass`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis`.`ISCaseClass` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`ISCaseClass` (
   `ISCase_id` INT NOT NULL ,
   `ClassCode_number` VARCHAR(250) NOT NULL ,
   `role` ENUM('producer','consumer','reprocessor') NOT NULL ,
@@ -442,12 +441,12 @@ CREATE  TABLE IF NOT EXISTS `indiosis`.`ISCaseClass` (
   INDEX `fk_ISCase_has_ClassCode_ISCase1_idx` (`ISCase_id` ASC) ,
   CONSTRAINT `fk_ISCase_has_ClassCode_ISCase1`
     FOREIGN KEY (`ISCase_id` )
-    REFERENCES `indiosis`.`ISCase` (`id` )
+    REFERENCES `indiosis_main`.`ISCase` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_ISCase_has_ClassCode_ClassCode1`
     FOREIGN KEY (`ClassCode_number` )
-    REFERENCES `indiosis`.`ClassCode` (`number` )
+    REFERENCES `indiosis_main`.`ClassCode` (`number` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -459,28 +458,29 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 -- -----------------------------------------------------
--- Data for table `indiosis`.`Organization`
+-- Data for table `indiosis_main`.`Organization`
 -- -----------------------------------------------------
 START TRANSACTION;
-USE `indiosis`;
-INSERT INTO `indiosis`.`Organization` (`id`, `acronym`, `name`, `type`, `description`, `linkedin_id`, `verified`, `anonymous`, `created_on`) VALUES (NULL, 'UNIL', 'University of Lausanne', 'consultant', 'Founded in 1537, the University of Lausanne is composed of seven faculties where approximately 12,400 students and 2,300 researchers work and study. Emphasis is placed on an interdisciplinary approach, with close cooperation between students, professors and teaching staff.', NULL, 1, 0, NULL);
+USE `indiosis_main`;
+INSERT INTO `indiosis_main`.`Organization` (`id`, `acronym`, `name`, `type`, `description`, `linkedin_id`, `verified`, `anonymous`, `created_on`) VALUES (NULL, 'UNIL', 'University of Lausanne', 'consultant', 'Founded in 1537, the University of Lausanne is composed of seven faculties where approximately 12,400 students and 2,300 researchers work and study. Emphasis is placed on an interdisciplinary approach, with close cooperation between students, professors and teaching staff.', NULL, 1, 0, NULL);
 
 COMMIT;
 
 -- -----------------------------------------------------
--- Data for table `indiosis`.`User`
+-- Data for table `indiosis_main`.`User`
 -- -----------------------------------------------------
 START TRANSACTION;
-USE `indiosis`;
-INSERT INTO `indiosis`.`User` (`id`, `email`, `password`, `lastName`, `firstName`, `prefix`, `title`, `bio`, `linkedin_id`, `oauth_token`, `oauth_secret`, `last_connected`, `joined_on`, `verification_code`, `Organization_id`) VALUES (NULL, 'fred@roi-online.org', '2ed91c548d1e8fecb55650ea0a15d8e6', 'Andreae', 'Frédéric', 'Mr', 'Indiosis Administrator', 'Analyst at the UNIL.', NULL, NULL, NULL, NULL, NULL, 'verified', 1);
+USE `indiosis_main`;
+INSERT INTO `indiosis_main`.`User` (`id`, `email`, `password`, `lastName`, `firstName`, `prefix`, `title`, `bio`, `linkedin_id`, `oauth_token`, `oauth_secret`, `last_connected`, `joined_on`, `verification_code`, `Organization_id`) VALUES (NULL, 'fred@roi-online.org', '2ed91c548d1e8fecb55650ea0a15d8e6', 'Andreae', 'Frédéric', 'Mr', 'indiosis_main Administrator', 'Analyst at the UNIL.', NULL, NULL, NULL, NULL, NULL, 'verified', 1);
 
 COMMIT;
 
 -- -----------------------------------------------------
--- Data for table `indiosis`.`ClassificationSystem`
+-- Data for table `indiosis_main`.`ClassificationSystem`
 -- -----------------------------------------------------
 START TRANSACTION;
-USE `indiosis`;
-INSERT INTO `indiosis`.`ClassificationSystem` (`name`, `fullName`, `revision`) VALUES ('HS', 'Harmonized System', '2005');
+USE `indiosis_main`;
+INSERT INTO `indiosis_main`.`ClassificationSystem` (`name`, `fullName`, `revision`) VALUES ('HS', 'Harmonized System', '2005');
+INSERT INTO `indiosis_main`.`ClassificationSystem` (`name`, `fullName`, `revision`) VALUES ('ISIC', 'International Standard Industrial Classification of All Economic Activities', '4');
 
 COMMIT;

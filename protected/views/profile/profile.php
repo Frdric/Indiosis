@@ -16,9 +16,12 @@
 // set page title
 $this->pageTitle= Helpers::buildPageTitle("Profile");
 // register CSS + JS scripts
-Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/profile.css');
-Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/jvectormap.css');
-// add JS variables
+Yii::app()->clientScript->registerCssFile(
+    Yii::app()->assetManager->publish(Yii::getPathOfAlias('application.views.profile')."/profile.css")
+);
+Yii::app()->clientScript->registerCssFile(
+    Yii::app()->assetManager->publish(Yii::getPathOfAlias('application.extensions.jvectormap')."/jvectormap.css")
+);
 $this->pageTitle= Helpers::varToJS($vmapMarkers);
 Yii::app()->clientScript->registerScriptFile(
     Yii::app()->assetManager->publish(Yii::getPathOfAlias('application.extensions.jvectormap')."/jquery-jvectormap.js"),
@@ -59,7 +62,7 @@ Yii::app()->clientScript->registerScriptFile(
         </div>
         <div id="org_descr">
             <h3><?php echo $organization->name; ?> &nbsp;<span>(<?php echo $organization->acronym; ?>)</span></h3>
-            active in <a href=""><?php echo Yii::app()->params['industryList'][1]; ?></a>
+            active in <a href="">Industrial Activity</a>
             <br/><hr/>
             <p><?php
             if(strlen($organization->description)>300) {

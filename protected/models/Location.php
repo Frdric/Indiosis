@@ -19,9 +19,9 @@
  * @property integer $ISCase_id
  *
  * The followings are the available model relations:
+ * @property ISCase $iSCase
  * @property Organization $organization
  * @property ResourceFlow $resourceFlow
- * @property ISCase $iSCase
  */
 class Location extends CActiveRecord
 {
@@ -69,9 +69,9 @@ class Location extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'iSCase' => array(self::BELONGS_TO, 'ISCase', 'ISCase_id'),
 			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
 			'resourceFlow' => array(self::BELONGS_TO, 'ResourceFlow', 'ResourceFlow_id'),
-			'iSCase' => array(self::BELONGS_TO, 'ISCase', 'ISCase_id'),
 		);
 	}
 

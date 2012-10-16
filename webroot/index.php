@@ -14,8 +14,13 @@
  */
 
 // Framework library + configuration file
+// on unil server
+$yii='../../misc/indiosis/scripts/yii_framework/framework/yii.php';
+$config='../../misc/indiosis/scripts/protected/config/unil.php';
+
+// on localhost
 $yii=dirname(__FILE__).'/../../yii_framework/framework/yii.php';
-$config=dirname(__FILE__).'/../protected/config/main.php';
+$config=dirname(__FILE__).'/../protected/config/local.php';
 
 // remove the following lines when in production mode
 defined('YII_DEBUG') or define('YII_DEBUG',true);

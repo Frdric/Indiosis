@@ -1,12 +1,12 @@
-/* 
+/*
  * - -- - - - - - - - - - - - *
  * INDIOSIS                   *
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
- * 
+ *
  * JS : Site-wide JS scripts
  * JS Script loaded on every pages and run before all other scripts.
- * 
+ *
  * @package     layout
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI
@@ -19,11 +19,6 @@ $("#searchfield input").focus(function() {
         $(this).removeClass("empty");
     }
 });
-
-// Reparse the LinkedIn button
-function reparseLinkedIn() {
-    IN.parse();
-}
 
 // Show and hide loading image.
 function showLoader(loader_id) {

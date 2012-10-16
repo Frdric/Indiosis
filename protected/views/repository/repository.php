@@ -15,8 +15,9 @@
 
 $this->pageTitle= Helpers::buildPageTitle("Repository");
 
-Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/repository.css');
-Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/inventory.css'); // TODO : remove this line
+/*Yii::app()->clientScript->registerCssFile(
+    Yii::app()->assetManager->publish(Yii::getPathOfAlias('application.views.inventory')."/inventory.css") // TODO : remove this line
+);*/
 ?>
 
 <!-- REPOSITORY PAGE CONTENT -->
@@ -37,7 +38,7 @@ $form=$this->beginWidget('CActiveForm', array(
 echo 'Material name : ';
 $this->widget('CAutoComplete', array(
     'name' => 'material_name',
-    'url' => Yii::app()->baseUrl.'/inventory/MaterialAutocomplete',
+    'url' => Yii::app()->createUrl('repository/MaterialAutocomplete'),
     'methodChain'=>".result(function(event,item){ $(\"#Class_Code_number\").val(item[1]);})"
 ));
 

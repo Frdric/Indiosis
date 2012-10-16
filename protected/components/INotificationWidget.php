@@ -29,7 +29,7 @@ class INotificationWidget extends CWidget
     public $notId;
     // the header title of the box
     public $title = null;
-    // the header title of the box
+    // the color class of the box
     public $color = '';
     // the icon to be displayed (default none)
     public $icon = self::ICON_NONE;

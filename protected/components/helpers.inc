@@ -214,4 +214,20 @@ class Helpers {
         }
         return $relativeDate;
     }
+
+
+    public static function getLinkedInProfile()
+    {
+
+        $API_CONFIG = array(
+          'appKey'       => Yii::app()->params['linkedinKey'],
+          'appSecret'    => Yii::app()->params['linkedinSecret'],
+          'callbackUrl'  => NULL
+        );
+        $linkedin = new LinkedIn($API_CONFIG);
+
+        die("ok");
+
+        return true;
+    }
 }

@@ -4,18 +4,19 @@
  * INDIOSIS                   *
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
- * 
+ *
  * VIEW : Error
  * Indiosis's error page.
- * 
+ *
  * @package     all
  * @author      Frederic Andreae
  * @copyright   Copyright (C) 2011, ROI
  */
 
-$this->pageTitle= Helpers::buildPageTitle('Oops !');
-Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/error.css');
 $this->layout='errors';
+
+$this->pageTitle= Helpers::buildPageTitle('Oops !');
+Yii::app()->clientScript->registerCssFile(Yii::app()->assetManager->publish(Yii::getPathOfAlias('application.views.layouts').'/error.css'));
 ?>
 <h1>:-( Oops... Indiosis generated an error!</h1>
 

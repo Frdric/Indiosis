@@ -31,15 +31,14 @@ class ProfileController extends IndiosisController
         );
     }
 
-    /**
-     * Default action.
-     */
     public function actionIndex()
     {
         $this->breadcrumbsLinks = array('My Company'=>'index','Profile');
+
         // retrieve organisation data
         $organization = Organization::model()->findByAttributes(array('id'=>Yii::app()->user->organizationId));
         $geoLocation = GeoHelper::lookupCoordinates($organization->locations[0]);
+
 
         $vmapMarkers = array(   "latLng" => array($geoLocation->getLat(),$geoLocation->getLng()),
                                 "r" => 3,

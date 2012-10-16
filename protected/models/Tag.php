@@ -10,8 +10,8 @@
  * @property integer $Organization_id
  *
  * The followings are the available model relations:
- * @property User $user
  * @property Organization $organization
+ * @property User $user
  */
 class Tag extends CActiveRecord
 {
@@ -41,9 +41,9 @@ class Tag extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('label, User_id, Organization_id', 'required'),
+			array('label', 'required'),
 			array('User_id, Organization_id', 'numerical', 'integerOnly'=>true),
-			array('label', 'length', 'max'=>255),
+			array('label', 'length', 'max'=>6),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, label, User_id, Organization_id', 'safe', 'on'=>'search'),
@@ -58,8 +58,8 @@ class Tag extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'user' => array(self::BELONGS_TO, 'User', 'User_id'),
 			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
+			'user' => array(self::BELONGS_TO, 'User', 'User_id'),
 		);
 	}
 

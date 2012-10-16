@@ -12,7 +12,7 @@
  * @property string $prefix
  * @property string $title
  * @property string $bio
- * @property integer $linkedin_id
+ * @property string $linkedin_id
  * @property string $oauth_token
  * @property string $oauth_secret
  * @property string $last_connected
@@ -56,11 +56,12 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('email, password, joined_on, Organization_id', 'required'),
-			array('linkedin_id, Organization_id', 'numerical', 'integerOnly'=>true),
+			array('Organization_id', 'numerical', 'integerOnly'=>true),
 			array('email, lastName, firstName', 'length', 'max'=>45),
 			array('password', 'length', 'max'=>32),
 			array('prefix', 'length', 'max'=>20),
 			array('title', 'length', 'max'=>250),
+			array('linkedin_id', 'length', 'max'=>255),
 			array('oauth_token, oauth_secret, verification_code', 'length', 'max'=>100),
 			array('bio, last_connected', 'safe'),
 			// The following rule is used by search().
@@ -128,7 +129,7 @@ class User extends CActiveRecord
 		$criteria->compare('prefix',$this->prefix,true);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('bio',$this->bio,true);
-		$criteria->compare('linkedin_id',$this->linkedin_id);
+		$criteria->compare('linkedin_id',$this->linkedin_id,true);
 		$criteria->compare('oauth_token',$this->oauth_token,true);
 		$criteria->compare('oauth_secret',$this->oauth_secret,true);
 		$criteria->compare('last_connected',$this->last_connected,true);

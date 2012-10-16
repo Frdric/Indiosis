@@ -80,6 +80,11 @@ em {
     color: #2582A9;
     font-style: normal;
 }
+.circled {
+    border: 1px solid #BBB;
+    border-radius: 10px;
+    padding : 1px 5px;
+}
 .bold {
     font-family: "Bitstream-Bold";
 }
@@ -93,7 +98,7 @@ ul,ol {
 ol {
     list-style-type: decimal;
 }
-ol li {
+ol li, ul li {
     color: #333;
     line-height: 15px;
     font-size: 12px;
@@ -131,7 +136,7 @@ hr.ongray {
     position:relative;
     top:18px;
     padding-right: 12px;
-    background-image: url("../images/grained_back.gif");
+    background-image: url("../../images/grained_back.gif");
     background-repeat: repeat;
 }
 input:not(.ibutton):not(.ibutton_big) {
@@ -144,6 +149,9 @@ input:not(.ibutton):not(.ibutton_big) {
 input:not(.ibutton):focus, label.required {
     color: #2582A9;
 }
+.error {
+    color: #c83a2c;
+}
 
 /* - OVERALL LAYOUT - */
 html {
@@ -154,7 +162,7 @@ body {
     background-color: white;
     font-size: 12px;
     font-family: "Bitstream", Georgia, serif;
-    background-image: url("../images/grained_back.gif");
+    background-image: url("../../images/grained_back.gif");
     background-repeat: repeat;
 }
 .wrapper {
@@ -172,7 +180,7 @@ body {
 }
 .header_wrapper {
     background-color: #CCC;
-    background-image: url("../images/header_gradient.gif");
+    background-image: url("../../images/header_gradient.gif");
     background-repeat: repeat-x;
     border-bottom: solid 2px white;
     font-family: "OpenSansSemibold", Arial, sans-serif;
@@ -236,7 +244,7 @@ body {
     color: #2A92BE;
 }
 #topmenu div.selected a {
-    background-image: url("../images/topmenu_arrow.png");
+    background-image: url("../../images/topmenu_arrow.png");
     background-repeat: no-repeat;
     background-position: 50% 73px;
 }
@@ -250,7 +258,7 @@ body {
     width: 180px;
     border: solid 1px #BABABA;
     border-radius: 15px;
-    background-image: url("../images/searchmag.gif");
+    background-image: url("../../images/searchmag.gif");
     background-repeat: no-repeat;
     background-position: 8px 5px;
     text-indent: 27px;
@@ -267,7 +275,6 @@ body {
     overflow: hidden;
 }
 .infobar {
-    margin-top: 8px;
     padding-right: 2px;
     text-align: right;
     font-size: 11px;
@@ -436,26 +443,46 @@ div.login_box div.login_side, div.login_box div.register_side {
     float: left;
     margin: 15px 0 15px 15px;
     padding: 0 25px 0 0;
-    width: 280px;
+    width: 295px;
     height: 167px;
     border-right: 1px solid #D1D1D1;
 }
 div.login_box div.register_side {
-    width: 180px;
+    width: 165px;
     border-right: none;
     padding: 0 0 0 25px;
     margin: 15px 15px 15px 0;
+}
+div.login_box .register_side .ibutton {
+    font-size: 12px;
+    padding: 8px 17px;
+    margin: 6px 0;
+    background-image: url("../../images/linkedin_signup.png");
+    background-repeat: no-repeat;
+    background-position: -94px -15px;
+}
+div.login_box .register_side > span {
+    font-size: 11px;
+    font-family: "Bitstream";
+    color: #999;
+}
+div.login_box .register_side > span:last-child {
+    color: black;
+    font-size: 14px;
+}
+div.login_box .register_side .ibutton span {
+    font-family: "OpenSansBold";
 }
 div.login_box div.login_line {
     height: 45px;
 }
 div.login_box input.text, div.login_box input.password {
-    width: 194px;
+    width: 204px;
     padding: 5px 3px;
     font-size: 14px;
 }
 div.login_box label {
-    width: 75px;
+    width: 80px;
     font-family: "OpenSansSemibold";
     font-size: 13px;
     padding-top: 9px;
@@ -511,19 +538,19 @@ div.login_box div.pw_forgot span {
 /* - SITE-WIDE ELEMENTS - */
 
 /* Indiosis box */
-div.ibox {
+.ibox {
     border: solid 1px #D3D3D3;
     border-radius: 10px;
     background-color: white;
-    background-image: url("../images/header_gradient.gif");
+    background-image: url("../../images/header_gradient.gif");
     background-repeat: repeat-x;
-    background-position-y: -18px;
+    background-position: -18px 0;
     overflow: hidden;
     -moz-box-shadow: 0 2px 3px #E2E2E2;
     -webkit-box-shadow: 0 2px 3px #E2E2E2;
     box-shadow: 0 2px 3px #E2E2E2;
 }
-div.ibox div.iboxheader {
+.ibox .iboxheader {
     padding: 12px 15px 12px;
     border-bottom: solid 1px #CFCFCF;
     font-family: "OpenSansSemibold";
@@ -531,7 +558,7 @@ div.ibox div.iboxheader {
     color: #777;
     text-shadow: 0 1px 1px white;
 }
-div.ibox div.iboxcontent {
+.ibox .iboxcontent {
     background-color: white;
     padding: 20px 15px 10px;
     -moz-box-shadow: inset 0 3px 6px 0 #E6E6E6;
@@ -598,22 +625,22 @@ div.ibox div.iboxcontent {
 
 /* Gray button skin */
 .igray {
-    color: #EEE;
-    border: solid 1px #666;
-    text-shadow: 0 1px 1px #222;
+    color: #777;
+    border: solid 1px #AAA;
     -moz-box-shadow:inset 0 1px 1px 0 #EEE;
     -webkit-box-shadow:inset 0 1px 1px 0 #EEE;
     box-shadow:inset 0 1px 1px 0 #EEE;
     background: #6e6e6e;
-    background: -webkit-gradient(linear, left top, left bottom, from(#CCC), to(#888));
-    background: -moz-linear-gradient(top,  #CCC,  #888);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#CCCCCC', endColorstr='#888888');
+    background: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#BBBBBB));
+    background: -moz-linear-gradient(top,  #EEEEEE,  #BBBBBB);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#EEEEEE', endColorstr='#BBBBBB');
 }
 .igray:hover {
+    color: #555;
     background: #666;
-    background: -webkit-gradient(linear, left top, left bottom, from(#BBB), to(#777));
-    background: -moz-linear-gradient(top,  #BBB,  #777);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#BBBBBB', endColorstr='#777777');
+    background: -webkit-gradient(linear, left top, left bottom, from(#DDDDDD), to(#999999));
+    background: -moz-linear-gradient(top,  #DDDDDD,  #999999);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#DDDDDD', endColorstr='#999999');
 }
 .igray:active {
     color: #DDD;
@@ -682,13 +709,12 @@ div.ibox div.iboxcontent {
     background-color: rgba(37,130,169,0.6);
     color: white;
     border-color: #30A1D1;
-    font-family: "OpenSansSemibold";
-}
-.inotification_green {
-
 }
 .inotification_red {
-
+    color: #c83a2c;
+    background-color: #e18279;
+    background-color: rgba(200,58,44,0.2);
+    border-color: #c83a2c;
 }
 
 

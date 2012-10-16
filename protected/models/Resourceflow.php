@@ -21,8 +21,8 @@
  *
  * The followings are the available model relations:
  * @property Location[] $locations
- * @property CustomClass $customClass
  * @property ClassCode $classCodeNumber
+ * @property CustomClass $customClass
  * @property Organization $provider
  * @property Organization $receiver
  * @property Symbiosis[] $symbiosises
@@ -75,8 +75,8 @@ class ResourceFlow extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'locations' => array(self::HAS_MANY, 'Location', 'ResourceFlow_id'),
-			'customClass' => array(self::BELONGS_TO, 'CustomClass', 'CustomClass_id'),
 			'classCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'ClassCode_number'),
+			'customClass' => array(self::BELONGS_TO, 'CustomClass', 'CustomClass_id'),
 			'provider' => array(self::BELONGS_TO, 'Organization', 'Provider_id'),
 			'receiver' => array(self::BELONGS_TO, 'Organization', 'Receiver_id'),
 			'symbiosises' => array(self::MANY_MANY, 'Symbiosis', 'SymbioticFlow(ResourceFlow_id, Symbiosis_id)'),

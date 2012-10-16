@@ -12,6 +12,9 @@
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI
  */
+
+$am = Yii::app()->assetManager;
+$cs = Yii::app()->clientScript;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -23,46 +26,25 @@
     <meta name="author" content="Frederic Andreae" />
     <meta name="copyright" content="&copy; 2012 UNIL/ROI">
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo Yii::app()->request->baseUrl; ?>/images/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/css_reset.css' ?>" />
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/fonts/bitstream/fontface.css' ?>" />
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/fonts/open-sans/fontface.css' ?>" />
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/fonts/entypo/fontface.css' ?>" />
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/fonts/modernpics/fontface.css' ?>" />
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/fonts/websymbols/fontface.css' ?>" />
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.'/css/main.css' ?>" />
-
     <title><?php echo CHtml::encode($this->pageTitle); ?></title>
 
-    <?php
-    // Global JS scripts
-    Yii::app()->clientScript->registerCoreScript('jquery');
-    Yii::app()->clientScript->registerCoreScript('jquery.ui');
-    Yii::app()->clientScript->registerScriptFile(
-            Yii::app()->assetManager->publish(Yii::getPathOfAlias('application.views.layouts').'/primary.js'),
-            CClientScript::POS_END);
-    // Global JS constants
-    Yii::app()->clientScript->registerScript('globalConstants','
-        // Set global JS constants
-        var BASE_URL = "'.Yii::app()->baseUrl.'";',
-    CClientScript::POS_HEAD);
-    ?>
     <!-- LinkedIn API import -->
     <script type="text/javascript" src="http://platform.linkedin.com/in.js">
       api_key: <?php echo Yii::app()->params['linkedinKey']; ?>
       authorize: true
     </script>
+
     <?php
     // Add fancybox to login link
-    $this->widget('application.extensions.fancybox.EFancyBox', array(
+    $this->widget('ext.fancybox.EFancyBox', array(
         'target'=>'a#login_link',
-        'config'=>array("padding" => 0, 'onComplete'=>'js:reparseLinkedIn')
+        'config'=>array("padding" => 0)
     ));
     ?>
 </head>
 
 <body>
     <div class="wrapper">
-
         <!-- HEADER -->
         <div class="header_wrapper">
             <div class="header">
@@ -72,13 +54,10 @@
                     </a>
                 </div>
                 <div id="topmenu">
-                    <div class="topmenubutton <?php echo ((Yii::app()->controller->id=='repository') ? 'current' : ''); ?>"><a href="<?php echo Yii::app()->baseUrl; ?>/repository"><span class="websymbol-modernpicto">B</span><br/>REPOSITORY</a></div>
-                    <div class="topmenubutton <?php echo ((Yii::app()->controller->id=='company') ? 'current' : ''); ?>"><a href="<?php echo Yii::app()->baseUrl; ?>/members"><span class="websymbol-entypo" style="font-size: 40px;">,</span><br/>MEMBERS</a></div>
-                    <div class="topmenubutton  <?php echo ((Yii::app()->controller->id=='profile') ? 'current' : ''); ?>">
-                        <a href="<?php echo Yii::app()->baseUrl; ?>/profile">
-                            <span class="websymbol-entypo" style="font-size: 40px;">o</span><br/>MY COMPANY</a>
-                    </div>
-                    <div class="topmenubutton dbline <?php echo ((Yii::app()->controller->id=='expert') ? 'current' : ''); ?>"><a href="<?php echo Yii::app()->baseUrl; ?>/about">EXPERTS<br/>CORNER</a></div>
+                    <div class="topmenubutton <?php echo ((Yii::app()->controller->id=='repository') ? 'current' : ''); ?>"><a href="<?php echo Yii::app()->createUrl('repository'); ?>"><span class="websymbol-modernpicto">B</span><br/>REPOSITORY</a></div>
+                    <div class="topmenubutton <?php echo ((Yii::app()->controller->id=='company') ? 'current' : ''); ?>"><a href="<?php echo Yii::app()->createUrl('members'); ?>"><span class="websymbol-entypo" style="font-size: 40px;">,</span><br/>MEMBERS</a></div>
+                    <div class="topmenubutton  <?php echo ((Yii::app()->controller->id=='profile') ? 'current' : ''); ?>"><a href="<?php echo Yii::app()->createUrl('profile'); ?>"><span class="websymbol-entypo" style="font-size: 40px;">o</span><br/>MY COMPANY</a></div>
+                    <div class="topmenubutton dbline <?php echo ((Yii::app()->controller->id=='expert') ? 'current' : ''); ?>"><a href="<?php echo Yii::app()->createUrl('about'); ?>">EXPERTS<br/>CORNER</a></div>
                     <div id="searchfield"><input type="text" name="spractice" value="search symbiosis practices.." class="no-uniform empty" /></div>
                 </div>
             </div>
@@ -89,16 +68,15 @@
                     $this->widget('zii.widgets.CBreadcrumbs', array('links'=>$this->breadcrumbsLinks,'homeLink'=>false));
 
                     if(Yii::app()->user->isGuest) {
-                        echo '<a href="'.Yii::app()->baseUrl.'/account/login" id="login_link"><img src="'.Yii::app()->baseUrl.'/images/login_lock.gif'.'" alt="Secure login" />Log In</a>';
+                        echo '<a href="'.Yii::app()->createUrl('account/login').'" id="login_link"><img src="'.Yii::app()->baseUrl.'/images/login_lock.gif'.'" alt="Secure login" />Log In</a>';
                     }
                     else {
-                        echo Yii::app()->user->firstName." ".Yii::app()->user->lastName.' &nbsp;<span>('.((!empty(Yii::app()->user->organizationAcronym)) ? Yii::app()->user->organizationAcronym : Yii::app()->user->organizationName ).')</span> | '.'<a href="'.Yii::app()->baseUrl.'/account/logout"><span class="websymbol">X</span></a>';
+                        echo Yii::app()->user->firstName." ".Yii::app()->user->lastName.' &nbsp;<span>('.((!empty(Yii::app()->user->organizationAcronym)) ? Yii::app()->user->organizationAcronym : Yii::app()->user->organizationName ).')</span> | '.'<a href="'.Yii::app()->createUrl('account/logout').'"><span class="websymbol">X</span></a>';
                     }
                     ?>
                 </div>
             </div>
         </div>
-
         <!-- MAIN CONTENT -->
         <div class="main_content">
             <?php
@@ -129,7 +107,6 @@
         </div>
         <div id="footer_push"></div>
     </div>
-
     <!-- FOOTER -->
     <div id="footer_wrapper">
     <div id="footer_inwrapper">

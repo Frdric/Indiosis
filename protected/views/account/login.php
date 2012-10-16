@@ -4,10 +4,10 @@
  * INDIOSIS                   *
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
- * 
+ *
  * VIEW : Login
  * The login box.
- * 
+ *
  * @package     account
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI
@@ -21,11 +21,10 @@
         <?php
         $form=$this->beginWidget('IndiosisForm', array(
             'id'=>'login-form',
-            'action'=>Yii::app()->baseUrl.'/profile',
-            'enableAjaxValidation'=>true,
-            'enableClientValidation'=>true,
+            'action'=>Yii::app()->createUrl('profile'),
+            'enableAjaxValidation' => true,
             'clientOptions'=>array(
-                'validationUrl'=>Yii::app()->baseUrl.'/account/authenticate',
+                'validationUrl'=>Yii::app()->createUrl('account/authenticate'),
                 'validateOnSubmit'=>true,
                 'validateOnChange'=>false,
                 'beforeValidate'=>'js:function(form) { showLoader(".loader"); return true; }',
@@ -55,11 +54,10 @@
     <div class="register_side">
         <h3>Not a member yet ?</h3>
         <hr class="ongray"/>
-        <br/>
-        <script type="in/Login"></script>
-        <br/>
-        <br/>
-        OR <a href="<?php echo $this->createUrl('/account/register');?>">Sign up with Email</a>
+        <a href="<?php echo $this->createUrl('/account/linkedinauthorize');?>"><div id="linkedin-signin" class="ibutton iblue gradient">Sign Up with <span>LinkedIn</span></div></a>
+        <span>For a better experience<br/>we recommand using your LinkedIn account.</span><br/>
+        <hr class="ongray"/>
+        or &nbsp;<a href="<?php echo $this->createUrl('/account/register');?>">Sign up with your email</a>
     </div>
     <div class="pw_forgot"><span>&raquo;</span> <a href="#">Forgot your password ?</a></div>
 </div>

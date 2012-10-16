@@ -1,13 +1,13 @@
 <?php
-/* 
+/*
  * - -- - - - - - - - - - - - *
  * INDIOSIS                   *
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
- * 
+ *
  * WIDGET : Indiosis Top Notification message
  * Creates a standard notification message.
- * 
+ *
  * @package     all
  * @author      Frederic Andreae
  * @copyright   UNIL/ROI
@@ -26,12 +26,12 @@
         default:
             break;
     }
-    if(isset($title)) {
-        echo '<span class="inot_title">'.$title.'</span>';
+    if(isset($title) && !empty($title) && $title=="") {
+        echo '<span class="inot_title">'.$title.'</span><br/><br/>';
     }
     // print content if provided
     if($content!="") {
-        echo '<br/><br/>'.$content;
+        echo $content;
     }
     ?>
 </div>

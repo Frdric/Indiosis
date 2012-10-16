@@ -9,9 +9,9 @@
  * @property integer $User_id
  *
  * The followings are the available model relations:
- * @property User $user
- * @property ClassCode $resourceCodeNumber
  * @property Organization $organization
+ * @property ClassCode $resourceCodeNumber
+ * @property User $user
  */
 class Expertise extends CActiveRecord
 {
@@ -58,9 +58,9 @@ class Expertise extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'user' => array(self::BELONGS_TO, 'User', 'User_id'),
-			'resourceCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'ResourceCode_number'),
 			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
+			'resourceCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'ResourceCode_number'),
+			'user' => array(self::BELONGS_TO, 'User', 'User_id'),
 		);
 	}
 

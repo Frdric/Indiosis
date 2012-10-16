@@ -37,6 +37,59 @@ class ResourceManager extends CComponent {
         return 1;
     }
 
+    /**
+     * Fetch from the database the entire ISIC classification.
+     * @param integer $level The level (or tree node code) from which to retrieve the tree.
+     * @param bool $levelOnly Whether to retrieve only codes from the specified level or retreive the entire below tree.
+     * @return array An array representing the ISIC classification tree.
+     */
+    public static function getISICTree($level=0,$levelOnly=true)
+    {
+        $isicTree = array();
+        if($level != 0 && $levelOnly) {
+            $codes = ClassCode::model()->findAll(array('condition'=>"ChildOf_number = $level AND ClassificationSystem_name = 'ISIC'",'order'=>'ChildOf_number'));
+        }
+        elseif($level == 0 && $levelOnly) {
+            $codes = ClassCode::model()->findAll(array('condition'=>"ChildOf_number IS NULL AND ClassificationSystem_name = 'ISIC'",'order'=>'ChildOf_number'));
+        }
+        else {
+            $codes = ClassCode::model()->findAll(array('condition'=>"ClassificationSystem_name = 'ISIC'",'order'=>'number'));
+        }
+        //TODO : Create a proper leveled tree array.
+        // create the array
+        foreach($codes as $code) {
+            $isicTree[] = array("code"=>$code->number,
+                                "description"=>$code->description,
+                                "parent"=>$code->ChildOf_number);
+        }
+        return $isicTree;
+    }
+
+    /**
+     * Return the ISIC activity list (with indented descriptions).
+     */
+    public static function getISICList()
+    {
+        $isicTree = ResourceManager::getISICTree(0,false);
+
+        foreach($isicTree as $code) {
+            switch (strlen($code['code'])) {
+                case 9:
+                    $isicList[$code['code']] = $code['description']." - [ class ]";
+                    break;
+                case 8:
+                    $isicList[$code['code']] = $code['description']." - [ group ]";
+                    break;
+                case 7:
+                    $isicList[$code['code']] = $code['description']." - [ division ]";
+                    break;
+                default:
+                    $isicList[$code['code']] = $code['description']." - [ section ]";
+                    break;
+            }
+        }
+        return $isicList;
+    }
 
     /**
      * Fetch from the database the entire HS classification.
@@ -48,13 +101,13 @@ class ResourceManager extends CComponent {
     {
         $hsTree = array();
         if($level != 0 && $levelOnly) {
-            $codes = ClassCode::model()->findAll(array('condition'=>"ChildOf_number = $level",'order'=>'ChildOf_number'));
+            $codes = ClassCode::model()->findAll(array('condition'=>"ChildOf_number = $level AND ClassificationSystem_name = 'HS'",'order'=>'ChildOf_number'));
         }
         elseif($level == 0 && $levelOnly) {
-            $codes = ClassCode::model()->findAll(array('condition'=>"ChildOf_number IS NULL",'order'=>'ChildOf_number'));
+            $codes = ClassCode::model()->findAll(array('condition'=>"ChildOf_number IS NULL AND ClassificationSystem_name = 'HS'",'order'=>'ChildOf_number'));
         }
         else {
-            $codes = ClassCode::model()->findAll(array('order'=>'ChildOf_number'));
+            $codes = ClassCode::model()->findAll(array('condition'=>"ClassificationSystem_name = 'HS'",'order'=>'ChildOf_number'));
         }
         //TODO : Create a proper leveled tree array.
         // create the array

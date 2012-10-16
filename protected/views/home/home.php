@@ -17,12 +17,13 @@ $this->pageTitle= Helpers::buildPageTitle("Home");
 
 Yii::app()->clientScript->registerScriptFile("http://widgets.twimg.com/j/2/widget.js");
 Yii::app()->clientScript->registerScriptFile("https://apis.google.com/js/plusone.js");
-Yii::app()->clientScript->registerScriptFile("http://platform.linkedin.com/in.js");
+Yii::app()->clientScript->registerCssFile(
+    Yii::app()->assetManager->publish(Yii::getPathOfAlias('application.views.home')."/home.css")
+);
 Yii::app()->clientScript->registerScriptFile(
     Yii::app()->assetManager->publish(Yii::getPathOfAlias('application.views.home')."/home.js"), CClientScript::POS_END
 );
 
-Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/home.css');
 ?>
 
 <!-- HOME PAGE CONTENT -->

@@ -9,8 +9,8 @@
  * @property string $role
  *
  * The followings are the available model relations:
- * @property ISCase $iSCase
  * @property ClassCode $classCodeNumber
+ * @property ISCase $iSCase
  */
 class ISCaseClass extends CActiveRecord
 {
@@ -58,8 +58,8 @@ class ISCaseClass extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'iSCase' => array(self::BELONGS_TO, 'ISCase', 'ISCase_id'),
 			'classCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'ClassCode_number'),
+			'iSCase' => array(self::BELONGS_TO, 'ISCase', 'ISCase_id'),
 		);
 	}
 

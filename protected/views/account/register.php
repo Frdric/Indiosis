@@ -15,13 +15,20 @@
 
 // set page title
 $this->pageTitle= Helpers::buildPageTitle("Register");
+
 // register CSS + JS scripts
-Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/register.css');
+Yii::app()->clientScript->registerCssFile(
+    Yii::app()->assetManager->publish(Yii::getPathOfAlias('application.views.account')."/register.css")
+);
 Yii::app()->clientScript->registerScriptFile(
     Yii::app()->assetManager->publish(Yii::getPathOfAlias('application.views.account')."/register.js"),
     CClientScript::POS_END
 );
+
+$country_list = Yii::app()->params['countryList'];
+$country_list["XX"] = "select your country";
 ?>
+
 <!-- REGISTER VIEW -->
 <?php
 $this->beginWidget('IBoxWidget',array(
@@ -35,8 +42,6 @@ $this->beginWidget('IBoxWidget',array(
     <?php
     $form=$this->beginWidget('IndiosisForm', array(
         'id'=>'signup-form',
-        'enableAjaxValidation'=>true,
-        'enableClientValidation'=>true,
         'clientOptions'=>array(
             'validationUrl'=>Yii::app()->baseUrl.'/account/validatesignup',
             'errorCssClass'=>'errorField',
@@ -67,9 +72,19 @@ $this->beginWidget('IBoxWidget',array(
         <?php echo $form->error($model,'password'); ?>
     </div>
     <div class="row">
-        <div>Company name</div>
+        <div>Your Organisation</div>
         <div><?php echo $form->textField($model,'organization') ?></div>
         <?php echo $form->error($model,'organization'); ?>
+    </div>
+    <div class="row">
+        <div>Organisation type</div>
+        <div><?php echo $form->dropdownlist($model,'org_type',array('company'=>'Company','association'=>'Association','ngo'=>'NGO or similar','consultant'=>'Constultant','recycler'=>'Recycler','clean-tech'=>'Clean-Tech')) ?></div>
+        <?php echo $form->error($model,'org_type'); ?>
+    </div>
+    <div class="row">
+        <div>Country</div>
+        <div><?php echo $form->dropdownlist($model,'org_country',$country_list,array('empty' => '','options'=>array($country_code=>array('selected'=>'selected')))); ?></div>
+        <?php echo $form->error($model,'org_country'); ?>
     </div>
     <div class="row uaagreed">
         <div><?php echo $form->checkBox($model,'uaagreed') ?></div>
@@ -86,8 +101,8 @@ $this->beginWidget('IBoxWidget',array(
 <div id="info_side">
     <br/>
     <h2>Connect with LinkedIn !</h2>
-    <p><em>You can use your LinkedIn account to connect to Indiosis.</em></p>
-    <script type="in/Login" data-onAuth="registerLinkedInUser"></script>
+    <p><em>You can use your LinkedIn account to connect to Indiosis :</em></p>
+    <a href="<?php echo $this->createUrl('account/linkedinauthorize');?>"><div class="ibutton_big iblue gradient">Sign Up with <span>LinkedIn</span></div></a>
     <br/>
     <br/>
     <p>It's quicker and your Indiosis account will use your business connections to better suggest you with symbiotic opportunities.</p>

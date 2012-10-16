@@ -27,16 +27,18 @@ class IndiosisUser extends CUserIdentity
         else if($record->verification_code!=='verified')
             $this->errorCode=self::ERROR_UNKNOWN_IDENTITY;
         else {
+            // set session info
             $this->_id=$record->id;
             $this->setState('email', $record->email);
             $this->setState('prefix', $record->prefix);
             $this->setState('firstName', $record->firstName);
             $this->setState('lastName', $record->lastName);
             $this->setState('title', $record->title);
-            $this->setState('linkedin_id', $record->linkedin_id);
-            $this->setState('oauthToken', $record->oauth_token);
-            $this->setState('oauthSecret', $record->oauth_secret);
             $this->setState('lastConnected', $record->last_connected);
+            // add LinkedIn session info if set
+            if(!empty($record->linkedin_id)) {
+                $this->setState('linkedinId', $record->linkedin_id);
+            }
             // get user's organization info
             $userOrg = Organization::model()->findByAttributes(array('id'=>$record->Organization_id));
             $this->setState('organizationId', $userOrg->id);

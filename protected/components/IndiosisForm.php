@@ -18,15 +18,16 @@ class IndiosisForm extends CActiveForm
 {
 
     public $uniformConfig = array(
-        'selector' => 'select:not(.no-uniform), input:not(:button,:submit,.no-uniform), textarea:not(.no-uniform)',
+        'selector' => 'select:not(.no-uniform):not(.chzn-select), input:not(:button,:submit,.no-uniform), textarea:not(.no-uniform)',
         'theme' => 'indiosis',
-        // Uniform options, see the documentation
-        'options' => array()
+        'options' => array() // Uniform options, see the documentation
     );
 
     public function init()
     {
         $this->widget('ext.uniforms.EUniform', $this->uniformConfig);
+        $this->widget('ext.echosen.EChosen'); // applies to .chzn-select class select list.
+        $this->enableClientValidation = true;
         parent::init();
     }
 }
