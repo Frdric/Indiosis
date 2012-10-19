@@ -8298,3 +8298,399 @@ Stack trace:
 #17 {main}
 REQUEST_URI=/indiosis/account/linkedinhandle?oauth_token=2d246579-550f-4be1-b24e-d718884b5093&oauth_verifier=25322
 ---
+2012/10/19 11:42:06 [error] [exception.CException] exception 'CException' with message 'Organization and its behaviors do not have a method or closure named "hasError".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(226): CComponent->__call('hasError', Array)
+#1 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/AccountController.php(233): CActiveRecord->__call('hasError', Array)
+#2 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/AccountController.php(233): Organization->hasError()
+#3 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/AccountController.php(163): AccountController->authenticateLinkedIn(Object(User), Object(Organization))
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): AccountController->actionLinkedInHandle()
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): CController->run('linkedinhandle')
+#14 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('account/linkedi...')
+#15 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#17 {main}
+REQUEST_URI=/indiosis/account/linkedinhandle?oauth_token=1d6c3af4-c22c-4535-9e17-6ceb1de1d995&oauth_verifier=49000
+---
+2012/10/19 11:59:03 [error] [php] Undefined offset: 0 (/Users/Frdric/Sites/Indiosis/webapp/protected/controllers/ProfileController.php:40)
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): ProfileController->runAction()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): ProfileController->filterAccessControl()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): ProfileController->runActionWithFilters()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): ProfileController->run()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CWebApplication->run()
+REQUEST_URI=/indiosis/profile/index
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/ProfileController.php (40)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/10/19 12:26:19 [error] [php] Trying to get property of non-object (/Users/Frdric/Sites/Indiosis/webapp/protected/components/helpers.inc:56)
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): AccountController->runAction()
+#2 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): AccountController->filterAccessControl()
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): AccountController->runActionWithFilters()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): AccountController->run()
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CWebApplication->run()
+REQUEST_URI=/indiosis/account/linkedinhandle?oauth_token=433e43e8-976b-49fc-9320-45e01fa5d38e&oauth_verifier=54980
+in /Users/Frdric/Sites/Indiosis/webapp/protected/components/helpers.inc (56)
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/AccountController.php (148)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/10/19 12:27:01 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser._id" is not defined.' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/auth/CWebUser.php(141): CComponent->__get('_id')
+#1 /Users/Frdric/Sites/Indiosis/webapp/protected/components/helpers.inc(47): CWebUser->__get('_id')
+#2 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/AccountController.php(148): Helpers::getFromLinkedIn(Object(User))
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): AccountController->actionLinkedInHandle()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): CController->run('linkedinhandle')
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('account/linkedi...')
+#14 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#16 {main}
+REQUEST_URI=/indiosis/account/linkedinhandle?oauth_token=46a78214-b292-42d0-91d4-99353a5f4a74&oauth_verifier=85085
+---
+2012/10/19 12:27:39 [error] [php] Undefined variable: profileresp (/Users/Frdric/Sites/Indiosis/webapp/protected/controllers/AccountController.php:149)
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): AccountController->runAction()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): AccountController->filterAccessControl()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): AccountController->runActionWithFilters()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): AccountController->run()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CWebApplication->run()
+REQUEST_URI=/indiosis/account/linkedinhandle?oauth_token=3d152260-9672-4613-92a0-c626f8ad20b2&oauth_verifier=58661
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/AccountController.php (149)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/10/19 12:28:30 [error] [php] Undefined variable: profileresp (/Users/Frdric/Sites/Indiosis/webapp/protected/controllers/AccountController.php:151)
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): AccountController->runAction()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): AccountController->filterAccessControl()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): AccountController->runActionWithFilters()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): AccountController->run()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CWebApplication->run()
+REQUEST_URI=/indiosis/account/linkedinhandle?oauth_token=f18cc6b2-4211-4672-b724-383df99dec13&oauth_verifier=98238
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/AccountController.php (151)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/10/19 12:29:09 [error] [php] json_decode() expects parameter 1 to be string, array given (/Users/Frdric/Sites/Indiosis/webapp/protected/controllers/AccountController.php:151)
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): AccountController->runAction()
+#2 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): AccountController->filterAccessControl()
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): AccountController->runActionWithFilters()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): AccountController->run()
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CWebApplication->run()
+REQUEST_URI=/indiosis/account/linkedinhandle?oauth_token=47eba330-b8a2-4e52-bc1b-9ea1eeaac191&oauth_verifier=61036
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/AccountController.php (151)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/10/19 12:31:18 [error] [php] Undefined variable: profileresp (/Users/Frdric/Sites/Indiosis/webapp/protected/controllers/AccountController.php:151)
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): AccountController->runAction()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): AccountController->filterAccessControl()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): AccountController->runActionWithFilters()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): AccountController->run()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CWebApplication->run()
+REQUEST_URI=/indiosis/account/linkedinhandle?oauth_token=176a5a9b-8482-4bc8-8c48-e5fceb5f0da4&oauth_verifier=81846
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/AccountController.php (151)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/10/19 12:33:16 [error] [php] Undefined offset: 0 (/Users/Frdric/Sites/Indiosis/webapp/protected/controllers/ProfileController.php:56)
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): ProfileController->runAction()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): ProfileController->filterAccessControl()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): ProfileController->runActionWithFilters()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): ProfileController->run()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CWebApplication->run()
+REQUEST_URI=/indiosis/profile
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/ProfileController.php (56)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/10/19 12:34:14 [error] [php] Undefined offset: 0 (/Users/Frdric/Sites/Indiosis/webapp/protected/controllers/ProfileController.php:57)
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): ProfileController->runAction()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): ProfileController->filterAccessControl()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): ProfileController->runActionWithFilters()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): ProfileController->run()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CWebApplication->run()
+REQUEST_URI=/indiosis/profile
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/ProfileController.php (57)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/10/19 12:34:16 [error] [php] Undefined offset: 0 (/Users/Frdric/Sites/Indiosis/webapp/protected/controllers/ProfileController.php:57)
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): ProfileController->runAction()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): ProfileController->filterAccessControl()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): ProfileController->runActionWithFilters()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): ProfileController->run()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CWebApplication->run()
+REQUEST_URI=/indiosis/profile
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/ProfileController.php (57)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/10/19 12:34:25 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.organizationAcronym" is not defined.' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/auth/CWebUser.php(141): CComponent->__get('organizationAcr...')
+#1 /Users/Frdric/Sites/Indiosis/webapp/protected/views/profile/profile.php(107): CWebUser->__get('organizationAcr...')
+#2 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CBaseController.php(127): require('/Users/Frdric/S...')
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/Frdric/S...', Array, true)
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(870): CBaseController->renderFile('/Users/Frdric/S...', Array, true)
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(783): CController->renderPartial('profile', Array, true)
+#6 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/ProfileController.php(59): CController->render('profile', Array)
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): ProfileController->actionIndex()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#15 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): CController->run('')
+#17 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('profile')
+#18 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#20 {main}
+REQUEST_URI=/indiosis/profile
+HTTP_REFERER=http://localhost/indiosis/
+---
+2012/10/19 12:36:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "members".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('members')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/members
+HTTP_REFERER=http://localhost/indiosis/profile
+---
+2012/10/19 12:36:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "about".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('about')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/about
+HTTP_REFERER=http://localhost/indiosis/profile
+---
+2012/10/19 12:40:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/account/linkedinhandle?oauth_token=62b6c00a-7638-4a58-83a3-e82ae0236513&oauth_verifier=43831
+---
+2012/10/19 12:41:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/account/linkedinhandle?oauth_token=22375bd3-65fe-42f9-a218-5ecff833281a&oauth_verifier=70121
+---
+2012/10/19 12:42:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/account/linkedinhandle?oauth_token=98c5f87b-1fa7-4b50-930e-1ebba3ba75af&oauth_verifier=19066
+---
+2012/10/19 12:42:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/account/linkedinhandle?oauth_token=304498c3-8e97-4179-8720-1bdedd7698fc&oauth_verifier=90492
+---
+2012/10/19 12:47:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/account/linkedinhandle?oauth_token=8c4fdc55-e871-4613-9485-642dd6b3a844&oauth_verifier=42129
+---
+2012/10/19 12:47:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/account/linkedinhandle?oauth_token=8c4fdc55-e871-4613-9485-642dd6b3a844&oauth_verifier=42129
+---
+2012/10/19 12:48:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/account/linkedinhandle?oauth_token=1cd39514-42c8-4ae9-ad2b-a68e6588576e&oauth_verifier=08246
+---
+2012/10/19 12:51:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/account/linkedinhandle?oauth_token=f3cda468-f074-48b8-ad5d-21ef9464de83&oauth_verifier=54997
+---
+2012/10/19 12:59:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/account/linkedinhandle?oauth_token=0c66d20b-2d60-49af-b953-a8b846c48872&oauth_verifier=42156
+---
+2012/10/19 13:07:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/account/linkedinhandle?oauth_token=9ac31d26-c293-481a-a814-a9cec3c47377&oauth_verifier=40010
+---
+2012/10/19 13:09:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/account/linkedinhandle?oauth_token=eebb8de9-6281-4088-85c8-d256abcd3ff1&oauth_verifier=83824
+---
+2012/10/19 13:10:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/account/linkedinhandle?oauth_token=52ba9ffa-4d3a-4ec9-9b35-fa4bcd31c613&oauth_verifier=07977
+---
+2012/10/19 13:11:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/account/linkedinhandle?oauth_token=f30bdfc5-bedb-414b-b79b-154c7aa6e2d1&oauth_verifier=41408
+---
+2012/10/19 13:17:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/account/linkedinhandle?oauth_token=a151469b-679e-47bd-b8c4-f2e0a22db445&oauth_verifier=34159
+---
+2012/10/19 13:17:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/account/linkedinhandle?oauth_token=a151469b-679e-47bd-b8c4-f2e0a22db445&oauth_verifier=34159
+---
+2012/10/19 13:17:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/account/linkedinhandle?oauth_token=a151469b-679e-47bd-b8c4-f2e0a22db445&oauth_verifier=34159
+---
+2012/10/19 13:18:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/account/linkedinhandle?oauth_token=4e3a75e9-26cb-4e38-a709-d7b7319fe0fd&oauth_verifier=14719
+---
+2012/10/19 13:21:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/account/linkedinhandle?oauth_token=c38f3c50-d952-4378-b0e2-dfbf22efe6e1&oauth_verifier=26275
+---

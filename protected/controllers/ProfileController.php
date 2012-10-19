@@ -37,8 +37,16 @@ class ProfileController extends IndiosisController
 
         // retrieve organisation data
         $organization = Organization::model()->findByAttributes(array('id'=>Yii::app()->user->organizationId));
-        $geoLocation = GeoHelper::lookupCoordinates($organization->locations[0]);
+        if(count($organization->locations)==0) {
+            $orgLocation = new Location;
+            $orgLocation->country = "India";
+            //Helpers::getFromLinkedIn('company');
+        }
+        else {
+            $orgLocation = $organization->locations[0];
+        }
 
+        $geoLocation = GeoHelper::lookupCoordinates($orgLocation);
 
         $vmapMarkers = array(   "latLng" => array($geoLocation->getLat(),$geoLocation->getLng()),
                                 "r" => 3,
@@ -46,7 +54,7 @@ class ProfileController extends IndiosisController
                                 "name" => $organization->acronym);
 
         $this->render('profile',array(  'organization'=>$organization,
-                                        'org_location'=>$organization->locations[0],
+                                        'org_location'=>$orgLocation,
                                         'vmapMarkers'=>$vmapMarkers,
                                         'org_commeans'=>$organization->communicationMeans));
     }

@@ -129,8 +129,8 @@ return array(
         'indiosisVersionNumber' => '0.2',
         'ajaxSuccess' => 'OK',
         'ajaxFailure' => 'ERROR',
-        'linkedinKey' => 'h2c4xaig3qq2',
-        'linkedinSecret' => 'nFW1p1Z4PWvsVVrB',
+        'linkedinKey' => 'pj0erle37g0w',
+        'linkedinSecret' => 'Q8tfJu8jekqAWTNE',
         'linkedinBackUrl' => 'http://localhost/indiosis/account/linkedinhandle',
         'countryList' => include( _joinpath(_joinpath($homePath,'protected'),'data').'/country-list.php')
     )

@@ -33,6 +33,51 @@ class Helpers {
     }
 
     /**
+     * LinkedIn call helper.
+     * @param string What needs to be retrieve (profile or company)
+     * @param User The user you wish the retrieve information about (default is current user).
+     * @return array The requested information or null if nothing has been retrieved.
+     */
+    public static function getFromLinkedIn($what=null,$user=null)
+    {
+        Yii::import('ext.simple-linkedin.*');
+        $lkdinResponse = null;
+
+        if($user==null) {
+            $user = User::model()->findByAttributes(array('id'=>Yii::app()->user->_id));
+        }
+        $API_CONFIG = array(
+          'appKey'       => Yii::app()->params['linkedinKey'],
+          'appSecret'    => Yii::app()->params['linkedinSecret'],
+          'callbackUrl'  => Yii::app()->params['linkedinBackUrl']
+        );
+        $linkedin = new LinkedIn($API_CONFIG);
+
+        $linkedin->setToken(array('oauth_token' => $user->oauth_token, 'oauth_token_secret' => $user->oauth_secret));
+        $linkedin->setResponseFormat(LINKEDIN::_RESPONSE_JSON);
+
+        switch ($what) {
+            case 'company':
+                $lkdinResponse = $linkedin->profile('~:(id,first-name,last-name,email-address,positions)');
+                break;
+            case 'profile':
+                $lkdinResponse = $linkedin->profile('~:(id,first-name,last-name,email-address,positions)');
+                break;
+
+            default:
+                // get profile by default
+                $lkdinResponse = $linkedin->profile('~:(id,first-name,last-name,email-address,positions)');
+                break;
+        }
+        if($lkdinResponse!=null) {
+            $lkdinResponse = $lkdinResponse['linkedin'];
+        }
+
+        return $lkdinResponse;
+    }
+
+
+    /**
      * Output an array of variables into the client's JS script.
      * @param array $phpVar An array of variables.
      */
@@ -213,21 +258,5 @@ class Helpers {
             }
         }
         return $relativeDate;
-    }
-
-
-    public static function getLinkedInProfile()
-    {
-
-        $API_CONFIG = array(
-          'appKey'       => Yii::app()->params['linkedinKey'],
-          'appSecret'    => Yii::app()->params['linkedinSecret'],
-          'callbackUrl'  => NULL
-        );
-        $linkedin = new LinkedIn($API_CONFIG);
-
-        die("ok");
-
-        return true;
     }
 }

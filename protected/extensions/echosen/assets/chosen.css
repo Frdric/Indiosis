@@ -252,12 +252,12 @@
   color: #fff;
 }
 .chzn-container .chzn-results li em {
-  background: #ecf6fb;
   font-style: normal;
+  font-weight: bold;
 }
 .chzn-container .chzn-results .highlighted em {
   background: transparent;
-  color: black;
+  color: white;
 }
 .chzn-container .chzn-results .no-results {
   background: #f4f4f4;

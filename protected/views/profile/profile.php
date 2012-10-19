@@ -104,7 +104,7 @@ Yii::app()->clientScript->registerScriptFile(
     <?php
     $this->beginWidget('IBoxWidget',array(
         'boxId'=>'org_flows',
-        'title'=> '<span>'.Yii::app()->user->organizationAcronym.'</span> has <span>3</span> resource flows',
+        'title'=> '<span>'.((empty($organization->acronym)) ? $organization->name : $organization->acronym).'</span> has <span>3</span> resource flows',
         'closable'=>  false));
     ?>
     <em>2</em> input flows

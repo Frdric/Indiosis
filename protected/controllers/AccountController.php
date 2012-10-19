@@ -105,7 +105,7 @@ class AccountController extends IndiosisController
         $API_CONFIG = array(
           'appKey'       => Yii::app()->params['linkedinKey'],
           'appSecret'    => Yii::app()->params['linkedinSecret'],
-          'callbackUrl'  => 'http://localhost/indiosis/account/linkedinhandle'
+          'callbackUrl'  => Yii::app()->params['linkedinBackUrl']
         );
         $linkedin = new LinkedIn($API_CONFIG);
         $request_token_response = $linkedin->retrieveTokenRequest();
@@ -145,23 +145,18 @@ class AccountController extends IndiosisController
                 $newLkdinUser->oauth_token = $response['linkedin']['oauth_token'];
                 $newLkdinUser->oauth_secret = $response['linkedin']['oauth_token_secret'];
                 // make the first API profile call to get user profile info
-                $linkedin->setTokenAccess($response['linkedin']);
-                $linkedin->setResponseFormat(LINKEDIN::_RESPONSE_JSON);
-                $profileresp = $linkedin->profile('~:(id,first-name,last-name,email-address,positions)');
-                if($profileresp['success'] === TRUE)
+                $lkdinResponse = Helpers::getFromLinkedIn('profile',$newLkdinUser);
+                if($lkdinResponse != null)
                 {
-                    $profileresp['linkedin'] = json_decode($profileresp['linkedin']);
-                    $newLkdinUser->linkedin_id = $profileresp['linkedin']->id;
-                    $newLkdinUser->email = $profileresp['linkedin']->emailAddress;
-                    $newLkdinUser->firstName = $profileresp['linkedin']->firstName;
-                    $newLkdinUser->lastName = $profileresp['linkedin']->lastName;
-                    $newLkdinUser->title = $profileresp['linkedin']->positions->values[0]->title;
+                    $lkdinResponse = json_decode($lkdinResponse);
+                    $newLkdinUser->linkedin_id = $lkdinResponse->id;
+                    $newLkdinUser->email = $lkdinResponse->emailAddress;
+                    $newLkdinUser->firstName = $lkdinResponse->firstName;
+                    $newLkdinUser->lastName = $lkdinResponse->lastName;
+                    $newLkdinUser->title = $lkdinResponse->positions->values[0]->title;
                     $newLkdinCompany = new Organization;
-                    $newLkdinCompany->linkedin_id = $profileresp['linkedin']->positions->values[0]->company->id;
-                    $newLkdinCompany->name = $profileresp['linkedin']->positions->values[0]->company->name;
-                    $newLkdinCompany->verified = true;
-                    $newLkdinCompany->anonymous = false;
-                    $newLkdinCompany->created_on = date("Y-m-d H:i:s");;
+                    $newLkdinCompany->linkedin_id = $lkdinResponse->positions->values[0]->company->id;
+                    $newLkdinCompany->name = $lkdinResponse->positions->values[0]->company->name;
                     // authenticate the user (register or login)
                     $this->authenticateLinkedIn($newLkdinUser,$newLkdinCompany);
                 }
@@ -221,14 +216,29 @@ class AccountController extends IndiosisController
      */
     protected function authenticateLinkedIn($lkdinUser,$lkdinCompany=null)
     {
-        $record = User::model()->findByAttributes(array('linkedin_id'=>$lkdinUser->linkedin_id));
-        if($record===null) {
+        $userRecord = User::model()->findByAttributes(array('linkedin_id'=>$lkdinUser->linkedin_id));
+        // register the LinkedIn user if not existant
+        if($userRecord===null) {
             $lkdinUser->password = md5($lkdinUser->oauth_secret);
             $lkdinUser->joined_on = date("Y-m-d H:i:s");
             $lkdinUser->verification_code = "verified";
-            $lkdinUser->Organization_id = 1;
+            $orgRecord = Organization::model()->findByAttributes(array('linkedin_id'=>$lkdinCompany->linkedin_id));
+            // create an Organisation if not existant
+            if($orgRecord===null) {
+                $lkdinCompany->verified = 1;
+                $lkdinCompany->type = "company";
+                $lkdinCompany->anonymous = 0;
+                $lkdinCompany->created_on = date("Y-m-d H:i:s");
+                $lkdinCompany->save();
+                $orgRecord = $lkdinCompany;
+            }
+            $lkdinUser->Organization_id = $orgRecord->id;
             $lkdinUser->save();
         }
+        else {
+            $lkdinUser = $userRecord;
+        }
+        // directly login the User.
         $identity = new IndiosisUser($lkdinUser->email,$lkdinUser->oauth_secret);
         if(!$identity->authenticate()) {
             die("password incorrect");
