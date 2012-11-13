@@ -11,15 +11,17 @@
  * @property string $ClassificationSystem_name
  *
  * The followings are the available model relations:
+ * @property ClassificationSystem $classificationSystemName
  * @property ClassCode $childOfNumber
  * @property ClassCode[] $classCodes
- * @property ClassificationSystem $classificationSystemName
  * @property CodeCorrelation[] $codeCorrelations
  * @property CodeCorrelation[] $codeCorrelations1
  * @property CustomClass[] $customClasses
  * @property Expertise[] $expertises
- * @property ISCaseClass[] $iSCaseClasses
  * @property ResourceFlow[] $resourceFlows
+ * @property SymbioticLinkage[] $symbioticLinkages
+ * @property SymbioticLinkage[] $symbioticLinkages1
+ * @property SymbioticLinkage[] $symbioticLinkages2
  */
 class ClassCode extends CActiveRecord
 {
@@ -67,15 +69,17 @@ class ClassCode extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'classificationSystemName' => array(self::BELONGS_TO, 'ClassificationSystem', 'ClassificationSystem_name'),
 			'childOfNumber' => array(self::BELONGS_TO, 'ClassCode', 'ChildOf_number'),
 			'classCodes' => array(self::HAS_MANY, 'ClassCode', 'ChildOf_number'),
-			'classificationSystemName' => array(self::BELONGS_TO, 'ClassificationSystem', 'ClassificationSystem_name'),
-			'codeCorrelations' => array(self::HAS_MANY, 'CodeCorrelation', 'CorrelatingCode_number'),
-			'codeCorrelations1' => array(self::HAS_MANY, 'CodeCorrelation', 'ReferringCode_number'),
+			'codeCorrelations' => array(self::HAS_MANY, 'CodeCorrelation', 'ReferringCode_number'),
+			'codeCorrelations1' => array(self::HAS_MANY, 'CodeCorrelation', 'CorrelatingCode_number'),
 			'customClasses' => array(self::HAS_MANY, 'CustomClass', 'MatchingCode_number'),
 			'expertises' => array(self::HAS_MANY, 'Expertise', 'ResourceCode_number'),
-			'iSCaseClasses' => array(self::HAS_MANY, 'ISCaseClass', 'ClassCode_number'),
 			'resourceFlows' => array(self::HAS_MANY, 'ResourceFlow', 'ClassCode_number'),
+			'symbioticLinkages' => array(self::HAS_MANY, 'SymbioticLinkage', 'SourceClass_number'),
+			'symbioticLinkages1' => array(self::HAS_MANY, 'SymbioticLinkage', 'MaterialClass_number'),
+			'symbioticLinkages2' => array(self::HAS_MANY, 'SymbioticLinkage', 'EndClass_number'),
 		);
 	}
 

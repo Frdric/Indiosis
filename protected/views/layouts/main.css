@@ -66,7 +66,7 @@ h4 {
     font-family: "OpenSansLight", Arial, sans-serif;
     font-size: 17px;
     font-weight: normal;
-    color: #B6B6B6;
+    color: #999;
     margin: 0 0 10px;
     text-shadow: 0 2px 2px white;
 }
@@ -87,6 +87,9 @@ em {
 }
 .bold {
     font-family: "Bitstream-Bold";
+}
+.bold-sans {
+    font-family: "OpenSansSemibold";
 }
 ul,ol {
     list-style-type: circle;
@@ -300,14 +303,20 @@ body {
 
 .actionMenu {
     font-family: "OpenSansRegular";
-    margin-top: -20px;
-    margin-bottom: 15px;
-    padding: 5px 0 10px;
+    margin-top: -32px;
+    margin-bottom: 25px;
+    padding: 7px 10px 10px;
     text-align: right;
+    background-color: #EEE;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: 1px solid #72c4e6;
+    border-right: 1px solid #72c4e6;
+    border-bottom: 1px solid #72c4e6;
 }
 .actionMenu span {
     font-family: "OpenSansSemibold";
-    color: #555;
+    color: #4D4D4D;
 }
 
 .main_content {

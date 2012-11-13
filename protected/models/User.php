@@ -60,8 +60,7 @@ class User extends CActiveRecord
 			array('email, lastName, firstName', 'length', 'max'=>45),
 			array('password', 'length', 'max'=>32),
 			array('prefix', 'length', 'max'=>20),
-			array('title', 'length', 'max'=>250),
-			array('linkedin_id', 'length', 'max'=>255),
+			array('title, linkedin_id', 'length', 'max'=>250),
 			array('oauth_token, oauth_secret, verification_code', 'length', 'max'=>100),
 			array('bio, last_connected', 'safe'),
 			// The following rule is used by search().

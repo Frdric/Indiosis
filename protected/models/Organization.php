@@ -22,7 +22,6 @@
  * @property Location[] $locations
  * @property ResourceFlow[] $resourceFlows
  * @property ResourceFlow[] $resourceFlows1
- * @property Symbiosis[] $symbiosises
  * @property Tag[] $tags
  * @property User[] $users
  */
@@ -74,14 +73,13 @@ class Organization extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'affiliations' => array(self::HAS_MANY, 'Affiliation', 'Child_id'),
-			'affiliations1' => array(self::HAS_MANY, 'Affiliation', 'Parent_id'),
+			'affiliations' => array(self::HAS_MANY, 'Affiliation', 'Parent_id'),
+			'affiliations1' => array(self::HAS_MANY, 'Affiliation', 'Child_id'),
 			'communicationMeans' => array(self::HAS_MANY, 'CommunicationMean', 'Organization_id'),
 			'expertises' => array(self::HAS_MANY, 'Expertise', 'Organization_id'),
 			'locations' => array(self::HAS_MANY, 'Location', 'Organization_id'),
 			'resourceFlows' => array(self::HAS_MANY, 'ResourceFlow', 'Provider_id'),
 			'resourceFlows1' => array(self::HAS_MANY, 'ResourceFlow', 'Receiver_id'),
-			'symbiosises' => array(self::MANY_MANY, 'Symbiosis', 'SymbioticOrganization(Organization_id, Symbiosis_id)'),
 			'tags' => array(self::HAS_MANY, 'Tag', 'Organization_id'),
 			'users' => array(self::HAS_MANY, 'User', 'Organization_id'),
 		);

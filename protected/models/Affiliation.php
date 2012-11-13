@@ -8,8 +8,8 @@
  * @property integer $Child_id
  *
  * The followings are the available model relations:
- * @property Organization $child
  * @property Organization $parent
+ * @property Organization $child
  */
 class Affiliation extends CActiveRecord
 {
@@ -55,8 +55,8 @@ class Affiliation extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'child' => array(self::BELONGS_TO, 'Organization', 'Child_id'),
 			'parent' => array(self::BELONGS_TO, 'Organization', 'Parent_id'),
+			'child' => array(self::BELONGS_TO, 'Organization', 'Child_id'),
 		);
 	}
 

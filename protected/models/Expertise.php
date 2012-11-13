@@ -9,9 +9,9 @@
  * @property integer $User_id
  *
  * The followings are the available model relations:
- * @property Organization $organization
- * @property ClassCode $resourceCodeNumber
  * @property User $user
+ * @property ClassCode $resourceCodeNumber
+ * @property Organization $organization
  */
 class Expertise extends CActiveRecord
 {
@@ -41,7 +41,7 @@ class Expertise extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ResourceCode_number, Organization_id, User_id', 'required'),
+			array('ResourceCode_number', 'required'),
 			array('Organization_id, User_id', 'numerical', 'integerOnly'=>true),
 			array('ResourceCode_number', 'length', 'max'=>250),
 			// The following rule is used by search().
@@ -58,9 +58,9 @@ class Expertise extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
-			'resourceCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'ResourceCode_number'),
 			'user' => array(self::BELONGS_TO, 'User', 'User_id'),
+			'resourceCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'ResourceCode_number'),
+			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
 		);
 	}
 

@@ -2,7 +2,6 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
-USE `indiosis_main` ;
 
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`Organization`
@@ -33,7 +32,7 @@ CREATE  TABLE IF NOT EXISTS `indiosis_main`.`User` (
   `prefix` VARCHAR(20) NULL ,
   `title` VARCHAR(250) NULL ,
   `bio` TEXT NULL ,
-  `linkedin_id` INT NULL ,
+  `linkedin_id` VARCHAR(250) NULL ,
   `oauth_token` VARCHAR(100) NULL ,
   `oauth_secret` VARCHAR(100) NULL ,
   `last_connected` TIMESTAMP NULL ,
@@ -96,7 +95,7 @@ CREATE  TABLE IF NOT EXISTS `indiosis_main`.`CustomClass` (
   `MatchingCode_number` VARCHAR(250) NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `fk_CustomResource_ResourceCode1_idx` (`MatchingCode_number` ASC) ,
-  CONSTRAINT `fk_CustomResource_ResourceCode1`
+  CONSTRAINT `fk_CustomResource_ResourceCode`
     FOREIGN KEY (`MatchingCode_number` )
     REFERENCES `indiosis_main`.`ClassCode` (`number` )
     ON DELETE NO ACTION
@@ -183,19 +182,24 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis_main`.`ISCase`
+-- Table `indiosis_main`.`ISBC`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis_main`.`ISCase` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`ISBC` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `title` TEXT NOT NULL ,
   `type` ENUM('wastex','ecopark','intra','local','regional','mutual') NOT NULL ,
-  `description` TEXT NULL ,
-  `financial_impact` TEXT NULL ,
-  `hr_impact` TEXT NULL ,
-  `org_impact` TEXT NULL ,
-  `envmnt_impact` TEXT NULL ,
+  `overview` TEXT NULL ,
+  `time_period` VARCHAR(45) NULL ,
+  `eco_drivers` TEXT NULL ,
+  `eco_barriers` TEXT NULL ,
+  `tech_drivers` TEXT NULL ,
+  `tech_barriers` TEXT NULL ,
+  `regul_drivers` VARCHAR(45) NULL ,
+  `regul_barriers` VARCHAR(45) NULL ,
+  `socioenv_benefits` VARCHAR(45) NULL ,
   `contingencies` TEXT NULL ,
   `source` TEXT NULL ,
+  `added_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB;
 
@@ -233,7 +237,7 @@ CREATE  TABLE IF NOT EXISTS `indiosis_main`.`Location` (
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Location_ISCase1`
     FOREIGN KEY (`ISCase_id` )
-    REFERENCES `indiosis_main`.`ISCase` (`id` )
+    REFERENCES `indiosis_main`.`ISBC` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -314,8 +318,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`Expertise` (
   `ResourceCode_number` VARCHAR(250) NOT NULL ,
-  `Organization_id` INT NOT NULL ,
-  `User_id` INT NOT NULL ,
+  `Organization_id` INT NULL DEFAULT NULL ,
+  `User_id` INT NULL DEFAULT NULL ,
   PRIMARY KEY (`ResourceCode_number`, `Organization_id`, `User_id`) ,
   INDEX `fk_Expertise_ResourceCode_idx` (`ResourceCode_number` ASC) ,
   INDEX `fk_Expertise_User_idx` (`User_id` ASC) ,
@@ -355,28 +359,6 @@ CREATE  TABLE IF NOT EXISTS `indiosis_main`.`SymbioticFlow` (
   CONSTRAINT `fk_SymbioticFlow_ResourceFlow`
     FOREIGN KEY (`ResourceFlow_id` )
     REFERENCES `indiosis_main`.`ResourceFlow` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `indiosis_main`.`SymbioticOrganization`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis_main`.`SymbioticOrganization` (
-  `Symbiosis_id` INT NOT NULL ,
-  `Organization_id` INT NOT NULL ,
-  PRIMARY KEY (`Symbiosis_id`, `Organization_id`) ,
-  INDEX `fk_SymbioticOrganization_Organization_idx` (`Organization_id` ASC) ,
-  INDEX `fk_SymbioticOrganization_Symbiosis_idx` (`Symbiosis_id` ASC) ,
-  CONSTRAINT `fk_SymbioticOrganization_Symbiosis`
-    FOREIGN KEY (`Symbiosis_id` )
-    REFERENCES `indiosis_main`.`Symbiosis` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_SymbioticOrganization_Organization`
-    FOREIGN KEY (`Organization_id` )
-    REFERENCES `indiosis_main`.`Organization` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -430,22 +412,41 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `indiosis_main`.`ISCaseClass`
+-- Table `indiosis_main`.`SymbioticLinkage`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `indiosis_main`.`ISCaseClass` (
+CREATE  TABLE IF NOT EXISTS `indiosis_main`.`SymbioticLinkage` (
   `ISCase_id` INT NOT NULL ,
-  `ClassCode_number` VARCHAR(250) NOT NULL ,
-  `role` ENUM('producer','consumer','reprocessor') NOT NULL ,
-  PRIMARY KEY (`ISCase_id`, `ClassCode_number`, `role`) ,
-  INDEX `fk_ISCase_has_ClassCode_ClassCode1_idx` (`ClassCode_number` ASC) ,
+  `MaterialClass_number` VARCHAR(250) NOT NULL ,
+  `SourceClass_number` VARCHAR(250) NOT NULL ,
+  `EndClass_number` VARCHAR(250) NOT NULL ,
+  `type` ENUM('reuse','sharing','joint') NULL ,
+  `qty` VARCHAR(250) NULL ,
+  `implementation` TEXT NULL ,
+  `benefit_source` TEXT NULL ,
+  `benefit_end` TEXT NULL ,
+  `remarks` TEXT NULL ,
+  PRIMARY KEY (`ISCase_id`, `MaterialClass_number`, `SourceClass_number`, `EndClass_number`) ,
+  INDEX `fk_ISCase_has_ClassCode_ClassCode1_idx` (`SourceClass_number` ASC) ,
   INDEX `fk_ISCase_has_ClassCode_ISCase1_idx` (`ISCase_id` ASC) ,
+  INDEX `fk_ISCaseClass_ClassCode1_idx` (`MaterialClass_number` ASC) ,
+  INDEX `fk_SymbioticLink_ClassCode1_idx` (`EndClass_number` ASC) ,
   CONSTRAINT `fk_ISCase_has_ClassCode_ISCase1`
     FOREIGN KEY (`ISCase_id` )
-    REFERENCES `indiosis_main`.`ISCase` (`id` )
+    REFERENCES `indiosis_main`.`ISBC` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_ISCase_has_ClassCode_ClassCode1`
-    FOREIGN KEY (`ClassCode_number` )
+    FOREIGN KEY (`SourceClass_number` )
+    REFERENCES `indiosis_main`.`ClassCode` (`number` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_ISCaseClass_ClassCode1`
+    FOREIGN KEY (`MaterialClass_number` )
+    REFERENCES `indiosis_main`.`ClassCode` (`number` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_SymbioticLink_ClassCode1`
+    FOREIGN KEY (`EndClass_number` )
     REFERENCES `indiosis_main`.`ClassCode` (`number` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -471,7 +472,7 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `indiosis_main`;
-INSERT INTO `indiosis_main`.`User` (`id`, `email`, `password`, `lastName`, `firstName`, `prefix`, `title`, `bio`, `linkedin_id`, `oauth_token`, `oauth_secret`, `last_connected`, `joined_on`, `verification_code`, `Organization_id`) VALUES (NULL, 'fred@roi-online.org', '2ed91c548d1e8fecb55650ea0a15d8e6', 'Andreae', 'Frédéric', 'Mr', 'indiosis_main Administrator', 'Analyst at the UNIL.', NULL, NULL, NULL, NULL, NULL, 'verified', 1);
+INSERT INTO `indiosis_main`.`User` (`id`, `email`, `password`, `lastName`, `firstName`, `prefix`, `title`, `bio`, `linkedin_id`, `oauth_token`, `oauth_secret`, `last_connected`, `joined_on`, `verification_code`, `Organization_id`) VALUES (NULL, 'fred@roi-online.org', '2ed91c548d1e8fecb55650ea0a15d8e6', 'Andreae', 'Frédéric', 'Mr', 'Indiosis Administrator', 'Analyst at the UNIL.', NULL, NULL, NULL, NULL, NULL, 'verified', 1);
 
 COMMIT;
 

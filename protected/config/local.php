@@ -32,6 +32,9 @@ return array(
     // Name of the application
     'name'=>'Indiosis',
 
+    // Unique application ID
+    'id'=>'indiosis-dev',
+
     // Default controller to use
     'defaultController'=>'home',
 
@@ -89,7 +92,7 @@ return array(
 
         // Setup the DB connexion
         'db'=>array(
-                'connectionString' => 'mysql:host=127.0.0.1;dbname=indiosis',
+                'connectionString' => 'mysql:host=127.0.0.1;dbname=indiosis_main',
                 'emulatePrepare' => true,
                 'username' => 'indiosis',
                 'password' => 'roi',

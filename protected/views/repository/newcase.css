@@ -51,7 +51,7 @@ hr {
 	margin-top: 6px;
 }
 .case-form .row:not(.error) label:not(.required):not(.error) {
-	color: #666;
+	color: #777;
 }
 .case-form select {
 	width: 300px;
@@ -72,13 +72,17 @@ hr {
 	width: 70px;
 	padding: 2px 0;
 }
+.case-form input {
+	width: 530px;
+}
 .company-line {
 	margin-bottom: 15px;
 }
 .company-head {
 	float: left;
-	width: 100px;
-	padding: 49px 0 50px 20px;
+	width: 80px;
+	height: 600px;
+	padding: 17px 0 0 14px;
 	font-family: "OpenSansRegular";
 	font-size: 13px;
 	background-color: #F5F5F5;
@@ -92,14 +96,22 @@ hr {
 .company-class {
 	background-color: #FAFAFA;
 	float: right;
-	width: 405px;
-	padding-top: 12px;
+	width: 430px;
+	padding: 12px 0 5px;
 	border-top-right-radius: 7px;
 	border-bottom-right-radius: 7px;
 }
 .company-class .row {
 	padding-bottom: 8px;
 	padding-left: 15px;
+	clear: both;
+}
+.company-class .row input {
+	width: 50px;
+}
+.company-class .row textarea {
+	width: 390px;
+	margin-top: 5px;
 }
 #classes .label-wrapper > label, .company-class .row > label {
 	font-family: "OpenSansSemibold";
@@ -110,9 +122,6 @@ hr {
 	text-align: center;
 	background-color: #ecf6fb;
 	border-top: 1px solid #d7edf6;
-}
-.case-form input {
-	width: 530px;
 }
 .addcompbutton {
 	margin-top: 15px;

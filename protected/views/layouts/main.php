@@ -84,7 +84,7 @@ $cs = Yii::app()->clientScript;
             if(isset($this->menuActions)) {
                 ?>
                 <div class="actionMenu">
-                    <span>Admin privileges :</span>&nbsp;&nbsp;
+                    <span>ADMIN :</span>&nbsp;&nbsp;
                 <?php
                 $first=true;
                 foreach ($this->menuActions as $action => $link) {

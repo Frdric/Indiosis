@@ -12,7 +12,6 @@
  *
  * The followings are the available model relations:
  * @property ResourceFlow[] $resourceFlows
- * @property Organization[] $organizations
  */
 class Symbiosis extends CActiveRecord
 {
@@ -61,7 +60,6 @@ class Symbiosis extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'resourceFlows' => array(self::MANY_MANY, 'ResourceFlow', 'SymbioticFlow(Symbiosis_id, ResourceFlow_id)'),
-			'organizations' => array(self::MANY_MANY, 'Organization', 'SymbioticOrganization(Symbiosis_id, Organization_id)'),
 		);
 	}
 

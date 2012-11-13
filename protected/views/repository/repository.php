@@ -14,10 +14,6 @@
  */
 
 $this->pageTitle= Helpers::buildPageTitle("Repository");
-
-/*Yii::app()->clientScript->registerCssFile(
-    Yii::app()->assetManager->publish(Yii::getPathOfAlias('application.views.inventory')."/inventory.css") // TODO : remove this line
-);*/
 ?>
 
 <!-- REPOSITORY PAGE CONTENT -->

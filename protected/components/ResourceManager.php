@@ -118,5 +118,24 @@ class ResourceManager extends CComponent {
         }
         return $hsTree;
     }
+
+    /**
+     * Return the ISIC activity list (with indented descriptions).
+     */
+    public static function getHSList()
+    {
+        $hsTree = ResourceManager::getHSCodeTree(0,false);
+
+        foreach($hsTree as $code) {
+            if($code['parent']=='') {
+                $hsList[$code['code']] = $code['description']." - [ chapter ]";
+            }
+            else {
+                $hsList[$code['code']] = $code['description'];
+            }
+        }
+
+        return $hsList;
+    }
 }
 ?>
