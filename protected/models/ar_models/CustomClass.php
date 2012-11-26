@@ -4,7 +4,7 @@
  * This is the model class for table "CustomClass".
  *
  * The followings are the available columns in table 'CustomClass':
- * @property integer $id
+ * @property string $code
  * @property string $name
  * @property string $description
  * @property string $MatchingCode_number
@@ -41,11 +41,12 @@ class CustomClass extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, description, MatchingCode_number', 'required'),
+			array('code, name, description, MatchingCode_number', 'required'),
+			array('code', 'length', 'max'=>255),
 			array('MatchingCode_number', 'length', 'max'=>250),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, description, MatchingCode_number', 'safe', 'on'=>'search'),
+			array('code, name, description, MatchingCode_number', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,7 +59,7 @@ class CustomClass extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'matchingCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'MatchingCode_number'),
-			'resourceFlows' => array(self::HAS_MANY, 'ResourceFlow', 'CustomClass_id'),
+			'resourceFlows' => array(self::HAS_MANY, 'ResourceFlow', 'CustomClass_code'),
 		);
 	}
 
@@ -68,7 +69,7 @@ class CustomClass extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
+			'code' => 'Code',
 			'name' => 'Name',
 			'description' => 'Description',
 			'MatchingCode_number' => 'Matching Code Number',
@@ -86,7 +87,7 @@ class CustomClass extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
+		$criteria->compare('code',$this->code,true);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('MatchingCode_number',$this->MatchingCode_number,true);

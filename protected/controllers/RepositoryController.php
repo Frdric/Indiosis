@@ -41,7 +41,9 @@ class RepositoryController extends IndiosisController
         $this->defaultAction = 'browse';
         $this->breadcrumbsLinks = array('IS Repository'=>'index');
         if(!Yii::app()->user->isGuest) {
-            $this->menuActions = array('Add ISBC'=>$this->createUrl('repository/newcase'),'Import ISBCs'=>$this->createUrl('repository/importxcel'));
+            $this->menuActions = array( 'Add ISBC'=>$this->createUrl('repository/newcase'),
+                                        'Auto-import ISBCs'=>$this->createUrl('repository/importxcel'),
+                                        'Custom Categories'=>$this->createUrl('repository/customcategory'));
         }
         return true;
     }
@@ -51,9 +53,12 @@ class RepositoryController extends IndiosisController
      */
     public function actionBrowse()
     {
-        $this->breadcrumbsLinks = array('IS Repository'=>'index','Browse');
+        $this->breadcrumbsLinks = array('IS Repository'=>'index','All ISBCs');
         $resourceModel = new ClassCode;
-        $this->render('repository',array('resourceModel'=>$resourceModel),false,true);
+        // retrieve all stored ISBCs
+        $isbcs = ISBC::model()->findAll();
+
+        $this->render('repository',array('resourceModel'=>$resourceModel,'isbcs'=>$isbcs));
     }
 
     /**
@@ -61,7 +66,7 @@ class RepositoryController extends IndiosisController
      */
     public function actionNewCase()
     {
-    	$this->breadcrumbsLinks = array('IS Repository'=>$this->createUrl('repository/index'),'New IS Case');
+    	$this->breadcrumbsLinks = array('IS Repository'=>$this->createUrl('repository/index'),'ADMIN : New ISBC');
 
         $IScase = new ISBC;
         $location = new Location;
@@ -137,6 +142,8 @@ class RepositoryController extends IndiosisController
      */
     public function actionImportXcel()
     {
+        $this->breadcrumbsLinks = array('IS Repository'=>'index','Import ISBCs');
+
         $xcelform = new ISBCXcelForm;
 
         if(isset($_POST['ISBCXcelForm']))
@@ -162,5 +169,48 @@ class RepositoryController extends IndiosisController
         }
 
         $this->render('xcelimport',array('xcelform'=>$xcelform));
+    }
+
+    public function actionCustomCategory()
+    {
+        $this->breadcrumbsLinks = array('IS Repository'=>$this->createUrl('repository/index'),'Custom Categories ');
+
+        $customCategory = new CustomCategory;
+
+        if(isset($_POST['CustomCategory']))
+        {
+            $customCategory->attributes = $_POST['CustomCategory'];
+            $customClass = new CustomClass;
+            $customClass->code = 'INDSIS-'.$_POST['CustomCategory']['id'];
+            $customClass->name = $customCategory->name;
+            $customClass->description = $customCategory->description;
+            // depending on which classification system is being used as reference
+            switch ($customCategory->classification) {
+                case 'ISIC':
+                    $customCategory->MatchingCode_number = 'ISIC-'.$customCategory->MatchingCode_number;
+                    $customClass->MatchingCode_number = $customCategory->MatchingCode_number;
+                    break;
+                default:
+                    $customClass->MatchingCode_number = $customCategory->MatchingCode_number;
+                    break;
+            }
+            $customCategory->code = $customClass->code;
+
+            if($customCategory->validate()) {
+                $customClass->save();
+            }
+            else {
+                    $customCategory->MatchingCode_number = str_replace("ISIC-","",$customCategory->MatchingCode_number);
+            }
+        }
+
+        // retrieve all current custom classes
+        $customClasses = CustomClass::model()->findAll();
+
+        // $ISIClist = ResourceManager::getISICList();
+        // $HScodes = ResourceManager::getHSList();
+
+        $this->render('customCat',array('customCategory'=>$customCategory,
+                                        'customClasses'=>$customClasses));
     }
 }

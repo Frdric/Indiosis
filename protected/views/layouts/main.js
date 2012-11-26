@@ -20,6 +20,23 @@ $("#searchfield input").focus(function() {
     }
 });
 
+
+// IBox close button
+$("div.closable").click(function() {
+	var ibox = $(this).parent();
+	if(ibox.find(".iboxcontent").height()=="0") {
+		$(this).find("span.close").html('&#59228;');
+		//ibox.find(".iboxcontent").animate({ height: 'auto' },"slow",function() { $(this).removeClass("closed"); });
+		ibox.find(".iboxcontent").height("auto");
+		ibox.find(".iboxcontent").removeClass("closed");
+	}
+	else {
+		$(this).find("span.close").html('&#59231;');
+		ibox.find(".iboxcontent").height("0px");
+		ibox.find(".iboxcontent").addClass("closed");
+	}
+});
+
 // Show and hide loading image.
 function showLoader(loader_id) {
     $(loader_id).fadeIn("fast");

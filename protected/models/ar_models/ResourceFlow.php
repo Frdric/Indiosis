@@ -15,13 +15,13 @@
  * @property integer $hideQtyUom
  * @property integer $hideLocation
  * @property string $ClassCode_number
- * @property integer $CustomClass_id
+ * @property string $CustomClass_code
  * @property integer $Provider_id
  * @property integer $Receiver_id
  *
  * The followings are the available model relations:
  * @property Location[] $locations
- * @property CustomClass $customClass
+ * @property CustomClass $customClassCode
  * @property ClassCode $classCodeNumber
  * @property Organization $provider
  * @property Organization $receiver
@@ -56,13 +56,13 @@ class ResourceFlow extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('added_on', 'required'),
-			array('qty, hideQty, hideQtyUom, hideLocation, CustomClass_id, Provider_id, Receiver_id', 'numerical', 'integerOnly'=>true),
-			array('label', 'length', 'max'=>255),
+			array('qty, hideQty, hideQtyUom, hideLocation, Provider_id, Receiver_id', 'numerical', 'integerOnly'=>true),
+			array('label, CustomClass_code', 'length', 'max'=>255),
 			array('qtyUom, frequency', 'length', 'max'=>20),
 			array('reach, ClassCode_number', 'length', 'max'=>250),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, label, qty, qtyUom, frequency, reach, added_on, hideQty, hideQtyUom, hideLocation, ClassCode_number, CustomClass_id, Provider_id, Receiver_id', 'safe', 'on'=>'search'),
+			array('id, label, qty, qtyUom, frequency, reach, added_on, hideQty, hideQtyUom, hideLocation, ClassCode_number, CustomClass_code, Provider_id, Receiver_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -75,7 +75,7 @@ class ResourceFlow extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'locations' => array(self::HAS_MANY, 'Location', 'ResourceFlow_id'),
-			'customClass' => array(self::BELONGS_TO, 'CustomClass', 'CustomClass_id'),
+			'customClassCode' => array(self::BELONGS_TO, 'CustomClass', 'CustomClass_code'),
 			'classCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'ClassCode_number'),
 			'provider' => array(self::BELONGS_TO, 'Organization', 'Provider_id'),
 			'receiver' => array(self::BELONGS_TO, 'Organization', 'Receiver_id'),
@@ -100,7 +100,7 @@ class ResourceFlow extends CActiveRecord
 			'hideQtyUom' => 'Hide Qty Uom',
 			'hideLocation' => 'Hide Location',
 			'ClassCode_number' => 'Class Code Number',
-			'CustomClass_id' => 'Custom Class',
+			'CustomClass_code' => 'Custom Class Code',
 			'Provider_id' => 'Provider',
 			'Receiver_id' => 'Receiver',
 		);
@@ -128,7 +128,7 @@ class ResourceFlow extends CActiveRecord
 		$criteria->compare('hideQtyUom',$this->hideQtyUom);
 		$criteria->compare('hideLocation',$this->hideLocation);
 		$criteria->compare('ClassCode_number',$this->ClassCode_number,true);
-		$criteria->compare('CustomClass_id',$this->CustomClass_id);
+		$criteria->compare('CustomClass_code',$this->CustomClass_code,true);
 		$criteria->compare('Provider_id',$this->Provider_id);
 		$criteria->compare('Receiver_id',$this->Receiver_id);
 

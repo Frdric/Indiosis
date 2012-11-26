@@ -56,6 +56,7 @@ return array(
     // Autoloading model and component classes
     'import'=>array(
         'application.models.*',
+        'application.models.ar_models.*',
         'application.models.forms.*',
         'application.components.*'
     ),
@@ -135,6 +136,7 @@ return array(
         'linkedinKey' => 'pj0erle37g0w',
         'linkedinSecret' => 'Q8tfJu8jekqAWTNE',
         'linkedinBackUrl' => 'http://localhost/indiosis/account/linkedinhandle',
-        'countryList' => include( _joinpath(_joinpath($homePath,'protected'),'data').'/country-list.php')
+        'countryList' => include( _joinpath(_joinpath($homePath,'protected'),'data').'/country-list.php'),
+        'isbcScales' => array('wastex'=>'Waste exchange','intra'=>'Intra-facility','ecopark'=>'Eco-industrial park','local'=>'Local','regional'=>'Regional','mutual'=>'Mutualization')
     )
 );

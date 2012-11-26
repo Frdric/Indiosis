@@ -2,6 +2,8 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
+CREATE SCHEMA IF NOT EXISTS `indiosis_main` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+USE `indiosis_main` ;
 
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`Organization`
@@ -89,11 +91,11 @@ ENGINE = InnoDB;
 -- Table `indiosis_main`.`CustomClass`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`CustomClass` (
-  `id` INT NOT NULL AUTO_INCREMENT ,
+  `code` VARCHAR(255) NOT NULL ,
   `name` TEXT NOT NULL ,
   `description` TEXT NOT NULL ,
   `MatchingCode_number` VARCHAR(250) NOT NULL ,
-  PRIMARY KEY (`id`) ,
+  PRIMARY KEY (`code`) ,
   INDEX `fk_CustomResource_ResourceCode1_idx` (`MatchingCode_number` ASC) ,
   CONSTRAINT `fk_CustomResource_ResourceCode`
     FOREIGN KEY (`MatchingCode_number` )
@@ -118,17 +120,17 @@ CREATE  TABLE IF NOT EXISTS `indiosis_main`.`ResourceFlow` (
   `hideQtyUom` TINYINT(1) NOT NULL DEFAULT 0 ,
   `hideLocation` TINYINT(1) NOT NULL DEFAULT 0 ,
   `ClassCode_number` VARCHAR(250) NULL ,
-  `CustomClass_id` INT NULL ,
+  `CustomClass_code` VARCHAR(255) NULL ,
   `Provider_id` INT NULL ,
   `Receiver_id` INT NULL ,
   PRIMARY KEY (`id`) ,
-  INDEX `fk_ResourceFlow_CustomClass_idx` (`CustomClass_id` ASC) ,
+  INDEX `fk_ResourceFlow_CustomClass_idx` (`CustomClass_code` ASC) ,
   INDEX `fk_ResourceFlow_ClassCode_idx` (`ClassCode_number` ASC) ,
   INDEX `fk_ResourceFlow_Provider_idx` (`Provider_id` ASC) ,
   INDEX `fk_ResourceFlow_Receiver_idx` (`Receiver_id` ASC) ,
   CONSTRAINT `fk_ResourceFlow_CustomClass`
-    FOREIGN KEY (`CustomClass_id` )
-    REFERENCES `indiosis_main`.`CustomClass` (`id` )
+    FOREIGN KEY (`CustomClass_code` )
+    REFERENCES `indiosis_main`.`CustomClass` (`code` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_ResourceFlow_ClassCode`

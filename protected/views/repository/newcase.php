@@ -37,9 +37,6 @@ if($IScase->hasErrors() || $location->hasErrors() || $SymbioticLink->hasErrors()
     'init_display'=>true));
 
     echo 'Fields marked in red are required.';
-    // print_r($IScase->errors);
-    // print_r($location->errors);
-    // print_r($SymbioticLink->errors);
 
     $this->endWidget();
 }
@@ -60,7 +57,7 @@ $this->beginWidget('IBoxWidget',array(
 </div>
 <div class="row">
     <div class="label-wrapper"><?php echo $form->label($IScase,'type',array('label'=>'IS scale :')); ?></div>
-    <?php echo $form->dropdownlist($IScase,'type',array('wastex'=>'Waste exchange','intra'=>'Intra-facility','ecopark'=>'Eco-industrial park','local'=>'Local','regional'=>'Regional','mutual'=>'Mutualization')); ?>
+    <?php echo $form->dropdownlist($IScase,'type',Yii::app()->params['isbcScales']); ?>
 </div>
 <div class="row">
     <div class="label-wrapper"><?php echo $form->label($IScase,'overview',array('label'=>'Overview :')); ?></div>
@@ -93,7 +90,9 @@ $this->beginWidget('IBoxWidget',array(
             </div>
             <div class="row">
                 <?php echo $form->label($SymbioticLink,"[$i]MaterialClass_number",array('label'=>'Resource :')); ?>
+                <span class="alt-HS-button websymbol-entypo">&#9998;</span>
                 <?php echo $form->dropdownlist($SymbioticLink,"[$i]MaterialClass_number",$HScodes,array('class'=>'chzn-select','prompt'=>'','data-placeholder'=>'– select a resource reference –')); ?>
+                <input type="text" class="alt-HS" style="display: none;" alt="Toggle Manual input"/>
             </div>
             <div class="row">
                 <?php echo $form->label($SymbioticLink,"[$i]qty",array('label'=>'Quantity :')); ?>&nbsp;

@@ -357,3 +357,772 @@ REQUEST_URI=/indiosis/repository/download/file/test.xls
 in /Users/Frdric/Sites/Indiosis/webapp/protected/views/layouts/error.php (31)
 in /Users/Frdric/Sites/Indiosis/webapp/protected/components/IndiosisController.php (107)
 in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 13:33:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "customcat".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php:484
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(271): CController->missingAction('customcat')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): CController->run('customcat')
+#2 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('repository/cust...')
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#5 {main}
+REQUEST_URI=/indiosis/repository/customcat
+HTTP_REFERER=http://localhost/indiosis/repository/importxcel
+---
+2012/11/19 13:34:08 [error] [exception.CException] exception 'CException' with message 'RepositoryController and its behaviors do not have a method or closure named "getCommandBuilder".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(1405): CComponent->__call('getCommandBuild...', Array)
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(1405): RepositoryController->getCommandBuilder()
+#2 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php(182): CActiveRecord->findAll()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): RepositoryController->actionCustomCategory()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): CController->run('customcategory')
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('repository/cust...')
+#14 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#16 {main}
+REQUEST_URI=/indiosis/repository/customcategory
+HTTP_REFERER=http://localhost/indiosis/repository/importxcel
+---
+2012/11/19 13:36:09 [error] [php] Undefined variable: xcelform (/Users/Frdric/Sites/Indiosis/webapp/protected/views/repository/customCat.php:59)
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(870): RepositoryController->renderFile()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(783): RepositoryController->renderPartial()
+#2 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php(184): RepositoryController->render()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): RepositoryController->actionCustomCategory()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): RepositoryController->runAction()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): RepositoryController->filterAccessControl()
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): RepositoryController->runActionWithFilters()
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): RepositoryController->run()
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#14 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CWebApplication->run()
+REQUEST_URI=/indiosis/repository/customcategory
+in /Users/Frdric/Sites/Indiosis/webapp/protected/views/repository/customCat.php (59)
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (184)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 13:50:15 [error] [php] Undefined variable: ISIClist (/Users/Frdric/Sites/Indiosis/webapp/protected/views/repository/customCat.php:68)
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(870): RepositoryController->renderFile()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(783): RepositoryController->renderPartial()
+#2 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php(190): RepositoryController->render()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): RepositoryController->actionCustomCategory()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): RepositoryController->runAction()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): RepositoryController->filterAccessControl()
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): RepositoryController->runActionWithFilters()
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): RepositoryController->run()
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#14 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CWebApplication->run()
+REQUEST_URI=/indiosis/repository/customcategory
+in /Users/Frdric/Sites/Indiosis/webapp/protected/views/repository/customCat.php (68)
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (190)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 15:18:24 [error] [php] Undefined variable: customClass (/Users/Frdric/Sites/Indiosis/webapp/protected/views/repository/customCat.php:26)
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(870): RepositoryController->renderFile()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(783): RepositoryController->renderPartial()
+#2 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php(190): RepositoryController->render()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): RepositoryController->actionCustomCategory()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): RepositoryController->runAction()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): RepositoryController->filterAccessControl()
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): RepositoryController->runActionWithFilters()
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): RepositoryController->run()
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#14 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CWebApplication->run()
+REQUEST_URI=/indiosis/repository/customcategory
+in /Users/Frdric/Sites/Indiosis/webapp/protected/views/repository/customCat.php (26)
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (190)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 15:19:16 [error] [php] Undefined variable: customCategory (/Users/Frdric/Sites/Indiosis/webapp/protected/views/repository/customCat.php:26)
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(870): RepositoryController->renderFile()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(783): RepositoryController->renderPartial()
+#2 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php(190): RepositoryController->render()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): RepositoryController->actionCustomCategory()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): RepositoryController->runAction()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): RepositoryController->filterAccessControl()
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): RepositoryController->runActionWithFilters()
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): RepositoryController->run()
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#14 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CWebApplication->run()
+REQUEST_URI=/indiosis/repository/customcategory
+in /Users/Frdric/Sites/Indiosis/webapp/protected/views/repository/customCat.php (26)
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (190)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 15:19:30 [error] [exception.CException] exception 'CException' with message 'Property "CustomClass.classification" is not defined.' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(144): CComponent->__get('classification')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('classification')
+#2 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/helpers/CHtml.php(1543): CHtml::resolveValue(Object(CustomClass), 'classification')
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/widgets/CActiveForm.php(729): CHtml::activeRadioButtonList(Object(CustomClass), 'classification', Array, Array)
+#4 /Users/Frdric/Sites/Indiosis/webapp/protected/views/repository/customCat.php(60): CActiveForm->radioButtonList(Object(CustomClass), 'classification', Array)
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CBaseController.php(127): require('/Users/Frdric/S...')
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/Frdric/S...', Array, true)
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(870): CBaseController->renderFile('/Users/Frdric/S...', Array, true)
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(783): CController->renderPartial('customCat', Array, true)
+#9 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php(190): CController->render('customCat', Array)
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): RepositoryController->actionCustomCategory()
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#15 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#16 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#18 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): CController->run('customcategory')
+#20 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('repository/cust...')
+#21 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#23 {main}
+REQUEST_URI=/indiosis/repository/customcategory
+HTTP_REFERER=http://localhost/indiosis/repository/importxcel
+---
+2012/11/19 15:31:43 [error] [exception.CException] exception 'CException' with message 'Property "CustomCategory.classification" is not defined.' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(144): CComponent->__get('classification')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('classification')
+#2 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/helpers/CHtml.php(1543): CHtml::resolveValue(Object(CustomCategory), 'classification')
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/widgets/CActiveForm.php(729): CHtml::activeRadioButtonList(Object(CustomCategory), 'classification', Array, Array)
+#4 /Users/Frdric/Sites/Indiosis/webapp/protected/views/repository/customCat.php(60): CActiveForm->radioButtonList(Object(CustomCategory), 'classification', Array)
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CBaseController.php(127): require('/Users/Frdric/S...')
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/Frdric/S...', Array, true)
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(870): CBaseController->renderFile('/Users/Frdric/S...', Array, true)
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(783): CController->renderPartial('customCat', Array, true)
+#9 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php(190): CController->render('customCat', Array)
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): RepositoryController->actionCustomCategory()
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#15 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#16 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#18 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): CController->run('customcategory')
+#20 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('repository/cust...')
+#21 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#23 {main}
+REQUEST_URI=/indiosis/repository/customcategory
+HTTP_REFERER=http://localhost/indiosis/repository/importxcel
+---
+2012/11/19 16:05:33 [error] [exception.CException] exception 'CException' with message 'Property "CustomCategory.id" is not defined.' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(144): CComponent->__get('id')
+#1 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php(179): CActiveRecord->__get('id')
+#2 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): RepositoryController->actionCustomCategory()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): CController->run('customcategory')
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('repository/cust...')
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#15 {main}
+REQUEST_URI=/indiosis/repository/customcategory
+HTTP_REFERER=http://localhost/indiosis/repository/customcategory
+---
+2012/11/19 16:09:48 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:09:48 [error] [php] print_r() expects at least 1 parameter, 0 given (/Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php:178)
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): RepositoryController->runAction()
+#2 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): RepositoryController->filterAccessControl()
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): RepositoryController->runActionWithFilters()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): RepositoryController->run()
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CWebApplication->run()
+REQUEST_URI=/indiosis/repository/customcategory
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (178)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:09:59 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:09:59 [error] [exception.CException] exception 'CException' with message 'Property "CustomCategory.id" is not defined.' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(144): CComponent->__get('id')
+#1 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php(181): CActiveRecord->__get('id')
+#2 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): RepositoryController->actionCustomCategory()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): CController->run('customcategory')
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('repository/cust...')
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#15 {main}
+REQUEST_URI=/indiosis/repository/customcategory
+HTTP_REFERER=http://localhost/indiosis/repository/customcategory
+---
+2012/11/19 16:12:59 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:12:59 [error] [exception.CException] exception 'CException' with message 'Property "CustomClass.id" is not defined.' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CComponent.php:174
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(160): CComponent->__set('id', 'INDSIS-1')
+#1 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php(179): CActiveRecord->__set('id', 'INDSIS-1')
+#2 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): RepositoryController->actionCustomCategory()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): CController->run('customcategory')
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('repository/cust...')
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#15 {main}
+REQUEST_URI=/indiosis/repository/customcategory
+HTTP_REFERER=http://localhost/indiosis/repository/customcategory
+---
+2012/11/19 16:13:20 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:14:54 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:15:11 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:15:50 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:17:01 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:17:20 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:20:05 [error] [php] Object of class CustomCategory could not be converted to string (/Users/Frdric/Sites/Indiosis/webapp/protected/views/repository/customCat.php:33)
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(870): RepositoryController->renderFile()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(783): RepositoryController->renderPartial()
+#2 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php(208): RepositoryController->render()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): RepositoryController->actionCustomCategory()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): RepositoryController->runAction()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): RepositoryController->filterAccessControl()
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): RepositoryController->runActionWithFilters()
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): RepositoryController->run()
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#14 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CWebApplication->run()
+REQUEST_URI=/indiosis/repository/customcategory
+in /Users/Frdric/Sites/Indiosis/webapp/protected/views/repository/customCat.php (33)
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (208)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:26:11 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:26:53 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:27:46 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:28:19 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:29:06 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:30:42 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:32:05 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:32:17 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:34:35 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:37:29 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:37:29 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`indiosis_main`.`customclass`, CONSTRAINT `fk_CustomResource_ResourceCode` FOREIGN KEY (`MatchingCode_number`) REFERENCES `ClassCode` (`number`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `CustomClass` (`code`, `name`, `description`, `MatchingCode_number`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (194)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/19 16:37:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`indiosis_main`.`customclass`, CONSTRAINT `fk_CustomResource_ResourceCode` FOREIGN KEY (`MatchingCode_number`) REFERENCES `ClassCode` (`number`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `CustomClass` (`code`, `name`, `description`, `MatchingCode_number`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(1014): CDbCommand->execute()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php(194): CActiveRecord->save()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): RepositoryController->actionCustomCategory()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): CController->run('customcategory')
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('repository/cust...')
+#14 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#16 {main}
+REQUEST_URI=/indiosis/repository/customcategory
+HTTP_REFERER=http://localhost/indiosis/repository/customcategory
+---
+2012/11/19 16:37:53 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:06:25 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:06:31 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:06:34 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:06:36 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:10:36 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:10:38 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:10:50 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:11:01 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:11:04 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:11:13 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:11:19 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:11:31 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:11:32 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:11:36 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:11:37 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:12:56 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:13:01 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:13:06 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:13:06 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:13:09 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:15:23 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:15:28 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:16:31 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:16:34 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:16:38 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:16:44 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:16:49 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:16:50 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:16:57 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:44:00 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:44:26 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:44:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`indiosis_main`.`customclass`, CONSTRAINT `fk_CustomResource_ResourceCode` FOREIGN KEY (`MatchingCode_number`) REFERENCES `ClassCode` (`number`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `CustomClass` (`code`, `name`, `description`, `MatchingCode_number`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (194)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:44:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`indiosis_main`.`customclass`, CONSTRAINT `fk_CustomResource_ResourceCode` FOREIGN KEY (`MatchingCode_number`) REFERENCES `ClassCode` (`number`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `CustomClass` (`code`, `name`, `description`, `MatchingCode_number`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(1014): CDbCommand->execute()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php(194): CActiveRecord->save()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): RepositoryController->actionCustomCategory()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): CController->run('customcategory')
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('repository/cust...')
+#14 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#16 {main}
+REQUEST_URI=/indiosis/repository/customcategory
+HTTP_REFERER=http://localhost/indiosis/repository/customcategory
+---
+2012/11/20 08:44:43 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:44:47 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:44:47 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`indiosis_main`.`customclass`, CONSTRAINT `fk_CustomResource_ResourceCode` FOREIGN KEY (`MatchingCode_number`) REFERENCES `ClassCode` (`number`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `CustomClass` (`code`, `name`, `description`, `MatchingCode_number`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (194)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 08:44:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`indiosis_main`.`customclass`, CONSTRAINT `fk_CustomResource_ResourceCode` FOREIGN KEY (`MatchingCode_number`) REFERENCES `ClassCode` (`number`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `CustomClass` (`code`, `name`, `description`, `MatchingCode_number`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(1014): CDbCommand->execute()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php(194): CActiveRecord->save()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): RepositoryController->actionCustomCategory()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): CController->run('customcategory')
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('repository/cust...')
+#14 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#16 {main}
+REQUEST_URI=/indiosis/repository/customcategory
+HTTP_REFERER=http://localhost/indiosis/repository/customcategory
+---
+2012/11/20 09:21:30 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:21:31 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:21:38 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:21:40 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:21:46 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:21:53 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:21:57 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:25:36 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:25:37 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:25:41 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:26:12 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:27:08 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:27:45 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:28:35 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:28:39 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:28:44 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:28:44 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:28:47 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:28:57 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:28:58 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:29:03 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:30:14 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:30:17 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:30:21 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:30:26 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:30:30 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:33:07 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (178)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:33:19 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (178)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:34:31 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (178)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:34:42 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (184)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 09:46:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "members".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('members')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/members
+HTTP_REFERER=http://localhost/indiosis/repository/browse
+---
+2012/11/20 10:00:16 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (178)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 10:00:21 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (184)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 10:00:25 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (178)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 10:00:27 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (178)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 10:00:32 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (178)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 10:00:45 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (184)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 10:00:48 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (178)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 10:01:09 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (178)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 10:01:11 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (178)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 10:01:16 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (178)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 10:01:20 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (178)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 10:01:23 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (178)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 10:01:25 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (178)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 10:01:30 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (178)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 10:02:20 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 10:02:25 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (177)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 10:32:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/repository/newcase
+---
+2012/11/20 10:34:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/register.css".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('css/register.cs...')
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#3 {main}
+REQUEST_URI=/indiosis/css/register.css
+HTTP_REFERER=http://localhost/indiosis/repository/newcase
+---
+2012/11/20 13:11:29 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (179)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 13:11:51 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (179)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 13:11:55 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (179)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 13:16:44 [warning] [application] Failed to set unsafe attribute "id" of "CustomCategory".
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (179)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 16:11:49 [error] [php] Undefined variable: dateFormatter (/Users/Frdric/Sites/Indiosis/webapp/protected/views/repository/repository.php:64)
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(870): RepositoryController->renderFile()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(783): RepositoryController->renderPartial()
+#2 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php(61): RepositoryController->render()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): RepositoryController->actionBrowse()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): RepositoryController->runAction()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): RepositoryController->filterAccessControl()
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): RepositoryController->runActionWithFilters()
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): RepositoryController->run()
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#14 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CWebApplication->run()
+REQUEST_URI=/indiosis/repository/browse
+in /Users/Frdric/Sites/Indiosis/webapp/protected/views/repository/repository.php (64)
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (61)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
+2012/11/20 16:12:01 [error] [exception.CException] exception 'CException' with message 'RepositoryController and its behaviors do not have a method or closure named "parseFormat".' in /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/i18n/CDateFormatter.php(97): CComponent->__call('parseFormat', Array)
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/i18n/CDateFormatter.php(97): RepositoryController->parseFormat('yyyy-MM-dd')
+#2 /Users/Frdric/Sites/Indiosis/webapp/protected/views/repository/repository.php(64): CDateFormatter->format('yyyy-MM-dd', '2012-11-20 10:3...')
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CBaseController.php(127): require('/Users/Frdric/S...')
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/Frdric/S...', Array, true)
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(870): CBaseController->renderFile('/Users/Frdric/S...', Array, true)
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(783): CController->renderPartial('repository', Array, true)
+#7 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php(61): CController->render('repository', Array)
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): RepositoryController->actionBrowse()
+#9 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#16 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): CController->run('browse')
+#18 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('repository/brow...')
+#19 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#20 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CApplication->run()
+#21 {main}
+REQUEST_URI=/indiosis/repository/browse
+HTTP_REFERER=http://localhost/indiosis/repository/browse
+---
+2012/11/21 07:45:25 [error] [php] PDO::__construct(): [2002] Connection refused (trying to connect via tcp://127.0.0.1:3306) (/Users/Frdric/Sites/Indiosis/yii_framework/framework/db/CDbConnection.php:422)
+Stack trace:
+#0 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/CDbConnection.php(309): CDbConnection->setActive()
+#2 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(431): CWebApplication->getComponent()
+#4 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(615): CWebApplication->getDb()
+#5 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(2263): CustomCategory->getDbConnection()
+#6 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct()
+#7 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(394): model()
+#8 /Users/Frdric/Sites/Indiosis/yii_framework/framework/db/ar/CActiveRecord.php(78): CustomCategory->getMetaData()
+#9 /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php(178): CustomCategory->__construct()
+#10 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/actions/CInlineAction.php(50): RepositoryController->actionCustomCategory()
+#11 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(134): RepositoryController->runAction()
+#13 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CInlineFilter.php(59): RepositoryController->filterAccessControl()
+#16 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(292): CFilterChain->run()
+#18 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CController.php(266): RepositoryController->runActionWithFilters()
+#19 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(276): RepositoryController->run()
+#20 /Users/Frdric/Sites/Indiosis/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#21 /Users/Frdric/Sites/Indiosis/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php(34): CWebApplication->run()
+REQUEST_URI=/indiosis/repository/customcategory
+in /Users/Frdric/Sites/Indiosis/webapp/protected/controllers/RepositoryController.php (178)
+in /Users/Frdric/Sites/Indiosis/webapp/webroot/index.php (34)
