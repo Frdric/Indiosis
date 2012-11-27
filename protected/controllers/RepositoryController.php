@@ -148,23 +148,15 @@ class RepositoryController extends IndiosisController
 
         if(isset($_POST['ISBCXcelForm']))
         {
-            $xcelform->attributes = $_POST['ISBCXcelForm'];
-            $xcelfile = CUploadedFile::getInstance($xcelform,'xcelfile');
+            $xcelform->xcelfile = CUploadedFile::getInstance($xcelform,'xcelfile');
             if($xcelform->validate())
             {
-                spl_autoload_unregister(array('YiiBase','autoload')); # turns off Yii autoload
-
-                // include the main class (phpExcel has its own autoload registration)
-                include(Yii::getPathOfAlias('ext.PHPExcel') . DIRECTORY_SEPARATOR . 'PHPExcel.php');
-
-                //$inputFileName = Yii::getPathOfAlias('application.data').'/Indiosis_ISBC_Sprdsheet_Template.xls';
-                $objPHPExcel = PHPExcel_IOFactory::load($xcelfile->tempName);
-
-                $sheetData = $objPHPExcel->getActiveSheet()->toArray(null,true,true,true);
-                echo '<pre>';
-                var_dump($sheetData);
+                echo 'done<pre>';
+                print_r($xcelform->parsedISBCs);
                 echo '</pre>';
-                die("done");
+                // $xcelform->parsedISBCs; // save this
+                echo "Well formated ready to be saved";
+                die();
             }
         }
 

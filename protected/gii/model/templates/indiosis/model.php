@@ -12,15 +12,20 @@
 ?>
 <?php echo "<?php\n"; ?>
 
-/**
+/*
  * - -- - - - - - - - - - - - *
  * INDIOSIS                   *
  * Synergize your resources.  *
  * - -- - - - - - - - - - - - *
- * 
- * MODEL : <?php echo ucwords($tableName); ?> 
- * The model class for table "<?php echo $tableName; ?>".
- * 
+ *
+ * AR MODEL : <?php echo ucwords($tableName); ?>
+ *
+ * @package     model
+ * @author      Frederic Andreae
+ * @copyright   UNIL/ROI
+ */
+
+/**
  * The followings are the available columns in table '<?php echo $tableName; ?>':
 <?php foreach($columns as $column): ?>
  * @property <?php echo $column->type.' $'.$column->name."\n"; ?>
@@ -55,12 +60,7 @@
     ?>
 <?php endforeach; ?>
 <?php endif; ?>
- *
- * @package     base
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
  */
- 
 class <?php echo $modelClass; ?> extends <?php echo $this->baseClass."\n"; ?>
 {
 	/**
@@ -72,16 +72,6 @@ class <?php echo $modelClass; ?> extends <?php echo $this->baseClass."\n"; ?>
 	{
 		return parent::model($className);
 	}
-	<?php if($connectionId!='db'):?>
-
-	/**
-	 * @return CDbConnection database connection
-	 */
-	public function getDbConnection()
-	{
-        return Yii::app()-><?php echo $connectionId ?>;
-    }
-	<?php endif?>
 
 	/**
 	 * @return string the associated database table name
@@ -132,6 +122,24 @@ class <?php echo $modelClass; ?> extends <?php echo $this->baseClass."\n"; ?>
 			<?php echo "'$name' => '$label',\n"; ?>
 <?php endforeach; ?>
 		);
+	}
+
+
+	/**
+	 * Retrieves the list of possible values for an ENUM field.
+	 * @param string $name The name of an ENUM type attribute.
+	 * @return array The list of ENUM options.
+	 */
+	public function attributeEnumOptions($name)
+	{
+        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
+        foreach(explode(',', $matches[1]) as $value)
+        {
+                $value=str_replace("'",null,$value);
+                $values[$value]=Yii::t('enumItem',$value);
+        }
+
+        return $values;
 	}
 
 	/**

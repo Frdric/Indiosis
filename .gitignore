@@ -1,4 +1,13 @@
+# APP generated files #
 /webroot/assets/*
-.DS_Store
 /runtime/*
-unil.php
+
+# OS generated files #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db

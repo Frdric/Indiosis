@@ -1,8 +1,18 @@
 <?php
 
-/**
- * This is the model class for table "Tag".
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  *
+ * AR MODEL : Tag *
+ * @package     model
+ * @author      Frederic Andreae
+ * @copyright   UNIL/ROI
+ */
+
+/**
  * The followings are the available columns in table 'Tag':
  * @property integer $id
  * @property string $label
@@ -74,6 +84,24 @@ class Tag extends CActiveRecord
 			'User_id' => 'User',
 			'Organization_id' => 'Organization',
 		);
+	}
+
+
+	/**
+	 * Retrieves the list of possible values for an ENUM field.
+	 * @param string $name The name of an ENUM type attribute.
+	 * @return array The list of ENUM options.
+	 */
+	public function attributeEnumOptions($name)
+	{
+        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
+        foreach(explode(',', $matches[1]) as $value)
+        {
+                $value=str_replace("'",null,$value);
+                $values[$value]=Yii::t('enumItem',$value);
+        }
+
+        return $values;
 	}
 
 	/**

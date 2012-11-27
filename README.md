@@ -27,7 +27,9 @@ In addition to being a dynamic knowledge repository, Indiosis uses existing soci
 What's Next
 -----------
 
-The earliest possible Indiosis beta release is expected in May 2012.
+The earliest possible Indiosis beta release is expected in 2013.
 
 Indiosis is a PRIME / UNIL project in collaboration with ROI.
 www.unil.ch/prime | www.roionline.org
+
+![My image](http://www2.unil.ch/indiosis/indiosis_logo.png)

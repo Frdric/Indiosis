@@ -1,8 +1,18 @@
 <?php
 
-/**
- * This is the model class for table "Message".
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  *
+ * AR MODEL : Message *
+ * @package     model
+ * @author      Frederic Andreae
+ * @copyright   UNIL/ROI
+ */
+
+/**
  * The followings are the available columns in table 'Message':
  * @property integer $id
  * @property string $title
@@ -77,6 +87,24 @@ class Message extends CActiveRecord
 			'sent_on' => 'Sent On',
 			'Sender_id' => 'Sender',
 		);
+	}
+
+
+	/**
+	 * Retrieves the list of possible values for an ENUM field.
+	 * @param string $name The name of an ENUM type attribute.
+	 * @return array The list of ENUM options.
+	 */
+	public function attributeEnumOptions($name)
+	{
+        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
+        foreach(explode(',', $matches[1]) as $value)
+        {
+                $value=str_replace("'",null,$value);
+                $values[$value]=Yii::t('enumItem',$value);
+        }
+
+        return $values;
 	}
 
 	/**

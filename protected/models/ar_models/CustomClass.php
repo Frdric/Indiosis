@@ -1,8 +1,18 @@
 <?php
 
-/**
- * This is the model class for table "CustomClass".
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  *
+ * AR MODEL : CustomClass *
+ * @package     model
+ * @author      Frederic Andreae
+ * @copyright   UNIL/ROI
+ */
+
+/**
  * The followings are the available columns in table 'CustomClass':
  * @property string $code
  * @property string $name
@@ -12,6 +22,7 @@
  * The followings are the available model relations:
  * @property ClassCode $matchingCodeNumber
  * @property ResourceFlow[] $resourceFlows
+ * @property SymbioticLinkage[] $symbioticLinkages
  */
 class CustomClass extends CActiveRecord
 {
@@ -60,6 +71,7 @@ class CustomClass extends CActiveRecord
 		return array(
 			'matchingCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'MatchingCode_number'),
 			'resourceFlows' => array(self::HAS_MANY, 'ResourceFlow', 'CustomClass_code'),
+			'symbioticLinkages' => array(self::HAS_MANY, 'SymbioticLinkage', 'CustomMaterial_code'),
 		);
 	}
 
@@ -74,6 +86,24 @@ class CustomClass extends CActiveRecord
 			'description' => 'Description',
 			'MatchingCode_number' => 'Matching Code Number',
 		);
+	}
+
+
+	/**
+	 * Retrieves the list of possible values for an ENUM field.
+	 * @param string $name The name of an ENUM type attribute.
+	 * @return array The list of ENUM options.
+	 */
+	public function attributeEnumOptions($name)
+	{
+        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
+        foreach(explode(',', $matches[1]) as $value)
+        {
+                $value=str_replace("'",null,$value);
+                $values[$value]=Yii::t('enumItem',$value);
+        }
+
+        return $values;
 	}
 
 	/**

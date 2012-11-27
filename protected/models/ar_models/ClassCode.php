@@ -1,8 +1,18 @@
 <?php
 
-/**
- * This is the model class for table "ClassCode".
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  *
+ * AR MODEL : ClassCode *
+ * @package     model
+ * @author      Frederic Andreae
+ * @copyright   UNIL/ROI
+ */
+
+/**
  * The followings are the available columns in table 'ClassCode':
  * @property string $number
  * @property string $description
@@ -95,6 +105,24 @@ class ClassCode extends CActiveRecord
 			'ChildOf_number' => 'Child Of Number',
 			'ClassificationSystem_name' => 'Classification System Name',
 		);
+	}
+
+
+	/**
+	 * Retrieves the list of possible values for an ENUM field.
+	 * @param string $name The name of an ENUM type attribute.
+	 * @return array The list of ENUM options.
+	 */
+	public function attributeEnumOptions($name)
+	{
+        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
+        foreach(explode(',', $matches[1]) as $value)
+        {
+                $value=str_replace("'",null,$value);
+                $values[$value]=Yii::t('enumItem',$value);
+        }
+
+        return $values;
 	}
 
 	/**

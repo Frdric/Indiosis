@@ -1,8 +1,18 @@
 <?php
 
-/**
- * This is the model class for table "MessageRecipient".
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  *
+ * AR MODEL : MessageRecipient *
+ * @package     model
+ * @author      Frederic Andreae
+ * @copyright   UNIL/ROI
+ */
+
+/**
  * The followings are the available columns in table 'MessageRecipient':
  * @property integer $Message_id
  * @property integer $Recipient_id
@@ -65,6 +75,24 @@ class MessageRecipient extends CActiveRecord
 			'Recipient_id' => 'Recipient',
 			'read' => 'Read',
 		);
+	}
+
+
+	/**
+	 * Retrieves the list of possible values for an ENUM field.
+	 * @param string $name The name of an ENUM type attribute.
+	 * @return array The list of ENUM options.
+	 */
+	public function attributeEnumOptions($name)
+	{
+        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
+        foreach(explode(',', $matches[1]) as $value)
+        {
+                $value=str_replace("'",null,$value);
+                $values[$value]=Yii::t('enumItem',$value);
+        }
+
+        return $values;
 	}
 
 	/**

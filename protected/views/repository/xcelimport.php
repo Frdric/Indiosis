@@ -37,14 +37,14 @@ $this->beginWidget('IBoxWidget',array(
 	<hr/>
 	<br/>
 	<div class="row">
+		<?php echo $form->error($xcelform,'xcelfile'); ?><br/><br/>
 	    <div class="label-wrapper"><?php echo $form->label($xcelform,'xcelfile',array("label"=>"Excel or CSV file")); ?></div>
-	    <?php echo $form->fileField($xcelform,'xcelfile'); ?><br/><br/>
-	    <?php echo $form->error($xcelform,'xcelfile'); ?>
+	    <?php echo $form->fileField($xcelform,'xcelfile'); ?>
 	</div>
-	<?php echo CHtml::submitButton('Upload',array("class"=>'ibutton_big iblue',"style"=>"margin-left: 55px;")); ?>
 	<br/>
-	<div style="color: #AAA; text-align: center;">A preview of the data will be displayed<br/>before submitting the import.</div>
+	<?php echo CHtml::submitButton('Upload  +  Import',array("class"=>'ibutton_big iblue',"style"=>"margin-left: 55px;")); ?>
 	<br/>
+	<div style="color: #AAA; text-align: center;">A structure check will be performed<br/>before submitting the import.</div>
 	<br/>
 	<br/>
 	<br/>
