@@ -19,8 +19,8 @@
     outline: none;
 }
 ::selection, ::-moz-selection, ::-webkit-selection {
-    background: #2582A9;
     color: white;
+    background: #2582A9;
 }
 a {
     color: #2582A9;
@@ -32,9 +32,9 @@ a {
     font-family: "OpenSansSemibold";
 }
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #555;
 }
-
 a img{
     border: 0 none;
 }
@@ -66,7 +66,7 @@ h4 {
     font-family: "OpenSansLight", Arial, sans-serif;
     font-size: 17px;
     font-weight: normal;
-    color: #B6B6B6;
+    color: #999;
     margin: 0 0 10px;
     text-shadow: 0 2px 2px white;
 }
@@ -78,7 +78,6 @@ p {
 }
 em {
     color: #2582A9;
-    font-style: normal;
 }
 .circled {
     border: 1px solid #BBB;
@@ -87,6 +86,9 @@ em {
 }
 .bold {
     font-family: "Bitstream-Bold";
+}
+.bold-sans {
+    font-family: "OpenSansSemibold";
 }
 ul,ol {
     list-style-type: circle;
@@ -202,7 +204,7 @@ body {
     border-left: solid 1px #AAA;
 }
 #topmenu span {
-    font-size: 30px;
+    font-size: 40px;
     line-height: 26px;
 }
 #topmenu div.topmenubutton {
@@ -282,7 +284,7 @@ body {
     font-family: "OpenSansRegular";
     color: #FAFAFA;
 }
-.infobar a:hover {
+.infobar a:hover, .actionMenu a:hover {
     text-decoration: none;
     color: #2582A9;
 }
@@ -290,7 +292,7 @@ body {
     font-size: 12px;
 }
 .breadcrumbs {
-    font-family: "OpenSansRegular";
+    font-family: "OpenSansLight";
     float: left;
     text-align: left;
 }
@@ -299,15 +301,46 @@ body {
 }
 
 .actionMenu {
-    font-family: "OpenSansRegular";
-    margin-top: -20px;
-    margin-bottom: 15px;
-    padding: 5px 0 10px;
+    font-family: "OpenSansSemibold";
+    margin: -32px 250px 25px;
     text-align: right;
+    padding: 6px 11px 9px;
+    background-color: #E8E8E8;
+    border: 2px solid white;
+    border-top: 1px solid #4D4D4D;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-bottom-right-radius: 8px;
+    -ms-border-bottom-right-radius: 8px;
+    -o-border-bottom-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -moz-border-bottom-left-radius: 8px;
+    -ms-border-bottom-left-radius: 8px;
+    -o-border-bottom-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    -webkit-box-shadow: inset 0 -3px 3px 0 #DDD;
+    -moz-box-shadow: inset 0 -3px 3px 0 #DDD;
+    box-shadow: inset 0 -3px 3px 0 #DDD;
+    color: #BBB;
+    -webkit-text-shadow: 0 1px 0 #FFF;
+    -moz-text-shadow: 0 1px 0 #FFF;
+    -ms-text-shadow: 0 1px 0 #FFF;
+    -o-text-shadow: 0 1px 0 #FFF;
+    text-shadow: 0 1px 0 #FFF;
+}
+.actionMenu a {
+    color: #666;
+    font-size: 11px;
+    -webkit-text-shadow: none;
+    -moz-text-shadow: none;
+    -ms-text-shadow: none;
+    -o-text-shadow: none;
+    text-shadow: none;
 }
 .actionMenu span {
     font-family: "OpenSansSemibold";
-    color: #555;
+    font-size: 13px;
+    float: left;
 }
 
 .main_content {
@@ -557,6 +590,26 @@ div.login_box div.pw_forgot span {
     font-size: 18px;
     color: #777;
     text-shadow: 0 1px 1px white;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+.ibox .closable {
+    cursor: pointer;
+}
+.ibox .iboxheader .close {
+    float: right;
+    font-size: 45px;
+    position: relative;
+    top: -13px;
+    cursor: pointer;
+}
+.ibox .iboxheader:hover .close {
+    color: #2582A9;
 }
 .ibox .iboxcontent {
     background-color: white;
@@ -564,6 +617,10 @@ div.login_box div.pw_forgot span {
     -moz-box-shadow: inset 0 3px 6px 0 #E6E6E6;
     -webkit-box-shadow: inset 0 3px 6px 0 #E6E6E6;
     box-shadow: inset 0 3px 6px 0 #E6E6E6;
+}
+.ibox .closed {
+    overflow: hidden;
+    height: 0;
 }
 
 /* Indiosis buttons */
@@ -678,18 +735,18 @@ div.login_box div.pw_forgot span {
 /* Notification messages */
 .inotification {
     border: solid 1px #30A1D1;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
     background-color: #DDD;
     background-color: rgba(0,0,0,0.03);
     padding: 20px;
     font-family: "OpenSansRegular";
-    font-size: 16px;
+    font-size: 15px;
     line-height: 19px;
-    color: black;
+    color: #333;
     text-align: center;
-    margin: 10px 10px;
+    margin: 10px 0;
     overflow: hidden;
 }
 .inotification:not(.show) {

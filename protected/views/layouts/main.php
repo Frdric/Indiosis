@@ -54,9 +54,9 @@ $cs = Yii::app()->clientScript;
                     </a>
                 </div>
                 <div id="topmenu">
-                    <div class="topmenubutton <?php echo ((Yii::app()->controller->id=='repository') ? 'current' : ''); ?>"><a href="<?php echo Yii::app()->createUrl('repository'); ?>"><span class="websymbol-modernpicto">B</span><br/>REPOSITORY</a></div>
-                    <div class="topmenubutton <?php echo ((Yii::app()->controller->id=='company') ? 'current' : ''); ?>"><a href="<?php echo Yii::app()->createUrl('members'); ?>"><span class="websymbol-entypo" style="font-size: 40px;">,</span><br/>MEMBERS</a></div>
-                    <div class="topmenubutton  <?php echo ((Yii::app()->controller->id=='profile') ? 'current' : ''); ?>"><a href="<?php echo Yii::app()->createUrl('profile'); ?>"><span class="websymbol-entypo" style="font-size: 40px;">o</span><br/>MY COMPANY</a></div>
+                    <div class="topmenubutton <?php echo ((Yii::app()->controller->id=='repository') ? 'current' : ''); ?>"><a href="<?php echo Yii::app()->createUrl('repository'); ?>"><span class="websymbol-modernpicto" style="font-size: 32px;">B</span><br/>REPOSITORY</a></div>
+                    <div class="topmenubutton <?php echo ((Yii::app()->controller->id=='company') ? 'current' : ''); ?>"><a href="<?php echo Yii::app()->createUrl('members'); ?>"><span class="websymbol-entypo">&#128101;</span><br/>MEMBERS</a></div>
+                    <div class="topmenubutton  <?php echo ((Yii::app()->controller->id=='profile') ? 'current' : ''); ?>"><a href="<?php echo Yii::app()->createUrl('profile'); ?>"><span class="websymbol-entypo">&#59191;</span><br/>MY COMPANY</a></div>
                     <div class="topmenubutton dbline <?php echo ((Yii::app()->controller->id=='expert') ? 'current' : ''); ?>"><a href="<?php echo Yii::app()->createUrl('about'); ?>">EXPERTS<br/>CORNER</a></div>
                     <div id="searchfield"><input type="text" name="spractice" value="search symbiosis practices.." class="no-uniform empty" /></div>
                 </div>
@@ -64,8 +64,8 @@ $cs = Yii::app()->clientScript;
             <div class="infobar_wrapper">
                 <div class="infobar <?php echo (Yii::app()->user->isGuest)? 'guest':'logged' ; ?>">
                     <?php
-                    // Display breadcrumbs (if set)
-                    $this->widget('zii.widgets.CBreadcrumbs', array('links'=>$this->breadcrumbsLinks,'homeLink'=>false));
+                    // Breadcrumbs (if set)
+                    $this->widget('zii.widgets.CBreadcrumbs', array('links'=>$this->breadcrumbsLinks,'homeLink'=>false,'separator'=>'&nbsp;&nbsp;<span class="websymbol-entypo" style="font-size: 15px;">&#59238;</span>&nbsp;&nbsp;'));
 
                     if(Yii::app()->user->isGuest) {
                         echo '<a href="'.Yii::app()->createUrl('account/login').'" id="login_link"><img src="'.Yii::app()->baseUrl.'/images/login_lock.gif'.'" alt="Secure login" />Log In</a>';
@@ -80,21 +80,26 @@ $cs = Yii::app()->clientScript;
         <!-- MAIN CONTENT -->
         <div class="main_content">
             <?php
-            // Action menu (if set)
+            // Expert access
             if(isset($this->menuActions)) {
                 ?>
                 <div class="actionMenu">
-                    <span>Admin privileges :</span>&nbsp;&nbsp;
+                    <span>Expert access</span>
                 <?php
                 $first=true;
                 foreach ($this->menuActions as $action => $link) {
                     if(!$first) {
-                        echo ' <span>|</span> ';
+                        echo '&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;';
                     }
                     else {
                         $first=false;
                     }
-                    echo '<a href="'.$link.'">'.$action.'</a>';
+                    if(strstr($link,$this->action->id)) {
+                        echo '<a href="'.$link.'"><em>'.$action.'</em></a>';
+                    }
+                    else {
+                        echo '<a href="'.$link.'">'.$action.'</a>';
+                    }
                 }
                 ?>
                 </div>
@@ -102,7 +107,6 @@ $cs = Yii::app()->clientScript;
             }
             // Output main content
             echo $content;
-            // echo '<a href="#header" /><span>&#9650;</span> Back To Top</a>';
             ?>
         </div>
         <div id="footer_push"></div>

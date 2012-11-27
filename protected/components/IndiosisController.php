@@ -60,6 +60,19 @@ class IndiosisController extends CController
     }
 
     /**
+     * Rendered before every page call.
+     */
+    protected function beforeRender($view)
+    {
+        $return = parent::beforeRender($view);
+        // Google Analytics tracking
+        if(YII_DEBUG == FALSE) {
+            Yii::app()->googleAnalytics->render();
+        }
+        return $return;
+    }
+
+    /**
      * Default index action for every controller.
      */
     public function actionIndex()
@@ -73,7 +86,29 @@ class IndiosisController extends CController
     public function actionError()
     {
         if($error=Yii::app()->errorHandler->error) {
-            //die('<pre>'.print_r($error).'</pre>');
+            $this->render('//layouts/error', $error);
+        }
+    }
+
+    /**
+     * Send a file for the client to download.
+     */
+    public function actionDownload()
+    {
+        try
+        {
+            $fileToSend = Yii::app()->assetManager->publish( Yii::getPathOfAlias('application.data').'/'.$_GET['file'] );
+
+            Yii::app()->request->xSendFile($fileToSend);
+        }
+        catch (CException $e)
+        {
+            $error = array( 'message'=>"The file you are trying to download does not exists.",
+                            'code'=>$e->getCode(),
+                            'type'=>$e->getMessage(),
+                            'file'=>$_GET['file'],
+                            'line'=>$e->getCode()
+                            );
             $this->render('//layouts/error', $error);
         }
     }

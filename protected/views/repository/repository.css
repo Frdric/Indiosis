@@ -1,0 +1,88 @@
+@charset "utf-8";
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
+ *
+ * STYLE : Main Repository
+ *
+ * @package     repository
+ * @author      Frédéric Andreae
+ * @copyright   UNIL/ROI
+*/
+
+
+h1 {
+	font-family: "OpenSansLight";
+	margin: -40px 0 20px;
+	text-align: center;
+}
+.base-logo {
+	margin-top: -30px;
+	font-size: 190px;
+	color: #E8E8E8;
+	text-align: center;
+	-webkit-text-shadow: 0 1px 0 white;
+	-moz-text-shadow: 0 1px 0 white;
+	-ms-text-shadow: 0 1px 0 white;
+	-o-text-shadow: 0 1px 0 white;
+	text-shadow: 0 1px 0 white;
+}
+
+.intro {
+	color: #999;
+	margin: 20px 10px;
+	-webkit-text-shadow: 0 2px 0 white;
+	-moz-text-shadow: 0 2px 0 white;
+	-ms-text-shadow: 0 2px 0 white;
+	-o-text-shadow: 0 2px 0 white;
+	text-shadow: 0 2px 0 white;
+}
+
+/* -- ISBC LIST ------------------------------------------- */
+
+#allIsbcBox .iboxheader {
+	text-align: center;
+}
+.isbc-list {
+	width: 100%;
+}
+.isbc-list th {
+	font-family: "OpenSansSemibold";
+	text-align: left;
+	padding: 0 5px 10px;
+	color: #777;
+}
+.isbc-list tr:nth-child(even) {
+	background-color: #F7F7F7;
+}
+.isbc-list td {
+	padding: 7px 6px;
+	font-size: 11px;
+	font-family: "Verdana";
+	color: #333;
+}
+.isbc-list td:not(:last-child) {
+	border-right: 2px solid white;
+}
+.isbc-list th:last-child, .isbc-list tr td:last-child {
+	text-align: right;
+}
+
+.licencing {
+	width: 170px;
+	margin: 0 auto;
+	font-size: 60px;
+	text-align: center;
+	color: #DDD;
+	letter-spacing: 6px;
+	-webkit-text-shadow: 0 1px 0 white;
+	-moz-text-shadow: 0 1px 0 white;
+	-ms-text-shadow: 0 1px 0 white;
+	-o-text-shadow: 0 1px 0 white;
+	text-shadow: 0 1px 0 white;
+}
+.licencing:hover {
+	color: #CCC;
+}

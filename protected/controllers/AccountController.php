@@ -25,6 +25,7 @@ class AccountController extends IndiosisController
 
     /**
      * Handles the registration process. (including LinkedIn users).
+     *
      */
     public function actionRegister()
     {
@@ -49,6 +50,8 @@ class AccountController extends IndiosisController
                 $newOrganization = new Organization;
                 $newOrganization->name = $model->attributes['organization'];
                 $newOrganization->type = $model->attributes['org_type'];
+                $newOrganization->verified = 0;
+                $newOrganization->anonymous = 0;
                 $newOrganization->created_on = date("Y-m-d H:i:s");
                 $newOrganization->save();
 
