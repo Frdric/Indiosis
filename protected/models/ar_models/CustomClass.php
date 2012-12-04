@@ -1,18 +1,8 @@
 <?php
 
-/*
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- *
- * AR MODEL : CustomClass *
- * @package     model
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
- */
-
 /**
+ * This is the model class for table "CustomClass".
+ *
  * The followings are the available columns in table 'CustomClass':
  * @property string $code
  * @property string $name
@@ -86,24 +76,6 @@ class CustomClass extends CActiveRecord
 			'description' => 'Description',
 			'MatchingCode_number' => 'Matching Code Number',
 		);
-	}
-
-
-	/**
-	 * Retrieves the list of possible values for an ENUM field.
-	 * @param string $name The name of an ENUM type attribute.
-	 * @return array The list of ENUM options.
-	 */
-	public function attributeEnumOptions($name)
-	{
-        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
-        foreach(explode(',', $matches[1]) as $value)
-        {
-                $value=str_replace("'",null,$value);
-                $values[$value]=Yii::t('enumItem',$value);
-        }
-
-        return $values;
 	}
 
 	/**

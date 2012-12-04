@@ -151,12 +151,33 @@ class RepositoryController extends IndiosisController
             $xcelform->xcelfile = CUploadedFile::getInstance($xcelform,'xcelfile');
             if($xcelform->validate())
             {
-                echo 'done<pre>';
+                $linkagesTotal = 0;
+                echo '<pre>';
                 print_r($xcelform->parsedISBCs);
+                foreach ($xcelform->parsedISBCs as $fullISBC) {
+                    // save the main ISBC
+                    $isbc = $fullISBC['ISBC'];
+                    $isbc->save();
+                    // attach and save ISBC location
+                    $location = $fullISBC['Location'];
+                    $location->ISCase_id = $isbc->id;
+                    $location->label = 'IS Case Region';
+                    $location->save();
+                    // attach and save each included Symbiotic link
+                    $links = $fullISBC['SymbLinks'];
+                    foreach ($links as $sLink) {
+                        $sLink->ISCase_id = $isbc->id;
+                        $sLink->CustomMaterial_code = 'None';
+                        //$sLink->save();
+                        $linkagesTotal++;
+                    }
+                }
                 echo '</pre>';
-                // $xcelform->parsedISBCs; // save this
-                echo "Well formated ready to be saved";
                 die();
+                $this->render('//layouts/notifications', array('message'=>"All IS cases were imported.<br/>( <em>".count($xcelform->parsedISBCs)."</em> ISBCs including a total of <em>".$linkagesTotal."</em> Symbiotic linkages. )",
+                                                                'title'=>"Import successful",
+                                                                'backUrl'=>$this->createUrl('repository/index')));
+                Yii::app()->end();
             }
         }
 

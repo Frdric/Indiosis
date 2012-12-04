@@ -1,18 +1,8 @@
 <?php
 
-/*
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- *
- * AR MODEL : ResourceFlow *
- * @package     model
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
- */
-
 /**
+ * This is the model class for table "ResourceFlow".
+ *
  * The followings are the available columns in table 'ResourceFlow':
  * @property integer $id
  * @property string $label
@@ -31,8 +21,8 @@
  *
  * The followings are the available model relations:
  * @property Location[] $locations
- * @property CustomClass $customClassCode
  * @property ClassCode $classCodeNumber
+ * @property CustomClass $customClassCode
  * @property Organization $provider
  * @property Organization $receiver
  * @property Symbiosis[] $symbiosises
@@ -85,8 +75,8 @@ class ResourceFlow extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'locations' => array(self::HAS_MANY, 'Location', 'ResourceFlow_id'),
-			'customClassCode' => array(self::BELONGS_TO, 'CustomClass', 'CustomClass_code'),
 			'classCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'ClassCode_number'),
+			'customClassCode' => array(self::BELONGS_TO, 'CustomClass', 'CustomClass_code'),
 			'provider' => array(self::BELONGS_TO, 'Organization', 'Provider_id'),
 			'receiver' => array(self::BELONGS_TO, 'Organization', 'Receiver_id'),
 			'symbiosises' => array(self::MANY_MANY, 'Symbiosis', 'SymbioticFlow(ResourceFlow_id, Symbiosis_id)'),
@@ -114,24 +104,6 @@ class ResourceFlow extends CActiveRecord
 			'Provider_id' => 'Provider',
 			'Receiver_id' => 'Receiver',
 		);
-	}
-
-
-	/**
-	 * Retrieves the list of possible values for an ENUM field.
-	 * @param string $name The name of an ENUM type attribute.
-	 * @return array The list of ENUM options.
-	 */
-	public function attributeEnumOptions($name)
-	{
-        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
-        foreach(explode(',', $matches[1]) as $value)
-        {
-                $value=str_replace("'",null,$value);
-                $values[$value]=Yii::t('enumItem',$value);
-        }
-
-        return $values;
 	}
 
 	/**

@@ -1,18 +1,8 @@
 <?php
 
-/*
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- *
- * AR MODEL : Location *
- * @package     model
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
- */
-
 /**
+ * This is the model class for table "Location".
+ *
  * The followings are the available columns in table 'Location':
  * @property integer $id
  * @property string $label
@@ -29,9 +19,9 @@
  * @property integer $ISCase_id
  *
  * The followings are the available model relations:
+ * @property ISBC $iSCase
  * @property Organization $organization
  * @property ResourceFlow $resourceFlow
- * @property ISBC $iSCase
  */
 class Location extends CActiveRecord
 {
@@ -79,9 +69,9 @@ class Location extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'iSCase' => array(self::BELONGS_TO, 'ISBC', 'ISCase_id'),
 			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
 			'resourceFlow' => array(self::BELONGS_TO, 'ResourceFlow', 'ResourceFlow_id'),
-			'iSCase' => array(self::BELONGS_TO, 'ISBC', 'ISCase_id'),
 		);
 	}
 
@@ -105,24 +95,6 @@ class Location extends CActiveRecord
 			'ResourceFlow_id' => 'Resource Flow',
 			'ISCase_id' => 'Iscase',
 		);
-	}
-
-
-	/**
-	 * Retrieves the list of possible values for an ENUM field.
-	 * @param string $name The name of an ENUM type attribute.
-	 * @return array The list of ENUM options.
-	 */
-	public function attributeEnumOptions($name)
-	{
-        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
-        foreach(explode(',', $matches[1]) as $value)
-        {
-                $value=str_replace("'",null,$value);
-                $values[$value]=Yii::t('enumItem',$value);
-        }
-
-        return $values;
 	}
 
 	/**

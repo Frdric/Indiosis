@@ -172,9 +172,9 @@ class ResourceManager extends CComponent {
         // turn Yii autoload back on.
         spl_autoload_register(array('YiiBase','autoload'));
 
-        // echo '<pre>';
-        // print_r($sheetData);
-        // echo '<pre>';
+        // get ISIC and HS lists for validation
+        $allISIC = ResourceManager::getISICList();
+        $allHS = ResourceManager::getHSList();
 
         // try parsing...
         try
@@ -190,13 +190,15 @@ class ResourceManager extends CComponent {
                 if(is_float($columns['A']))
                 {
                     // keep previous valid ISBC
-                    if($current_ISBC['ISBC']!=NULL) { $validISBCs[] = 9; echo 'ok'; }
+                    if($current_ISBC['ISBC']!=NULL) { $validISBCs[] = $current_ISBC;}
 
                     // requirements check
                     if(empty($columns['B'])) throw new CHttpException(417,'Title is missing for case number '.$columns['A'].' - row '.$line);
                     if(empty($columns['F'])) throw new CHttpException(417,'Type is missing for case number '.$columns['A'].' - row '.$line);
 
                     $newISBC = new ISBC;
+
+                    $columns['F'] = strtolower($columns['F']);
 
                     // matching with Indiosis scales of IS
                     switch (true) {
@@ -222,7 +224,7 @@ class ResourceManager extends CComponent {
                             throw new CHttpException(417,'Case number '.$columns['A'].' is missing an IS scale (wastex,ecopark,intra,local,regional or mutual) - row '.$line);
                             break;
                     }
-                    $newISBC->title = strtolower($columns['B']);
+                    $newISBC->title = $columns['B'];
                     $newISBC->overview = $columns['C'];
                     preg_match('(\d\d\d\d)',$columns['E'],$timePeriod); # match first year (YYYY string)
                     $newISBC->time_period = ( (isset($timePeriod[0])) ? $timePeriod[0] : '' );
@@ -258,6 +260,8 @@ class ResourceManager extends CComponent {
 
                     $sLink = new SymbioticLinkage;
 
+                    $columns['S'] = strtolower($columns['S']);
+
                     // matching with Indiosis Symbiotic linkage types
                     switch (true) {
                         case preg_match('(reuse|by-product|waste|exchange)', $columns['S']);
@@ -274,13 +278,29 @@ class ResourceManager extends CComponent {
                             break;
                     }
 
-                    // checking if the Resource is Custom or HS
+                    // checking if the Resource is Custom or valid HS
                     if(ResourceManager::isCustomClass($columns['R'])) {
                         $sLink->CustomClass = $columns['R'];
                     }
-                    else { $sLink->MaterialClass_number = $columns['R']; }
-                    $sLink->SourceClass_number = 'ISIC-'.$columns['U'];
-                    $sLink->EndClass_number = 'ISIC-'.$columns['W'];
+                    elseif(isset($allHS[$columns['R']])) {
+                        $sLink->MaterialClass_number = $columns['R'];
+                    }
+                    else {
+                        throw new CHttpException(417,'A valid HS code is required at row '.$line.' - ('.$columns['R'].' does not exist)');
+                    }
+                    // checking if the Source & End are valid ISIC
+                    if(isset($allISIC['ISIC-'.$columns['U']])) {
+                        $sLink->SourceClass_number = 'ISIC-'.$columns['U'];
+                    }
+                    else {
+                        throw new CHttpException(417,'A valid Source industry ISIC code is required at row '.$line.' - ('.$columns['U'].' does not exist)');
+                    }
+                    if(isset($allISIC['ISIC-'.$columns['W']])) {
+                        $sLink->EndClass_number = 'ISIC-'.$columns['W'];
+                    }
+                    else {
+                        throw new CHttpException(417,'A valid End industry ISIC code is required at row '.$line.' - ('.$columns['W'].' does not exist)');
+                    }
                     $sLink->qty = $columns['X'];
                     $sLink->implementation = $columns['Y'];
                     $sLink->benefit_source = $columns['Z'];

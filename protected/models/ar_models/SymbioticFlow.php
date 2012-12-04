@@ -1,18 +1,8 @@
 <?php
 
-/*
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- *
- * AR MODEL : SymbioticFlow *
- * @package     model
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
- */
-
 /**
+ * This is the model class for table "SymbioticFlow".
+ *
  * The followings are the available columns in table 'SymbioticFlow':
  * @property integer $Symbiosis_id
  * @property integer $ResourceFlow_id
@@ -73,24 +63,6 @@ class SymbioticFlow extends CActiveRecord
 			'Symbiosis_id' => 'Symbiosis',
 			'ResourceFlow_id' => 'Resource Flow',
 		);
-	}
-
-
-	/**
-	 * Retrieves the list of possible values for an ENUM field.
-	 * @param string $name The name of an ENUM type attribute.
-	 * @return array The list of ENUM options.
-	 */
-	public function attributeEnumOptions($name)
-	{
-        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
-        foreach(explode(',', $matches[1]) as $value)
-        {
-                $value=str_replace("'",null,$value);
-                $values[$value]=Yii::t('enumItem',$value);
-        }
-
-        return $values;
 	}
 
 	/**

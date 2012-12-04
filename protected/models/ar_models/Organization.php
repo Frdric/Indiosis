@@ -1,18 +1,8 @@
 <?php
 
-/*
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- *
- * AR MODEL : Organization *
- * @package     model
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
- */
-
 /**
+ * This is the model class for table "Organization".
+ *
  * The followings are the available columns in table 'Organization':
  * @property integer $id
  * @property string $acronym
@@ -83,8 +73,8 @@ class Organization extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'affiliations' => array(self::HAS_MANY, 'Affiliation', 'Parent_id'),
-			'affiliations1' => array(self::HAS_MANY, 'Affiliation', 'Child_id'),
+			'affiliations' => array(self::HAS_MANY, 'Affiliation', 'Child_id'),
+			'affiliations1' => array(self::HAS_MANY, 'Affiliation', 'Parent_id'),
 			'communicationMeans' => array(self::HAS_MANY, 'CommunicationMean', 'Organization_id'),
 			'expertises' => array(self::HAS_MANY, 'Expertise', 'Organization_id'),
 			'locations' => array(self::HAS_MANY, 'Location', 'Organization_id'),
@@ -111,24 +101,6 @@ class Organization extends CActiveRecord
 			'anonymous' => 'Anonymous',
 			'created_on' => 'Created On',
 		);
-	}
-
-
-	/**
-	 * Retrieves the list of possible values for an ENUM field.
-	 * @param string $name The name of an ENUM type attribute.
-	 * @return array The list of ENUM options.
-	 */
-	public function attributeEnumOptions($name)
-	{
-        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
-        foreach(explode(',', $matches[1]) as $value)
-        {
-                $value=str_replace("'",null,$value);
-                $values[$value]=Yii::t('enumItem',$value);
-        }
-
-        return $values;
 	}
 
 	/**

@@ -1,18 +1,8 @@
 <?php
 
-/*
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- *
- * AR MODEL : SymbioticLinkage *
- * @package     model
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
- */
-
 /**
+ * This is the model class for table "SymbioticLinkage".
+ *
  * The followings are the available columns in table 'SymbioticLinkage':
  * @property integer $ISCase_id
  * @property string $MaterialClass_number
@@ -27,11 +17,11 @@
  * @property string $remarks
  *
  * The followings are the available model relations:
- * @property ISBC $iSCase
- * @property ClassCode $sourceClassNumber
  * @property ClassCode $materialClassNumber
- * @property ClassCode $endClassNumber
+ * @property ClassCode $sourceClassNumber
+ * @property ISBC $iSCase
  * @property CustomClass $customMaterialCode
+ * @property ClassCode $endClassNumber
  */
 class SymbioticLinkage extends CActiveRecord
 {
@@ -81,11 +71,11 @@ class SymbioticLinkage extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'iSCase' => array(self::BELONGS_TO, 'ISBC', 'ISCase_id'),
-			'sourceClassNumber' => array(self::BELONGS_TO, 'ClassCode', 'SourceClass_number'),
 			'materialClassNumber' => array(self::BELONGS_TO, 'ClassCode', 'MaterialClass_number'),
-			'endClassNumber' => array(self::BELONGS_TO, 'ClassCode', 'EndClass_number'),
+			'sourceClassNumber' => array(self::BELONGS_TO, 'ClassCode', 'SourceClass_number'),
+			'iSCase' => array(self::BELONGS_TO, 'ISBC', 'ISCase_id'),
 			'customMaterialCode' => array(self::BELONGS_TO, 'CustomClass', 'CustomMaterial_code'),
+			'endClassNumber' => array(self::BELONGS_TO, 'ClassCode', 'EndClass_number'),
 		);
 	}
 
@@ -107,24 +97,6 @@ class SymbioticLinkage extends CActiveRecord
 			'benefit_end' => 'Benefit End',
 			'remarks' => 'Remarks',
 		);
-	}
-
-
-	/**
-	 * Retrieves the list of possible values for an ENUM field.
-	 * @param string $name The name of an ENUM type attribute.
-	 * @return array The list of ENUM options.
-	 */
-	public function attributeEnumOptions($name)
-	{
-        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
-        foreach(explode(',', $matches[1]) as $value)
-        {
-                $value=str_replace("'",null,$value);
-                $values[$value]=Yii::t('enumItem',$value);
-        }
-
-        return $values;
 	}
 
 	/**

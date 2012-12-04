@@ -1,18 +1,8 @@
 <?php
 
-/*
- * - -- - - - - - - - - - - - *
- * INDIOSIS                   *
- * Synergize your resources.  *
- * - -- - - - - - - - - - - - *
- *
- * AR MODEL : ISBC *
- * @package     model
- * @author      Frederic Andreae
- * @copyright   UNIL/ROI
- */
-
 /**
+ * This is the model class for table "ISBC".
+ *
  * The followings are the available columns in table 'ISBC':
  * @property integer $id
  * @property string $title
@@ -64,8 +54,8 @@ class ISBC extends CActiveRecord
 		return array(
 			array('title, type, added_on', 'required'),
 			array('type', 'length', 'max'=>8),
-			array('time_period, regul_drivers, regul_barriers, socioenv_benefits', 'length', 'max'=>45),
-			array('overview, eco_drivers, eco_barriers, tech_drivers, tech_barriers, contingencies, source', 'safe'),
+			array('time_period', 'length', 'max'=>45),
+			array('overview, eco_drivers, eco_barriers, tech_drivers, tech_barriers, regul_drivers, regul_barriers, socioenv_benefits, contingencies, source', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, title, type, overview, time_period, eco_drivers, eco_barriers, tech_drivers, tech_barriers, regul_drivers, regul_barriers, socioenv_benefits, contingencies, source, added_on', 'safe', 'on'=>'search'),
@@ -107,24 +97,6 @@ class ISBC extends CActiveRecord
 			'source' => 'Source',
 			'added_on' => 'Added On',
 		);
-	}
-
-
-	/**
-	 * Retrieves the list of possible values for an ENUM field.
-	 * @param string $name The name of an ENUM type attribute.
-	 * @return array The list of ENUM options.
-	 */
-	public function attributeEnumOptions($name)
-	{
-        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
-        foreach(explode(',', $matches[1]) as $value)
-        {
-                $value=str_replace("'",null,$value);
-                $values[$value]=Yii::t('enumItem',$value);
-        }
-
-        return $values;
 	}
 
 	/**
