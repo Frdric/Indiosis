@@ -1,8 +1,18 @@
 <?php
 
-/**
- * This is the model class for table "Organization".
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  *
+ * AR MODEL : Organization *
+ * @package     model
+ * @author      Frederic Andreae
+ * @copyright   UNIL/ROI
+ */
+
+/**
  * The followings are the available columns in table 'Organization':
  * @property integer $id
  * @property string $acronym
@@ -13,17 +23,6 @@
  * @property integer $verified
  * @property integer $anonymous
  * @property string $created_on
- *
- * The followings are the available model relations:
- * @property Affiliation[] $affiliations
- * @property Affiliation[] $affiliations1
- * @property CommunicationMean[] $communicationMeans
- * @property Expertise[] $expertises
- * @property Location[] $locations
- * @property ResourceFlow[] $resourceFlows
- * @property ResourceFlow[] $resourceFlows1
- * @property Tag[] $tags
- * @property User[] $users
  */
 class Organization extends CActiveRecord
 {
@@ -73,15 +72,6 @@ class Organization extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'affiliations' => array(self::HAS_MANY, 'Affiliation', 'Child_id'),
-			'affiliations1' => array(self::HAS_MANY, 'Affiliation', 'Parent_id'),
-			'communicationMeans' => array(self::HAS_MANY, 'CommunicationMean', 'Organization_id'),
-			'expertises' => array(self::HAS_MANY, 'Expertise', 'Organization_id'),
-			'locations' => array(self::HAS_MANY, 'Location', 'Organization_id'),
-			'resourceFlows' => array(self::HAS_MANY, 'ResourceFlow', 'Provider_id'),
-			'resourceFlows1' => array(self::HAS_MANY, 'ResourceFlow', 'Receiver_id'),
-			'tags' => array(self::HAS_MANY, 'Tag', 'Organization_id'),
-			'users' => array(self::HAS_MANY, 'User', 'Organization_id'),
 		);
 	}
 
@@ -101,6 +91,24 @@ class Organization extends CActiveRecord
 			'anonymous' => 'Anonymous',
 			'created_on' => 'Created On',
 		);
+	}
+
+
+	/**
+	 * Retrieves the list of possible values for an ENUM field.
+	 * @param string $name The name of an ENUM type attribute.
+	 * @return array The list of ENUM options.
+	 */
+	public function attributeEnumOptions($name)
+	{
+        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
+        foreach(explode(',', $matches[1]) as $value)
+        {
+                $value=str_replace("'",null,$value);
+                $values[$value]=Yii::t('enumItem',$value);
+        }
+
+        return $values;
 	}
 
 	/**

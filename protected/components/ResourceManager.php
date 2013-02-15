@@ -15,7 +15,7 @@
  */
 
 
-class ResourceManager extends CComponent {
+class ResourceManager extends CApplicationComponent {
 
     // whether to perform the matching according to the reach (matching result will be within the reach radius).
     private $reach_on = false;
@@ -152,6 +152,7 @@ class ResourceManager extends CComponent {
             return false;
     }
 
+
     /**
      * Parse a given ISBC spreadsheet file and extract ISBCs from it.
      * @param CUploadedFile $sprdsht The just uploaded spreadsheet file.
@@ -278,11 +279,12 @@ class ResourceManager extends CComponent {
                             break;
                     }
 
-                    // checking if the Resource is Custom or valid HS
-                    if(ResourceManager::isCustomClass($columns['R'])) {
-                        $sLink->CustomClass = $columns['R'];
+                    // transform to 6 digit code
+                    for ($z=strlen($columns['R']); $z < 6 ; $z++) {
+                        $columns['R'] = '0'.$columns['R'];
                     }
-                    elseif(isset($allHS[$columns['R']])) {
+                    // checking if the Resource is a valid HS
+                    if(isset($allHS[$columns['R']])) {
                         $sLink->MaterialClass_number = $columns['R'];
                     }
                     else {
@@ -318,6 +320,58 @@ class ResourceManager extends CComponent {
         }
 
         return $validISBCs;
+    }
+
+    /**
+     * Parse an HS csv file and import into DB.
+     */
+    public function parseHScsv()
+    {
+        if (($handle = fopen(Yii::getPathOfAlias('application.data').'/HScodes.csv', "r")) !== FALSE) {
+            while (($row = fgetcsv($handle, 1000, ",")) !== FALSE)
+            {
+                //print_r($row);
+                if(count($row)>1)
+                {
+                    for ($i=strlen($row[0]); $i < 6 ; $i++) {
+                        $row[0] = '0'.$row[0];
+                    }
+                    //echo $row[0].' : '.$row[1].'<br/>';
+
+                    $ccode = new ClassCode();
+                    $ccode->number = $row[0];
+                    $ccode->description = $row[1];
+                    $ccode->ClassificationSystem_name = 'HS';
+                    if(!$ccode->validate()) {
+                        print_r($ccode->errors);
+                    }
+                    $ccode->save();
+                }
+            }
+            fclose($handle);
+        }
+    }
+
+    /**
+     * Parse an HS uom csv file and import into DB.
+     */
+    public function addUom()
+    {
+        if (($handle = fopen(Yii::getPathOfAlias('application.data').'/HSuom.csv', "r")) !== FALSE) {
+            while (($row = fgetcsv($handle, 1000, ",")) !== FALSE)
+            {
+                //print_r($row);
+                if(count($row)>1)
+                {
+                    $ccode = ClassCode::model()->findByPk($row[0]);
+                    if($ccode!=null) {
+                        $ccode->uom = $row[1];
+                        $ccode->save();
+                    }
+                }
+            }
+            fclose($handle);
+        }
     }
 }
 ?>

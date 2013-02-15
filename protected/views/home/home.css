@@ -78,9 +78,12 @@ h1 {
 
 /* -- REGISTER AREA -- */
 #register_area {
-    margin-top: 20px;
-    height: 225px;
+    width: 90%;
+    margin: 25px auto 35px;
     text-align: center;
+    background-color: #F3F3F3;
+    border-radius: 15px;
+    padding: 20px 0;
 }
 #register_area h2 {
     font-family: "OpenSansBold";
@@ -102,7 +105,7 @@ p#signup_subtitle {
 #signup_buttons {
     width: 607px;
     height: 70px;
-    margin: 25px auto;
+    margin: 25px auto 0;
     color: #777;
 }
 #signup_left, #signup_middle, #signup_right {
@@ -219,7 +222,7 @@ p#signup_note {
 .what_is {
     width: 310px;
     padding: 18px 23px;
-    border: solid 10px #E6E6E6;
+    border: solid 8px #EEE;
     border-radius: 20px;
     background-color: white;
     clear: both;

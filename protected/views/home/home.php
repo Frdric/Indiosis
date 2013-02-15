@@ -63,7 +63,6 @@ Yii::app()->clientScript->registerScriptFile(
 <?php
 if(Yii::app()->user->isGuest) {
 ?>
-<hr/>
 <div id="register_area">
     <h2>SIGN UP <span>- it's free !</span></h2>
     <p id="signup_subtitle">Set up a profile page for your company and start looking for synergy partners.</p>
@@ -80,7 +79,7 @@ if(Yii::app()->user->isGuest) {
             For experts registration, <a href="/register" />click here</a>.
         </div>
     </div>
-    <p id="signup_note">We recommand using your LinkedIn account<br/>as it will allow Indiosis to better suggest you with synergy partners.</p>
+    <br style="clear: both;"/>
 </div>
 <?php } ?>
 <div class="news_area_wrapper">

@@ -1,17 +1,22 @@
 <?php
 
-/**
- * This is the model class for table "Expertise".
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  *
+ * AR MODEL : Expertise *
+ * @package     model
+ * @author      Frederic Andreae
+ * @copyright   UNIL/ROI
+ */
+
+/**
  * The followings are the available columns in table 'Expertise':
  * @property string $ResourceCode_number
  * @property integer $Organization_id
  * @property integer $User_id
- *
- * The followings are the available model relations:
- * @property Organization $organization
- * @property ClassCode $resourceCodeNumber
- * @property User $user
  */
 class Expertise extends CActiveRecord
 {
@@ -58,9 +63,6 @@ class Expertise extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
-			'resourceCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'ResourceCode_number'),
-			'user' => array(self::BELONGS_TO, 'User', 'User_id'),
 		);
 	}
 
@@ -74,6 +76,24 @@ class Expertise extends CActiveRecord
 			'Organization_id' => 'Organization',
 			'User_id' => 'User',
 		);
+	}
+
+
+	/**
+	 * Retrieves the list of possible values for an ENUM field.
+	 * @param string $name The name of an ENUM type attribute.
+	 * @return array The list of ENUM options.
+	 */
+	public function attributeEnumOptions($name)
+	{
+        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
+        foreach(explode(',', $matches[1]) as $value)
+        {
+                $value=str_replace("'",null,$value);
+                $values[$value]=Yii::t('enumItem',$value);
+        }
+
+        return $values;
 	}
 
 	/**

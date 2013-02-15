@@ -1,27 +1,24 @@
 <?php
 
-/**
- * This is the model class for table "ClassCode".
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  *
+ * AR MODEL : ClassCode *
+ * @package     model
+ * @author      Frederic Andreae
+ * @copyright   UNIL/ROI
+ */
+
+/**
  * The followings are the available columns in table 'ClassCode':
  * @property string $number
  * @property string $description
  * @property string $uom
  * @property string $ChildOf_number
  * @property string $ClassificationSystem_name
- *
- * The followings are the available model relations:
- * @property ClassCode $childOfNumber
- * @property ClassCode[] $classCodes
- * @property ClassificationSystem $classificationSystemName
- * @property CodeCorrelation[] $codeCorrelations
- * @property CodeCorrelation[] $codeCorrelations1
- * @property CustomClass[] $customClasses
- * @property Expertise[] $expertises
- * @property ResourceFlow[] $resourceFlows
- * @property SymbioticLinkage[] $symbioticLinkages
- * @property SymbioticLinkage[] $symbioticLinkages1
- * @property SymbioticLinkage[] $symbioticLinkages2
  */
 class ClassCode extends CActiveRecord
 {
@@ -69,17 +66,6 @@ class ClassCode extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'childOfNumber' => array(self::BELONGS_TO, 'ClassCode', 'ChildOf_number'),
-			'classCodes' => array(self::HAS_MANY, 'ClassCode', 'ChildOf_number'),
-			'classificationSystemName' => array(self::BELONGS_TO, 'ClassificationSystem', 'ClassificationSystem_name'),
-			'codeCorrelations' => array(self::HAS_MANY, 'CodeCorrelation', 'CorrelatingCode_number'),
-			'codeCorrelations1' => array(self::HAS_MANY, 'CodeCorrelation', 'ReferringCode_number'),
-			'customClasses' => array(self::HAS_MANY, 'CustomClass', 'MatchingCode_number'),
-			'expertises' => array(self::HAS_MANY, 'Expertise', 'ResourceCode_number'),
-			'resourceFlows' => array(self::HAS_MANY, 'ResourceFlow', 'ClassCode_number'),
-			'symbioticLinkages' => array(self::HAS_MANY, 'SymbioticLinkage', 'MaterialClass_number'),
-			'symbioticLinkages1' => array(self::HAS_MANY, 'SymbioticLinkage', 'SourceClass_number'),
-			'symbioticLinkages2' => array(self::HAS_MANY, 'SymbioticLinkage', 'EndClass_number'),
 		);
 	}
 
@@ -95,6 +81,24 @@ class ClassCode extends CActiveRecord
 			'ChildOf_number' => 'Child Of Number',
 			'ClassificationSystem_name' => 'Classification System Name',
 		);
+	}
+
+
+	/**
+	 * Retrieves the list of possible values for an ENUM field.
+	 * @param string $name The name of an ENUM type attribute.
+	 * @return array The list of ENUM options.
+	 */
+	public function attributeEnumOptions($name)
+	{
+        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
+        foreach(explode(',', $matches[1]) as $value)
+        {
+                $value=str_replace("'",null,$value);
+                $values[$value]=Yii::t('enumItem',$value);
+        }
+
+        return $values;
 	}
 
 	/**

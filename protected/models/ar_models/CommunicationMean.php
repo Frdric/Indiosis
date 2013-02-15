@@ -1,8 +1,18 @@
 <?php
 
-/**
- * This is the model class for table "CommunicationMean".
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  *
+ * AR MODEL : CommunicationMean *
+ * @package     model
+ * @author      Frederic Andreae
+ * @copyright   UNIL/ROI
+ */
+
+/**
  * The followings are the available columns in table 'CommunicationMean':
  * @property integer $id
  * @property string $type
@@ -10,10 +20,6 @@
  * @property string $label
  * @property integer $User_id
  * @property integer $Organization_id
- *
- * The followings are the available model relations:
- * @property Organization $organization
- * @property User $user
  */
 class CommunicationMean extends CActiveRecord
 {
@@ -61,8 +67,6 @@ class CommunicationMean extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
-			'user' => array(self::BELONGS_TO, 'User', 'User_id'),
 		);
 	}
 
@@ -79,6 +83,24 @@ class CommunicationMean extends CActiveRecord
 			'User_id' => 'User',
 			'Organization_id' => 'Organization',
 		);
+	}
+
+
+	/**
+	 * Retrieves the list of possible values for an ENUM field.
+	 * @param string $name The name of an ENUM type attribute.
+	 * @return array The list of ENUM options.
+	 */
+	public function attributeEnumOptions($name)
+	{
+        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
+        foreach(explode(',', $matches[1]) as $value)
+        {
+                $value=str_replace("'",null,$value);
+                $values[$value]=Yii::t('enumItem',$value);
+        }
+
+        return $values;
 	}
 
 	/**

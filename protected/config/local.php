@@ -13,9 +13,6 @@
  * @copyright   UNIL/ROI 2012
  */
 
-// Include helper functions
-require_once( dirname(__FILE__) . '/../components/helpers.inc');
-
 // Define home folder path
 $homePath = dirname(__FILE__) . '/../..';
 
@@ -121,6 +118,11 @@ return array(
         'assetManager'=>array(
             'basePath'=>_joinpath($homePath,'webroot/assets'),
             'baseUrl'=>'/indiosis/assets'
+        ),
+
+        // Resource manager
+        'resourceManager'=>array(
+            'class'=>'ResourceManager'
         )
     ),
 

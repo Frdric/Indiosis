@@ -1,15 +1,22 @@
 <?php
 
-/**
- * This is the model class for table "ClassificationSystem".
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  *
+ * AR MODEL : ClassificationSystem *
+ * @package     model
+ * @author      Frederic Andreae
+ * @copyright   UNIL/ROI
+ */
+
+/**
  * The followings are the available columns in table 'ClassificationSystem':
  * @property string $name
  * @property string $fullName
  * @property string $revision
- *
- * The followings are the available model relations:
- * @property ClassCode[] $classCodes
  */
 class ClassificationSystem extends CActiveRecord
 {
@@ -57,7 +64,6 @@ class ClassificationSystem extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'classCodes' => array(self::HAS_MANY, 'ClassCode', 'ClassificationSystem_name'),
 		);
 	}
 
@@ -71,6 +77,24 @@ class ClassificationSystem extends CActiveRecord
 			'fullName' => 'Full Name',
 			'revision' => 'Revision',
 		);
+	}
+
+
+	/**
+	 * Retrieves the list of possible values for an ENUM field.
+	 * @param string $name The name of an ENUM type attribute.
+	 * @return array The list of ENUM options.
+	 */
+	public function attributeEnumOptions($name)
+	{
+        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
+        foreach(explode(',', $matches[1]) as $value)
+        {
+                $value=str_replace("'",null,$value);
+                $values[$value]=Yii::t('enumItem',$value);
+        }
+
+        return $values;
 	}
 
 	/**

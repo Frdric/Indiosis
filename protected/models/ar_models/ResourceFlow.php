@@ -1,8 +1,18 @@
 <?php
 
-/**
- * This is the model class for table "ResourceFlow".
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  *
+ * AR MODEL : ResourceFlow *
+ * @package     model
+ * @author      Frederic Andreae
+ * @copyright   UNIL/ROI
+ */
+
+/**
  * The followings are the available columns in table 'ResourceFlow':
  * @property integer $id
  * @property string $label
@@ -12,20 +22,10 @@
  * @property string $reach
  * @property string $added_on
  * @property integer $hideQty
- * @property integer $hideQtyUom
  * @property integer $hideLocation
  * @property string $ClassCode_number
- * @property string $CustomClass_code
  * @property integer $Provider_id
  * @property integer $Receiver_id
- *
- * The followings are the available model relations:
- * @property Location[] $locations
- * @property ClassCode $classCodeNumber
- * @property CustomClass $customClassCode
- * @property Organization $provider
- * @property Organization $receiver
- * @property Symbiosis[] $symbiosises
  */
 class ResourceFlow extends CActiveRecord
 {
@@ -56,13 +56,13 @@ class ResourceFlow extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('added_on', 'required'),
-			array('qty, hideQty, hideQtyUom, hideLocation, Provider_id, Receiver_id', 'numerical', 'integerOnly'=>true),
-			array('label, CustomClass_code', 'length', 'max'=>255),
+			array('qty, hideQty, hideLocation, Provider_id, Receiver_id', 'numerical', 'integerOnly'=>true),
+			array('label', 'length', 'max'=>255),
 			array('qtyUom, frequency', 'length', 'max'=>20),
 			array('reach, ClassCode_number', 'length', 'max'=>250),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, label, qty, qtyUom, frequency, reach, added_on, hideQty, hideQtyUom, hideLocation, ClassCode_number, CustomClass_code, Provider_id, Receiver_id', 'safe', 'on'=>'search'),
+			array('id, label, qty, qtyUom, frequency, reach, added_on, hideQty, hideLocation, ClassCode_number, Provider_id, Receiver_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -74,12 +74,6 @@ class ResourceFlow extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'locations' => array(self::HAS_MANY, 'Location', 'ResourceFlow_id'),
-			'classCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'ClassCode_number'),
-			'customClassCode' => array(self::BELONGS_TO, 'CustomClass', 'CustomClass_code'),
-			'provider' => array(self::BELONGS_TO, 'Organization', 'Provider_id'),
-			'receiver' => array(self::BELONGS_TO, 'Organization', 'Receiver_id'),
-			'symbiosises' => array(self::MANY_MANY, 'Symbiosis', 'SymbioticFlow(ResourceFlow_id, Symbiosis_id)'),
 		);
 	}
 
@@ -97,13 +91,29 @@ class ResourceFlow extends CActiveRecord
 			'reach' => 'Reach',
 			'added_on' => 'Added On',
 			'hideQty' => 'Hide Qty',
-			'hideQtyUom' => 'Hide Qty Uom',
 			'hideLocation' => 'Hide Location',
 			'ClassCode_number' => 'Class Code Number',
-			'CustomClass_code' => 'Custom Class Code',
 			'Provider_id' => 'Provider',
 			'Receiver_id' => 'Receiver',
 		);
+	}
+
+
+	/**
+	 * Retrieves the list of possible values for an ENUM field.
+	 * @param string $name The name of an ENUM type attribute.
+	 * @return array The list of ENUM options.
+	 */
+	public function attributeEnumOptions($name)
+	{
+        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
+        foreach(explode(',', $matches[1]) as $value)
+        {
+                $value=str_replace("'",null,$value);
+                $values[$value]=Yii::t('enumItem',$value);
+        }
+
+        return $values;
 	}
 
 	/**
@@ -125,10 +135,8 @@ class ResourceFlow extends CActiveRecord
 		$criteria->compare('reach',$this->reach,true);
 		$criteria->compare('added_on',$this->added_on,true);
 		$criteria->compare('hideQty',$this->hideQty);
-		$criteria->compare('hideQtyUom',$this->hideQtyUom);
 		$criteria->compare('hideLocation',$this->hideLocation);
 		$criteria->compare('ClassCode_number',$this->ClassCode_number,true);
-		$criteria->compare('CustomClass_code',$this->CustomClass_code,true);
 		$criteria->compare('Provider_id',$this->Provider_id);
 		$criteria->compare('Receiver_id',$this->Receiver_id);
 

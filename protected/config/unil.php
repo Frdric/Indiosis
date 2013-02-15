@@ -112,6 +112,11 @@ return array(
             'baseUrl'=>'/indiosis/assets'
         ),
 
+        // Resource manager
+        'resourceManager'=>array(
+            'class'=>'ResourceManager'
+        ),
+
         // Google Analytics
         'googleAnalytics' => array(
             'class' =>'ext.TPGoogleAnalytics.TPGoogleAnalytics',

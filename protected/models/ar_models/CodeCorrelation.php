@@ -1,15 +1,21 @@
 <?php
 
-/**
- * This is the model class for table "CodeCorrelation".
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  *
+ * AR MODEL : CodeCorrelation *
+ * @package     model
+ * @author      Frederic Andreae
+ * @copyright   UNIL/ROI
+ */
+
+/**
  * The followings are the available columns in table 'CodeCorrelation':
  * @property string $ReferringCode_number
  * @property string $CorrelatingCode_number
- *
- * The followings are the available model relations:
- * @property ClassCode $correlatingCodeNumber
- * @property ClassCode $referringCodeNumber
  */
 class CodeCorrelation extends CActiveRecord
 {
@@ -55,8 +61,6 @@ class CodeCorrelation extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'correlatingCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'CorrelatingCode_number'),
-			'referringCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'ReferringCode_number'),
 		);
 	}
 
@@ -69,6 +73,24 @@ class CodeCorrelation extends CActiveRecord
 			'ReferringCode_number' => 'Referring Code Number',
 			'CorrelatingCode_number' => 'Correlating Code Number',
 		);
+	}
+
+
+	/**
+	 * Retrieves the list of possible values for an ENUM field.
+	 * @param string $name The name of an ENUM type attribute.
+	 * @return array The list of ENUM options.
+	 */
+	public function attributeEnumOptions($name)
+	{
+        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
+        foreach(explode(',', $matches[1]) as $value)
+        {
+                $value=str_replace("'",null,$value);
+                $values[$value]=Yii::t('enumItem',$value);
+        }
+
+        return $values;
 	}
 
 	/**

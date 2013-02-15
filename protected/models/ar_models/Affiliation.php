@@ -1,15 +1,21 @@
 <?php
 
-/**
- * This is the model class for table "Affiliation".
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  *
+ * AR MODEL : Affiliation *
+ * @package     model
+ * @author      Frederic Andreae
+ * @copyright   UNIL/ROI
+ */
+
+/**
  * The followings are the available columns in table 'Affiliation':
  * @property integer $Parent_id
  * @property integer $Child_id
- *
- * The followings are the available model relations:
- * @property Organization $child
- * @property Organization $parent
  */
 class Affiliation extends CActiveRecord
 {
@@ -55,8 +61,6 @@ class Affiliation extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'child' => array(self::BELONGS_TO, 'Organization', 'Child_id'),
-			'parent' => array(self::BELONGS_TO, 'Organization', 'Parent_id'),
 		);
 	}
 
@@ -69,6 +73,24 @@ class Affiliation extends CActiveRecord
 			'Parent_id' => 'Parent',
 			'Child_id' => 'Child',
 		);
+	}
+
+
+	/**
+	 * Retrieves the list of possible values for an ENUM field.
+	 * @param string $name The name of an ENUM type attribute.
+	 * @return array The list of ENUM options.
+	 */
+	public function attributeEnumOptions($name)
+	{
+        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
+        foreach(explode(',', $matches[1]) as $value)
+        {
+                $value=str_replace("'",null,$value);
+                $values[$value]=Yii::t('enumItem',$value);
+        }
+
+        return $values;
 	}
 
 	/**

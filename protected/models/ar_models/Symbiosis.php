@@ -1,17 +1,24 @@
 <?php
 
-/**
- * This is the model class for table "Symbiosis".
+/*
+ * - -- - - - - - - - - - - - *
+ * INDIOSIS                   *
+ * Synergize your resources.  *
+ * - -- - - - - - - - - - - - *
  *
+ * AR MODEL : Symbiosis *
+ * @package     model
+ * @author      Frederic Andreae
+ * @copyright   UNIL/ROI
+ */
+
+/**
  * The followings are the available columns in table 'Symbiosis':
  * @property integer $id
  * @property string $status
  * @property string $descrition
  * @property string $created_on
  * @property string $expires_on
- *
- * The followings are the available model relations:
- * @property ResourceFlow[] $resourceFlows
  */
 class Symbiosis extends CActiveRecord
 {
@@ -59,7 +66,6 @@ class Symbiosis extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'resourceFlows' => array(self::MANY_MANY, 'ResourceFlow', 'SymbioticFlow(Symbiosis_id, ResourceFlow_id)'),
 		);
 	}
 
@@ -75,6 +81,24 @@ class Symbiosis extends CActiveRecord
 			'created_on' => 'Created On',
 			'expires_on' => 'Expires On',
 		);
+	}
+
+
+	/**
+	 * Retrieves the list of possible values for an ENUM field.
+	 * @param string $name The name of an ENUM type attribute.
+	 * @return array The list of ENUM options.
+	 */
+	public function attributeEnumOptions($name)
+	{
+        preg_match('/\((.*)\)/',$this->tableSchema->columns[$name]->dbType,$matches);
+        foreach(explode(',', $matches[1]) as $value)
+        {
+                $value=str_replace("'",null,$value);
+                $values[$value]=Yii::t('enumItem',$value);
+        }
+
+        return $values;
 	}
 
 	/**

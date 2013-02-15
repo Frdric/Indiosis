@@ -61,6 +61,13 @@ class RepositoryController extends IndiosisController
         $this->render('repository',array('resourceModel'=>$resourceModel,'isbcs'=>$isbcs));
     }
 
+    public function actionResetHS()
+    {
+        //Yii::app()->resourceManager->parseHscsv();
+        Yii::app()->resourceManager->addUom();
+        die('Reset done - HS code list updated.');
+    }
+
     /**
      * Add a new IS case into the repository.
      */
