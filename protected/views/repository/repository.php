@@ -54,16 +54,23 @@ $this->beginWidget(	'IBoxWidget',array(
 <table class="isbc-list">
 	<tr>
 		<th>TITLE</th>
-		<th>SCALE</th>
+		<th class="scale">SCALE</th>
 		<th>ABSTRACT</th>
 		<th>ADDED ON</th>
 	</tr>
 	<?php
-	foreach ($isbcs as $isbc) {
+	foreach ($isbcs as $isbc)
+	{
+		if(strrpos(substr($isbc->overview,0,300),".")) {
+			$isbc->overview = substr($isbc->overview,0,strrpos(substr($isbc->overview,0,300),".")).'.';
+		}
+		else {
+			$isbc->overview = substr($isbc->overview,0,strrpos(substr($isbc->overview,0,250)," ")).' ...';
+		}
 		echo '<tr>';
 		echo '<td>'.$isbc->title.'</td>';
 		echo '<td>'.Yii::app()->params['isbcScales'][$isbc->type].'</td>';
-		echo '<td>'.$isbc->overview.'</td>';
+		echo '<td class="overview">'.$isbc->overview.'</td>';
 		echo '<td>'.Yii::app()->dateFormatter->format('MMMM, d yyyy',$isbc->added_on).'</td>';
 		echo '</tr>';
 	}

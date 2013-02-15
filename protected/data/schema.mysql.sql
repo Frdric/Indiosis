@@ -2,15 +2,12 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
-DROP SCHEMA IF EXISTS `indiosis_main` ;
 CREATE SCHEMA IF NOT EXISTS `indiosis_main` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
 USE `indiosis_main` ;
 
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`Organization`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `indiosis_main`.`Organization` ;
-
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`Organization` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `acronym` VARCHAR(10) NULL ,
@@ -28,8 +25,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`User`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `indiosis_main`.`User` ;
-
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`User` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `email` VARCHAR(45) NOT NULL ,
@@ -59,8 +54,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`ClassificationSystem`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `indiosis_main`.`ClassificationSystem` ;
-
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`ClassificationSystem` (
   `name` VARCHAR(20) NOT NULL ,
   `fullName` VARCHAR(250) NULL ,
@@ -72,8 +65,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`ClassCode`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `indiosis_main`.`ClassCode` ;
-
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`ClassCode` (
   `number` VARCHAR(250) NOT NULL ,
   `description` TEXT NOT NULL ,
@@ -81,35 +72,15 @@ CREATE  TABLE IF NOT EXISTS `indiosis_main`.`ClassCode` (
   `ChildOf_number` VARCHAR(250) NULL ,
   `ClassificationSystem_name` VARCHAR(20) NOT NULL ,
   PRIMARY KEY (`number`) ,
-  INDEX `fk_ResourceCode_ClassificationSystem_idx` (`ClassificationSystem_name` ASC) ,
-  INDEX `fk_ResourceCode_ChildOf_idx` (`ChildOf_number` ASC) ,
-  CONSTRAINT `fk_ResourceCode_ClassificationSystem`
+  INDEX `fk_ClassCode_ClassificationSystem_idx` (`ClassificationSystem_name` ASC) ,
+  INDEX `fk_ClassCode_parent_idx` (`ChildOf_number` ASC) ,
+  CONSTRAINT `fk_ClassCode_ClassificationSystem`
     FOREIGN KEY (`ClassificationSystem_name` )
     REFERENCES `indiosis_main`.`ClassificationSystem` (`name` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_ResourceCode_ChildOf`
+  CONSTRAINT `fk_ClassCode_Parent`
     FOREIGN KEY (`ChildOf_number` )
-    REFERENCES `indiosis_main`.`ClassCode` (`number` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `indiosis_main`.`CustomClass`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `indiosis_main`.`CustomClass` ;
-
-CREATE  TABLE IF NOT EXISTS `indiosis_main`.`CustomClass` (
-  `code` VARCHAR(255) NOT NULL ,
-  `name` TEXT NOT NULL ,
-  `description` TEXT NOT NULL ,
-  `MatchingCode_number` VARCHAR(250) NOT NULL ,
-  PRIMARY KEY (`code`) ,
-  INDEX `fk_CustomResource_ResourceCode1_idx` (`MatchingCode_number` ASC) ,
-  CONSTRAINT `fk_CustomResource_ResourceCode`
-    FOREIGN KEY (`MatchingCode_number` )
     REFERENCES `indiosis_main`.`ClassCode` (`number` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -119,8 +90,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`ResourceFlow`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `indiosis_main`.`ResourceFlow` ;
-
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`ResourceFlow` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `label` VARCHAR(255) NULL ,
@@ -130,22 +99,14 @@ CREATE  TABLE IF NOT EXISTS `indiosis_main`.`ResourceFlow` (
   `reach` VARCHAR(250) NULL ,
   `added_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
   `hideQty` TINYINT(1) NOT NULL DEFAULT 0 ,
-  `hideQtyUom` TINYINT(1) NOT NULL DEFAULT 0 ,
   `hideLocation` TINYINT(1) NOT NULL DEFAULT 0 ,
   `ClassCode_number` VARCHAR(250) NULL ,
-  `CustomClass_code` VARCHAR(255) NULL ,
   `Provider_id` INT NULL ,
   `Receiver_id` INT NULL ,
   PRIMARY KEY (`id`) ,
-  INDEX `fk_ResourceFlow_CustomClass_idx` (`CustomClass_code` ASC) ,
   INDEX `fk_ResourceFlow_ClassCode_idx` (`ClassCode_number` ASC) ,
   INDEX `fk_ResourceFlow_Provider_idx` (`Provider_id` ASC) ,
   INDEX `fk_ResourceFlow_Receiver_idx` (`Receiver_id` ASC) ,
-  CONSTRAINT `fk_ResourceFlow_CustomClass`
-    FOREIGN KEY (`CustomClass_code` )
-    REFERENCES `indiosis_main`.`CustomClass` (`code` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
   CONSTRAINT `fk_ResourceFlow_ClassCode`
     FOREIGN KEY (`ClassCode_number` )
     REFERENCES `indiosis_main`.`ClassCode` (`number` )
@@ -167,8 +128,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`Message`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `indiosis_main`.`Message` ;
-
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`Message` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `title` VARCHAR(250) NULL ,
@@ -188,8 +147,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`Symbiosis`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `indiosis_main`.`Symbiosis` ;
-
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`Symbiosis` (
   `id` INT NOT NULL ,
   `status` ENUM('REQ', 'ACPTED', 'REJ','ACTIVE','INACTIVE','FAILED') NOT NULL DEFAULT 'REQ' ,
@@ -203,8 +160,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`ISBC`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `indiosis_main`.`ISBC` ;
-
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`ISBC` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `title` TEXT NOT NULL ,
@@ -215,21 +170,26 @@ CREATE  TABLE IF NOT EXISTS `indiosis_main`.`ISBC` (
   `eco_barriers` TEXT NULL ,
   `tech_drivers` TEXT NULL ,
   `tech_barriers` TEXT NULL ,
-  `regul_drivers` VARCHAR(45) NULL ,
-  `regul_barriers` VARCHAR(45) NULL ,
-  `socioenv_benefits` VARCHAR(45) NULL ,
+  `regul_drivers` TEXT NULL ,
+  `regul_barriers` TEXT NULL ,
+  `socioenv_benefits` TEXT NULL ,
   `contingencies` TEXT NULL ,
   `source` TEXT NULL ,
   `added_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
-  PRIMARY KEY (`id`) )
+  `added_by` INT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `fk_ISBC_User_idx` (`added_by` ASC) ,
+  CONSTRAINT `fk_ISBC_User1`
+    FOREIGN KEY (`added_by` )
+    REFERENCES `indiosis_main`.`User` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`Location`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `indiosis_main`.`Location` ;
-
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`Location` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `label` VARCHAR(250) NOT NULL ,
@@ -269,8 +229,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`CommunicationMean`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `indiosis_main`.`CommunicationMean` ;
-
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`CommunicationMean` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `type` ENUM('email','phone','fax','skype','gtalk','msn','yahoo','website','twitter') NOT NULL ,
@@ -297,8 +255,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`Affiliation`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `indiosis_main`.`Affiliation` ;
-
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`Affiliation` (
   `Parent_id` INT NOT NULL ,
   `Child_id` INT NOT NULL ,
@@ -321,8 +277,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`CodeCorrelation`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `indiosis_main`.`CodeCorrelation` ;
-
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`CodeCorrelation` (
   `ReferringCode_number` VARCHAR(250) NOT NULL ,
   `CorrelatingCode_number` VARCHAR(250) NOT NULL ,
@@ -345,8 +299,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`Expertise`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `indiosis_main`.`Expertise` ;
-
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`Expertise` (
   `ResourceCode_number` VARCHAR(250) NOT NULL ,
   `Organization_id` INT NULL DEFAULT NULL ,
@@ -376,8 +328,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`SymbioticFlow`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `indiosis_main`.`SymbioticFlow` ;
-
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`SymbioticFlow` (
   `Symbiosis_id` INT NOT NULL ,
   `ResourceFlow_id` INT NOT NULL ,
@@ -400,8 +350,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`MessageRecipient`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `indiosis_main`.`MessageRecipient` ;
-
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`MessageRecipient` (
   `Message_id` INT NOT NULL ,
   `Recipient_id` INT NOT NULL ,
@@ -425,8 +373,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`Tag`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `indiosis_main`.`Tag` ;
-
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`Tag` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `label` ENUM('retain','expert','admin') NOT NULL ,
@@ -451,12 +397,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `indiosis_main`.`SymbioticLinkage`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `indiosis_main`.`SymbioticLinkage` ;
-
 CREATE  TABLE IF NOT EXISTS `indiosis_main`.`SymbioticLinkage` (
   `ISCase_id` INT NOT NULL ,
   `MaterialClass_number` VARCHAR(250) NULL ,
-  `CustomMaterial_code` VARCHAR(255) NULL ,
   `SourceClass_number` VARCHAR(250) NOT NULL ,
   `EndClass_number` VARCHAR(250) NOT NULL ,
   `type` ENUM('reuse','sharing','joint') NULL ,
@@ -465,35 +408,29 @@ CREATE  TABLE IF NOT EXISTS `indiosis_main`.`SymbioticLinkage` (
   `benefit_source` TEXT NULL ,
   `benefit_end` TEXT NULL ,
   `remarks` TEXT NULL ,
-  PRIMARY KEY (`ISCase_id`, `MaterialClass_number`, `SourceClass_number`, `EndClass_number`, `CustomMaterial_code`) ,
-  INDEX `fk_ISCase_has_ClassCode_ClassCode1_idx` (`SourceClass_number` ASC) ,
-  INDEX `fk_ISCase_has_ClassCode_ISCase1_idx` (`ISCase_id` ASC) ,
-  INDEX `fk_ISCaseClass_ClassCode1_idx` (`MaterialClass_number` ASC) ,
-  INDEX `fk_SymbioticLink_ClassCode1_idx` (`EndClass_number` ASC) ,
-  INDEX `fk_SymbioticLinkage_CustomClass1_idx` (`CustomMaterial_code` ASC) ,
-  CONSTRAINT `fk_ISCase_has_ClassCode_ISCase1`
+  PRIMARY KEY (`ISCase_id`, `MaterialClass_number`, `SourceClass_number`, `EndClass_number`) ,
+  INDEX `fk_SymbioticLink_SourceClass_idx` (`SourceClass_number` ASC) ,
+  INDEX `fk_SymbioticLink_ISBC_idx` (`ISCase_id` ASC) ,
+  INDEX `fk_SymbioticLink_MaterialClass_idx` (`MaterialClass_number` ASC) ,
+  INDEX `fk_SymbioticLink_EndClass_idx` (`EndClass_number` ASC) ,
+  CONSTRAINT `fk_SymbioticLink_ISBC`
     FOREIGN KEY (`ISCase_id` )
     REFERENCES `indiosis_main`.`ISBC` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_ISCase_has_ClassCode_ClassCode1`
+  CONSTRAINT `fk_SymbioticLink_SourceClass`
     FOREIGN KEY (`SourceClass_number` )
     REFERENCES `indiosis_main`.`ClassCode` (`number` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_ISCaseClass_ClassCode1`
+  CONSTRAINT `fk_SymbioticLink_MaterialClass`
     FOREIGN KEY (`MaterialClass_number` )
     REFERENCES `indiosis_main`.`ClassCode` (`number` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_SymbioticLink_ClassCode1`
+  CONSTRAINT `fk_SymbioticLink_EndClass`
     FOREIGN KEY (`EndClass_number` )
     REFERENCES `indiosis_main`.`ClassCode` (`number` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_SymbioticLinkage_CustomClass1`
-    FOREIGN KEY (`CustomMaterial_code` )
-    REFERENCES `indiosis_main`.`CustomClass` (`code` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -529,5 +466,7 @@ START TRANSACTION;
 USE `indiosis_main`;
 INSERT INTO `indiosis_main`.`ClassificationSystem` (`name`, `fullName`, `revision`) VALUES ('HS', 'Harmonized System', '2005');
 INSERT INTO `indiosis_main`.`ClassificationSystem` (`name`, `fullName`, `revision`) VALUES ('ISIC', 'International Standard Industrial Classification of All Economic Activities', '4');
+INSERT INTO `indiosis_main`.`ClassificationSystem` (`name`, `fullName`, `revision`) VALUES ('HS-INDSIS', 'Indiosis HS Extension', '2012');
+INSERT INTO `indiosis_main`.`ClassificationSystem` (`name`, `fullName`, `revision`) VALUES ('ISIC-INDSIS', 'Indiosis ISIC Extension', '2012');
 
 COMMIT;

@@ -16,10 +16,6 @@
  * The followings are the available columns in table 'CodeCorrelation':
  * @property string $ReferringCode_number
  * @property string $CorrelatingCode_number
- *
- * The followings are the available model relations:
- * @property ClassCode $referringCodeNumber
- * @property ClassCode $correlatingCodeNumber
  */
 class CodeCorrelation extends CActiveRecord
 {
@@ -65,8 +61,6 @@ class CodeCorrelation extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'referringCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'ReferringCode_number'),
-			'correlatingCodeNumber' => array(self::BELONGS_TO, 'ClassCode', 'CorrelatingCode_number'),
 		);
 	}
 

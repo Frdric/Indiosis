@@ -211,15 +211,15 @@ $this->beginWidget('IBoxWidget',array(
             <li><em class="bold">Consumer</em> - An entity using output material or services from any other entity present in the system.</li>
             <li><em class="bold">Reprocessor</em> - An entity acting both as a producer AND a consumer in the system (both input and output must come from or be used within the system).</li>
         </ul>
-        <p>Each linkage also indicates the type of material or resource involved (based on the "<a href="http://www.wcoomd.org/home_hsnomenclaturetable2012.htm" target="blank">Harmonized System</a>" provided by the WCO).</p>
+        <p>Each linkage also indicates the type of material or resource involved (based on the "<a href="http://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs_nomenclature_2012/hs_nomenclature_table_2012.aspx" target="blank">Harmonized System</a>" provided by the WCO).</p>
     </p>
     <p>
         <em class="bold">Contingencies</em> – should describe what are the possible risks involved in the setup and/or the maintenance of the described symbiosis.
     </p>
     <hr/>
     <p>
-        - More information on ISIC can be found <a href="http://unstats.un.org/unsd/publication/seriesM/seriesm_4rev4e.pdf" target="blank">here</a>.<br/>
-        - More information on HS can be found <a href="http://www.wcoomd.org/home_hsoverviewboxes.htm" target="blank">here</a>.
+        - ISIC reference can be found <a href="http://unstats.un.org/unsd/publication/seriesM/seriesm_4rev4e.pdf" target="blank">here</a>.<br/>
+        - HS 2012 nomenclature can be found <a href="http://www.allhscodes.com" target="blank">here</a>.
     </p>
 </div>
 <div class="submit-area"><?php echo CHtml::submitButton('Add to Repository',array("class"=>'ibutton_big iblue')); ?></div>

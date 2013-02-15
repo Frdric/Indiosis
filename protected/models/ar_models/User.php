@@ -29,13 +29,6 @@
  * @property string $joined_on
  * @property string $verification_code
  * @property integer $Organization_id
- *
- * The followings are the available model relations:
- * @property CommunicationMean[] $communicationMeans
- * @property Expertise[] $expertises
- * @property Message[] $messages
- * @property Tag[] $tags
- * @property Organization $organization
  */
 class User extends CActiveRecord
 {
@@ -87,11 +80,6 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'communicationMeans' => array(self::HAS_MANY, 'CommunicationMean', 'User_id'),
-			'expertises' => array(self::HAS_MANY, 'Expertise', 'User_id'),
-			'messages' => array(self::MANY_MANY, 'Message', 'MessageRecipient(Recipient_id, Message_id)'),
-			'tags' => array(self::HAS_MANY, 'Tag', 'User_id'),
-			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
 		);
 	}
 

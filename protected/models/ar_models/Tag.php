@@ -18,10 +18,6 @@
  * @property string $label
  * @property integer $User_id
  * @property integer $Organization_id
- *
- * The followings are the available model relations:
- * @property User $user
- * @property Organization $organization
  */
 class Tag extends CActiveRecord
 {
@@ -68,8 +64,6 @@ class Tag extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'user' => array(self::BELONGS_TO, 'User', 'User_id'),
-			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
 		);
 	}
 

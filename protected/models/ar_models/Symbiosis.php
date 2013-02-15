@@ -19,9 +19,6 @@
  * @property string $descrition
  * @property string $created_on
  * @property string $expires_on
- *
- * The followings are the available model relations:
- * @property ResourceFlow[] $resourceFlows
  */
 class Symbiosis extends CActiveRecord
 {
@@ -69,7 +66,6 @@ class Symbiosis extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'resourceFlows' => array(self::MANY_MANY, 'ResourceFlow', 'SymbioticFlow(Symbiosis_id, ResourceFlow_id)'),
 		);
 	}
 

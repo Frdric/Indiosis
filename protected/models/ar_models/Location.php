@@ -27,11 +27,6 @@
  * @property integer $Organization_id
  * @property integer $ResourceFlow_id
  * @property integer $ISCase_id
- *
- * The followings are the available model relations:
- * @property Organization $organization
- * @property ResourceFlow $resourceFlow
- * @property ISBC $iSCase
  */
 class Location extends CActiveRecord
 {
@@ -79,9 +74,6 @@ class Location extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'organization' => array(self::BELONGS_TO, 'Organization', 'Organization_id'),
-			'resourceFlow' => array(self::BELONGS_TO, 'ResourceFlow', 'ResourceFlow_id'),
-			'iSCase' => array(self::BELONGS_TO, 'ISBC', 'ISCase_id'),
 		);
 	}
 

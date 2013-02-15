@@ -29,10 +29,7 @@
  * @property string $contingencies
  * @property string $source
  * @property string $added_on
- *
- * The followings are the available model relations:
- * @property Location[] $locations
- * @property SymbioticLinkage[] $symbioticLinkages
+ * @property integer $added_by
  */
 class ISBC extends CActiveRecord
 {
@@ -63,12 +60,13 @@ class ISBC extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('title, type, added_on', 'required'),
+			array('added_by', 'numerical', 'integerOnly'=>true),
 			array('type', 'length', 'max'=>8),
-			array('time_period, regul_drivers, regul_barriers, socioenv_benefits', 'length', 'max'=>45),
-			array('overview, eco_drivers, eco_barriers, tech_drivers, tech_barriers, contingencies, source', 'safe'),
+			array('time_period', 'length', 'max'=>45),
+			array('overview, eco_drivers, eco_barriers, tech_drivers, tech_barriers, regul_drivers, regul_barriers, socioenv_benefits, contingencies, source', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, type, overview, time_period, eco_drivers, eco_barriers, tech_drivers, tech_barriers, regul_drivers, regul_barriers, socioenv_benefits, contingencies, source, added_on', 'safe', 'on'=>'search'),
+			array('id, title, type, overview, time_period, eco_drivers, eco_barriers, tech_drivers, tech_barriers, regul_drivers, regul_barriers, socioenv_benefits, contingencies, source, added_on, added_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -80,8 +78,6 @@ class ISBC extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'locations' => array(self::HAS_MANY, 'Location', 'ISCase_id'),
-			'symbioticLinkages' => array(self::HAS_MANY, 'SymbioticLinkage', 'ISCase_id'),
 		);
 	}
 
@@ -106,6 +102,7 @@ class ISBC extends CActiveRecord
 			'contingencies' => 'Contingencies',
 			'source' => 'Source',
 			'added_on' => 'Added On',
+			'added_by' => 'Added By',
 		);
 	}
 
@@ -153,6 +150,7 @@ class ISBC extends CActiveRecord
 		$criteria->compare('contingencies',$this->contingencies,true);
 		$criteria->compare('source',$this->source,true);
 		$criteria->compare('added_on',$this->added_on,true);
+		$criteria->compare('added_by',$this->added_by);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

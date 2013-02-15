@@ -17,9 +17,6 @@
  * @property string $name
  * @property string $fullName
  * @property string $revision
- *
- * The followings are the available model relations:
- * @property ClassCode[] $classCodes
  */
 class ClassificationSystem extends CActiveRecord
 {
@@ -67,7 +64,6 @@ class ClassificationSystem extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'classCodes' => array(self::HAS_MANY, 'ClassCode', 'ClassificationSystem_name'),
 		);
 	}
 

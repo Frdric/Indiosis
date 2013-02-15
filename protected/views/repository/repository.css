@@ -54,6 +54,15 @@ h1 {
 	padding: 0 5px 10px;
 	color: #777;
 }
+.isbc-list th:first-child {
+	width: 120px;
+}
+.isbc-list .scale {
+	width: 90px;
+}
+.isbc-list th:last-child {
+	width: 130px;
+}
 .isbc-list tr:nth-child(even) {
 	background-color: #F7F7F7;
 }
@@ -65,6 +74,11 @@ h1 {
 }
 .isbc-list td:not(:last-child) {
 	border-right: 2px solid white;
+}
+.isbc-list .overview {
+	color: #666;
+	font-family: "OpenSansRegular";
+	line-height: 14px;
 }
 .isbc-list th:last-child, .isbc-list tr td:last-child {
 	text-align: right;

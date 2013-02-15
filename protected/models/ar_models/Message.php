@@ -19,10 +19,6 @@
  * @property string $body
  * @property string $sent_on
  * @property integer $Sender_id
- *
- * The followings are the available model relations:
- * @property User $sender
- * @property User[] $users
  */
 class Message extends CActiveRecord
 {
@@ -70,8 +66,6 @@ class Message extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'sender' => array(self::BELONGS_TO, 'User', 'Sender_id'),
-			'users' => array(self::MANY_MANY, 'User', 'MessageRecipient(Message_id, Recipient_id)'),
 		);
 	}
 
